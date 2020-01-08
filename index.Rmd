@@ -1,14 +1,12 @@
 ---
-title: Willy's Website
+title: Willy Chen
 output: 
   html_document:
     theme: readable
     css: web.css
-    highlight: tango
-fontsize: 18pt
 ---
-## This is Willy's personal website. All info related to Willy's work can be found here.
 ![](IMG_1288.jpg){#id .class width=300px height=300px}
+
 
 # {.tabset .tabset-fade .tabset-pills}
 
