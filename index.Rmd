@@ -27,3 +27,4 @@ This is Willy's personal website. All info related to Willy's work can be found 
 ## Photo Gallery
 
 ![Family picture at NYC](images/_DSC5702.jpg)
+![Traffic Control](images/_DSC7439.jpg)
