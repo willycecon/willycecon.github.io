@@ -12,7 +12,6 @@ output:
 
 ## Bio
 
-
 ## Research Experience
 [My CV](https://willythewoo.github.io/WillyTheWoo/cvWillyChen.pdf)
 
@@ -31,8 +30,6 @@ output:
 ![Traffic Control](images/_DSC7439.jpg)
 
 ## Contact Information
-Phone: (614)804-2781
-
-Academic Email: willyc@uchicago.edu / chen.6149@osu.edu
+Academic Email: willyc@uchicago.edu 
 
 Personal Email: wchen6149@gmail.com
