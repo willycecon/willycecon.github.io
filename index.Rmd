@@ -13,7 +13,7 @@ This is Willy's personal website. All info related to Willy's work can be found 
 
 
 ## Research Experience
-
+[My CV](https://willythewoo.github.io/WillyTheWoo/cvWillyChen.pdf)
 
 
 ## Coding Examples 
