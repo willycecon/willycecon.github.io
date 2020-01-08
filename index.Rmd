@@ -1,8 +1,18 @@
 ---
-title: "Willy Chen"
 output: 
   html_document:
-    toc: true
     theme: readable
 ---
-[ambassador](https://willythewoo.github.io/WillyTheWoo/ambassador_schedule)
+# Willy Chen {.tabset .tabset-fade .tabset-pills}
+## Bio
+
+
+## Research Experience
+
+
+
+## Coding Examples 
+
+[University Amabssador Scheduling System](https://willythewoo.github.io/WillyTheWoo/Ambassador_Schedule)
+
+[Taiwanese Housing](https://willythewoo.github.io/WillyTheWoo/Taiwan_housing)
