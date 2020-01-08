@@ -18,11 +18,11 @@ This is Willy's personal website. All info related to Willy's work can be found 
 
 ## Coding Examples 
 
-[University Amabssador Scheduling System](https://willythewoo.github.io/WillyTheWoo/Ambassador_Schedule)
+[University Amabssador Scheduling System](https://willythewoo.github.io/WillyTheWoo/coding/Ambassador_Schedule)
 
-[Taiwanese Housing](https://willythewoo.github.io/WillyTheWoo/Taiwan_housing)
+[Taiwanese Housing](https://willythewoo.github.io/WillyTheWoo/coding/Taiwan_housing)
 
-[Tweets processing](https://willythewoo.github.io/WillyTheWoo/twitter)
+[Tweets processing](https://willythewoo.github.io/WillyTheWoo/coding/twitter)
 
 ## Photo Gallery
 
