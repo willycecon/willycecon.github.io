@@ -31,5 +31,6 @@ output:
 
 ## Contact Information
 Academic Email: willyc@uchicago.edu 
+Academic Email: willyc@uchicago
 
 Personal Email: wchen6149@gmail.com
