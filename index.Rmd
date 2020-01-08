@@ -1,9 +1,14 @@
 ---
+title: Willy's Website
 output: 
   html_document:
     theme: readable
+    css: web.css
 ---
-# Willy Chen {.tabset .tabset-fade .tabset-pills}
+This is Willy's personal website. All info related to Willy's work can be found here.
+
+# {.tabset .tabset-fade .tabset-pills}
+
 ## Bio
 
 
@@ -18,3 +23,7 @@ output:
 [Taiwanese Housing](https://willythewoo.github.io/WillyTheWoo/Taiwan_housing)
 
 [Tweets processing](https://willythewoo.github.io/WillyTheWoo/twitter)
+
+## Photo Gallery
+
+![Family picture at NYC](images/_DSC5702.jpg)
