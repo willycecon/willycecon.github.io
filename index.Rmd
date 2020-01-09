@@ -11,6 +11,10 @@ output:
 # {.tabset .tabset-fade .tabset-pills}
 
 ## Bio
+Willy Chen is a current MA student of Economics at the University of Chicago. He obtained his B.S. in both Economics and Mathematics from The Ohio State University in Spring 2019. Willy's research interest is in migration economics. His current focus is on the effect of immigration flow on natives' migration flow.
+
+Willy is also a self-procliamed magician, photographer, boardgame-maker, and funny T-shirt enthusiast.
+
 
 ## Research Experience
 [My CV](https://willythewoo.github.io/WillyTheWoo/cvWillyChen.pdf)
@@ -18,7 +22,7 @@ output:
 
 ## Coding Examples 
 
-[University Amabssador Scheduling System](https://willythewoo.github.io/WillyTheWoo/coding/Ambassador_Schedule)
+[University Ambassador Scheduling System](https://willythewoo.github.io/WillyTheWoo/coding/Ambassador_Schedule)
 
 [Taiwanese Housing](https://willythewoo.github.io/WillyTheWoo/coding/Taiwan_housing)
 
