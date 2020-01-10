@@ -30,18 +30,26 @@ Willy is also a self-procliamed magician, photographer, boardgame-maker, and fun
 
 ## Photo Gallery
 <div class="slides">
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/6149pix/albums/72157668602509916" title="The encyclopedia of human"><img src="https://live.staticflickr.com/1616/26515657351_0bd53e5a82_z.jpg" width="640" height="512" alt="The encyclopedia of human"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
-</div>
-<div style="width:500px;height:500px;text-align:center;margin:auto;" >
-<object width="500" height="500" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"  codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">
-<param name="flashvars" value="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2F6149pix%2Fshow&amp;page_show_back_url=%2Fphotos%2F6149pix%2F&amp;user_id=129191808@N08" />
-<param name="allowFullScreen" value="true" />
-<param name="src" value="https://www.flickr.com/apps/slideshow/show.swf?v=71649" /> 
-<embed width="500" height="500" type="application/x-shockwave-flash" src="https://www.flickr.com/apps/slideshow/show.swf?v=71649" flashvars="offsite=true&amp;lang=en-us&amp;page_show_url=%2Fphotos%2F6149pix%2Fshow&amp;page_show_back_url=%2Fphotos%2F6149pix%2F&amp;user_id=129191808@N08" allowFullScreen="true" /> 
-</object>
-
+  <img class="mySlides" src="https://willythewoo.github.io/WillyTheWoo/images/Dawn.jpg" style="width:100%">
+  <img class="mySlides" src="https://willythewoo.github.io/WillyTheWoo/images/Dusk.jpg" style="width:100%">
 </div>
 
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none"; 
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1} 
+  x[slideIndex-1].style.display = "block"; 
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+</script>
 ## Contact Information
 Academic Email: willyc@uchicago.edu
 
