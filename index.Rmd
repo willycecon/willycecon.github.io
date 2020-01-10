@@ -30,9 +30,9 @@ Willy is also a self-procliamed magician, photographer, boardgame-maker, and fun
 
 ## Photo Gallery
 
-![Family picture at NYC](images/_DSC5702.jpg)
-![Traffic Control](images/_DSC7439.jpg)
-
+<div class="slideshow"> 
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/6149pix/albums/72157668602509916" title="The encyclopedia of human"><img src="https://live.staticflickr.com/1616/26515657351_0bd53e5a82_z.jpg" width="640" height="512" alt="The encyclopedia of human"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+</div>
 ## Contact Information
 Academic Email: willyc@uchicago.edu
 
