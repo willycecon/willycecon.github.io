@@ -7,13 +7,12 @@ output:
 ---
 ![](IMG_1288.jpg){#id .class width=300px height=300px}
 
-
 # {.tabset .tabset-fade .tabset-pills}
 
 ## Bio
 Willy Chen is a current MA student of Economics at the University of Chicago. He obtained his B.S. in both Economics and Mathematics from The Ohio State University in Spring 2019. Willy's research interest is in migration economics. His current focus is on the effect of immigration flow on natives' migration flow.
 
-Willy is also a self-procliamed magician, photographer, boardgame-maker, and funny T-shirt enthusiast.
+Willy is also a self-proclaimed magician, photographer, boardgame-maker, and funny T-shirt enthusiast.
 
 
 ## Research Experience
@@ -28,28 +27,170 @@ Willy is also a self-procliamed magician, photographer, boardgame-maker, and fun
 
 [Tweets processing](https://willythewoo.github.io/WillyTheWoo/coding/twitter)
 
+
 ## Photo Gallery
-<div class="slides">
-  <img class="mySlides" src="https://willythewoo.github.io/WillyTheWoo/images/Dawn.jpg" style="width:100%">
-  <img class="mySlides" src="https://willythewoo.github.io/WillyTheWoo/images/Dusk.jpg" style="width:100%">
+
+<!-- <style> -->
+<!-- .w3-animate-fading{animation:fading 5s infinite}@keyframes fading{0%{opacity:0}35%{opacity:1}75%{opacity:1}100%{opacity:0}} -->
+<!-- </style> -->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<div class="w3-content w3-section w3-display-container" style="max-width:700px">
+  <img class="mySlides w3-animate-fading lazy" src="https://willythewoo.github.io/WillyTheWoo/images/celebrate.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/grad.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/grocer.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/grocery.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/hustle.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/sleep.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/travelers.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/art.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/bench.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/brooklyn.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/cat.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/cherry.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/chicago.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/dad.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/Dawn.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/Dusk.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/forest.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/fountain.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/friends.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/frozen.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/hello.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/high.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/hope.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/hug.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/leap.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/mini.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/mirror.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/mom.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/morning.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/mountain.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/nyc.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/parade.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/pathfinder.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/pond.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/puppy.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/salt.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/selfie.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/shore.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/step.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/stopper.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/Taipei.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/time.jpg" alt="Laziness" style="width:100%">
+<img class="mySlides w3-animate-fading lazy" data-src="https://willythewoo.github.io/WillyTheWoo/images/wedding.jpg" alt="Laziness" style="width:100%">
+<div class="w3-center w3-display-bottommiddle" style="width:100%">
+  <div class="w3-left w3-hover-text-red" onclick="plusDivs(-1)">&#10094;</div>
+  <div class="w3-right w3-hover-text-red" onclick="plusDivs(1)">&#10095;</div>
+  </div>
 </div>
 
 <script>
-var slideIndex = 0;
-carousel();
+var lazy = [];
+
+function setLazy(){
+ lazy = document.getElementsByClassName('lazy');
+}
+
+function registerListener(event, func) {
+    if (window.addEventListener) {
+        window.addEventListener(event, func)
+    } else {
+        window.attachEvent('on' + event, func)
+    }
+}
+function isInViewport(el){
+    var rect = el.getBoundingClientRect();
+    return (
+    rect.bottom >= 0 && 
+    rect.right >= 0 && 
+    rect.top <= (
+    window.innerHeight || 
+    document.documentElement.clientHeight) && 
+    rect.left <= (
+    window.innerWidth || 
+    document.documentElement.clientWidth)
+ );
+}
+registerListener('load', setLazy);
+registerListener('load', lazyLoad);
+function lazyLoad(){
+    for(var i=0; i<lazy.length; i++){
+        if(isInViewport(lazy[i])){
+            if (i==0){
+            setTimeout(carousel,5000)
+            }
+            if (lazy[i+1].getAttribute('data-src')){
+                lazy[i+1].src = 
+                 lazy[i+1].getAttribute('data-src');
+            }
+            if (lazy[i+2].getAttribute('data-src')){
+                lazy[i+2].src = 
+                 lazy[i+2].getAttribute('data-src');
+            }
+            if (lazy[i-3].getAttribute('src')){
+                lazy[i-3].removeAttribute('src');
+            }
+            if (lazy[i-4].getAttribute('src')){
+                lazy[i-4].removeAttribute('src');
+            }
+        }
+    }
+    cleanLazy();
+}
+
+function cleanLazy(){
+    lazy = 
+        Array.prototype.filter.call(
+            lazy, 
+            function(l){ 
+                return l.getAttribute('data-src');
+             }
+        );
+}
+
+var myIndex = 0
 
 function carousel() {
   var i;
   var x = document.getElementsByClassName("mySlides");
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none"; 
+    x[i].style.display = "none";  
   }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1} 
-  x[slideIndex-1].style.display = "block"; 
-  setTimeout(carousel, 3000); // Change image every 2 seconds
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";
+  timeout = setTimeout(carousel, 4700);    
+}
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  clearTimeout(timeout);
+  timeout = timeout = setTimeout(carousel, 4700)
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
 }
 </script>
+
+For more pictures of my work, head to my [flickr page](flickr.com/photos/6149pix)
+
+
+
 ## Contact Information
 Academic Email: willyc@uchicago.edu
 
