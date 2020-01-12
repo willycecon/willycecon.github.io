@@ -1,0 +1,158 @@
+ \documentclass[11pt]{article}
+
+\usepackage[letterpaper]{geometry} %So margins are not their default huge
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsthm} %Allows me to create theorem*-like environments, with no numbering.
+\usepackage{commath} %to help me use \eval, for derivatives evaluated at somewhere
+\usepackage{ mathrsfs } % to use \mathscr{L} for a Lagrangian
+\usepackage{xcolor}
+\usepackage{verbatim} %Allows multiline comments with \begin{comment}
+\usepackage{tikz}  %for making graphs in LaTeX
+\usepackage{enumerate}
+
+
+% Some custom commands
+%
+\newcommand{\deldel}[2]{ \frac{ \partial #1}{\partial #2}}  %partial derivative
+\newcommand{\dd}[2]{ \frac{d #1}{d #2}}  % derivative
+\newcommand{\recip}[1]{\frac{1}{#1}}  %reciprocal
+\newcommand{\half}{\recip{2}} %shortcut for 1/2
+\newcommand{\ratioone}{\frac{U_{zi}}{U_x}}
+\newcommand{\z}{z_1,z_2,..., z_n}
+\DeclareMathOperator{\st}{s.t. \,} %shortcut for such that
+\DeclareMathOperator{\argmax}{argmax} %argmax
+\DeclareMathOperator{\argmin}{argmin} %argmin
+
+
+
+
+
+ %Fancy-header package to modify header/page numbering 
+ %
+ \usepackage{fancyhdr}
+ \pagestyle{fancy}
+ %\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+ %\addtolength{\headwidth}{\marginparwidth}
+ \lhead{\small\scshape Hieu Nguyen}
+ \chead{} 
+ \rhead{\footnotesize } 
+ \lfoot{Part \thesection} 
+ \cfoot{} 
+ \rfoot{\thepage} 
+ \renewcommand{\headrulewidth}{.3pt} 
+ \renewcommand{\footrulewidth}{.3pt}
+ \setlength\voffset{-0.25in}
+ \setlength\textheight{648pt}
+
+
+
+\begin{document}
+
+\title{Summary for Hedonic Prices and Implicit Markets: Product Differentiation in Pure Competition }
+\author{Hieu Nguyen}
+
+%\date{October 5, 2012}
+
+
+\maketitle
+\begin{abstract}
+	 A theory of hedonic prices is formulated as a problem in the economics of spatial equilibrium in the characteristic space.
+\end{abstract}
+
+
+
+%This line allows the subsections to be delineated by letters in parentheses.  Try commenting it out to see how subsection labels change.
+%\def\thesubsection{(\alph{subsection})}
+
+\section{Introduction and Summary}
+
+This paper sketches a model of product differentiation where products are valued for their characteristics. 
+
+\emph{Hedonic prices} are defined as the implicit prices of attributes revealed to economic agents from observed prices and characteristics of products
+
+The model is a competitive equilibrium with $p\left( z_1, z_2, ... , z_n\right) = p\left(z\right)$, where $z = z\left( z_1, z_2, ..., z_n\right)$ is a vector of characteristics of the product. 
+It is a perfect competitive market with a continuum of buyers and sellers with zero weight. Market clearing condition imposes that amount offered is equal to amount demanded at different prices and quantities (of course). Both consumers and producers maximize their objective function, and the allocation is Pareto efficient.
+
+An identification problem is also considered.
+
+\section{Market Equilibrium}
+Some basic assumptions
+\begin{itemize}
+	\item Choices are continuous in z , there is a spectrum of products
+	\item Resale is not allowed
+	\item $p\left(z\right)$ is the hedonic prices 
+\end{itemize}
+
+
+\begin{enumerate} [A]
+	\item The Consumption Decision
+	
+	Standard maximization problem:
+ 	$$ max \quad U\left(x, z_1, z_2, ... , z_n\right) \quad subject \, to \quad y = x + p\left(z\right)$$
+	Then we get the first order conditions:
+	$$ \deldel{p}{z} = p_i = \ratioone$$ , i = 1, ..., n
+	
+	We can alternatively view the problem as cost minimization and define $\theta \left(	\z\right)$ as:
+	$$ U\left( y - \theta , \z \right) = u$$ 
+	Then differentiate  we get:
+	$$ \theta_{zi} = \ratioone$$
+	and the second order conditions (Bordered-Hessian)
+	
+	The key point is that this $\theta$ as a function of z traces out the indifference curve for the consumer for a given level of utility, and it is the amount that the consumer is willing to pay for z at that level. If we set marginal benefit to marginal cost, we get $ \theta_{zi} = p_i\left(z^{\star}\right)$, so the optimum allocation is where the price schedule and the indifference curve are tangent to each other.
+	
+	Comparative statics:with normal good assumption, higher income leads consumers to buy higher qualities characteristics, steeper indifference curve. 
+	
+	\item Production Decision
+	
+	Standard profit maximization problem:
+	$$ \pi = Mp\left(z\right) - C\left(M, \z\right)$$
+	The first order conditions requires:
+	$$p_i\left(z\right) = C_{zi}\left(M, \z\right)/M$$
+	$$p\left(z\right) = C_M\left(M, \z\right)$$
+	So, marginal revenue equals marginal cost and unit revenue equals marginal production cost.
+	Now, define an offer function $\phi\left(\z;\pi, \beta\right)$ as:
+	$$\pi = M\phi - C\left(M, \z\right)$$
+	$$C_M\left(M, \z\right) = \phi$$
+	Here, $\phi$ is the offer price the seller is willing to accept on produce z at profit level $\pi$. Again, equilibrium is characterized by tangency between the profit indifference surface and price schedule. 
+	Different cost structures (different $\beta$) leads to different cost curves (of high and low qualities)
+	
+\end{enumerate}
+
+
+\section{Market Equilibirum}
+Need $p\left(z\right)$ such that $ Q^{d}\left(z\right) = Q^{s}\left(z\right)$
+\begin{enumerate} [A]
+	\item Short- Run Equilibirum
+	
+	Firms: fixed the quality level $z_1$ but can vary quantities, new entry is precluded. 
+	Setting demand equal to supply yields a differential equation in p and $z_1$, subject to boundary constraints (like terminal and initial conditions)
+	The details are technical but basically we get a portion of the price schedule that is positive for some level of $z_{10}$ as a function of z.
+	
+	\item Long-Run Equilibirum
+	
+	Firm may vary qualities and since there is no entry restrictions, $\pi^{\star} = 0$. The offer price for each firm satisfy the first order condition: $\phi \left(z;\beta\right) =  C\left( M,z;\beta\right)/M$.Cost function is linear in number of outputs and $p\left(z\right) = h\left(z;\beta\right)$ where $h\left(z;\beta\right)$ is the minimum average cost of z. Therefore, $\phi = h\left(z;\beta\right)$ and $ p\left(z\right) = h\left(z;\beta\right)$ is the equilibrium condition for maximum profit.
+\end {enumerate}
+
+\section{Identification Problem} 
+This section is very econometrically, but the basic idea is a possible procedure to identify the supply and demand equation is proposed (simultaneous equation). 
+
+\section{Price Indexes, Economic Welfare, and Legislated Restrictions}
+This section uses the model to analyze welfare consequences of quality standards legislation. For example, mandatory of seat belts and air bags will affect the automobile price index. 
+This law will affect consumers for which $\bar{z_1} > z_1^{\star}$, and the distance $\triangle P = P_2 - P_1$ is the monetary welfare loss. This can be broken up to  $\int_{z_1^{\star}}^{\bar{z_1}} \! p_1(z) \, \mathrm{d} z$, which measures $P_2 - P_0$ and  $\int_{z_1^{\star}}^{\bar{z_1}} \! \theta_1(z) \, \mathrm{d} z$, which measures $P_1 - P_0$
+
+\section{Conclusion}
+The economic content of the relationship between observed prices and observed characteristics becomes evident once price differences among goods are recognized as equalizing differences for the alternative packages they embody.
+
+
+
+
+%\begin{thebibliography}{4}
+%\end{thebibliography}
+ \end{document}
+
+	

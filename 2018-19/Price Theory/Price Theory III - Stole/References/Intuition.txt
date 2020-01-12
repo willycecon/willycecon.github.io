@@ -1,0 +1,8 @@
+[ signaling ]
+- marginal cost of education is lower for high-productivity workers (signel-crossing property)
+- definition of PBE
+- since the informed party moves first, signaling involves more sophisticated game-theoretic arguments than screening models; in screening, the revelation principle and the fact that the uninformed party moves first allows for the transformation of bilateral contracting into a decision problem
+
+[ moral hazard]
+- up-front sale of the output to the agent
+- In other words, a debt contract provides the best incentives for effort provision by extracting as much as possible from the entrepreneur under low performance and by giving her the full marginal return from effort provision in high-performance states where revenues are above the face value of the debt.

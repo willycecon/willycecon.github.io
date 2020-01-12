@@ -1,0 +1,770 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize letterpaper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 3cm
+\rightmargin 2.5cm
+\bottommargin 3cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Investment in Human Capital: A Theoretical Analysis
+\end_layout
+
+\begin_layout Author
+Gary Becker
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Summarized by Ken Kikkawa
+\end_layout
+
+\begin_layout Abstract
+The key concept that we need to understand is the difference between 
+\begin_inset Quotes eld
+\end_inset
+
+general
+\begin_inset Quotes erd
+\end_inset
+
+ and 
+\begin_inset Quotes eld
+\end_inset
+
+specific
+\begin_inset Quotes erd
+\end_inset
+
+ trainings.
+ The theory developed at 2.1, where the 2 concepts are explained, is applied
+ in every other sections in this paper.
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+Investing in Human Capital = activities that influence future real income
+ through the imbedding of resources in people
+\end_layout
+
+\begin_layout Section
+Different kinds of investment
+\end_layout
+
+\begin_layout Subsection
+On the job
+\end_layout
+
+\begin_layout Standard
+Many workers increase their productivity by learning new skills and perfecting
+ old ones while on the job.
+ On-the-job training is therefore a process that raises future productivity
+ and differs from school training in that an investment is made on the job
+ rather than in a institution that specializes in teaching.
+ 
+\end_layout
+
+\begin_layout Standard
+Each employee is assumed to be hired for a specified time period.
+ Markets are competitive.
+ If there's no on the job training, wage rates will equal the marginal products,
+ 
+\begin_inset Formula $MP_{t}=W_{t}$
+\end_inset
+
+, which also means (receipts = expenditure).
+ We can see that they depend only on the flows during that period.
+\end_layout
+
+\begin_layout Standard
+Now consider training.
+ Assume that training is done only in the first period, we have
+\begin_inset Formula 
+\[
+MP_{0}+\sum_{t=1}^{n-1}\frac{MP_{t}}{(1+i)^{t}}=W_{0}+k+\sum_{t=1}^{n-1}\frac{W_{t}}{(1+i)^{t}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $k$
+\end_inset
+
+ is the outlay of training.
+ Substitute 
+\begin_inset Formula $G=\sum_{t=1}^{n-1}\frac{MP_{t}-W_{t}}{(1+i)^{t}}$
+\end_inset
+
+ and we have 
+\begin_inset Formula $MP_{0}+G=W_{0}+k$
+\end_inset
+
+.
+ We further have 
+\begin_inset Formula 
+\[
+MP_{0}^{\prime}+G=W_{0}+C
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Formula $MP_{0}^{\prime}$
+\end_inset
+
+ is the difference between what could have been produced and what is produced,
+ which is the opportunity cost of time spent on training, 
+\begin_inset Formula $G$
+\end_inset
+
+ is the excess of future receipts over future outlays, which is the return
+ to the firm from providing training.
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ is the opportunity cost of training plus 
+\begin_inset Formula $k$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $G-C$
+\end_inset
+
+ equals the (return - cost) of training.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+General training
+\end_layout
+
+\begin_layout Standard
+We now consider general training, a skill that can be useful in other firms
+ (ex.
+ doctors trained in one hospital find that skill usefull in other hospitals).
+ Since in a competitive labor market, the wage rates paid by any firm are
+ determined by marginal productivities in other firms, future wage rates
+ as well as marginal products would increase to firms providing general
+ training.
+ Consequently, wage rates would rise by exactly the same amount as the marginal
+ product and the firms providing such training could not capture any of
+ the ruturn.
+ Then why do firms provide training? They provide training only if they
+ did not have to pay any of the costs.
+ Persons receiving general training would be willing to pay these costs
+ since training raises their future wages.
+ So the cost as well as returns from training will be borne by trainees,
+ not by firms.
+ In this case, 
+\begin_inset Formula $G=0$
+\end_inset
+
+.
+ Thus 
+\begin_inset Formula $W_{0}=MP_{0}^{\prime}-C$
+\end_inset
+
+, hence 
+\begin_inset Formula $W_{0}=MP_{0}-k$
+\end_inset
+
+.
+ The wage of trainees is not equal to their opportunity marginal products,
+ but is less by the total cost of training.
+ See Figure 1.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Age/Earnings
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename wage.pdf
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Income maximizing firms would not pay the cost of general training and would
+ pay trained persons the market wage.
+ If they pay for training costs, then too many trainees will come and labor
+ costs will increase.
+ If they do not pay trained persons as much as the market wage, they will
+ have difficulty hiring trained persons and they will be less profitalbe
+ to other firms.
+ A good example is military.
+ Military offers training and also pays.
+ So for persons, they can receive much higher wages in the military during
+ training.
+ Well over 90% of US commercial airplane pilots received training at military.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Specific training
+\end_layout
+
+\begin_layout Standard
+Training that increases productivity more in firms providing it will be
+ called specific training.
+ Completely specific training can be defined as training that has no effect
+ on the productivity of trainees that would be useful in other firms.
+ If all trainings were completely specific, the wage that an employee could
+ get elsewhere would be independent of the amount of training he had received.
+ Then the wage paid by firms would be independent of training.
+ Then firms have to pay training costs.
+ Firms would collect the returns from higher productivity in the future,
+ and firms would provide training only if the return exceeds the cost.
+ Long run equilibrium requires that the present value of the return equals
+ costs.
+\end_layout
+
+\begin_layout Standard
+If trainings were not completely specific, productivity would increase in
+ other firms, and the wage will increase in other firms.
+ Such training can be looked as the sum of a completely general training
+ and a completely specific training, with the former being relatively larger,
+ the greater the effect on wages in other firms relative to the firms providing
+ training.
+ Since firms do not pay any of completely general costs and only part of
+ completely specific costs, the fraction of costs paid by firms would be
+ negatively related to the importance of the general component, or positively
+ related to the specificity of the training.
+\end_layout
+
+\begin_layout Standard
+Rational firms pay generally trained employees the same wage and specifically
+ trained employees a higher wage than they could get elsewhere.
+ The reason is that firms are not concerned about turnover of employees
+ with general training and have no incentive to offer premiums, but they
+ are concerned about turnovers with specific training, and premium is offered.
+\end_layout
+
+\begin_layout Standard
+Employees with specific training have less incentive to quit, and firms
+ have less incentive to fire.
+ Thus quits and layoffs are inversely related to the amount of specific
+ training.
+\end_layout
+
+\begin_layout Standard
+Consider a firm that experiences an unexpected decline in demand of its
+ output.
+ The marginal product of employees (initially equal to wages) with general
+ training and their employment will be reduced.
+ The marginal product of specifically trained employees (initially higher
+ than wages) will be reduced, but as long as they were reduced by less than
+ the initial difference of wages, firms will not fire them.
+ Even if the decline in the demand were greater so that marginal product
+ were pushed below their wages, firms would still not fire them, since there
+ is an incentive for firms not to lay off workers since they might gain
+ in the future if the decline in demand proved temporary.
+\end_layout
+
+\begin_layout Standard
+But if decline of demand were parmanent, all workers would be laid off when
+ their marginal product became less than their wage.
+\end_layout
+
+\begin_layout Standard
+A discrepancy between marginal product and wages is frequently taken as
+ evidence of imperfections in the competitive system, but it would occur
+ even in a perfectly competitive environment where there is investment in
+ specific training.
+\end_layout
+
+\begin_layout Subsection
+Schooling
+\end_layout
+
+\begin_layout Standard
+Schools and firms are often substitute sources of particular skills.
+ Since students dont work (or work only in holidays), earnings are usually
+ lower than if not in school.
+ Net earning 
+\begin_inset Formula $W$
+\end_inset
+
+ can be defined as 
+\begin_inset Formula $W=MP-k$
+\end_inset
+
+, where 
+\begin_inset Formula $MP$
+\end_inset
+
+ is actual marginal product (earnings) and 
+\begin_inset Formula $k$
+\end_inset
+
+ is direct costs (tuition etc).
+ If 
+\begin_inset Formula $MP_{0}$
+\end_inset
+
+ is the marginal product that could have been received, 
+\begin_inset Formula $W=MP_{0}-(MP_{0}-MP-k)=MP_{0}-C$
+\end_inset
+
+, where 
+\begin_inset Formula $C$
+\end_inset
+
+ is the sum of direct and forgone costs and where net earnings are the differenc
+e between potential earnings and total costs.
+\end_layout
+
+\begin_layout Standard
+Schooling would have the same kind of implication as general on the job
+ training.
+ Thus schooling would steepen the age-earnings profile.
+\end_layout
+
+\begin_layout Subsection
+Other Knowledge
+\end_layout
+
+\begin_layout Standard
+For example, information about prices charged by different sellers would
+ enable buyers to select the cheapest option.
+ Information about the political or social system could also significantly
+ raise real incomes.
+ Now consider the info on employment opportunities.
+ A better job might be found by spending cost on 
+\begin_inset Quotes eld
+\end_inset
+
+search
+\begin_inset Quotes erd
+\end_inset
+
+.
+ If workers spent this cost and collected the return, an investment in search
+ would have the same implications on general on the job training and schooling.
+ If firms paid the costs and collected the return, search would have the
+ same implications as on the job specific training.
+\end_layout
+
+\begin_layout Subsection
+Productive Wage Increases
+\end_layout
+
+\begin_layout Standard
+Emotional and physical health is an important determinant of earnings.
+ Firms can invest in the health of employees through medical examinations
+ etc.
+ An investment in health that increased productivity to the same extent
+ in many firms would be a general investment in health and would have the
+ same effect as general training, while an investment in health that increased
+ productivity more in the firms making them would be a specific investment.
+ But many health investment is made outside the firms (in households etc),
+ so we now look at the relationship between on-the-job and outside human
+ investments.
+ 
+\end_layout
+
+\begin_layout Standard
+A firm would be willing to pay for investment in human capital made by employees
+ outside the firm if it could benefit from the resulting increase in productivit
+y.
+ The only way to pay, would be to offer higher wages.
+ When a firm gives a productive wage increase (an increase that raises productiv
+ity), outside investments are converted into on the job investments.
+ Firms would benefit more from on-the-job investment, the more specific
+ the productivity effect.
+ For example, a wage increase spent on a better diet with an immediate impact
+ on productivity might well be granted, but not one spent on general education
+ with a very delayed impact.
+\end_layout
+
+\begin_layout Standard
+An investment in human capital would usually steepen age-earnings profiles
+ (as seen before), lowering reported earnings during the investment period
+ and raising them later on.
+ But an investment in an increase in earnings may have precisely the opposite
+ effect, raising reported earnings more during the investment period than
+ later and thus flattening age-earnings profiles.
+ 
+\end_layout
+
+\begin_layout Section
+Relation Between Earnings, Costs, and Rates of Return
+\end_layout
+
+\begin_layout Standard
+Since this section was focused on the methods on how to investigate the
+ titled relations in empirical research (and also because I didn't quite
+ understand what he was doing), I will not go as far.
+\end_layout
+
+\begin_layout Standard
+Some general relations between earnings, investment cost, and rates of return
+ are derived.
+ They permit one to distinguish, among other things, a change in the return
+ from a change in the amount invested.
+ And the rate of return, amount invested, and the investment period can
+ all be derived from information on net earnings alone.
+\end_layout
+
+\begin_layout Section
+The Incentive to Invest
+\end_layout
+
+\begin_layout Subsection
+Number of periods
+\end_layout
+
+\begin_layout Standard
+The young commit themselves in activities for investing in themselves, and
+ this is because they have more incentive to invest than the old.
+ They have more incentive, because they can collect the return over more
+ years.
+\end_layout
+
+\begin_layout Standard
+The time spent on one activity is determined not only by age, but also by
+ the amount of switching between activities.
+ Women spend less time in labor force and therefore have less incentive
+ to invest in market skills, tourists spend little time in one area so have
+ less incentive to invest in any knowledge of specific consumption opportunities.
+ Those people like to find investments that increase productivity in several
+ activities.
+ But such investments are less available than more specialized ones, therefore
+ specialists have greater incentive to invest in themselves than others
+ do.
+\end_layout
+
+\begin_layout Standard
+Specialization in an activity would be discouraged if that market is small,
+ so the incentive to specialize and to invest in oneself would increase
+ as market gets bigger.
+ 
+\end_layout
+
+\begin_layout Subsection
+Wage differentials and secular changes
+\end_layout
+
+\begin_layout Standard
+Marginal productivity analysis relates the derived demand for any class
+ of workers to the ratio of their wages to those of other inputs, so wage
+ ratios are more appropriate in understanding forces determining demand.
+ On the other hand, the return on investment skills and other knowledge
+ is determined by absolute wage differences, so wage differences are better
+ in supply studies.
+ 
+\end_layout
+
+\begin_layout Standard
+Consider technological progress.
+ If progress were uniform and neutral, initially all wages would rise by
+ the same proportion, and the prices of all goods would be unchanged.
+ Wage ratios will not change, so firms would have no incentive to alter
+ their factor proportions, Wage differences would however rise, and there
+ would be an incentive to invest more in human capital, and thus to increase
+ the relative supply of skilled persons.
+ The increased supply would in turn reduce the rate of increase of wage
+ differences and produce an absolute narrowing of wage ratios.
+\end_layout
+
+\begin_layout Subsection
+Risk and Liquidity
+\end_layout
+
+\begin_layout Standard
+A rational man only invests if the expected rate of return was greater than
+ the sum of the interest rate on riskless assets and the liquidity and risk
+ premiums associated with the investments.
+ Since human capital is a very illiquid asset, a positive liquidity premium
+ would be associated with such capital.
+\end_layout
+
+\begin_layout Standard
+There is a lot of uncertainty about the return to human capital (length
+ of life, ability etc).
+ The longer the average period between investment and return, the less knowledge
+ is available.
+\end_layout
+
+\begin_layout Subsection
+Capital Markets and Knowledge
+\end_layout
+
+\begin_layout Standard
+It is very difficult to use the capital market to finance investments in
+ human capital, for the following reasons.
+ (1) Large expenditures are more difficult to finance, so investment in
+ college education is more difficult than short term migration.
+ (2) Internal financing would be common, so wealthier families invest more.
+ (3) Since specific skills can be offered as collateral along with tangible
+ assets, capital would be more available for specific than general investments.
+\end_layout
+
+\begin_layout Standard
+However, otherwise equivalent investments in physical capital is also difficult.
+ Consider a 18 year old trying to finance for a firm he is starting, rather
+ than to finance for college.
+ Will that be easy? No.
+ A recurring theme is that the young are especially prone to be ignorant
+ of their abilities etc, thus harder to raise capital.
+ But investors in human capital are younger partly because of the cost in
+ postponing their investment to older ages (see 4.1).
+ Since an investment in human capital is more coltly to postpone, it would
+ be made earlier.
+ So the young will postpone their investment in non-human capital.
+\end_layout
+
+\begin_layout Section
+Some Effects of Human Capital
+\end_layout
+
+\begin_layout Subsection
+Examples
+\end_layout
+
+\begin_layout Itemize
+Most studies show that age-earnings profiles tend to be steeper among more
+ skilled and educated people.
+ As analysed earlier, on-the-job training will steepen the age-earnings
+ profile.
+\end_layout
+
+\begin_layout Itemize
+Studies show that US exports relatively labor-intensive commodities and
+ imports relatively capital intensive commodities, though it is said that
+ US have relative scarcity of labor and abundance of capital.
+ An interpretation is that US has an even more abundant supply of human
+ capital.
+ An increase in human capital would show up as an apparent increase in labor
+ intensity since earnings are gross of the return on such capital.
+ Thus export industries might pay higher wages than import competing ones
+ primarily because they employ more skilled or healthier workers.
+\end_layout
+
+\begin_layout Subsection
+Ability and the Distribution of Earnings
+\end_layout
+
+\begin_layout Standard
+Human capital not only explain differences in earnings over time and among
+ areas, but also among persons or families within an area.
+\end_layout
+
+\begin_layout Standard
+Suppose that the amount invested in on-the-job training, health, and other
+ human capital etc are held constant.
+ A reasonable first approximation would say that if two persons have the
+ same investment in human capital, the one who earns more is demonstrating
+ greater economics talent.
+ Earnings can be approximated by 
+\begin_inset Formula $Y=X+rC$
+\end_inset
+
+.
+ Where 
+\begin_inset Formula $C$
+\end_inset
+
+ measures total investment costs, 
+\begin_inset Formula $r$
+\end_inset
+
+ the average rate of return, and 
+\begin_inset Formula $X$
+\end_inset
+
+ the earnings when there is no investment in human capital.
+ Assume that distribution of 
+\begin_inset Formula $X$
+\end_inset
+
+ is ignored, 
+\begin_inset Formula $Y$
+\end_inset
+
+ would depend only on 
+\begin_inset Formula $r$
+\end_inset
+
+ when 
+\begin_inset Formula $C$
+\end_inset
+
+ was held constant.
+ Thus 
+\begin_inset Quotes eld
+\end_inset
+
+ability
+\begin_inset Quotes erd
+\end_inset
+
+ would be measured by the average rate of return on human capital, 
+\begin_inset Formula $r$
+\end_inset
+
+.
+ Persons receiving high marginal rate of return would have an incentive
+ to invest more than others, so there wold be a positive correlation between
+ ability and the investment in human capital.
+\end_layout
+
+\begin_layout Standard
+The main implication of this is that the amount invested is a function of
+ the rate of return expected, and this can explain several well known properties
+ of earnings distributions.
+ If everyone invested the same amount, and if ability of people were symmetrical
+ly distributed, earnings would also be.
+ And if all people had the same ability, earnings would be the same for
+ everyone.
+ If ability and investment both varied, earnings would tend to be skewed
+ even when ability and investment were not.
+ But the skewness would be small as long as the amount invested and ability
+ was independent with each other.
+ But as seen above, people with more ability will invest more, and the two
+ are not independent, thus the skewness of earnings will be more skewed.
+ 
+\end_layout
+
+\begin_layout Standard
+The degree of skewness will differ among the skilled and unskilled.
+ Since the unskilled have smaller 
+\begin_inset Formula $rC$
+\end_inset
+
+ relative to 
+\begin_inset Formula $X$
+\end_inset
+
+, the distribution of 
+\begin_inset Formula $rC$
+\end_inset
+
+ would not dominate 
+\begin_inset Formula $Y$
+\end_inset
+
+.
+ The opposite argument is made for the skilled.
+ Thus if abilities were symmetrically distributed, earnings would tend to
+ be more symmetrically distributed among the unskilled than among the skilled.
+ Hence we can say that there will be smaller skewness at younger than older
+ ages.
+\end_layout
+
+\end_body
+\end_document

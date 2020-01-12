@@ -1,0 +1,137 @@
+ \documentclass[11pt]{article}
+
+\usepackage[letterpaper]{geometry} %So margins are not their default huge
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsthm} %Allows me to create theorem*-like environments, with no numbering.
+\usepackage{commath} %to help me use \eval, for derivatives evaluated at somewhere
+\usepackage{ mathrsfs } % to use \mathscr{L} for a Lagrangian
+\usepackage{xcolor}
+\usepackage{verbatim} %Allows multiline comments with \begin{comment}
+\usepackage{tikz}  %for making graphs in LaTeX
+\usepackage{enumerate}
+
+
+% Some custom commands
+%
+\newcommand{\deldel}[2]{ \frac{ \partial #1}{\partial #2}}  %partial derivative
+\newcommand{\dd}[2]{ \frac{d #1}{d #2}}  % derivative
+\newcommand{\recip}[1]{\frac{1}{#1}}  %reciprocal
+\newcommand{\half}{\recip{2}} %shortcut for 1/2
+\newcommand{\ratioone}{\frac{U_{zi}}{U_x}}
+\newcommand{\z}{z_1,z_2,..., z_n}
+\DeclareMathOperator{\st}{s.t. \,} %shortcut for such that
+\DeclareMathOperator{\argmax}{argmax} %argmax
+\DeclareMathOperator{\argmin}{argmin} %argmin
+
+
+
+
+
+ %Fancy-header package to modify header/page numbering 
+ %
+ \usepackage{fancyhdr}
+ \pagestyle{fancy}
+ %\addtolength{\headwidth}{\marginparsep} %these change header-rule width
+ %\addtolength{\headwidth}{\marginparwidth}
+ \lhead{\small\scshape Hieu Nguyen}
+ \chead{} 
+ \rhead{\footnotesize Habits, Addictions, And Traditions Summary} 
+ \lfoot{Part \thesection} 
+ \cfoot{} 
+ \rfoot{\thepage} 
+ \renewcommand{\headrulewidth}{.3pt} 
+ \renewcommand{\footrulewidth}{.3pt}
+ \setlength\voffset{-0.25in}
+ \setlength\textheight{648pt}
+
+
+
+\begin{document}
+
+\title{Summary for Human Capital and the Rise and Fall of Families }
+\author{Hieu Nguyen}
+
+%\date{October 5, 2012}
+
+
+\maketitle
+
+
+
+%This line allows the subsections to be delineated by letters in parentheses.  Try commenting it out to see how subsection labels change.
+%\def\thesubsection{(\alph{subsection})}
+
+\section{Introduction}
+
+\indent 
+This paper studies inequality within families over generations as determined by the relation between the incomes or wealth of parents, children and later descendants. Consider the simple Markov model of the relation between parents and children:
+\begin{align}
+I_{t+1} = a + bI_t + \epsilon_{t+1}
+\end{align}
+Inequality will grow if $b \ge 1$, and approach a constant if $b < 1$. The purpose of this paper is to analyze the determinants of unequal opportunities by developing a systematic model that relies on utility-maximizing behavior by all participants and equilibrium in different markets (including altruism toward children, investment in human capital of children, assortative mating in marriage market, demand for children). 
+
+- Human capital and earnings are distinguished from other wealth, parents' utility depends on the utility of children instead of on the permanent of income of children.
+
+\section{Earnings and Human Capital}
+Model of the endowment:
+
+\begin{align}
+E_t^i = \alpha_t + hE_{t-1}^i + v_t^i
+\end{align}
+where $E_t^i$ is the endowment of the $i$th family in the $t$th, h is the degree of inheritability and $v_t^i$ is luck in transmission process. Assume $0 < h <1$, plausible for the inheritance of genetic traits (regression toward mean). $\alpha_t$ is the social endowment common to all members of the same cohort. 
+
+Assume two periods of life, childhood and adulthood and adult earnings depend on human capital ($H$) and market luck($l$):
+\begin{align}
+Y_t = \gamma H_t \alpha + l_t
+\end{align}
+The earning of one unit of human capital ($\gamma$) is normalized to 1. Adult human capital and expected earnings are determined by endowments inherited from parents and by parental expenditure (x) and public expenditures (s):
+\begin{align}
+H_t = \psi(x_{t-1}, s_{t-1}, E_t),
+\end{align}
+with $\psi_j >0,\, j = x,sE.$
+The marginal rate of return on parental expentireus ($r_m$) is defined by:
+\begin{align}
+\deldel{Y_t}{x_{t-1}} = \deldel{H_t}{x_{t-1}} = \psi_x = 1 + r_m(x_{t-1}, s_{t-1}, E_t)
+\end{align}
+Marginal rate of returns decline as more is invested in a person. 
+
+Parents are assumed to maximize the welfare of children when no reduction in their own consumption or leisure is entailed. Then parents borrow whatever is necessary to maximize the net income of their children, which requires that expenditures on the human capital of children equate the marginal rate of return to the interest rate:
+\begin{align}
+r_m = r_t \, or \, \hat{x}_{t-1} = g(E_t,s_{t-1},r_t)
+\end{align}
+To determine the equilibrium amount of parental expenditures, use the equation above (supply = demand). 
+
+An increase in the rate of interest reduces the investment in human capital. 
+
+The earnings of parents and children are more closely related when endowments are more inheritable. 
+
+\indent \emph{Imperfect Access to Capital}
+
+- Assume that parents must finance investments in children either by selling assets, by reducing their own consumption, by reducing the consumption by children, or by raising the labor-force activities of children. So, parents without assets would have to finance the investment in human capital by reducing their own consumption. Richer parents would tend to have both higher consumption and greater investments in children. The demand curve is the same as before, but the supply curve is now upward sloping, since increased expenditures lower the consumption by parents, raising their marginal utility of consumption (shadow cost of funding human capital). 
+
+
+
+\section{Conclusion}
+This paper develops a model of the transmission of earnings, assets, and consumption from parents to children and later descendants. 
+
+- Poor families often have difficulty financing investments in children because loans to supplement their limited resources are not readily available. Such capital market restrictions lower investments in children from poor families. 
+
+- Additional children in family reduce the amount invested in each one when investments must be financed by the family. 
+
+- Succesful families bequeath assets to children to offset the expiated downward regression in earnings. 
+
+- Consumption in poorer and middle-level families who do not want to leave bequests tends to regress upward because equilibrium marginal rates of return on investments in the human capital of children tend to be higher in families with low earnings. Since fertility is positively related to parents' wealth, larger families dilute the wealth bequeathed to each child. 
+
+- Empirical studies show that almost all earnings advantages or disadvantages are wiped out in three generations. 
+
+
+%\begin{thebibliography}{4}
+%\end{thebibliography}
+ \end{document}
+
+	

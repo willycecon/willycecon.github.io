@@ -1,0 +1,1604 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+%\numberwithin{equation}{section}
+%\numberwithin{section}{part}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+\DeclareMathOperator*{\argmin}{arg\,min} % thin space, limits underneath in displays
+\DeclareMathOperator*{\argmax}{arg\,max} % thin space, limits underneath in displays
+\DeclareMathOperator*{\intr}{int}
+\DeclareMathOperator*{\epi}{epi}
+\DeclareMathOperator*{\co}{co}
+\DeclareMathOperator*{\cl}{cl}
+\DeclareMathOperator*{\ext}{ext}
+\DeclareMathOperator*{\Var}{Var}
+\DeclareMathOperator*{\Cov}{Cov}
+
+\lhead{Problem Sets: Theory of Income II} 
+\chead{}
+\rhead{Simon Sangmin Oh}
+\cfoot{- \thepage \space-}
+\renewcommand{\headrulewidth}{0.4pt}
+\end_preamble
+\use_default_options true
+\begin_modules
+theorems-ams-bytype
+theorems-ams-extended-bytype
+theorems-sec-bytype
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language british
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "cochineal" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 11
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\boxbgcolor #e6e6e6
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1.5cm
+\topmargin 2.5cm
+\rightmargin 1.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\bullet 0 0 17 -1
+\bulletLaTeX 1 "*"
+\bullet 2 0 8 -1
+\bullet 3 0 9 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\noun on
+Reading Summaries:
+\begin_inset Newline newline
+\end_inset
+
+Theory of Income II
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace 1.5in
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+
+\noun on
+Simon Sangmin Oh
+\end_layout
+
+\begin_layout Date
+
+\size small
+\noun on
+University of Chicago
+\end_layout
+
+\begin_layout Standard
+
+\noun on
+\begin_inset VSpace 2in
+\end_inset
+
+
+\noun default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Note
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This document contains the summaries of readings for Theory of Income II
+ taught by Professor Stokey.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Deterministic Dynamic Programming
+\end_layout
+
+\begin_layout Subsection
+**Prescott (AER, 2002): Prosperity and Depression
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Prescott investigates the differences in output per capita among developed
+ countries.
+ He points to two distinct channels: labor tax (for France) and low productivity
+ (for Japan).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Motivation
+\end_layout
+
+\begin_layout Standard
+There is a wide range of output per capita among developed countries.
+\end_layout
+
+\begin_layout Paragraph
+Research Question
+\end_layout
+
+\begin_layout Standard
+Why are France and Japan 
+\begin_inset Quotes eld
+\end_inset
+
+depressed
+\begin_inset Quotes erd
+\end_inset
+
+ relative to United States, i.e.
+ output per working-age person is 30% less than the U.S.
+ level?
+\end_layout
+
+\begin_layout Paragraph
+Methodology
+\end_layout
+
+\begin_layout Standard
+Growth model with (1) technology (aggregate production function and capital
+ accumulation equation) and (2) utility function for the stand-in household
+ that depends on the paths of consumption and leisure and three types of
+ taxes (consumption, labor income, and capital income)
+\end_layout
+
+\begin_layout Paragraph
+Key Element
+\end_layout
+
+\begin_layout Standard
+Differences in output per capita can be accounted by: (1) exogenous level
+ of technology, (2) capital factor, (3) labor factor, and (4) productivity.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Main Results
+\end_layout
+
+\begin_layout Standard
+(1) and (2) are assumed same across countries; (3) accounts for France due
+ to its higher intratemporal (consumption-leisure) tax wedge; and (4) accounts
+ for Japan, which is poorer due to lower productivity (the most important
+ factor according to the author)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+*Rogerson and Wallenius (JET, 2009): Micro and macro elasticities in a life
+ cycle model with taxes
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+
+\emph on
+This is one of the first papers reconciling micro and macro elasticities.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Puzzle
+\end_layout
+
+\begin_layout Plain Layout
+Labor elasticity is important because it determines distortions introduced
+ by taxes and employment response to fluctuations in productivity.
+ Micro elasticity is 
+\emph on
+estimated
+\emph default
+ to be between 0 and 0.4, whereas the macro estimate 
+\emph on
+implies
+\emph default
+ an estimate between 2 to 4.
+ 
+\end_layout
+
+\begin_layout Paragraph
+This Paper
+\end_layout
+
+\begin_layout Plain Layout
+Authors find that there is little relationship between micro and macro elasticit
+ies of labor supply.
+ This is because micro elasticities estimates only capture the intensive
+ margin, whereas the macro elasticities must also capture the extensive
+ margin.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Motivation
+\end_layout
+
+\begin_layout Standard
+Prescott (AER, 2002) and others have argued that labour taxes explain a
+ large share of the differences between time devoted to work in continental
+ Europe versus the US (Europeans work about 70% of the US counterparts).
+ People critique saying that plugging in micro labor elasticity invalidates
+ Prescott's conclusion.
+\end_layout
+
+\begin_layout Paragraph
+Research Question
+\end_layout
+
+\begin_layout Standard
+Are low micro labor elasticity consistent with high macro estimates?
+\end_layout
+
+\begin_layout Paragraph
+Methodology
+\end_layout
+
+\begin_layout Itemize
+Model of life cycle labor supply that allows micro and macro estimates of
+ labor supply
+\end_layout
+
+\begin_layout Itemize
+Calibrate the model to replicate features of life cycle labor supply
+\end_layout
+
+\begin_layout Itemize
+Study how tax and transfer policies affect hours work in the steady-state
+\end_layout
+
+\begin_layout Paragraph
+Key Element
+\end_layout
+
+\begin_layout Standard
+Non-linearity in the mapping between time at work and labor services actually
+ provided.
+ A less important element is the heterogeneity across cohorts (young vs.
+ old): productivity depends on age
+\end_layout
+
+\begin_layout Paragraph
+Main Results
+\end_layout
+
+\begin_layout Standard
+Macro elasticities are unrelated to micro elasticities – micro elasticities
+ in the range [0.5, 1.25] can coexist with macro elasticities in the range
+ [2.25, 3].
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+*Keane and Rogerson (JEL, 2012): Reconciling micro and macro elasticities
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+This is a pseudo-summary of the literature on micro and macro labor supply
+ elasticities along with a few new suggestions.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Motivation
+\end_layout
+
+\begin_layout Standard
+Labor supply elasticity is important in understanding impact of labor tax
+ on labor supply, yet there's a lot of controversy.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Research Question
+\end_layout
+
+\begin_layout Standard
+How can we reconcile these micro vs macro views on labor supply elasticities?
+\end_layout
+
+\begin_layout Paragraph
+Methodology
+\end_layout
+
+\begin_layout Standard
+Survey of methodologies, focusing on two main ones:
+\end_layout
+
+\begin_layout Enumerate
+Extensive vs.
+ Intensive Margins (Rogerson & Wallenius, JET 2009).
+ See previous section.
+\end_layout
+
+\begin_layout Enumerate
+Human Capital (Imai & Keane, 2004).
+ Elasticities should capture how labor supply varies with wages 
+\emph on
+and
+\emph default
+ human capital, whereas measured micro elasticities only capture how labor
+ supply varies with wage.
+\end_layout
+
+\begin_layout Paragraph
+Key Element
+\end_layout
+
+\begin_layout Standard
+Return to an hour of work is not only the after tax wage but also includes
+ 
+\emph on
+human capital
+\emph default
+ (HC), define as the expected present value of increased earnings in all
+ future periods.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Main Results
+\end_layout
+
+\begin_layout Standard
+Since HC decreases with age, labor supply elasticity differs across ages.
+ The tax change affects HC depending on whether it's temporary (in which
+ case it does not affect HC) and it's permanent (in which case it does).
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\emph on
+
+\begin_inset Newline newline
+\end_inset
+
+SAMPLE QUESTION:
+\end_layout
+
+\begin_layout Problem*
+In their paper 
+\begin_inset Quotes eld
+\end_inset
+
+Micro and Macro Labor Supply Elasticities: A Reassessment of Conventional
+ Wisdom
+\begin_inset Quotes erd
+\end_inset
+
+ (JEL 2012), Keane and Rogerson discuss two main attempts at reconciling
+ the discrepacny between micro and macro elasticities.
+ Briefly describe the two approaches and the key model feature that accomplishes
+ the task in each.
+\end_layout
+
+\begin_deeper
+\begin_layout Solution*
+The authors discuss two approaches.
+ The first approach, by Rogerson & Wallenius, involves a convex labor schedule
+ of the form 
+\begin_inset Formula $e\left(a\right)\max\left\{ h-f,0\right\} $
+\end_inset
+
+ where 
+\begin_inset Formula $e\left(a\right)$
+\end_inset
+
+ is the productivity that varies with age 
+\begin_inset Formula $\left(a\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $f$
+\end_inset
+
+ is the up-front cost of entering the labor market.
+ This allows the agents to optimally decide to enter the market (extensive
+ margin) and also decide how many hours to work (intensive margin).
+ The micro elasticities only capture the intensive margin, and this mechanism
+ allows the two elasticities to be virtually unrelated.
+\end_layout
+
+\begin_layout Solution*
+The second approach, by Imai and Keane, argues that elasticities should
+ capture how labor supply varies with wage 
+\emph on
+and 
+\emph default
+human capital; the measured elasticities only capture how labor supply varies
+ with wage.
+ In their model, the wages are given by
+\begin_inset Formula 
+\[
+w_{t+1}=\left(1+\kappa\sum_{j=0}^{t-1}h_{t-j}\right)w_{1}
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+ represents the initial wage upon entering the market.
+ In this setup, a unit increase in 
+\begin_inset Formula $h_{t}$
+\end_inset
+
+ raises the wage by 
+\begin_inset Formula $\kappa w_{1}$
+\end_inset
+
+ in all future periods, so the return to an hour of work now consists of
+ the after-tax wage 
+\emph on
+plus
+\emph default
+ the expected present value of increased earnings in future periods.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+*Greenwood, Rogerson, and Wright (QR, 1993): Putting home economics into
+ macroeconomics
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Basic idea is that investment in standard RBC is too volatile while consumption
+ too smooth.
+ Introducing home production allows more substitution into and out of market
+ activity in response to shocks, so it helps relieve this puzzle.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Motivation
+\end_layout
+
+\begin_layout Standard
+The significance of home production in economic activity has long been reocgnize
+d, but its relevance for business cycle research has only been recently
+ investigated.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Research Question
+\end_layout
+
+\begin_layout Standard
+How does an RBC model with home production perform? Can it improve the fact
+ that investment in standard RBC is too volatile while consumption in standard
+ RBC is too smooth?
+\end_layout
+
+\begin_layout Paragraph
+Methodology
+\end_layout
+
+\begin_layout Standard
+Introduce home production function into the model and expand household choices
+ for allocating output.
+ Then calibrate the resulting model.
+ Finally, simulate the model to analyze its business cycle properties.
+\end_layout
+
+\begin_layout Paragraph
+Key Element
+\end_layout
+
+\begin_layout Standard
+The original household choice was allocating output between consumption
+ and investment; now they divide among consumption, investment in business
+ capital, and investment in household capital.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Main Results
+\end_layout
+
+\begin_layout Standard
+Incorporating home production outperforms standard RBC in matching (1) volatilit
+ies of makret output, consumption and investment relative to market output,
+ hours worked in the market relative to either market outpu or productivity
+ and (2) correlations between investment in household and business capital.
+ It still overstates the correlation between market hours & productivity
+ and home & market investment.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\emph on
+
+\begin_inset Newline newline
+\end_inset
+
+SAMPLE QUESTION:
+\end_layout
+
+\begin_layout Problem*
+In their paper 
+\begin_inset Quotes eld
+\end_inset
+
+Putting Home Economics into Macroeconomics
+\begin_inset Quotes erd
+\end_inset
+
+ (FRB-QR 1993), Greenwood, Rogerson, and Wright develop a model with home
+ production.
+ Briefly describe why they want to construct such a model and the key model
+ feature that accomplished the task.
+\end_layout
+
+\begin_deeper
+\begin_layout Solution*
+The primary motivation for their paper is that investment in standard RBC
+ model is too volatile while the consumption is too smooth.
+ Furthermore, the significance of home production in economic activities
+ has long been recognized, but its relevance for business cycle research
+ has only been recently investigated.
+\end_layout
+
+\begin_layout Solution*
+The authors introduce a home production function into the model and expand
+ the household choices for allocating output.
+ Specifically, the household now divides output between consumption, investment
+ in business capital, and investment in household capital.
+ Since home production allows more substitution into and out of market activity
+ in response to shocks, investment is less volatile to the standard RBC
+ model.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Subsection
+*Greenwood, Hercowitz, and Krusell (AER, 1997): Long-run implications of
+ investment-specific technical change
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+This shows how declining relative price of capital goods affects long-run
+ growth and short-run fluctuations.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Motivation
+\end_layout
+
+\begin_layout Standard
+Paper is motivated by two key observations that suggest that investment-specific
+ technological chance may be a factor in economic growth.
+\end_layout
+
+\begin_layout Enumerate
+Over the long-run, the relative price of equipment has declined remarkably
+ while the equipment-to-GNP ratio has risen.
+ 
+\end_layout
+
+\begin_layout Enumerate
+In the short-run, there is a negative correlation between the price for
+ equipment and equipment investment / GNP.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Research Question
+\end_layout
+
+\begin_layout Standard
+What is the quantitative role of investment-specific technological change
+ as an engine of growth?
+\end_layout
+
+\begin_layout Paragraph
+Methodology
+\end_layout
+
+\begin_layout Standard
+Add a vintage capital model to a standard neoclassical growth model and
+ matches the model to data.
+\end_layout
+
+\begin_layout Paragraph
+Key Element
+\end_layout
+
+\begin_layout Standard
+Amount of equipment that can be purchased for one unit of output 
+\begin_inset Formula $\left(q\right)$
+\end_inset
+
+ grows with the passage of time according to a Markov process.
+ The law of motion for structures:
+\begin_inset Formula 
+\[
+k_{s}'=\left(1-\delta_{s}\right)k_{s}+i_{s}
+\]
+
+\end_inset
+
+is thus different from the law of motion for equipment: 
+\begin_inset Formula 
+\[
+k_{e}'=(1-\delta_{e})k_{e}+i_{e}q
+\]
+
+\end_inset
+
+This implies that you have to investment in equipment to benefit from investment
+-specific technological change.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Main Results
+\end_layout
+
+\begin_layout Standard
+The balanced growth path shows that both the stock of equipment and new
+ equipment investment grow at a higher rate than output.
+ Furthermore, approximately 60% of post-war productivity growth can be attribute
+d to investment-specific technological change.
+ After accounting for this rapid improvement in production of capital goods,
+ the productivity slowdown since the 1970s looks even worse.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\emph on
+
+\begin_inset Newline newline
+\end_inset
+
+SAMPLE QUESTION:
+\end_layout
+
+\begin_layout Problem*
+In their paper 
+\begin_inset Quotes eld
+\end_inset
+
+Long-run implications of Investment-specific Technological Change
+\begin_inset Quotes erd
+\end_inset
+
+ (AER 1997), Greenwood, hercowitz, and Krusell modify a standard neoclassical
+ growth model to investigate the role of investment-specific technological
+ change.
+ Briefly describe why they think such change may be a driver of economic
+ growth and the key element in their model that accomplished the task.
+\end_layout
+
+\begin_deeper
+\begin_layout Solution*
+The paper is motivated by two key observations that suggest that investment-spec
+ific technological change may be a factor in economic growth.
+ First, the relative price of equipment has declined remarkably over the
+ long-run while the equipment-to-GNP ratio has risen.
+ Second, there is a negative correlation between the price for equipment
+ and equipment investment/GNP in the short-run.
+ 
+\end_layout
+
+\begin_layout Solution*
+The authors assume a Markov process for the amount of equipment that can
+ be purchased for one unit of output 
+\begin_inset Formula $\left(q\right)$
+\end_inset
+
+ that grows with the passage of time.
+ This creates a discrepancy in the law of motion for structures:
+\begin_inset Formula 
+\[
+k_{s}'=\left(1-\delta_{s}\right)k_{s}+i_{s}
+\]
+
+\end_inset
+
+and the law of motion for equipment:
+\begin_inset Formula 
+\[
+k_{e}'=\left(1-\delta_{e}\right)k_{e}+i_{e}q
+\]
+
+\end_inset
+
+which implies that you have to investment in equipment to benefit from the
+ investment-specific technological change.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Stochastic Dynamic Programming
+\end_layout
+
+\begin_layout Subsection
+**Long and Plosser (JPE, 1983): Real Business Cycles
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+People have recognized salient facts in output movement, and this model
+ essentially says that such co-movement can arise without stricter assumptions
+ about the shocks.
+ This is a 
+\begin_inset Quotes eld
+\end_inset
+
+multi-sector
+\begin_inset Quotes erd
+\end_inset
+
+ model.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Motivation
+\end_layout
+
+\begin_layout Standard
+Outputs in different sectors move together and there is significant deviations
+ from trend.
+\end_layout
+
+\begin_layout Paragraph
+Research Question
+\end_layout
+
+\begin_layout Standard
+Can we explain the above observations with a basic model?
+\end_layout
+
+\begin_layout Paragraph
+Methodology
+\end_layout
+
+\begin_layout Standard
+A basic RBC model with rational expectations, complete information, stable
+ preferences, no technological change, no longed-lived commodities, no frictions
+, no government, no money and no serial depend in shocks.
+\end_layout
+
+\begin_layout Paragraph
+Key Element
+\end_layout
+
+\begin_layout Standard
+Model transforms and amplifies i.i.d.
+ shocks (both time-series and cross-sectional) into output series that are
+ (1) persistent and (2) co-move.
+\end_layout
+
+\begin_layout Itemize
+Persistence: next-period production depends on amount produced today + the
+ shock next period, which is unobserved before making production decisions
+\end_layout
+
+\begin_layout Itemize
+Co-movement across commodities: multiple inputs are used to produce each
+ single output, and outputs from previous periods are used as inputs to
+ produce outputs next period.
+\end_layout
+
+\begin_layout Paragraph
+Main Results
+\end_layout
+
+\begin_layout Standard
+The model can explain persistence and co-movement in consumption plans character
+istic of typical business cycles.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\emph on
+
+\begin_inset Newline newline
+\end_inset
+
+SAMPLE QUESTION:
+\end_layout
+
+\begin_layout Problem*
+In their paper 
+\begin_inset Quotes eld
+\end_inset
+
+Real Business Cycles
+\begin_inset Quotes erd
+\end_inset
+
+ (JPE 1983), Long and Plosser build a basic RBC model with rational expectations
+, complete information, stable preferences and no serial dependence in shocks.
+ Briefly explain how the model transforms and amplifies these i.i.d.
+ shocks into output series that are (1) persistent and (2) co-move.
+\end_layout
+
+\begin_deeper
+\begin_layout Solution*
+The model successfully transforms and amplifies the i.i.d.
+ shocks into output series that are persistent and exhibit co-movement across
+ commodities.
+ Persistence comes from the fact that the next-period production depends
+ on the amount produced today and the shock next period, which is unobserved
+ before making production decisions.
+ The co-movement across commodities comes from the fact that multiple inputs
+ are used to produce each single output, and outputs from previous periods
+ are used as inputs to produce outputs next period.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+* Greenwood and Hercowitz (JPE, 1991): Allocation of Capital & Time over
+ the Business Cycle
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+This paper is one of the many early attempts to reconcile the joint movements
+ of expenditures, hours worked, and wages at business cycle frequencies
+ by appealing to models of non-market production.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Motivation
+\end_layout
+
+\begin_layout Standard
+Two facts: (1) stock of household capital (durables + residential) is greater
+ than the stock of business capital (non-residential), and (2) Investment
+ in household capital is highly procyclical, leading business investment.
+\end_layout
+
+\begin_layout Paragraph
+Research Question
+\end_layout
+
+\begin_layout Standard
+How is the allocation of capital between the business and household sectors
+ over the business cycle determined?
+\end_layout
+
+\begin_layout Paragraph
+Methodology
+\end_layout
+
+\begin_layout Standard
+A Beckerian model of household production that treats business and household
+ sectors (almost) symmetrically.
+ It's Beckerian in the sense that consumers value market goods and home
+ goods, not directly leisure (so time is split between market and home good).
+\end_layout
+
+\begin_layout Paragraph
+Key Element
+\end_layout
+
+\begin_layout Standard
+The only source of asymmetry between the two sectors is that capital can
+ be produced in the market sector only.
+\end_layout
+
+\begin_layout Paragraph
+Main Results
+\end_layout
+
+\begin_layout Standard
+The model can explain fact (1), but it cannot explain (2) even after increasing
+ complementarity or adding capital adjustment costs.
+ In general, any general equilibrium model with household durables would
+ go against (2) since:
+\end_layout
+
+\begin_layout Enumerate
+Positive technology shock increases optimal levels of B and HH capital.
+\end_layout
+
+\begin_layout Enumerate
+Since capital goods can only be produced in B, the consumption of market
+ goods must be sacrificed, and thus market goods become more scarce.
+ 
+\end_layout
+
+\begin_layout Enumerate
+This implies that it's more beneficial to invest in B (to relieve the excess
+ demand), which leads to negative co-movement in B and HH investment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "100col%"
+height "0.5pt"
+
+\end_inset
+
+
+\emph on
+
+\begin_inset Newline newline
+\end_inset
+
+SAMPLE QUESTION:
+\end_layout
+
+\begin_layout Problem*
+In their paper 
+\begin_inset Quotes eld
+\end_inset
+
+The Allocation of Capital and Time over the Business Cycle
+\begin_inset Quotes erd
+\end_inset
+
+ (JPE 1991), Greenwood and Hercowitz develop a model featuring household
+ sectors.
+ Explain the motivation behind the paper and the key element that delivers
+ the result.
+\end_layout
+
+\begin_deeper
+\begin_layout Solution*
+The paper seeks to develop a model that explains two stylized facts; (1)
+ stock of household capital is greater than the stock of business capital,
+ and (2) investment in household capital is highly procyclical, leading
+ business investment.
+ To do so, they develop a Beckerian model of household production that treats
+ business and household sectors almost symmetrically, where the only source
+ of asymmetry between the two sectros is that capital can be produced in
+ the market sector only.
+ The model succeeds in explaining fact (1), but it cannot explain (2) even
+ after adding increasing complementarity or adding capital adjustment costs.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Asset Pricing
+\end_layout
+
+\begin_layout Subsection
+**Lucas (ECTA, 1978): Asset Prices in an Exchange Economy
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+This paper is a theroetical examination of the stochastic behavior of equilibriu
+m asset prices in a simplified setting; one-good, pure exchange economy
+ with identical consumers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+*Mehra and Prescott (JME, 1985): The Equity Premium: A Puzzle
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+Starting from the empirical observations that (1) excess return on stock
+ is high and (2) risk-free rate is low, the authors find that the large
+ difference in yields cannot be accounted by models that abstract from frictions
+ in the economy.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Motivation
+\end_layout
+
+\begin_layout Standard
+Average real annual yield on S&P500 index is approximately 7%, and the average
+ yield on short-term debt – treasury bill – is less than 1%.
+ These imply that excess return on stock is 
+\emph on
+too
+\emph default
+ high and the risk-free rate is low.
+\end_layout
+
+\begin_layout Paragraph
+Research Question
+\end_layout
+
+\begin_layout Standard
+Can the large difference in yields be accounted for by models that abstract
+ from frictions in the economy?
+\end_layout
+
+\begin_layout Paragraph
+Methodology
+\end_layout
+
+\begin_layout Enumerate
+Quantitative theoretical exercise: variation of Lucas (1978) that rests
+ on three critical assumptions:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Identical preferences over future random consumption streams
+\end_layout
+
+\begin_layout Itemize
+People can trade stocks and bonds in a frictionless market
+\end_layout
+
+\begin_layout Itemize
+Existence of a 
+\begin_inset Quotes eld
+\end_inset
+
+representative agent
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Calibration of model to match moments of the data
+\end_layout
+
+\begin_layout Enumerate
+Compare implication of the model
+\end_layout
+
+\begin_layout Paragraph
+Key Element
+\end_layout
+
+\begin_layout Standard
+Intuition: It's important to note that the risk-free rate and the risk premium
+ are jointly determined in the economy.
+ They cannot be simultaneously rationalized in a perfect market:
+\end_layout
+
+\begin_layout Enumerate
+To explain the high risk premium observed in the market with this model,
+ we need abnormally high rates of risk aversion.
+\end_layout
+
+\begin_layout Enumerate
+If you have high rates of risk aversion, they desire smooth consumption
+ over time and therefore dislike growth.
+\end_layout
+
+\begin_layout Enumerate
+However, even though treausry bills offer only a low rate of return, individuals
+ defer consumption (=save) at a sufficiently fast rate to generate a significant
+ level consumption growth per year.
+\end_layout
+
+\begin_layout Paragraph
+Main Results
+\end_layout
+
+\begin_layout Standard
+It cannot match the data – requires impossible high risk aversion.
+ The 
+\emph on
+equity premium puzzle
+\emph default
+ is therefore that the covariances of the return with consumption only explains
+ the observed excess return if the agent is implausibly risk averse.
+\end_layout
+
+\begin_layout Subsection
+*Kocherlakota (JEL, 1996): The Equity Premium: It's Still A Puzzle
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+\begin_inset Box Shaded
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+The equity premium puzzle and the risk-free puzzle are driven by three key
+ assumptions.
+ The series of attempts to solve the puzzles fall under three categories:
+ (1) individual preferences, (2) complet markets, and (3) costless asset
+ trading.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Motivation
+\end_layout
+
+\begin_layout Standard
+TO-DO
+\end_layout
+
+\begin_layout Paragraph
+Research Question
+\end_layout
+
+\begin_layout Standard
+Have the equity premium puzzle and the risk-free rate puzzle been resolved?
+\end_layout
+
+\begin_layout Paragraph
+Methodology
+\end_layout
+
+\begin_layout Standard
+Survey 
+\end_layout
+
+\begin_layout Paragraph
+Key Element
+\end_layout
+
+\begin_layout Standard
+The risk-free rate puzzle can be resolved by breaking the link between individua
+l attitudes towards risk vs.
+ growth.
+ The equity premium puzzle, in the context of a representative model, cannot
+ avoid making the assumption of the agent being highly averse to consumption
+ risk.
+\end_layout
+
+\begin_layout Paragraph
+Main Results
+\end_layout
+
+\begin_layout Standard
+The low risk-free rate can be explained by alterations to any of the three
+ key assumptions above.
+ The equity risk premium puzzle, on the other hand, is only sufficiently
+ resolved by the incorporation of a sizable trading cost between the stock
+ and the bond markets.
+ 
+\end_layout
+
+\end_body
+\end_document
