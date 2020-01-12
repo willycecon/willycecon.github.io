@@ -32,20 +32,17 @@ Willy is also a self-proclaimed magician, photographer, boardgame-maker, and fun
 
 ## Photo Gallery
 
-<!-- <style> -->
-<!-- .w3-animate-fading{animation:fading 5s infinite}@keyframes fading{0%{opacity:0}35%{opacity:1}75%{opacity:1}100%{opacity:0}} -->
-<!-- </style> -->
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<div class="w3-content w3-section w3-display-container" style="max-width:700px">
+For more pictures of my work, head to my [flickr page](flickr.com/photos/6149pix)
+
+<style>
+.w3-animate-fading{animation:fading 5s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+</style>
+
+<div class="w3-content w3-section">
   <img class="mySlides w3-animate-fading" src="https://willythewoo.github.io/WillyTheWoo/images/celebrate.jpg">
-  <img class="mySlides w3-animate-fading" src="https://willythewoo.github.io/WillyTheWoo/images/grad.jpg">
-  <img class="mySlides w3-animate-fading" src="https://willythewoo.github.io/WillyTheWoo/images/nyc.jpg">
+  <img class="mySlides w3-animate-fading"  src="https://willythewoo.github.io/WillyTheWoo/images/nyc.jpg">
   <img class="mySlides w3-animate-fading" src="https://willythewoo.github.io/WillyTheWoo/images/mini.jpg">
   <img class="mySlides w3-animate-fading" src="https://willythewoo.github.io/WillyTheWoo/images/sleep.jpg">
-  <div class="w3-center w3-display-bottommiddle" style="width:100%">
-  <div class="w3-left w3-hover-text-red" onclick="plusDivs(-1)">&#10094;</div>
-  <div class="w3-right w3-hover-text-red" onclick="plusDivs(1)">&#10095;</div>
-  </div>
 </div>
 
 <script>
@@ -61,36 +58,12 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
   x[myIndex-1].style.display = "block";  
-  timeout=setTimeout(carousel, 4700);    
+  setTimeout(carousel, 4700);    
 }
 
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  clearTimeout(timeout);
-  timeout = setTimeout(carousel, 4700)
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
 </script>
 
-For more pictures of my work, head to my [flickr page](flickr.com/photos/6149pix)
+
 
 
 
