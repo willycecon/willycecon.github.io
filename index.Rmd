@@ -29,6 +29,8 @@ Willy is also a self-proclaimed magician, photographer, boardgame-maker, and fun
 
 [Tweets processing](https://willythewoo.github.io/WillyTheWoo/coding/twitter)
 
+[Battleship in R](https://willythewoo.github.io/WillyTheWoo/coding/Battleship)
+
 
 ## Photo Gallery
 
