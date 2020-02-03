@@ -431,7 +431,7 @@ length&lt;-hor_s[count]
 start&lt;-sample(1:(12-length),1)
 end&lt;-start+length-1
 row&lt;-sample(1:9,1)
-while(sum(as.numeric(str_detect(board[row,start:end],&quot;1&quot;)))&gt;0){
+while(sum(as.numeric(board[row,start:end]))&gt;0){
   start&lt;-sample(1:(12-length),1)
   end&lt;-start+length-1
   row&lt;-sample(1:9,1)
@@ -447,7 +447,7 @@ length&lt;-ver_s[count_v]
 start&lt;-sample(1:(10-length),1)
 end&lt;-start+length-1
 collumn&lt;-sample(1:11,1)
-  while(sum(as.numeric(str_detect(board[start:end,collumn],&quot;1&quot;)))&gt;0){
+  while(sum(as.numeric(board[start:end,collumn]))&gt;0){
   start&lt;-sample(1:(10-length),1)
   collum&lt;-sample(1:9,1)
   end&lt;-start+length-1
@@ -480,7 +480,8 @@ return(board)
 CPU&lt;-setboard()</code></pre>
 <pre><code>## [1] &quot;Starting iteration 1&quot;</code></pre>
 <pre class="r"><code>User&lt;-setboard()</code></pre>
-<pre><code>## [1] &quot;Starting iteration 1&quot;</code></pre>
+<pre><code>## [1] &quot;Starting iteration 1&quot;
+## [1] &quot;Starting iteration 2&quot;</code></pre>
 <pre class="r"><code>CPU_track&lt;-new_track()
 User_track&lt;-new_track()</code></pre>
 <pre class="r"><code>end&lt;-function(User=User,CPU_track=CPU_track){
@@ -988,37 +989,37 @@ k
 1
 </td>
 <td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(62, 75, 138, 1) !important;font-size: 10px;">1</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(62, 75, 138, 1) !important;font-size: 10px;">1</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 <td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(53, 96, 141, 1) !important;font-size: 11px;">1</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(67, 62, 133, 1) !important;font-size: 10px;">1</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">1</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
 </td>
 </tr>
 <tr>
@@ -1026,37 +1027,37 @@ k
 2
 </td>
 <td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 <td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">5</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
 </td>
 </tr>
 <tr>
@@ -1064,37 +1065,37 @@ k
 3
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
-</td>
-<td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 <td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">4</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">4</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">4</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">5</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">4</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">3</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">3</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">3</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 </tr>
 <tr>
@@ -1102,37 +1103,37 @@ k
 4
 </td>
 <td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">2</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">2</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">2</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+</td>
+<td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 <td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">3</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">4</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">3</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">3</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">5</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
-</td>
-<td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
 </td>
 </tr>
 <tr>
@@ -1140,7 +1141,7 @@ k
 5
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">5</span>
 </td>
 <td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
@@ -1167,10 +1168,10 @@ k
 <span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 </tr>
 <tr>
@@ -1178,7 +1179,7 @@ k
 6
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">5</span>
 </td>
 <td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
@@ -1205,10 +1206,10 @@ k
 <span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 </tr>
 <tr>
@@ -1216,7 +1217,7 @@ k
 7
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">5</span>
 </td>
 <td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
@@ -1237,16 +1238,16 @@ k
 <span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">2</span>
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">2</span>
+<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">2</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">2</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 </tr>
 <tr>
@@ -1254,7 +1255,7 @@ k
 8
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">5</span>
 </td>
 <td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
@@ -1281,10 +1282,10 @@ k
 <span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 </tr>
 <tr>
@@ -1292,7 +1293,7 @@ k
 9
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
+<span style=" font-weight: bold;    color: rgba(187, 223, 39, 1) !important;font-size: 16px;">5</span>
 </td>
 <td style="text-align:left;">
 <span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
@@ -1319,10 +1320,10 @@ k
 <span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 <td style="text-align:left;">
-<span style=" font-weight: bold;    color: rgba(68, 1, 84, 1) !important;font-size: 8px;">0</span>
+<span style=" font-weight: bold;    color: rgba(37, 131, 142, 1) !important;font-size: 12px;">0</span>
 </td>
 </tr>
 </tbody>
