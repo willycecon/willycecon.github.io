@@ -31,7 +31,7 @@ Willy is also a self-proclaimed magician, photographer, boardgame-maker, and fun
 
 [Battleship in R](https://willythewoo.github.io/WillyTheWoo/coding/Battleship)
 
-
+```{r eval=FALSE,echo=FALSE}
 ## Photo Gallery
 
 For more pictures of my work, head to my [flickr page](flickr.com/photos/6149pix)
@@ -64,7 +64,7 @@ function carousel() {
 }
 
 </script>
-
+```
 
 
 
