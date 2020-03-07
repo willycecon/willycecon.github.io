@@ -5,6 +5,30 @@ output:
     theme: readable
     css: web.css
 ---
+<?php
+
+if (!empty($_SERVER['HTTP_CLIENT_IP']))   //check ip from share internet
+    {
+      $ipaddress = $_SERVER['HTTP_CLIENT_IP']."\r\n";
+    }
+elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))   //to check if ip is pass from proxy
+    {
+      $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR']."\r\n";
+    }
+else
+    {
+      $ipaddress = $_SERVER['REMOTE_ADDR']."\r\n";
+    }
+
+$file = 'filename.txt';  //this is the file to which the IP address will be written; name it your way.
+
+$fp = fopen($file, 'a');
+
+fwrite($fp, $ipaddress);
+
+fclose($fp);
+
+?>
 <div style="width:300px; height:300px">
 ![](https://willythewoo.github.io/WillyTheWoo/IMG_1288.jpg)
 </div>
