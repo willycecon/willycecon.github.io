@@ -1,0 +1,62 @@
+---
+title: "COVI-19 Resource Lookup"
+author: "Resources gathered by volunteers"
+date: Updated `r Sys.Date()`
+output: html_document
+runtime: shiny
+---
+```{r echo=FALSE,message=FALSE,warning=FALSE,results="hide"}
+knitr::opts_chunk$set(echo=FALSE,message=FALSE,warning=FALSE)
+library(tidyverse)
+library(shiny)
+library(shinythemes)
+COVID_19_Resource<- read.csv("~/Documents/OneDrive - The Ohio State University/R/COVID/COVID-19-Resource.csv")%>%
+  separate(State,sep="-",c("State","City"))%>%
+  mutate(City=ifelse(is.na(City),"Statewide",City))
+
+COVID_19_Resource<-COVID_19_Resource[,!str_detect(variable.names(COVID_19_Resource),regex("X"))]%>%
+  arrange(State,City)
+
+names(COVID_19_Resource)<-str_replace_all(variable.names(COVID_19_Resource),pattern="\\.",rep=" ")
+
+rsconnect::setAccountInfo(name='willychen',
++ 			  token='5B5DCAFF63B32C4F04F0320A52198C34',
++ 			  secret='4lfxUC1RDYnrXfydtnQjLfP4AxKGe5EJMW40EIIP')
+```
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+u<-fluidPage(
+  mainPanel(
+    tabsetPanel(
+        tabPanel("Tab 1"),
+        tabPanel("Tab 2")
+      ),
+    fluidRow(
+    column(5,selectInput("state","Select a state",c("Federal",unique(COVID_19_Resource$State)[!str_detect(unique(COVID_19_Resource$State),"FEDERAL")]))),
+    column(5,(selectInput("city","Select a city",unique(COVID_19_Resource$City)))
+           )
+    ),
+    br(),
+"Resources in your selected area",
+            tableOutput("resource")
+            ),
+  theme = shinytheme("united")
+)
+
+s<-function(input, output){
+  table <- reactive({
+    if(input$state=="Federal"){
+    COVID_19_Resource
+    }else if(input$city=="Statewide"){
+    COVID_19_Resource%>%filter(State==input$state)
+    }else{
+    COVID_19_Resource%>%filter(State==input$state, City==input$city)
+    }
+    })
+  output$resource<-renderTable(table(),hover=TRUE)
+}
+
+  
+shinyApp(ui = u, server = s)
+
+```
