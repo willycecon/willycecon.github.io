@@ -4,7 +4,7 @@ username:
 account: willychen
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 1998129
-bundleId: 2926041
+appId: 1998276
+bundleId: 2926082
 url: https://willychen.shinyapps.io/covid/
-when: 1585198342.25246
+when: 1585199308.28031

@@ -10,8 +10,6 @@ knitr::opts_chunk$set(echo=FALSE,message=FALSE,warning=FALSE)
 library(tidyverse)
 library(shiny)
 library(shinythemes)
-setwd("~/Documents/GitHub/WillyTheWoo/COVID")
-
 
 COVID_19_Resource<-read.csv("https://willythewoo.github.io/WillyTheWoo/COVID/COVID-19-Resource.csv")%>%
   separate(State,sep="-",c("State","City"))%>%
@@ -35,11 +33,12 @@ Eviction<-read_csv("https://willythewoo.github.io/WillyTheWoo/COVID/eviction_res
          )%>%
   select(-gov)%>%
   select(State,everything())%>%
-  rename("Date of update"=Date.Updated)
+  rename("Date of update"=Date.Updated,
+         "Dates in Effect"="Dates in eEfect")
 
 states<-c("All states","Federal",sort(unique(c(unique(COVID_19_Resource$State),unique(Eviction$State)))))
 
-cities<-c("Statewide",sort(unique(c(unique(COVID_19_Resource$City),unique(Eviction$City)))))
+cities<-c("All","Statewide",sort(unique(c(unique(COVID_19_Resource$City),unique(Eviction$City)))))
 ```
 
 ```{r echo=FALSE,message=FALSE,warning=FALSE}
@@ -83,7 +82,7 @@ s<-function(input, output){
     # }
     if(input$state=="All states"){
     COVID_19_Resource
-    }else if(input$city=="Statewide"){
+    }else if(input$city=="All"){
     COVID_19_Resource%>%filter(State==input$state)
     }else{
     COVID_19_Resource%>%filter(State==input$state,City==input$city)
@@ -98,7 +97,7 @@ s<-function(input, output){
     # }
     if(input$state=="All states"){
     Eviction
-    }else if(input$city=="Statewide"){
+    }else if(input$city=="All"){
     Eviction%>%filter(State==input$state)
     }else{
     Eviction%>%filter(State==input$state,City==input$city)
@@ -117,11 +116,4 @@ shinyApp(ui = u, server = s, options = list(height = 900, width = 1100))
 ```
 
 
-```{r eval=FALSE}
-rsconnect::setAccountInfo(name='willychen',
-			  token='5B5DCAFF63B32C4F04F0320A52198C34',
-			  secret='4lfxUC1RDYnrXfydtnQjLfP4AxKGe5EJMW40EIIP')
-
-rsconnect::deployApp("~/Documents/GitHub/WillyTheWoo/COVID/COVID.Rmd")
-```
 
