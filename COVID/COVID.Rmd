@@ -11,19 +11,26 @@ library(tidyverse)
 library(shiny)
 library(shinythemes)
 setwd("~/Documents/GitHub/WillyTheWoo/COVID")
+
+
 COVID_19_Resource<-read.csv("https://willythewoo.github.io/WillyTheWoo/COVID/COVID-19-Resource.csv")%>%
   separate(State,sep="-",c("State","City"))%>%
   mutate(City=ifelse(is.na(City),"Statewide",City),
          State=str_remove(State," "),
          City=str_remove(City," "))
 
-COVID_19_Resource<-COVID_19_Resource[,!str_detect(variable.names(COVID_19_Resource),regex("X"))]%>%
+        COVID_19_Resource<-COVID_19_Resource[,!str_detect(variable.names(COVID_19_Resource),regex("X"))]%>%
   arrange(State,City)%>%
   filter(!Date.of.update=="")
 
-names(COVID_19_Resource)<-str_replace_all(variable.names(COVID_19_Resource),pattern="\\.",rep=" ")%>%
+        names(COVID_19_Resource)<-str_replace_all(variable.names(COVID_19_Resource),pattern="\\.",rep=" ")%>%
   str_replace_all(patter="UI DI",rep="UI/DI")
 
+              
+#Eviction<-read.csv("https://willythewoo.github.io/WillyTheWoo/COVID/eviction_resources.csv")
+        
+Eviction<-read_csv("eviction_resources.csv")
+          
 ```
 
 ```{r echo=FALSE,message=FALSE,warning=FALSE}
@@ -32,7 +39,7 @@ u<-fluidPage(
   #            margin-left:-200px}"),
   mainPanel(
     fluidRow(
-    column(5,selectInput("state","Select a state",c("All states",unique(str_remove(COVID_19_Resource$State," "))))),
+    column(5,selectInput("state","Select a state",c("All states",unique(c(str_remove(COVID_19_Resource$State," "),Eviction$State))))),
     column(5,(selectInput("city","Select a city",c("Statewide",unique(arrange(COVID_19_Resource,City)$City))))
     #        ),
     # column(5,(selectInput("res","Select a resource",c('All',variable.names(COVID_19_Resource)[!str_detect(variable.names(COVID_19_Resource),regex("Date|Link|notes"))][-c(1,2)])))
@@ -42,12 +49,11 @@ u<-fluidPage(
 h2("Resources in your selected area"),
 h4("Note: UI = Unemployment Insurance, DI = Disability Insurance"),
 tabsetPanel(
-        tabPanel("Labor",tableOutput("resource")),
+        tabPanel("Labor",tableOutput("labor")),
         tabPanel("Medical", h2("Coming Soon")),
         tabPanel("Closure & S.I.P.", h2("Coming Soon")),
         tabPanel("Disability & High Risk", h2("Coming Soon")),
-        tabPanel("Food", h2("Coming Soon")),
-        tabPanel("Rent & Bill Freeze", h2("Coming Soon"))
+        tabPanel("Food, Rent & Bill", tableOutput("rent"))
       )
             ),
   theme = shinytheme("united")
@@ -61,7 +67,7 @@ s<-function(input, output){
     #                        selected =filter(COVID_19_Resource,State==input$State)$City[1])
     # })
   
-  table <- reactive({
+  labor <- reactive({
     # if(input$res!="All"){
     #   COVID_19_Resource<-COVID_19_Resource%>%
     #     filter(!is.na(input$res))
@@ -76,8 +82,24 @@ s<-function(input, output){
     })
   
   
+    rent <- reactive({
+    # if(input$res!="All"){
+    #   COVID_19_Resource<-COVID_19_Resource%>%
+    #     filter(!is.na(input$res))
+    # }
+    if(input$state=="All states"){
+    Eviction
+    }else if(input$city=="Statewide"){
+    Eviction%>%filter(State==input$state)
+    }else{
+    Eviction%>%filter(State==input$state,City==input$city)
+    }
+    })
   
-  output$resource<-renderTable(table(),hover=TRUE,width="auto")
+  
+  
+  output$labor<-renderTable(labor(),hover=TRUE,width="auto")
+  output$rent<-renderTable(rent(),hover=TRUE,width="auto")
 }
 
   
@@ -91,6 +113,6 @@ rsconnect::setAccountInfo(name='willychen',
 			  token='5B5DCAFF63B32C4F04F0320A52198C34',
 			  secret='4lfxUC1RDYnrXfydtnQjLfP4AxKGe5EJMW40EIIP')
 
-deployApp(appName="COVID.Rmd", account="willychen")
+rsconnect::deployApp()
 ```
 
