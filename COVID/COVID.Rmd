@@ -29,14 +29,13 @@ COVID_19_Resource<-read.csv("https://willythewoo.github.io/WillyTheWoo/COVID/COV
   str_replace_all(patter="UI DI",rep="UI/DI")
 
               
-#Eviction<-read.csv("https://willythewoo.github.io/WillyTheWoo/COVID/eviction_resources.csv")
-        
-Eviction<-read_csv("eviction_resources.csv")%>%
+Eviction<-read_csv("https://willythewoo.github.io/WillyTheWoo/COVID/eviction_resources.csv")%>%
   mutate(City=ifelse(gov=="Local",City,"Statewide"),
          Date.Updated=str_remove(Date.Updated,regex(" .+"))
          )%>%
   select(-gov)%>%
-  select(State,everything())
+  select(State,everything())%>%
+  rename("Date of update"=Date.Updated)
 
 states<-c("All states","Federal",sort(unique(c(unique(COVID_19_Resource$State),unique(Eviction$State)))))
 
