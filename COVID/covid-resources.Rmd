@@ -122,6 +122,6 @@ rsconnect::setAccountInfo(name='willychen',
 			  token='5B5DCAFF63B32C4F04F0320A52198C34',
 			  secret='4lfxUC1RDYnrXfydtnQjLfP4AxKGe5EJMW40EIIP')
 
-rsconnect::deployApp()
+rsconnect::deployApp("~/Documents/GitHub/WillyTheWoo/COVID/COVID.Rmd")
 ```
 
