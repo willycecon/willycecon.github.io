@@ -1,12 +1,15 @@
 ---
 title: "COVID-19 Resource Lookup"
-author: "Resources gathered by volunteers"
-date: Updated `r Sys.Date()`
+date: Updated on `r Sys.Date()`
+author: Information gathered by volunteers
 output: html_document
 theme: readable
 css: web.css
+font-size: 16pt
 runtime: shiny
 ---
+
+
 
 ```{r echo=FALSE,message=FALSE,warning=FALSE,results="hide"}
 knitr::opts_chunk$set(echo=FALSE,message=FALSE,warning=FALSE)
