@@ -53,9 +53,10 @@ geo<-bind_rows(COVID_19_Resource[,1:2],Eviction[,1:2])%>%
 ```
 
 ```{r echo=FALSE,message=FALSE,warning=FALSE}
+#"https://willythewoo.github.io/WillyTheWoo/COVID/shiny.css"
 u<-fluidPage(
   tags$head(
-  tags$link(rel = "stylesheet", type = "text/css", href = "https://willythewoo.github.io/WillyTheWoo/COVID/shiny.css")),
+  tags$link(rel = "stylesheet", type = "text/css", href = "https://drive.google.com/file/d/1UFyngXSHXemDl4_zsWg2BL_KmwPKvtfx/view?usp=sharing")),
   # tags$style(".content {background-color: black;
   #            margin-left:-200px}"),
   mainPanel(

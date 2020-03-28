@@ -1,3 +1,7 @@
 body {
-  background-color: rgba(255, 249, 229, 0.75);
+  background-color: rgb(255, 249, 229);
+}
+
+th {
+  height: 10px;
 }
