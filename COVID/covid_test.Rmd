@@ -1,0 +1,134 @@
+---
+title: "Untitled"
+author: "Willy Chen"
+date: "3/28/2020"
+output: html_document
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE,message=FALSE,warning=FALSE)
+library(tidyverse)
+library(shiny)
+library(shinythemes)
+
+```
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+states<-NULL
+cities<-NULL
+
+u<-fluidPage(
+  # tags$style(".content {background-color: black;
+  #            margin-left:-200px}"),
+  mainPanel(
+    fluidRow(
+    column(5,selectInput("state","Select a state",c("All states",states))),
+    column(5,(selectInput("city","Select a city",cities))
+    #        ),
+    # column(5,(selectInput("res","Select a resource",c('All',variable.names(COVID_19_Resource)[!str_detect(variable.names(COVID_19_Resource),regex("Date|Link|notes"))][-c(1,2)])))
+           )
+    ),
+
+h2("Resources in your selected area"),
+h4("Note: UI = Unemployment Insurance, DI = Disability Insurance"),
+tabsetPanel(
+        tabPanel("Labor",tableOutput("labor")),
+        tabPanel("Food, Rent & Bill", tableOutput("rent")),
+        tabPanel("Medical", h2("Coming Soon")),
+        tabPanel("Closure & S.I.P.", h2("Coming Soon")),
+        tabPanel("Disability & High Risk", h2("Coming Soon"))
+      )
+            ),
+  theme = shinytheme("united")
+)
+
+s<-function(input, output){
+  COVID_19_Resource<-read.csv("https://willythewoo.github.io/WillyTheWoo/COVID/COVID-19-Resource.csv")%>%
+  separate(State,sep="-",c("State","City"))%>%
+  mutate(City=ifelse(is.na(City),"Statewide",City),
+         State=str_remove(State," "),
+         City=str_remove(City," "))
+
+        COVID_19_Resource<-COVID_19_Resource[,!str_detect(variable.names(COVID_19_Resource),regex("X"))]%>%
+  arrange(State,City)%>%
+  filter(!Date.of.update=="")%>%
+          mutate(Date.of.update=paste('2020/',as.character(Date.of.update),sep=""),
+                 Date.of.update=str_replace_all(Date.of.update,"/","-"))
+
+        names(COVID_19_Resource)<-str_replace_all(variable.names(COVID_19_Resource),pattern="\\.",rep=" ")%>%
+  str_replace_all(patter="UI DI",rep="UI/DI")
+
+              
+Eviction<-read_csv("https://willythewoo.github.io/WillyTheWoo/COVID/eviction_resources.csv")%>%
+  mutate(City=ifelse(gov=="Local",City,"Statewide"),
+         Date.Updated=str_remove(Date.Updated,regex(" .+"))
+         )%>%
+  select(-gov)%>%
+  select(State,everything())%>%
+  rename("Date of update"=Date.Updated,
+         "Dates in Effect"="Dates in eEfect")
+
+states<-c("All states","Federal",sort(unique(c(unique(COVID_19_Resource$State),unique(Eviction$State)))))
+
+cities<-c("All","Statewide",sort(unique(c(unique(COVID_19_Resource$City),unique(Eviction$City)))))
+  
+  
+  
+  
+    reactive({
+       updateSelectInput(session, "state",
+                           label = "state",
+                           choices = states,
+                           selected = "All states")
+      }) 
+    
+    eventReactive(input$state,
+       updateSelectInput(session, "city",
+                           label = "city",
+                           choices = filter(COVID_19_Resource,State==input$State)$City,
+                           selected = "Statewide")
+    )
+  
+  labor <- reactive({
+    # if(input$res!="All"){
+    #   COVID_19_Resource<-COVID_19_Resource%>%
+    #     filter(!is.na(input$res))
+    # }
+    if(input$state=="All states"){
+    COVID_19_Resource
+    }else if(input$city=="All"){
+    COVID_19_Resource%>%filter(State==input$state)
+    }else{
+    COVID_19_Resource%>%filter(State==input$state,City==input$city)
+    }
+    })
+  
+  
+    rent <- reactive({
+    # if(input$res!="All"){
+    #   COVID_19_Resource<-COVID_19_Resource%>%
+    #     filter(!is.na(input$res))
+    # }
+    if(input$state=="All states"){
+    Eviction
+    }else if(input$city=="All"){
+    Eviction%>%filter(State==input$state)
+    }else{
+    Eviction%>%filter(State==input$state,City==input$city)
+    }
+    })
+  
+  
+  
+  output$labor<-renderTable(labor(),hover=TRUE,width="auto")
+  output$rent<-renderTable(rent(),hover=TRUE,width="auto")
+}
+
+  
+shinyApp(ui = u, server = s, options = list(height = 900, width = 1100))
+
+```
+
+
+
