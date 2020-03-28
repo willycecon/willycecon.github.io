@@ -4,7 +4,7 @@ author: "Resources gathered by volunteers"
 date: Updated `r Sys.Date()`
 output: html_document
 theme: readable
-css: web.css
+css: shiny.css
 runtime: shiny
 ---
 
@@ -51,6 +51,7 @@ geo<-bind_rows(COVID_19_Resource[,1:2],Eviction[,1:2])%>%
 
 ```{r echo=FALSE,message=FALSE,warning=FALSE}
 u<-fluidPage(
+  tags$link(rel = "stylesheet", type = "text/css", href = "web.css"),
   # tags$style(".content {background-color: black;
   #            margin-left:-200px}"),
   mainPanel(
