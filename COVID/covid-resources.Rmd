@@ -5,7 +5,7 @@ author: Information gathered by volunteers
 output: html_document
 theme: readable
 css: web.css
-font-size: 16pt
+font-size: 9pt
 runtime: shiny
 ---
 
@@ -157,6 +157,7 @@ shinyApp(ui = u, server = s, options = list(height = 900, width = 1100))
 
 ```
 
+Food, Rent, & Bill information acquired from [Eviction Lab](https://evictionlab.org/covid-eviction-policies/?fbclid=IwAR1k7R9pixJuUMAH267esXb-6eWXBtgjbszETow1ZsRbQ2t5u9CANXtb4e4)
 
 
 ```{r eval=FALSE, echo=FALSE}
