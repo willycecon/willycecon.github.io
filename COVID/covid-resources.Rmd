@@ -9,7 +9,7 @@ font-size: 9pt
 runtime: shiny
 ---
 
-
+<a href="https://forms.gle/Mai38UY6GsQePxh57"> Submit feedback or corrections here </a>
 
 ```{r echo=FALSE,message=FALSE,warning=FALSE,results="hide"}
 knitr::opts_chunk$set(echo=FALSE,message=FALSE,warning=FALSE)
@@ -29,7 +29,9 @@ COVID_19_Resource<-read.csv("https://willythewoo.github.io/WillyTheWoo/COVID/COV
           mutate(Date.of.update=paste('2020/',as.character(Date.of.update),sep=""),
                  Date.of.update=str_replace_all(Date.of.update,"/","-"),
                  city=City,
-                 state=State)
+                 state=State,
+                 Link=paste('<a href="',Link,'">',str_remove_all(str_remove_all(Link,regex("ht.+//")),regex("/.+")),"</a>",sep="")
+                 )
 
         names(COVID_19_Resource)<-str_replace_all(variable.names(COVID_19_Resource),pattern="\\.",rep=" ")%>%
   str_replace_all(patter="UI DI",rep="UI/DI")
@@ -42,7 +44,8 @@ Eviction<-read_csv("https://willythewoo.github.io/WillyTheWoo/COVID/eviction_res
   select(-gov)%>%
   select(State,everything())%>%
   rename("Date of update"=Date.Updated,
-         "Dates in Effect"="Dates in eEfect")
+         "Dates in Effect"="Dates in eEfect")%>%
+  mutate( Link=paste('<a href="',Link,'">',str_remove_all(str_remove_all(Link,regex("ht.+//")),regex("/.+")),"</a>",sep=""))
 
 states<-c("All states","Federal",sort(unique(c(unique(COVID_19_Resource$State),unique(Eviction$State)))))
 
@@ -148,8 +151,8 @@ s<-function(session, input, output){
   
   
   
-  output$labor<-renderTable(labor(),hover=TRUE,width="auto")
-  output$rent<-renderTable(rent(),hover=TRUE,width="auto")
+  output$labor<-renderTable(labor(),hover=TRUE,width="auto", sanitize.text.function = function(x) x)
+  output$rent<-renderTable(rent(),hover=TRUE,width="auto",sanitize.text.function = function(x) x)
 }
 
   
@@ -167,4 +170,3 @@ rsconnect::setAccountInfo(name='willychen',
 setwd("~/Documents/GitHub/WillyTheWoo/COVID")
 rsconnect::deployApp("~/Documents/GitHub/WillyTheWoo/COVID/covid-resources.Rmd")
 ```
-

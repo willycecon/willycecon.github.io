@@ -5,6 +5,6 @@ account: willychen
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2013589
-bundleId: 2937727
+bundleId: 2938208
 url: https://willychen.shinyapps.io/covid-resources/
-when: 1585440360.83147
+when: 1585452283.22911
