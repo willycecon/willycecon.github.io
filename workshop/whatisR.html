@@ -1559,7 +1559,7 @@ div.tocify {
 </div>
 <div id="booleanlogical" class="section level2">
 <h2>Boolean/Logical</h2>
-<p>A boolean [Boo-Lee-en] or logical value takes on either <code>TRUE</code> or <code>FALSE</code>. If you make a logical value numeric or integer, you will get 1 for a true value and a 0 for a false value. You can also as make 0 into <code>FALSE</code> and any non-zero value into `TRUE. For example,</p>
+<p>A Boolean [Boo-Lee-en] or logical value takes on either <code>TRUE</code> or <code>FALSE</code>. If you make a logical value numeric or integer, you will get 1 for a true value and a 0 for a false value. You can also as make 0 into <code>FALSE</code> and any non-zero value into `TRUE. For example,</p>
 <pre class="r"><code>as.logical(0)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
 <pre class="r"><code>as.logical(5)</code></pre>
@@ -1605,7 +1605,7 @@ div.tocify {
 </div>
 <div id="object-type" class="section level1">
 <h1>Object type</h1>
-<p>R, like I said, is an object-oriented language. This means it is crucial we understand what <em>objects</em> are. Obejcts are things that we store values in, they are literal objects that we use to tell the computer <em>what</em> we are trying to do and <em>what</em> we are doing this to. From the basics of the basics, we have the following objects. Before you continue, copy,paste, and run the following chunk of code in your RStudio console.</p>
+<p>R, like I said, is an object-oriented language. This means it is crucial we understand what <em>objects</em> are. Objects are things that we store values in, they are literal objects that we use to tell the computer <em>what</em> we are trying to do and <em>what</em> we are doing this to. From the basics of the basics, we have the following objects. Before you continue, copy,paste, and run the following chunk of code in your RStudio console.</p>
 <pre class="r"><code>vector1&lt;-1
 vector2&lt;-2
 vector3&lt;-c(1,2,4)
@@ -1615,15 +1615,15 @@ dataframe1&lt;-data.frame(matrix1)</code></pre>
 <h2>[Atomic] Vectors</h2>
 <p>Vectors are the basic things we store our values in. A vector is a set of values that you set an order to. To create a vector, you write the name of the vector you want to create, put an assignment operator “&lt;-” next to it, and then start you vector with a “c” followed by a pair of parentheses with the values in the vector separated by commas. For example <code>myvector &lt;- c(1,2,3)</code> will give you</p>
 <pre><code>## [1] 1 2 3</code></pre>
-<p>As you can see from the code chunk I asked you to run, there is a vector called <code>vector1</code> and a vector called <code>vector2</code>. Both of these vectors are displayed as a valueo in RStudio, showing you that if you don’t create a vector for a single value, R will just take it as a vector with one element. <code>vector3</code> shows you what a vector with multiple value looks like.</p>
-<p>If you were versed at linear algebra or matrix algebra at somepoint in your life, you’re probably thinking, are the vectors vertical or horizontal?</p>
-<p>And the answer is: Neither! The only time the direction your vector would matter is if you are mergiing it with a data set. In that case, you will use specific functions to merge them and the direction of the vector is specified in the function you use.</p>
+<p>As you can see from the code chunk I asked you to run, there is a vector called <code>vector1</code> and a vector called <code>vector2</code>. Both of these vectors are displayed as a value in RStudio, showing you that if you don’t create a vector for a single value, R will just take it as a vector with one element. <code>vector3</code> shows you what a vector with multiple value looks like.</p>
+<p>If you were versed at linear algebra or matrix algebra at some point in your life, you’re probably thinking, are the vectors vertical or horizontal?</p>
+<p>And the answer is: Neither! The only time the direction your vector would matter is if you are merging it with a data set. In that case, you will use specific functions to merge them and the direction of the vector is specified in the function you use.</p>
 <p>To create a sequential vector you can use <code>:</code> to create a vector of a sequence added by 1. If you want different gaps, you can use <code>seq()</code>. For example,</p>
 <pre class="r"><code>1:10</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <pre class="r"><code>seq(1,10,2)</code></pre>
 <pre><code>## [1] 1 3 5 7 9</code></pre>
-<p><strong>Important note</strong>: A vector can only contain one value type. You will get an error if you make a vector of numerics and logicals. <code>NA</code>’s are not subject to this rule becasue <code>NA</code> is not a value, it is the absence of a value.</p>
+<p><strong>Important note</strong>: A vector can only contain one value type. You will get an error if you make a vector of numeric and logical. <code>NA</code>’s are not subject to this rule because <code>NA</code> is not a value, it is the absence of a value.</p>
 </div>
 <div id="data-frames" class="section level2">
 <h2>Data Frames</h2>
@@ -1644,7 +1644,7 @@ str(df)</code></pre>
 </div>
 <div id="syntax-and-semantics" class="section level1">
 <h1>Syntax and Semantics</h1>
-<p>Semantics is how you communicate with your computer in the language you have chosen. Every language (even the real languages like English) have a set of rules that tell you how words are arranged [syntax] and whay they mean [semantics]. In R, there are only a couple you need to remember:</p>
+<p>Semantics is how you communicate with your computer in the language you have chosen. Every language (even the real languages like English) have a set of rules that tell you how words are arranged [syntax] and what they mean [semantics]. In R, there are only a couple you need to remember:</p>
 <div id="assignment-operator" class="section level2">
 <h2>Assignment operator</h2>
 <p><code>&lt;-</code> is your assignment operator. You use this to assign values to objects. You can also use <code>=</code> as assignments like python but why would you?</p>
@@ -1652,7 +1652,7 @@ str(df)</code></pre>
 <div id="selection-operator" class="section level2">
 <h2>Selection operator</h2>
 <p><code>[]</code> is your selection operator for data objects [vectors, matrices, data frames]. As you might have realized, comma gives you the sense of ordering within data objects, however, in selection operator, comma is used for direction. To select an element of a vector, you would put the selection operator next to your vector. For example, <code>myvector[2]</code> will give me the second element of the vector <code>myvector</code>. To select something out of a 2D data object (matrices, data frames), simply use the syntax <code>2Dobject[row,column]</code>. The first index represents the row you want, and the second index represents the column you want.</p>
-<p>Now you migh be thinking, “What is I want multiple columns of one row?” This is where vector comes in. Recall that comma in vectors represents ordering, so say you want the second and forth column for the 5th row from <code>2Dobject</code> you would write <code>2Dobject[5,c(2,4)]</code>. Remember, you can also use <code>:</code> or <code>seq</code> or a combination of all these things as indices in your selection operator.</p>
+<p>Now you might be thinking, “What is I want multiple columns of one row?” This is where vector comes in. Recall that comma in vectors represents ordering, so say you want the second and forth column for the 5th row from <code>2Dobject</code> you would write <code>2Dobject[5,c(2,4)]</code>. Remember, you can also use <code>:</code> or <code>seq</code> or a combination of all these things as indices in your selection operator.</p>
 </div>
 </div>
 <div id="try-it-yourself" class="section level1">

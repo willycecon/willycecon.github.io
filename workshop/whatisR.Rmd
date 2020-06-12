@@ -31,7 +31,7 @@ as.numeric(2)
 ```
 
 ## Boolean/Logical
-A boolean [Boo-Lee-en] or logical value takes on either `TRUE` or `FALSE`. If you make a logical value numeric or integer, you will get 1 for a true value and a 0 for a false value. You can also as make 0 into `FALSE` and any non-zero value into `TRUE. For example,
+A Boolean [Boo-Lee-en] or logical value takes on either `TRUE` or `FALSE`. If you make a logical value numeric or integer, you will get 1 for a true value and a 0 for a false value. You can also as make 0 into `FALSE` and any non-zero value into `TRUE. For example,
 ```{r}
 as.logical(0)
 as.logical(5)
@@ -70,7 +70,7 @@ As you might realized form the examples above, you can do the basic operations w
 This concludes our introduction to values.
 
 # Object type
-R, like I said, is an object-oriented language. This means it is crucial we understand what *objects* are. Obejcts are things that we store values in, they are literal objects that we use to tell the computer *what* we are trying to do and *what* we are doing this to. From the basics of the basics, we have the following objects. Before you continue, copy,paste, and run the following chunk of code in your RStudio console.
+R, like I said, is an object-oriented language. This means it is crucial we understand what *objects* are. Objects are things that we store values in, they are literal objects that we use to tell the computer *what* we are trying to do and *what* we are doing this to. From the basics of the basics, we have the following objects. Before you continue, copy,paste, and run the following chunk of code in your RStudio console.
 
 ```{r}
 vector1<-1
@@ -88,11 +88,11 @@ Vectors are the basic things we store our values in. A vector is a set of values
 myvector
 ```
 
-As you can see from the code chunk I asked you to run, there is a vector called `vector1` and a vector called `vector2`. Both of these vectors are displayed as a valueo in RStudio, showing you that if you don't create a vector for a single value, R will just take it as a vector with one element. `vector3` shows you what a vector with multiple value looks like.
+As you can see from the code chunk I asked you to run, there is a vector called `vector1` and a vector called `vector2`. Both of these vectors are displayed as a value in RStudio, showing you that if you don't create a vector for a single value, R will just take it as a vector with one element. `vector3` shows you what a vector with multiple value looks like.
 
-If you were versed at linear algebra or matrix algebra at somepoint in your life, you're probably thinking, are the vectors vertical or horizontal?
+If you were versed at linear algebra or matrix algebra at some point in your life, you're probably thinking, are the vectors vertical or horizontal?
 
-And the answer is: Neither! The only time the direction your vector would matter is if you are mergiing it with a data set. In that case, you will use specific functions to merge them and the direction of the vector is specified in the function you use.
+And the answer is: Neither! The only time the direction your vector would matter is if you are merging it with a data set. In that case, you will use specific functions to merge them and the direction of the vector is specified in the function you use.
 
 To create a sequential vector you can use `:` to create a vector of a sequence added by 1. If you want different gaps, you can use `seq()`. For example,
 ```{r}
@@ -101,7 +101,7 @@ seq(1,10,2)
 ```
 
 
-**Important note**: A vector can only contain one value type. You will get an error if you make a vector of numerics and logicals. `NA`'s are not subject to this rule becasue `NA` is not a value, it is the absence of a value.
+**Important note**: A vector can only contain one value type. You will get an error if you make a vector of numeric and logical. `NA`'s are not subject to this rule because `NA` is not a value, it is the absence of a value.
 
 ## Data Frames
 If you use the `as.matrix()` or `matrix()` functions on a vector, you could transform it into a matrix. However, unless you are doing matrix operations to solve for equations by hand, you are not going to need it. Instead, to deal with a rectangular form of data, we have what is called a data frame. Data frames come in many types, it can be a `data.frame`, a `data.table`, a `tibble`, etc. At this stage, all you need to know is that a data frame is what you would imagine an excel sheet would look like. It has columns storing different types of values like name, salary, grades, etc. And each row in the data frame represents an observation of your data. To create a simple data frame, we can either use a matrix or multiple vectors in conjugate with the `data.frame()` function.
@@ -121,7 +121,7 @@ We will learn about more complicated and versatile functions later. As of writin
 
 
 # Syntax and Semantics
-Semantics is how you communicate with your computer in the language you have chosen. Every language (even the real languages like English) have a set of rules that tell you how words are arranged [syntax] and whay they mean [semantics]. In R, there are only a couple you need to remember:
+Semantics is how you communicate with your computer in the language you have chosen. Every language (even the real languages like English) have a set of rules that tell you how words are arranged [syntax] and what they mean [semantics]. In R, there are only a couple you need to remember:
 
 ## Assignment operator
 
@@ -130,7 +130,7 @@ Semantics is how you communicate with your computer in the language you have cho
 ## Selection operator
 `[]` is your selection operator for data objects [vectors, matrices, data frames]. As you might have realized, comma gives you the sense of ordering within data objects, however, in selection operator, comma is used for direction. To select an element of a vector, you would put the selection operator next to your vector. For example, `myvector[2]` will give me the second element of the vector `myvector`. To select something out of a 2D data object (matrices, data frames), simply use the syntax `2Dobject[row,column]`. The first index represents the row you want, and the second index represents the column you want.
 
-Now you migh be thinking, "What is I want multiple columns of one row?" This is where vector comes in. Recall that comma in vectors represents ordering, so say you want the second and forth column for the 5th row from `2Dobject` you would write `2Dobject[5,c(2,4)]`. Remember, you can also use `:` or `seq` or a combination of all these things as indices in your selection operator.
+Now you might be thinking, "What is I want multiple columns of one row?" This is where vector comes in. Recall that comma in vectors represents ordering, so say you want the second and forth column for the 5th row from `2Dobject` you would write `2Dobject[5,c(2,4)]`. Remember, you can also use `:` or `seq` or a combination of all these things as indices in your selection operator.
 
 
 # Try it yourself!
