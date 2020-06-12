@@ -30,7 +30,7 @@ COVID_19_Resource<-read.csv("https://willythewoo.github.io/WillyTheWoo/COVID/COV
                  Date.of.update=str_replace_all(Date.of.update,"/","-"),
                  city=City,
                  state=State,
-                 Link=paste('<a href="',Link,'">',str_remove_all(str_remove_all(Link,regex("ht.+//")),regex("/.+")),"</a>",sep="")
+                 Link=paste('<a href="',Link,'">',str_remove_all(str_remove_all(Link,regex("ht.+//(www\\.)?")),regex("/.+")),"</a>",sep="")
                  )
 
         names(COVID_19_Resource)<-str_replace_all(variable.names(COVID_19_Resource),pattern="\\.",rep=" ")%>%
@@ -45,7 +45,7 @@ Eviction<-read_csv("https://willythewoo.github.io/WillyTheWoo/COVID/eviction_res
   select(State,everything())%>%
   rename("Date of update"=Date.Updated,
          "Dates in Effect"="Dates in eEfect")%>%
-  mutate( Link=paste('<a href="',Link,'">',str_remove_all(str_remove_all(Link,regex("ht.+//")),regex("/.+")),"</a>",sep=""))
+  mutate( Link=paste('<a href="',Link,'">',str_remove_all(str_remove_all(Link,regex("ht.+//(www\\.)?")),regex("/.+")),"</a>",sep=""))
 
 states<-c("All states","Federal",sort(unique(c(unique(COVID_19_Resource$State),unique(Eviction$State)))))
 

@@ -1,0 +1,17 @@
+---
+title: "Menu"
+author: "Willy Chen"
+date: "6/12/2020"
+output: html_document
+---
+Welcome to the Principles of Data Visualization in R Workshop series. Please select one of the following menu items to continue.
+
+[Workshop Introduction (How to download R)](https://willythewoo.github.io/WillyTheWoo/workshop/Introduction.html)
+
+[What is R?](https://willythewoo.github.io/WillyTheWoo/workshop/whatisR.html)
+
+[Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
+
+[Introduction to ggplot2](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2.html)
+
+[How to data](https://willythewoo.github.io/WillyTheWoo/workshop/howtodata.heml)
