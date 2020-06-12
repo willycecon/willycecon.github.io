@@ -1,8 +1,8 @@
 ---
 title: "Principles of Data Visualization in R Workshop: Introduction"
 author: "Willy Chen"
-output:
-    html_document:
+output: 
+  html_document:
     css: eye.css
     theme: readable
 ---
