@@ -6,6 +6,8 @@ output:
   html_document:
     toc: true
     toc_float: true
+    css: eye.css
+    theme: readable
 ---
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
 
