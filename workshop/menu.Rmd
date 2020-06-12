@@ -1,7 +1,6 @@
 ---
-title: "Menu"
+title: "Principles of Data Visualization in R Workshop: Menu"
 author: "Willy Chen"
-date: "6/12/2020"
 output: html_document
 ---
 Welcome to the Principles of Data Visualization in R Workshop series. Please select one of the following menu items to continue.

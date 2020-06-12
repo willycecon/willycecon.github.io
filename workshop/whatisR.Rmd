@@ -2,8 +2,13 @@
 title: "Principles of Data Visualization in R Workshop: What is R?"
 author: "Willy Chen"
 date: "Workshop 1"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
 R is an object-oriented statistical language that is based on the language S which is based on C. Hence everything you do in R actually gets boiled down to C for your computer to understand. Cool, right?
 
 Any ways, to understand R, there are some basics you need to know.
@@ -136,4 +141,7 @@ Now you migh be thinking, "What is I want multiple columns of one row?" This is 
 `read.csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv")`
 
 
-# That is the end of the first workshop! I'll see you in the second!
+# That is the end of the first workshop! 
+[Click here to start the next workshop: Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
