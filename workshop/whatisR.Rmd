@@ -136,7 +136,7 @@ Now you migh be thinking, "What is I want multiple columns of one row?" This is 
 
 2. Using the selection operator `[]`, find the sub-data frame in `mydf` such that it only contains numbers less than 100 or greater than 900. (Hint: You can put logical values in selection, try and see how it works)
 
-3. Using the following code [copy and paste on to your console] to obtain a data frame called `ps1.csv` provided by me, then tell me how many `NA`'s are there in this data frame. (Hint: you can sum up a vector using `sum()`)
+3. Use the following code [copy and paste on to your console] to obtain a data frame called `ps1.csv`. How many `NA`'s are there in this data frame. (Hint: you can sum up a vector using `sum()`)
 
 `read.csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv")`
 
