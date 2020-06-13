@@ -6,6 +6,9 @@ output:
     css: eye.css
     theme: readable
 ---
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+
 Hi!
 
 Welcome to this workshop series on basic data visualization in R. In this series, we will not focus on how to get the R language exactly down. Rather, we will be focusing on learning the minimal things to get the best looking graphs. There is no prerequisites to this workshop and you are not expected to know anything about a computer language. While you are browsing through the workshop, feel free to jump around different sessions to get what you need.
@@ -39,3 +42,7 @@ For Windows users:
 
 
 Everything done by me during this workshop will be done on RStudio. After you have installed RStudio, I recommend you go play around with it. Don't worry, you will not break your computer from doing so. This is the end of the introduction, I will see you at workshop 1!
+
+[Click here to start the next workshop: What is R?](https://willythewoo.github.io/WillyTheWoo/workshop/whatisR.html)
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)

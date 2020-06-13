@@ -1,0 +1,109 @@
+---
+title: "Principles of Data Visualization in R Workshop: Introduction to tidyverse"
+author: "Willy Chen"
+date: "Workshop 2"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: eye.css
+    theme: readable
+---
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+R is a powerful language, but any language is only as powerful as its most versatile package. In R's case, that package is tidyverse and we will be focusing on functions from the `tidyverse` package for the rest of this series. If you haven't already, install the tidyverse package from CRAN using the code `install.packages("tidyverse")` and load it into your session using either `library(tidyverse)` or `require(tidyverse)`.
+```{r}
+require(tidyverse)
+```
+
+# Pipe operator `%>%`
+One of the most powerful tool that tidyverse brings us is the pipe operator `%>%`. If you are familiar with shell, you know what this is. If you have never heard of shell, this is going to blow your mind.
+
+Sometimes, you are going to use multiple function on a data set. Say you have a data set called `data`, and you have 4 functions, `f1`, `f2`, `f3`, and `f4`, and you need the output from feeding data through each function sequestially. Intuitively, the first thing you would do is.
+```{r eval=FALSE}
+data1<-f1(data)
+data2<-f2(data1)
+data3<-f3(data2)
+data_final<-f4(data3)
+```
+This may seem simple to do, but it can get tedious if you need to use more than 10 functions. To save our eyes and brains a little, programmers invented the pipe operator `%>%`. What the pipe operator does is it takes the output of a function and directly pipe it into the next function as its *first* argument. Hence the above scenario can be rewritten into:
+```{r eval=FALSE}
+data_final<-
+  data%>%
+  f1()%>%
+  f2()%>%
+  f3()%>%
+  f4()
+```
+The piping operator allows us to write much cleaner codefor readability. One of the most important and universal best practice in coding is to space out your code into lines when you need to, and pipes allows us to do that easily. Personally, I put each function in its own line so I can easily change some of the arguments in those functions.
+
+For the rest of this workshop, I want to focus on using the packages `dplyr` and `tidyr` from the parent package `tidyverse`. Note that this means you only have to load `tidyverse` and these packages will automatically be included. 
+
+# dplyr
+To get a more complete view of the `dplyr` package, [click here](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
+
+## filter(df , condition)
+`filter()` is a literal filter for you to only get data that fits a certain condition. The filter function takes 2 arguments.
+
+1. Data frame
+2. Truth condition
+
+You should place the data you want to use and place the truth condition second. Note that the truthcondition can include multiple things. To make your code clear, alwasy wrap around chunks of condition in paranthesis. For example, the code `filter(data,((a==4&b==2)&(a==2|b==3))|(a==0|b==0))` will give me data that fits either `(a==4&b==2) & (a==2|b==3) ` or  `(a==0|b==0)`. Making your filter condition clear is extermely important for readability.
+
+## arrange(df , vars...)
+`arrange()` lets you rearrange the order of your observations based on the order of a variable(s). By default, it arranges the variable ascendingly. If you would like it to be arranged descendingly, you need to wrap the variable with `desc()`. `arrange()` rearranges based on the order of the variable you gave. For example, `arrange(data,age,desc(gpa))` would first arrange the data set from the youngest to oldest, and then for people of the same age, it arranges the data from the highest GPA to the lowest GPA. Arrange is most useful whe you need to see extreme values using `head()`
+
+## mutate(df , vars...)
+`mutate()` is perhaps one of the most useful function and probably the function I used the most. This function lets you create a new variable in your dataset either with or without using the original data. To use `mutate()`, you use the data frame as its first argument and the variables you want to create as the rest of the arguments. For example, if I want to create a variable that is age $\times$ gpa and gpa $\times$ a random number between 10 and 20, I can write.
+```{r eval=FALSE}
+data<-df%>%
+  mutate(gradeage=gpa*age,
+         graderand=gpa*sample(10:20,1,TRUE))
+```
+
+## summarise(df , vars...)
+`summarise()` is similar to mutate, but you **will** lose your original data set. This function takes your data frame as the first argument and creates summarized statistics however you want it. Say I want to see the mean, maximum, and standard deviation of the variable gpa, I will write:
+```{r eval=FALSE}
+data%>%summarise(average=mean(gpa),max=mac(gpa),sigma=sd(gpa))
+```
+and I will get a data frame with one row and three variables. Alternatively, if you want a general summary statistics of your data you can call the function `summary()`.
+
+## group_by(df , vars...)
+`group_by()` is perhaps the most powerful function of the `dplyr` package. This function allows you to do any operation by certain grouping characteristics. This function outputs a data frame that has a grouping structure on it, making all the subsequent operations groupwise until the structure is removed. For example, if I want to look at the average age of participants in this workshop based on their cohorts, I will simply group the data by cohorts and then call `summarise()` or `mutate()`. Afterwards, I may want to remove the grouping structure so I can see the difference between group averages and total average. In that case, I simply need to pipe the data into `ungroup()` before I pipe it again into mutate.
+
+```{r eval=FALSE}
+data<-data%>%
+  group_by(cohort)%>%
+  mutate(muage=mean(age))%>%
+  ungroup()%>%
+  mutate(groupdiff=mean(age)-muage)
+```
+
+**Bonus** If you want the operation to happen row by row (you may need to do this when geocoding), you can use a special version of `group_by()` called `rowwise()`. `rowwise()` imposes a grouping structure so that each row is in its own group.
+
+## select()/rename()
+`seelct()` and `rename()` are used so you can tidy up your data. In `select()`, you put your data as the first argument, and the rest of the arguments are just variables you want to keep. If you want to rename some variables, you just need to write `select(data,newvar1=oldvar1,...)`. On the otherhand, if you just want to rename some variables, you onlyneed to write `rename(data,newvar1=oldvar1,...)`. The difference is that `select()` only gives you back the variables you specified while `rename()` gives you back your entire data frame. In the case where you want to use `select()` to reorder your data frame, you just need to specify the ones you want in the order and call `everything()` as your last argument.
+
+
+
+
+
+
+
+# tidyr
+
+## separate
+
+## unite
+
+## gather 
+
+## spread
+
+
+
+
+
+[Click here to start the next workshop: Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)

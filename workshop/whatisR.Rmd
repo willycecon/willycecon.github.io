@@ -15,13 +15,13 @@ R is an object-oriented statistical language that is based on the language S whi
 
 Any ways, to understand R, there are some basics you need to know.
 
-# Data/value type
+# Data/Value types
 Before we talk about all the bells and whistles in R, let's first talk about values. There are 6 types of values in R and in most languages:
 
 ## Integer
 An integer is a whole number that does not have decimals.
 
-## Numeric
+## Numeric/Float
 A numeric is a number that can be any number with or without decimals. Note that an integer can be transformed into a numeric without losing information while a numeric transformed into an integer can lose the information after the decimals. For example,
 ```{r}
 as.integer(2.2)
@@ -30,7 +30,7 @@ as.integer(2.2)
 as.numeric(2)
 ```
 
-## Boolean/Logical
+## Logical/Boolean
 A Boolean [Boo-Lee-en] or logical value takes on either `TRUE` or `FALSE`. If you make a logical value numeric or integer, you will get 1 for a true value and a 0 for a false value. You can also as make 0 into `FALSE` and any non-zero value into `TRUE. For example,
 ```{r}
 as.logical(0)
@@ -39,10 +39,10 @@ as.integer(TRUE)
 as.numeric(FALSE)
 ```
 
-## String/character
-String/character values are just texts. Any text value is a string. A number can also be read as a string. If you see a number read as a string, you can revert it back to a number using `as.numeric()`
+## Character/String
+String/character values are just texts. Any text value is a string. You can create strings with `""`. A number can also be read as a string. If you see a number read as a string, you can revert it back to a number using `as.numeric()`.
 ```{r}
-class(as.character(1))
+class("1")
 class(as.numeric(as.character(1)))
 ```
 
@@ -69,7 +69,7 @@ As you might realized form the examples above, you can do the basic operations w
 
 This concludes our introduction to values.
 
-# Object type
+# Object types
 R, like I said, is an object-oriented language. This means it is crucial we understand what *objects* are. Objects are things that we store values in, they are literal objects that we use to tell the computer *what* we are trying to do and *what* we are doing this to. From the basics of the basics, we have the following objects. Before you continue, copy,paste, and run the following chunk of code in your RStudio console.
 
 ```{r}
@@ -94,10 +94,11 @@ If you were versed at linear algebra or matrix algebra at some point in your lif
 
 And the answer is: Neither! The only time the direction your vector would matter is if you are merging it with a data set. In that case, you will use specific functions to merge them and the direction of the vector is specified in the function you use.
 
-To create a sequential vector you can use `:` to create a vector of a sequence added by 1. If you want different gaps, you can use `seq()`. For example,
+To create a sequential vector you can use `:` to create a vector of a sequence added by 1. If you want different gaps, you can use `seq()`. If you want a repeated number, you can use `rep()` For example,
 ```{r}
 1:10
 seq(1,10,2)
+rep(c(1,2,3),5)
 ```
 
 
@@ -130,7 +131,26 @@ Semantics is how you communicate with your computer in the language you have cho
 ## Selection operator
 `[]` is your selection operator for data objects [vectors, matrices, data frames]. As you might have realized, comma gives you the sense of ordering within data objects, however, in selection operator, comma is used for direction. To select an element of a vector, you would put the selection operator next to your vector. For example, `myvector[2]` will give me the second element of the vector `myvector`. To select something out of a 2D data object (matrices, data frames), simply use the syntax `2Dobject[row,column]`. The first index represents the row you want, and the second index represents the column you want.
 
-Now you might be thinking, "What is I want multiple columns of one row?" This is where vector comes in. Recall that comma in vectors represents ordering, so say you want the second and forth column for the 5th row from `2Dobject` you would write `2Dobject[5,c(2,4)]`. Remember, you can also use `:` or `seq` or a combination of all these things as indices in your selection operator.
+Now you might be thinking, "What is I want multiple columns of one row?" This is where vector comes in. Recall that comma in vectors represents ordering, so say you want the second and forth column for the 5th row from `2Dobject` you would write `2Dobject[5,c(2,4)]`. Remember, you can also use `:` or `seq` or `rep` or a combination of all these things as indices in your selection operator.
+
+## Column selection operator
+`$` placed after a dataframe will allow you to select a column by its name. If I have a dataset of all MAPSS students but only want to view their gpa, I can use `mapss$gpa` and get only that column. To select multiple columns by their names, you can use the `select()` function which will be discussed in the next workshop.
+
+##  AND and OR
+To add more operation in R for a logical condition, we can use the AND operator `&` and the OR operator `|`. You would normally place one condition on each side of the operator and it will give you the condition as a whole. For example, if we want to see whether 2 is less than 4 AND 4 is less than 4 we can write `2<4&4<4` and we would get the output `FALSE`. But if we switch to the OR operator and write `2<4|4<4`, then we will get the ourput `TRUE`. As a special note, there could be times where you have a large data set and having the computer check both conditions on an AND operator will take too much time. In those cases, you can use the `&&` operator instead. It checks the first condition, and if it is false the function outputs false without checking the second condition.
+
+
+## Packages
+If you think of R as your phone, packages are like the apps you would download and install from the app store. Most popular languages have a vast collection of packages developed either by a company or individual developers. In R's case, it is both. Great packages allow us to do things more efficiently in R and make more beautiful graphs.
+
+To install a package that is not already installed on your computer, run the code `install.packages("packagename")`. Simply replace the term `"packagename"` with the name of the package you want to install. Note that you need to make the package name a string/character for the function to work correctly. For example, the main package this workshop series will be using is the tidyverse package. As an example, run the following code in your console.
+ `install.packages("tidyverse")`
+
+At the beginning of each of your R sessions, you need to tell the computer which packages you want to use during the session. This is called loading a package. You can do so by using either `library(packagename)` or `require(packagename)`. Notice that there is no quotes needed as these functions take your input as a "symbol". You don't need to know what symbol means at this stage. `library()` will load the package you tell it to no matter what but `require()` will only load the package if the package is not already loaded. Using require make rerunning your code more efficienct when you are using multiple packages. 
+
+Sometimes, you may wish to call a function from a package while is "masked" by a function with the same name from a different package. In this case, you will only get the correct call by designating the package to call from. You can do so by using `::`. For example, when you run `library(tidyverse)`, you should get a warning that says `dplyr::filter masks stats::filter()`. If you want to call `filter()` from `stats`, you simply have to use call `stats::filter()` instead of just `filter()` 
+
+
 
 
 # Try it yourself!
@@ -138,10 +158,16 @@ Now you might be thinking, "What is I want multiple columns of one row?" This is
 
 2. Using the selection operator `[]`, find the sub-data frame in `mydf` such that it only contains numbers less than 100 or greater than 900. (Hint: You can put logical values in selection, try and see how it works)
 
-3. Use the following code [copy and paste on to your console] to obtain a data frame called `ps1.csv`. How many `NA`'s are there in this data frame. (Hint: you can sum up a vector using `sum()`)
+3. Use the following code [copy and paste onto your console] to obtain a data frame called `ps1.csv`. 
 
-`read.csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv")`
-
+Ignore the first two lines if you have already installed and loaded the package `tidyverse`
+```{r eval=FALSE}
+install.packages("tidyverse")
+require(tidyverse)
+data<-read.csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv")
+```
+  i. Use the function `head()` to look at the first couple rows ot the data, what do you see?
+  ii. How many `NA`'s are there in this data frame. (Hint: you can sum up a vector using `sum()`)
 
 # That is the end of the first workshop! 
 [Click here to start the next workshop: Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)

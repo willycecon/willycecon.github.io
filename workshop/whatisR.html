@@ -1542,23 +1542,23 @@ div.tocify {
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/menu.html">Click here to return to the menu</a></p>
 <p>R is an object-oriented statistical language that is based on the language S which is based on C. Hence everything you do in R actually gets boiled down to C for your computer to understand. Cool, right?</p>
 <p>Any ways, to understand R, there are some basics you need to know.</p>
-<div id="datavalue-type" class="section level1">
-<h1>Data/value type</h1>
+<div id="datavalue-types" class="section level1">
+<h1>Data/Value types</h1>
 <p>Before we talk about all the bells and whistles in R, let’s first talk about values. There are 6 types of values in R and in most languages:</p>
 <div id="integer" class="section level2">
 <h2>Integer</h2>
 <p>An integer is a whole number that does not have decimals.</p>
 </div>
-<div id="numeric" class="section level2">
-<h2>Numeric</h2>
+<div id="numericfloat" class="section level2">
+<h2>Numeric/Float</h2>
 <p>A numeric is a number that can be any number with or without decimals. Note that an integer can be transformed into a numeric without losing information while a numeric transformed into an integer can lose the information after the decimals. For example,</p>
 <pre class="r"><code>as.integer(2.2)</code></pre>
 <pre><code>## [1] 2</code></pre>
 <pre class="r"><code>as.numeric(2)</code></pre>
 <pre><code>## [1] 2</code></pre>
 </div>
-<div id="booleanlogical" class="section level2">
-<h2>Boolean/Logical</h2>
+<div id="logicalboolean" class="section level2">
+<h2>Logical/Boolean</h2>
 <p>A Boolean [Boo-Lee-en] or logical value takes on either <code>TRUE</code> or <code>FALSE</code>. If you make a logical value numeric or integer, you will get 1 for a true value and a 0 for a false value. You can also as make 0 into <code>FALSE</code> and any non-zero value into `TRUE. For example,</p>
 <pre class="r"><code>as.logical(0)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
@@ -1569,10 +1569,10 @@ div.tocify {
 <pre class="r"><code>as.numeric(FALSE)</code></pre>
 <pre><code>## [1] 0</code></pre>
 </div>
-<div id="stringcharacter" class="section level2">
-<h2>String/character</h2>
-<p>String/character values are just texts. Any text value is a string. A number can also be read as a string. If you see a number read as a string, you can revert it back to a number using <code>as.numeric()</code></p>
-<pre class="r"><code>class(as.character(1))</code></pre>
+<div id="characterstring" class="section level2">
+<h2>Character/String</h2>
+<p>String/character values are just texts. Any text value is a string. You can create strings with <code>&quot;&quot;</code>. A number can also be read as a string. If you see a number read as a string, you can revert it back to a number using <code>as.numeric()</code>.</p>
+<pre class="r"><code>class(&quot;1&quot;)</code></pre>
 <pre><code>## [1] &quot;character&quot;</code></pre>
 <pre class="r"><code>class(as.numeric(as.character(1)))</code></pre>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
@@ -1603,8 +1603,8 @@ div.tocify {
 <p>This concludes our introduction to values.</p>
 </div>
 </div>
-<div id="object-type" class="section level1">
-<h1>Object type</h1>
+<div id="object-types" class="section level1">
+<h1>Object types</h1>
 <p>R, like I said, is an object-oriented language. This means it is crucial we understand what <em>objects</em> are. Objects are things that we store values in, they are literal objects that we use to tell the computer <em>what</em> we are trying to do and <em>what</em> we are doing this to. From the basics of the basics, we have the following objects. Before you continue, copy,paste, and run the following chunk of code in your RStudio console.</p>
 <pre class="r"><code>vector1&lt;-1
 vector2&lt;-2
@@ -1618,11 +1618,13 @@ dataframe1&lt;-data.frame(matrix1)</code></pre>
 <p>As you can see from the code chunk I asked you to run, there is a vector called <code>vector1</code> and a vector called <code>vector2</code>. Both of these vectors are displayed as a value in RStudio, showing you that if you don’t create a vector for a single value, R will just take it as a vector with one element. <code>vector3</code> shows you what a vector with multiple value looks like.</p>
 <p>If you were versed at linear algebra or matrix algebra at some point in your life, you’re probably thinking, are the vectors vertical or horizontal?</p>
 <p>And the answer is: Neither! The only time the direction your vector would matter is if you are merging it with a data set. In that case, you will use specific functions to merge them and the direction of the vector is specified in the function you use.</p>
-<p>To create a sequential vector you can use <code>:</code> to create a vector of a sequence added by 1. If you want different gaps, you can use <code>seq()</code>. For example,</p>
+<p>To create a sequential vector you can use <code>:</code> to create a vector of a sequence added by 1. If you want different gaps, you can use <code>seq()</code>. If you want a repeated number, you can use <code>rep()</code> For example,</p>
 <pre class="r"><code>1:10</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 <pre class="r"><code>seq(1,10,2)</code></pre>
 <pre><code>## [1] 1 3 5 7 9</code></pre>
+<pre class="r"><code>rep(c(1,2,3),5)</code></pre>
+<pre><code>##  [1] 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3</code></pre>
 <p><strong>Important note</strong>: A vector can only contain one value type. You will get an error if you make a vector of numeric and logical. <code>NA</code>’s are not subject to this rule because <code>NA</code> is not a value, it is the absence of a value.</p>
 </div>
 <div id="data-frames" class="section level2">
@@ -1652,7 +1654,22 @@ str(df)</code></pre>
 <div id="selection-operator" class="section level2">
 <h2>Selection operator</h2>
 <p><code>[]</code> is your selection operator for data objects [vectors, matrices, data frames]. As you might have realized, comma gives you the sense of ordering within data objects, however, in selection operator, comma is used for direction. To select an element of a vector, you would put the selection operator next to your vector. For example, <code>myvector[2]</code> will give me the second element of the vector <code>myvector</code>. To select something out of a 2D data object (matrices, data frames), simply use the syntax <code>2Dobject[row,column]</code>. The first index represents the row you want, and the second index represents the column you want.</p>
-<p>Now you might be thinking, “What is I want multiple columns of one row?” This is where vector comes in. Recall that comma in vectors represents ordering, so say you want the second and forth column for the 5th row from <code>2Dobject</code> you would write <code>2Dobject[5,c(2,4)]</code>. Remember, you can also use <code>:</code> or <code>seq</code> or a combination of all these things as indices in your selection operator.</p>
+<p>Now you might be thinking, “What is I want multiple columns of one row?” This is where vector comes in. Recall that comma in vectors represents ordering, so say you want the second and forth column for the 5th row from <code>2Dobject</code> you would write <code>2Dobject[5,c(2,4)]</code>. Remember, you can also use <code>:</code> or <code>seq</code> or <code>rep</code> or a combination of all these things as indices in your selection operator.</p>
+</div>
+<div id="column-selection-operator" class="section level2">
+<h2>Column selection operator</h2>
+<p><code>$</code> placed after a dataframe will allow you to select a column by its name. If I have a dataset of all MAPSS students but only want to view their gpa, I can use <code>mapss$gpa</code> and get only that column. To select multiple columns by their names, you can use the <code>select()</code> function which will be discussed in the next workshop.</p>
+</div>
+<div id="and-and-or" class="section level2">
+<h2>AND and OR</h2>
+<p>To add more operation in R for a logical condition, we can use the AND operator <code>&amp;</code> and the OR operator <code>|</code>. You would normally place one condition on each side of the operator and it will give you the condition as a whole. For example, if we want to see whether 2 is less than 4 AND 4 is less than 4 we can write <code>2&lt;4&amp;4&lt;4</code> and we would get the output <code>FALSE</code>. But if we switch to the OR operator and write <code>2&lt;4|4&lt;4</code>, then we will get the ourput <code>TRUE</code>. As a special note, there could be times where you have a large data set and having the computer check both conditions on an AND operator will take too much time. In those cases, you can use the <code>&amp;&amp;</code> operator instead. It checks the first condition, and if it is false the function outputs false without checking the second condition.</p>
+</div>
+<div id="packages" class="section level2">
+<h2>Packages</h2>
+<p>If you think of R as your phone, packages are like the apps you would download and install from the app store. Most popular languages have a vast collection of packages developed either by a company or individual developers. In R’s case, it is both. Great packages allow us to do things more efficiently in R and make more beautiful graphs.</p>
+<p>To install a package that is not already installed on your computer, run the code <code>install.packages(&quot;packagename&quot;)</code>. Simply replace the term <code>&quot;packagename&quot;</code> with the name of the package you want to install. Note that you need to make the package name a string/character for the function to work correctly. For example, the main package this workshop series will be using is the tidyverse package. As an example, run the following code in your console. <code>install.packages(&quot;tidyverse&quot;)</code></p>
+<p>At the beginning of each of your R sessions, you need to tell the computer which packages you want to use during the session. This is called loading a package. You can do so by using either <code>library(packagename)</code> or <code>require(packagename)</code>. Notice that there is no quotes needed as these functions take your input as a “symbol”. You don’t need to know what symbol means at this stage. <code>library()</code> will load the package you tell it to no matter what but <code>require()</code> will only load the package if the package is not already loaded. Using require make rerunning your code more efficienct when you are using multiple packages.</p>
+<p>Sometimes, you may wish to call a function from a package while is “masked” by a function with the same name from a different package. In this case, you will only get the correct call by designating the package to call from. You can do so by using <code>::</code>. For example, when you run <code>library(tidyverse)</code>, you should get a warning that says <code>dplyr::filter masks stats::filter()</code>. If you want to call <code>filter()</code> from <code>stats</code>, you simply have to use call <code>stats::filter()</code> instead of just <code>filter()</code></p>
 </div>
 </div>
 <div id="try-it-yourself" class="section level1">
@@ -1660,9 +1677,16 @@ str(df)</code></pre>
 <ol style="list-style-type: decimal">
 <li><p>Create a data frame that has all the even numbers from 1 to 1000 in the first column and all the odd numbers from 1 to 1000 in the second columns and call this <code>mydf</code>.</p></li>
 <li><p>Using the selection operator <code>[]</code>, find the sub-data frame in <code>mydf</code> such that it only contains numbers less than 100 or greater than 900. (Hint: You can put logical values in selection, try and see how it works)</p></li>
-<li><p>Use the following code [copy and paste on to your console] to obtain a data frame called <code>ps1.csv</code>. How many <code>NA</code>’s are there in this data frame. (Hint: you can sum up a vector using <code>sum()</code>)</p></li>
+<li><p>Use the following code [copy and paste onto your console] to obtain a data frame called <code>ps1.csv</code>.</p></li>
 </ol>
-<p><code>read.csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv&quot;)</code></p>
+<p>Ignore the first two lines if you have already installed and loaded the package <code>tidyverse</code></p>
+<pre class="r"><code>install.packages(&quot;tidyverse&quot;)
+require(tidyverse)
+data&lt;-read.csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv&quot;)</code></pre>
+<ol style="list-style-type: lower-roman">
+<li>Use the function <code>head()</code> to look at the first couple rows ot the data, what do you see?</li>
+<li>How many <code>NA</code>’s are there in this data frame. (Hint: you can sum up a vector using <code>sum()</code>)</li>
+</ol>
 </div>
 <div id="that-is-the-end-of-the-first-workshop" class="section level1">
 <h1>That is the end of the first workshop!</h1>
