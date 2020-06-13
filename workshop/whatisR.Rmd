@@ -170,6 +170,6 @@ data<-read.csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv"
   ii. How many `NA`'s are there in this data frame. (Hint: you can sum up a vector using `sum()`)
 
 # That is the end of the first workshop! 
-[Click here to start the next workshop: Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
+[Click here to continue to the next workshop: Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
 
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
