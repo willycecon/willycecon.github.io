@@ -104,6 +104,6 @@ data<-data%>%
 
 
 
-[Click here to continue to the next workshop: Introduction to ggplot2](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2.html)
+<!-- [Click here to continue to the next workshop: Introduction to ggplot2](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2.html) -->
 
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
