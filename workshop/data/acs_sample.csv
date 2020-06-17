@@ -1,4 +1,4 @@
-year,cityname13,state,totalpop,sex,age,hhincome
+year,city,state,population,female,age,hhincome
 2005,"atlanta-sandy springs-roswell, ga",ga,4947012,0.5044801235198975,34,60000
 2005,"austin-round rock, tx",tx,1464309,0.4925105571746826,32,58500
 2005,"baltimore-columbia-towson, md",md,2649586,0.5181739330291748,37,69000
