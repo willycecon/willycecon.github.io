@@ -3190,7 +3190,7 @@ slide:not(.current) .plotly.html-widget{
 
 </article></slide><slide class=""><hgroup><h2>5. Factors</h2></hgroup><article  id="factors">
 
-<p>Factors are a special type of value that are categorical strings <strong>with an order</strong> associated with them. You can specify the order when making a facotr by using the <code>levels</code> argument inside the function <code>factor</code>. In R 4.0.1 and above, the default for string variables are <strong>NOT</strong> factors while in older versions of R the default for string variables are factors.</p>
+<p>Factors are a special type of value that are categorical strings <strong>with an order</strong> associated with them. You can specify the order when making a factor by using the <code>levels</code> argument inside the function <code>factor</code>. In R 4.0.1 and above, the default for string variables are <strong>NOT</strong> factors while in older versions of R the default for string variables are factors.</p>
 
 <p>When the default is <code>stringsAsFactors==TRUE</code>, it is ordered alphabetically. To check your default settings, call <code>default.stringsAsFactors()</code> in your console.</p>
 
@@ -3201,7 +3201,7 @@ name</pre>
 <pre >## [1] Willy    Caroline Aila    
 ## Levels: Aila Willy Caroline</pre>
 
-</article></slide><slide class=""><hgroup><h2>6. NA (Special case)</h2></hgroup><article  class="build" id="na-special-case">
+</article></slide><slide class=""><hgroup><h2>6. NA (Special case)</h2></hgroup><article  id="na-special-case" class="build">
 
 <p><code>NA</code>’s are tricky to deal with as it is not actually a type of values. Instead of representing a value, <code>NA</code> represents the <strong>absence of a value</strong>. Any value operated in conjugation with <code>NA</code> will give you a <code>NA</code>. If you compare 2 values, you get actual values, but if you do it with <code>NA</code>, you always get <code>NA</code>. For example,</p>
 
@@ -3217,7 +3217,7 @@ name</pre>
 
 <pre >## [1] TRUE</pre>
 
-</article></slide><slide class=""><hgroup><h2>6. NA (Special case) (Cont.)</h2></hgroup><article  class="build" id="na-special-case-cont.">
+</article></slide><slide class=""><hgroup><h2>6. NA (Special case) (Cont.)</h2></hgroup><article  id="na-special-case-cont." class="build">
 
 <pre class = 'prettyprint lang-r'>2+NA</pre>
 
@@ -3287,13 +3287,13 @@ dataframe1&lt;-data.frame(matrix1)</pre>
 
 <pre >## [1] 1 3 5 7 9</pre>
 
-</article></slide><slide class=""><hgroup><h2>[Atomic] Vectors (Cont.)</h2></hgroup><article  class="build" id="atomic-vectors-cont.-1">
+</article></slide><slide class=""><hgroup><h2>[Atomic] Vectors (Cont.)</h2></hgroup><article  id="atomic-vectors-cont.-1" class="build">
 
 <pre class = 'prettyprint lang-r'>rep(c(1,2,3),5)</pre>
 
 <pre >##  [1] 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3</pre>
 
-<p><strong>Important note</strong>: A vector can only contain one value type. You will get a uniform value type if you make a vector of numeric/logicals and strings. <code>NA</code>’s are not subject to this rule because <code>NA</code> is not a value, it is the absence of a value.</p>
+<p><strong>Important note</strong>: A vector can only contain one value type. You will get a uniform value type if you make a vector of numeric/logical and strings. <code>NA</code>’s are not subject to this rule because <code>NA</code> is not a value, it is the absence of a value.</p>
 
 <pre class = 'prettyprint lang-r'>c(rep(c(1,2,3),5),TRUE)</pre>
 
@@ -3317,7 +3317,7 @@ str(df)</pre>
 ##  $ vector3 : num  1 2 4
 ##  $ myvector: num  1 2 3</pre>
 
-<p>To add a vector to your data frame, use <code>bind_cols()</code> and <code>bind_rows()</code> to add either a column or arow to your data frame. Becasue vectors, matrices, and data frames store your &ldquo;data&rdquo;, they also have a special name called &ldquo;data objects&rdquo; even though values that are not data frames are commonly referred to as just atomic vectors</p>
+<p>To add a vector to your data frame, use <code>bind_cols()</code> and <code>bind_rows()</code> to add either a column or row to your data frame. Because vectors, matrices, and data frames store your &ldquo;data&rdquo;, they also have a special name called &ldquo;data objects&rdquo; even though values that are not data frames are commonly referred to as just atomic vectors</p>
 
 </article></slide><slide class=""><hgroup><h2>Functions</h2></hgroup><article  id="functions">
 
@@ -3333,7 +3333,7 @@ str(df)</pre>
 
 <p>Semantics is how you communicate with your computer in the language you have chosen. Every language (even the real languages like English) have a set of rules that tell you how words are arranged [syntax] and what they mean [semantics]. In R, there are only a couple you need to remember:</p>
 
-</article></slide><slide class=""><hgroup><h2>Assignment operator</h2></hgroup><article  class="build" id="assignment-operator">
+</article></slide><slide class=""><hgroup><h2>Assignment operator</h2></hgroup><article  id="assignment-operator" class="build">
 
 <p><code>&lt;-</code> is your assignment operator. You can use this to assign values to objects. You can also use <code>=</code> as assignments like python but why would you?</p>
 
@@ -3349,7 +3349,7 @@ a==b</pre>
 
 <p>Now you might be thinking, &ldquo;What if I want multiple columns of one row?&rdquo; This is where vector comes in. Recall that comma in vectors represents ordering, so say you want the second and forth column for the 5th row from <code>2Dobject</code> you would write <code>2Dobject[5,c(2,4)]</code>. Remember, you can also use <code>:</code> or <code>seq</code> or <code>rep</code> or a combination of all these things as indices in your selection operator.</p>
 
-</article></slide><slide class=""><hgroup><h2>Selection operator (Cont.)</h2></hgroup><article  class="build" id="selection-operator-cont.">
+</article></slide><slide class=""><hgroup><h2>Selection operator (Cont.)</h2></hgroup><article  id="selection-operator-cont." class="build">
 
 <pre class = 'prettyprint lang-r'>data</pre>
 
@@ -3368,7 +3368,7 @@ a==b</pre>
 
 <pre >## [1] &quot;data.frame&quot;</pre>
 
-</article></slide><slide class=""><hgroup><h2>Selection operator (Cont.)</h2></hgroup><article  class="build" id="selection-operator-cont.-1">
+</article></slide><slide class=""><hgroup><h2>Selection operator (Cont.)</h2></hgroup><article  id="selection-operator-cont.-1" class="build">
 
 <pre class = 'prettyprint lang-r'>data==2</pre>
 
@@ -3387,18 +3387,18 @@ a==b</pre>
 
 </article></slide><slide class=""><hgroup><h2>Column selection operator</h2></hgroup><article  id="column-selection-operator">
 
-<p><code>$</code> placed after a dataframe will allow you to select a column by its name. If I have a dataset of all MAPSS students but only want to view their gpa, I can use <code>mapss$gpa</code> and get only that column. To select multiple columns by their names, you can use the <code>select()</code> function which will be discussed in the next workshop.</p>
+<p><code>$</code> placed after a data frame will allow you to select a column by its name. If I have a data set of all MAPSS students but only want to view their GPA, I can use <code>mapss$gpa</code> and get only that column. To select multiple columns by their names, you can use the <code>select()</code> function which will be discussed in the next workshop.</p>
 
 <pre class = 'prettyprint lang-r'>data$name</pre>
 
 <pre >## [1] Willy  Grace  Kristi
 ## Levels: Grace Kristi Willy</pre>
 
-</article></slide><slide class=""><hgroup><h2>AND and OR</h2></hgroup><article  class="build" id="and-and-or">
+</article></slide><slide class=""><hgroup><h2>AND and OR</h2></hgroup><article  id="and-and-or" class="build">
 
 <p>To add more operation in R for a logical condition, we can use the AND operator <code>&amp;</code> and the OR operator <code>|</code>. You would normally place one condition on each side of the operator and it will give you the condition as a whole.</p>
 
-<p>For example, if we want to see whether 2 is less than 4 AND 4 is less than 4 we can write <code>2&lt;4&amp;4&lt;4</code> and we would get the output <code>FALSE</code>. But if we switch to the OR operator and write <code>2&lt;4|4&lt;4</code>, then we will get the ourput <code>TRUE</code>. As a special note, there could be times where you have a large data set and having the computer check both conditions on an AND operator will take too much time. In those cases, you can use the <code>&amp;&amp;</code> operator instead. It checks the first condition, and if it is false the function outputs false without checking the second condition.</p>
+<p>For example, if we want to see whether 2 is less than 4 AND 4 is less than 4 we can write <code>2&lt;4&amp;4&lt;4</code> and we would get the output <code>FALSE</code>. But if we switch to the OR operator and write <code>2&lt;4|4&lt;4</code>, then we will get the output <code>TRUE</code>. As a special note, there could be times where you have a large data set and having the computer check both conditions on an AND operator will take too much time. In those cases, you can use the <code>&amp;&amp;</code> operator instead. It checks the first condition, and if it is false the function outputs false without checking the second condition.</p>
 
 <pre class = 'prettyprint lang-r'>(2&lt;4 &amp; 4&lt;4) | (2&lt;4 | 4&lt;4)</pre>
 
@@ -3412,10 +3412,10 @@ a==b</pre>
 <li><strong>Installing packages</strong>: To install a package that is not already installed on your computer, run the code <code>install.packages(&quot;packagename&quot;)</code>. Simply replace the term <code>&quot;packagename&quot;</code> with the name of the package you want to install. Note that you need to make the package name a string/character for the function to work correctly. For example, the main package this workshop series will be using is the tidyverse package. As an example, run the following code in your console. <code>install.packages(&quot;tidyverse&quot;)</code></li>
 </ul>
 
-</article></slide><slide class=""><hgroup><h2>Packages (Cont.)</h2></hgroup><article  id="packages-cont.">
+</article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
 
 <ul>
-<li><p><strong>Loading packages:</strong> At the beginning of each of your R sessions, you need to tell the computer which packages you want to use during the session. This is called loading a package. You can do so by using either <code>library(packagename)</code> or <code>require(packagename)</code>. Notice that there is no quotes needed as these functions take your input as a &ldquo;symbol&rdquo;. You don’t need to know what symbol means at this stage. <code>library()</code> will load the package you tell it to no matter what but <code>require()</code> will only load the package if the package is not already loaded. Using require make rerunning your code more efficienct when you are using multiple packages.</p></li>
+<li><p><strong>Loading packages:</strong> At the beginning of each of your R sessions, you need to tell the computer which packages you want to use during the session. This is called loading a package. You can do so by using either <code>library(packagename)</code> or <code>require(packagename)</code>. Notice that there is no quotes needed as these functions take your input as a &ldquo;symbol&rdquo;. You don’t need to know what symbol means at this stage. <code>library()</code> will load the package you tell it to no matter what but <code>require()</code> will only load the package if the package is not already loaded. Using <code>require()</code> makes rerunning your code more efficiency when you are using multiple packages.</p></li>
 <li><p><strong>Direct calls:</strong> Sometimes, you may wish to call a function from a package while is &ldquo;masked&rdquo; by a function with the same name from a different package. In this case, you will only get the correct call by designating the package to call from. You can do so by using <code>::</code>. For example, when you run <code>library(tidyverse)</code>, you should get a warning that says <code>dplyr::filter masks stats::filter()</code>. If you want to call <code>filter()</code> from <code>stats</code>, you simply have to call <code>stats::filter()</code> instead of just <code>filter()</code></p></li>
 </ul>
 
@@ -3437,7 +3437,7 @@ a==b</pre>
 require(tidyverse)
 data&lt;-read.csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv&quot;)</pre>
 
-<p>(a). Use the function <code>head()</code> to look at the first couple rows ot the data, what do you see?</p>
+<p>(a). Use the function <code>head()</code> to look at the first couple rows of the data, what do you see?</p>
 
 <p>(b). How many <code>NA</code>’s are there in this data frame. (Hint: you can sum up a vector using <code>sum()</code>)</p></article></slide>
 

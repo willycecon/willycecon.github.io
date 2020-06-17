@@ -49,7 +49,7 @@ class(as.numeric(as.character(1)))
 ```
 
 ## 5. Factors
-Factors are a special type of value that are categorical strings **with an order** associated with them. You can specify the order when making a facotr by using the `levels` argument inside the function `factor`. In R 4.0.1 and above, the default for string variables are **NOT** factors while in older versions of R the default for string variables are factors.
+Factors are a special type of value that are categorical strings **with an order** associated with them. You can specify the order when making a factor by using the `levels` argument inside the function `factor`. In R 4.0.1 and above, the default for string variables are **NOT** factors while in older versions of R the default for string variables are factors.
 When the default is `stringsAsFactors==TRUE`, it is ordered alphabetically. To check your default settings, call `default.stringsAsFactors()` in your console.
 ```{r}
 names<-c("Willy","Caroline","Aila")
@@ -112,7 +112,7 @@ seq(1,10,2)
 rep(c(1,2,3),5)
 ```
 
-**Important note**: A vector can only contain one value type. You will get a uniform value type if you make a vector of numeric/logicals and strings. `NA`'s are not subject to this rule because `NA` is not a value, it is the absence of a value.
+**Important note**: A vector can only contain one value type. You will get a uniform value type if you make a vector of numeric/logical and strings. `NA`'s are not subject to this rule because `NA` is not a value, it is the absence of a value.
 ```{r}
 c(rep(c(1,2,3),5),TRUE)
 c(rep(c(1,2,3),5),"TRUE")
@@ -148,12 +148,12 @@ Semantics is how you communicate with your computer in the language you have cho
 Now you might be thinking, "What is I want multiple columns of one row?" This is where vector comes in. Recall that comma in vectors represents ordering, so say you want the second and forth column for the 5th row from `2Dobject` you would write `2Dobject[5,c(2,4)]`. Remember, you can also use `:` or `seq` or `rep` or a combination of all these things as indices in your selection operator.
 
 ## Column selection operator
-`$` placed after a dataframe will allow you to select a column by its name. If I have a dataset of all MAPSS students but only want to view their gpa, I can use `mapss$gpa` and get only that column. To select multiple columns by their names, you can use the `select()` function which will be discussed in the next workshop.
+`$` placed after a data frame will allow you to select a column by its name. If I have a data set of all MAPSS students but only want to view their output, I can use `mapss$gpa` and get only that column. To select multiple columns by their names, you can use the `select()` function which will be discussed in the next workshop.
 
 ##  AND and OR
 To add more operation in R for a logical condition, we can use the AND operator `&` and the OR operator `|`. You would normally place one condition on each side of the operator and it will give you the condition as a whole. 
 
-For example, if we want to see whether 2 is less than 4 AND 4 is less than 4 we can write `2<4&4<4` and we would get the output `FALSE`. But if we switch to the OR operator and write `2<4|4<4`, then we will get the ourput `TRUE`. As a special note, there could be times where you have a large data set and having the computer check both conditions on an AND operator will take too much time. In those cases, you can use the `&&` operator instead. It checks the first condition, and if it is false the function outputs false without checking the second condition.
+For example, if we want to see whether 2 is less than 4 AND 4 is less than 4 we can write `2<4&4<4` and we would get the output `FALSE`. But if we switch to the OR operator and write `2<4|4<4`, then we will get the output `TRUE`. As a special note, there could be times where you have a large data set and having the computer check both conditions on an AND operator will take too much time. In those cases, you can use the `&&` operator instead. It checks the first condition, and if it is false the function outputs false without checking the second condition.
 ```{r}
 (2<4 & 4<4) | (2<4 | 4<4)
 ```
@@ -164,7 +164,7 @@ If you think of R as your phone, packages are like the apps you would download a
 To install a package that is not already installed on your computer, run the code `install.packages("packagename")`. Simply replace the term `"packagename"` with the name of the package you want to install. Note that you need to make the package name a string/character for the function to work correctly. For example, the main package this workshop series will be using is the tidyverse package. As an example, run the following code in your console.
  `install.packages("tidyverse")`
 
-At the beginning of each of your R sessions, you need to tell the computer which packages you want to use during the session. This is called loading a package. You can do so by using either `library(packagename)` or `require(packagename)`. Notice that there is no quotes needed as these functions take your input as a "symbol". You don't need to know what symbol means at this stage. `library()` will load the package you tell it to no matter what but `require()` will only load the package if the package is not already loaded. Using require make rerunning your code more efficienct when you are using multiple packages. 
+At the beginning of each of your R sessions, you need to tell the computer which packages you want to use during the session. This is called loading a package. You can do so by using either `library(packagename)` or `require(packagename)`. Notice that there is no quotes needed as these functions take your input as a "symbol". You don't need to know what symbol means at this stage. `library()` will load the package you tell it to no matter what but `require()` will only load the package if the package is not already loaded. Using `require()` makes rerunning your code more efficiency when you are using multiple packages. 
 
 Sometimes, you may wish to call a function from a package while is "masked" by a function with the same name from a different package. In this case, you will only get the correct call by designating the package to call from. You can do so by using `::`. For example, when you run `library(tidyverse)`, you should get a warning that says `dplyr::filter masks stats::filter()`. If you want to call `filter()` from `stats`, you simply have to use call `stats::filter()` instead of just `filter()` 
 
@@ -191,7 +191,7 @@ write.csv(data,"~/Desktop/ps1.csv")
 data<-read.csv("~/Desktop/ps1.csv")
 ```
 
-  i. Use the function `head()` to look at the first couple rows ot the data, what do you see?
+  i. Use the function `head()` to look at the first couple rows of the data, what do you see?
   ii. How many `NA`'s are there in this data frame. (Hint: you can sum up a vector using `sum()`)
 
 # That is the end of the first workshop! 
