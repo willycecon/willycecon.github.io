@@ -8,16 +8,28 @@ output:
 ---
 Welcome to the Principles of Data Visualization in R Workshop series. Please select one of the following menu items to continue.
 
-0. [How to download R](https://willythewoo.github.io/WillyTheWoo/workshop/Introduction.html)
+0. [How to download R](https://willythewoo.github.io/WillyTheWoo/workshop/Introduction.html) 
 
 1. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html))  [What is R?](https://willythewoo.github.io/WillyTheWoo/workshop/whatisR.html) 
 
-2. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2slides.html))  [Introduction to ggplot2](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2.html)
+2. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2slides.html))  [Introduction to ggplot2](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2.html) 
 
 3. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/dataslides.html))  [Introduction to data](https://willythewoo.github.io/WillyTheWoo/workshop/data.html)
 
-4. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverseslides.html))  [Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
+4. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverseslides.html))  [Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html) 
 
-5. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/textdataslides.html))  [Introduction to text data](https://willythewoo.github.io/WillyTheWoo/workshop/textdata.html)
+5. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/textdataslides.html))  [Introduction to text data](https://willythewoo.github.io/WillyTheWoo/workshop/textdata.html) 
+
+6. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdownslides.html)) [Introduction to RMarkdown automation ](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdown.html) 
+
+There are many cheat sheets published by RStudio. I have attached a couple that I think will be useful for people taking this workshop. You can also find the complete set of cheat sheets [here](https://rstudio.com/resources/cheatsheets/)
+
+  * [RMarkdown cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+  * [ggplot2 cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf)
+  * [dplr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf)
+  * [strings cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/strings.pdf)
+  * [dates and times cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/lubridate.pdf)
+  * [Importing data cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf)
+
 
 For coding examples with R, you can visit [my website](https://willythewoo.github.io/WillyTheWoo/) 
