@@ -186,9 +186,12 @@ At this point, you truly have anough power to graph whatever you want, provided 
 
 # Try it yourself
 
-1.
+1. ACS
+
 2.
+
 3.
+
 4.
 
 [Click here to continue to the next workshop: Introduction to data](https://willythewoo.github.io/WillyTheWoo/workshop/data.html)
