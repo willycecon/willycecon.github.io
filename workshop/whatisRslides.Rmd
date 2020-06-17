@@ -1,17 +1,17 @@
 ---
 title: "What is R?"
 author: "Willy Chen"
-date: "6/16/2020"
+date: "6/24/2020"
 output: 
   ioslides_presentation:
+    # theme: readable
     widescreen: true
-    template: quarterly-report.html
 ---
 ## What is R?
 
 R is an object-oriented statistical language that is based on the language S which is based on C. Hence everything you do in R actually gets boiled down to C for your computer to understand. Cool, right?
 
-Any ways, to understand R, there are some basics you need to know.
+Anyways, to understand R, there are some basics you need to know.
 
 # Data/Value types
 

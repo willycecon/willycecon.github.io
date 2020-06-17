@@ -11,9 +11,11 @@ output:
 ---
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
 
+[Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html)
+
 R is an object-oriented statistical language that is based on the language S which is based on C. Hence everything you do in R actually gets boiled down to C for your computer to understand. Cool, right?
 
-Any ways, to understand R, there are some basics you need to know.
+Anyways, to understand R, there are some basics you need to know.
 
 # Data/Value types
 Before we talk about all the bells and whistles in R, let's first talk about values. There are 6 types of values in R and in most languages:
@@ -21,7 +23,7 @@ Before we talk about all the bells and whistles in R, let's first talk about val
 ## 1. Integer
 An integer is a whole number that does not have decimals.
 
-## 2. Numeric/Float
+## 2. Numeric/Float/Double
 A numeric is a number that can be any number with or without decimals. Note that an integer can be transformed into a numeric without losing information while a numeric transformed into an integer can lose the information after the decimals. For example,
 ```{r}
 as.integer(2.2)
