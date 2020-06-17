@@ -31,7 +31,7 @@ ggplot(data=data,aes(x=age,
                      label=as.factor(homework)))+
   geom_smooth(se=FALSE,method="lm")+
   geom_point()+
-  geom_text(sho.legend=TRUE)+
+  geom_text(show.legend=TRUE)+
   facet_wrap(~factor(exp,levels=c("What is R?",
                                   "Can do simple calculations",
                                   "Can do basic data cleaning or basic plot functions in R",
@@ -119,7 +119,7 @@ ggplot(data=data,aes(x=age,
                      label=as.factor(homework)))+
   geom_smooth(se=FALSE,method="lm")+
   geom_point()+
-  geom_text(sho.legend=TRUE)
+  geom_text(show.legend=TRUE)
 ```
 
 Now that we have the basic graph, you're probably wondering how we can specify the legend and the labels. This brings us to the third element of `ggplot2` -- **scale functions**
@@ -145,7 +145,7 @@ ggplot(data=data,aes(x=age,
                      label=as.factor(homework)))+
   geom_smooth(se=FALSE,method="lm")+
   geom_point()+
-  geom_text(sho.legend=TRUE)+
+  geom_text(show.legend=TRUE)+
   scale_color_discrete(name="Guesses \non social \ncommitee's \nname")+
   guides(fill=guide_legend(ncol=4))+
   labs(title = "Correlation between age and number of characters in full name",
@@ -169,7 +169,7 @@ ggplot(data=data,aes(x=age,
                      label=as.factor(homework)))+
   geom_smooth(se=FALSE,method="lm")+
   geom_point()+
-  geom_text(sho.legend=TRUE)+
+  geom_text(show.legend=TRUE)+
   facet_wrap(~factor(exp,levels=c("What is R?",
                                   "Can do simple calculations",
                                   "Can do basic data cleaning or basic plot functions in R",
@@ -184,6 +184,27 @@ ggplot(data=data,aes(x=age,
 
 At this point, you truly have enough power to graph whatever you want, provided that the data you have allows you to do so. In the next workshop, we will discuss some data fundamentals which will lead to the next workshop where we will go over basic data cleaning skills via the `tidyverse` package. Now try to do the following problems on your own. I will see you in the next workshop!
 
+
+If you have been watching the graphs closely, you might realize that behind the `geom_text()`'s, there are dots. We can remove those dots by removing `geom_point()`
+```{r warning=FALSE}
+ggplot(data=data,aes(x=age,
+                     y=characters,
+                     col=as.factor(social),
+                     label=as.factor(homework)))+
+  geom_smooth(se=FALSE,method="lm")+
+  #geom_point()+
+  geom_text(show.legend=TRUE)+
+  facet_wrap(~factor(exp,levels=c("What is R?",
+                                  "Can do simple calculations",
+                                  "Can do basic data cleaning or basic plot functions in R",
+                                  "Can do cleaning, basic predictive modeling")),nrow=2)+
+  scale_color_discrete(name="Guesses \non social \ncommitee's \nname")+
+  guides(fill=guide_legend(ncol=4))+
+  labs(title = "Correlation between age and number of characters in full name",
+       x="Age",
+       y="Number of characters")
+
+```
 # Try it yourself
 
 1. Use `read_csv()` from the `readr` package to load data from `https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv`. Make sure to use quotation marks in your function call so the data is read properly. And don't forget to use the assignment operator to actually save the data when you load it. This data set is called the American Community Survey (ACS). It is an annual sample collected by the Census Bureau. In the data set I provided you, there are 8 variables: Year, City, state, city population, \%female, median age, median household income, and whether this city is currently a sanctuary city.

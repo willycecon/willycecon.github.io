@@ -20,7 +20,7 @@ data$characters<-as.numeric(data$characters)
 
 
 ## ggplot example
-```{r echo=FALSE, warning=FALSE}
+```{r echo=FALSE, warning=FALSE, fig.align='center'}
 ggplot(data=data,aes(x=age,
                      y=characters,
                      col=as.factor(social),
@@ -144,7 +144,7 @@ There are other geom functions in the package so you should explore them if what
 ----
 
 Going back to our example, we can actually do most of my example graph now. Note that I added `se=FALSE` inside geom_smooth() so it does not graph the standard error range. The default is to graph it. 
-```{r eval=FALSE}
+```{r eval=FALSE, fig.align='center'}
 ggplot(data=data,aes(x=age,
                      y=characters,
                      col=as.factor(social),
@@ -156,7 +156,7 @@ ggplot(data=data,aes(x=age,
 
 ----
 
-```{r warning=FALSE, echo=FALSE}
+```{r warning=FALSE, echo=FALSE, fig.align='center'}
 ggplot(data=data,aes(x=age,
                      y=characters,
                      col=as.factor(social),
@@ -206,7 +206,7 @@ ggplot(data=data,aes(x=age,
 
 ----
 
-```{r echo=FALSE, warning=FALSE}
+```{r echo=FALSE, warning=FALSE, fig.align='center'}
 ggplot(data=data,aes(x=age,
                      y=characters,
                      col=as.factor(social),
@@ -257,13 +257,57 @@ ggplot(data=data,aes(x=age,
 
 ----
 
-```{r echo=FALSE, warning=FALSE}
+```{r echo=FALSE, warning=FALSE, fig.align='center',fig.width=10.5}
 ggplot(data=data,aes(x=age,
                      y=characters,
                      col=as.factor(social),
                      label=as.factor(homework)))+
   geom_smooth(se=FALSE,method="lm")+
   geom_point()+
+  geom_text(show.legend=TRUE)+
+  facet_wrap(~factor(exp,levels=c("What is R?",
+                                  "Can do simple calculations",
+                                  "Can do basic data cleaning or basic plot functions in R",
+                                  "Can do cleaning, basic predictive modeling")),nrow=2)+
+  scale_color_discrete(name="Guesses \non social \ncommitee's \nname")+
+  guides(fill=guide_legend(ncol=4))+
+  labs(title = "Correlation between age and number of characters in full name",
+       x="Age",
+       y="Number of characters")
+
+```
+
+----
+
+```{r eval=FALSE}
+ggplot(data=data,aes(x=age,
+                     y=characters,
+                     col=as.factor(social),
+                     label=as.factor(homework)))+
+  geom_smooth(se=FALSE,method="lm")+
+  #geom_point()+
+  geom_text(show.legend=TRUE)+
+  facet_wrap(~factor(exp,levels=c("What is R?",
+                                  "Can do simple calculations",
+                                  "Can do basic data cleaning or basic plot functions in R",
+                                  "Can do cleaning, basic predictive modeling")),nrow=2)+
+  scale_color_discrete(name="Guesses \non social \ncommitee's \nname")+
+  guides(fill=guide_legend(ncol=4))+
+  labs(title = "Correlation between age and number of characters in full name",
+       x="Age",
+       y="Number of characters")
+
+```
+
+----
+
+```{r warning=FALSE, echo=FALSE, fig.width=10.5, fig.heigh=8}
+ggplot(data=data,aes(x=age,
+                     y=characters,
+                     col=as.factor(social),
+                     label=as.factor(homework)))+
+  geom_smooth(se=FALSE,method="lm")+
+  #geom_point()+
   geom_text(show.legend=TRUE)+
   facet_wrap(~factor(exp,levels=c("What is R?",
                                   "Can do simple calculations",
