@@ -188,9 +188,9 @@ At this point, you truly have enough power to graph whatever you want, provided 
 
 1. Use `read_csv()` from the `readr` package to load data from `https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv`. Make sure to use quotation marks in your function call so the data is read properly. And don't forget to use the assignment operator to actually save the data when you load it. This data set is called the American Community Survey (ACS). It is an annual sample collected by the Census Bureau. In the data set I provided you, there are 8 variables: Year, City, state, city population, \%female, median age, median household income, and whether this city is currently a sanctuary city.
 
-  (i). Look at the data with `glimpse()` to get a view of what you are dealing with. You can also use the function `variable.names()` to see what variables there are. After you look at the data, use `anyNA()` to see if there is any `NA` in the data set.
+  (i) Look at the data with `glimpse()` to get a view of what you are dealing with. You can also use the function `variable.names()` to see what variables there are. After you look at the data, use `anyNA()` to see if there is any `NA` in the data set.
   
-  (ii). Use the function `plot_usmap()` from the `usmap` package to look at the household income level in each states with cities of more than 1,000,000 population. (Hint: the correct call would be `plot_usmap(data=dataframe,values="hhincome")` where data frame is the name of the data frame you stored your data.)
+  (ii) Use the function `plot_usmap()` from the `usmap` package to look at the household income level in each states with cities of more than 1,000,000 population. (Hint: the correct call would be `plot_usmap(data=dataframe,values="hhincome")` where data frame is the name of the data frame you stored your data.)
   
   (iii) This data set has data spanning many years, can you use `facet_..()` to separate the sub-figures from (ii)?
 
