@@ -1547,13 +1547,13 @@ div.tocify {
 <p>Any ways, to understand R, there are some basics you need to know.</p>
 <div id="datavalue-types" class="section level1">
 <h1>Data/Value types</h1>
-<p>Before we talk about all the bells and whistles in R, let’s first talk about values. There are 6 types of values in R and in most languages:</p>
+<p>Before we talk about all the bells and whistles in R, let’s first talk about values. There are 5 types of values in R and in most languages:</p>
 <div id="integer" class="section level2">
-<h2>Integer</h2>
+<h2>1. Integer</h2>
 <p>An integer is a whole number that does not have decimals.</p>
 </div>
 <div id="numericfloat" class="section level2">
-<h2>Numeric/Float</h2>
+<h2>2. Numeric/Float</h2>
 <p>A numeric is a number that can be any number with or without decimals. Note that an integer can be transformed into a numeric without losing information while a numeric transformed into an integer can lose the information after the decimals. For example,</p>
 <pre class="r"><code>as.integer(2.2)</code></pre>
 <pre><code>## [1] 2</code></pre>
@@ -1561,8 +1561,8 @@ div.tocify {
 <pre><code>## [1] 2</code></pre>
 </div>
 <div id="logicalboolean" class="section level2">
-<h2>Logical/Boolean</h2>
-<p>A Boolean [Boo-Lee-en] or logical value takes on either <code>TRUE</code> or <code>FALSE</code>. If you make a logical value numeric or integer, you will get 1 for a true value and a 0 for a false value. You can also as make 0 into <code>FALSE</code> and any non-zero value into `TRUE. For example,</p>
+<h2>3. Logical/Boolean</h2>
+<p>A Boolean [Boo-Lee-en] or logical value takes on either <code>TRUE</code> or <code>FALSE</code>. If you make a logical value numeric or integer, you will get 1 for a true value and a 0 for a false value. You can also make 0 into <code>FALSE</code> and any non-zero value into `TRUE. For example,</p>
 <pre class="r"><code>as.logical(0)</code></pre>
 <pre><code>## [1] FALSE</code></pre>
 <pre class="r"><code>as.logical(5)</code></pre>
@@ -1573,7 +1573,7 @@ div.tocify {
 <pre><code>## [1] 0</code></pre>
 </div>
 <div id="characterstring" class="section level2">
-<h2>Character/String</h2>
+<h2>4. Character/String</h2>
 <p>String/character values are just texts. Any text value is a string. You can create strings with <code>&quot;&quot;</code>. A number can also be read as a string. If you see a number read as a string, you can revert it back to a number using <code>as.numeric()</code>.</p>
 <pre class="r"><code>class(&quot;1&quot;)</code></pre>
 <pre><code>## [1] &quot;character&quot;</code></pre>
@@ -1581,7 +1581,7 @@ div.tocify {
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 </div>
 <div id="na-special-case" class="section level2">
-<h2>NA (Special case)</h2>
+<h2>5. NA (Special case)</h2>
 <p><code>NA</code>’s are tricky to deal with as it is not actually a type of values. Instead of representing a value, <code>NA</code> represents the <strong>absences of a value</strong>. Any value operated in conjugation with <code>NA</code> will give you a <code>NA</code>. If you compare 2 values, you get actual values, but if you do it with <code>NA</code>, you always get <code>NA</code>. For example,</p>
 <pre class="r"><code>2+2</code></pre>
 <pre><code>## [1] 4</code></pre>
@@ -1678,8 +1678,8 @@ str(df)</code></pre>
 <div id="try-it-yourself" class="section level1">
 <h1>Try it yourself!</h1>
 <ol style="list-style-type: decimal">
-<li><p>Create a data frame that has all the even numbers from 1 to 1000 in the first column and all the odd numbers from 1 to 1000 in the second columns and call this <code>mydf</code>.</p></li>
-<li><p>Using the selection operator <code>[]</code>, find the sub-data frame in <code>mydf</code> such that it only contains numbers less than 100 or greater than 900. (Hint: You can put logical values in selection, try and see how it works)</p></li>
+<li><p>Create a data frame that has all the even numbers from 1 to 1000 in the first column and all the odd numbers from 1 to 1000 in the second columns and call this <code>mydf</code>. (Hint: Use either <code>bind_cols()</code> or <code>bind_rows()</code>)</p></li>
+<li><p>Using the selection operator <code>[]</code>, create the sub-data frame in <code>mydf</code> such that it only contains numbers less than 100 or greater than 900. (Hint: You can put logical values in the selection operator. Try and see how it works)</p></li>
 <li><p>Use the following code [copy and paste onto your console] to obtain a data frame called <code>ps1.csv</code>.</p></li>
 </ol>
 <p>Ignore the first two lines if you have already installed and loaded the package <code>tidyverse</code></p>
