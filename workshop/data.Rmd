@@ -1,0 +1,18 @@
+---
+title: "Principles of Data Visualization in R Workshop: Introduction to `ggplot2`"
+author: "Willy Chen"
+date: "Workshop 2"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: eye.css
+    theme: readable
+---
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+[Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2slides.html)
+
+[Click here to continue to the next workshop: Introduction to data](https://willythewoo.github.io/WillyTheWoo/workshop/data.html)
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
