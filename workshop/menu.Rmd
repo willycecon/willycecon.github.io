@@ -7,17 +7,18 @@ output:
     theme: readable
 ---
 Welcome to the Principles of Data Visualization in R Workshop series. Please select one of the following menu items to continue.
-
+---------------------------------------------------------------------------------------------------------------------
 0. [Workshop Introduction (How to download R)](https://willythewoo.github.io/WillyTheWoo/workshop/Introduction.html)
 
-1. ([slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html)) [What is R?](https://willythewoo.github.io/WillyTheWoo/workshop/whatisR.html) 
+1. ([slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html))  [What is R?](https://willythewoo.github.io/WillyTheWoo/workshop/whatisR.html) 
 
-2. ([slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html)) [Introduction to ggplot2](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2.html)
+2. ([slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html))  [Introduction to ggplot2](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2.html)
 
-3. ([slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html)) [Introduction to data](https://willythewoo.github.io/WillyTheWoo/workshop/data.html)
+3. ([slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html))  [Introduction to data](https://willythewoo.github.io/WillyTheWoo/workshop/data.html)
 
-4. ([slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html)) [Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
+4. ([slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html))  [Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
 
-5. ([slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html)) [Introduction to text data](https://willythewoo.github.io/WillyTheWoo/workshop/textdata.html)
+5. ([slides](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html))  [Introduction to text data](https://willythewoo.github.io/WillyTheWoo/workshop/textdata.html)
 
-For coding examples with R, you can visit [my website](https://willythewoo.github.io/WillyTheWoo/)
+For coding examples with R, you can visit [my website](https://willythewoo.github.io/WillyTheWoo/) 
+---------------------------------------------------------------------------------------------------------------------
