@@ -27,13 +27,17 @@ For my photography work, [click here](https://www.flickr.com/photos/6149pix).
 
 
 
-## Coding Examples 
+## Coding Projects/Examples
+
+### Projects
 **[Latest Update: Principles of data visualization workshop](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)**
 
 [Corona Virus Resources](https://willychen.shinyapps.io/covid-resources/)
 
 [University Ambassador Scheduling System](https://willythewoo.github.io/WillyTheWoo/coding/Ambassador_Schedule)
 
+
+### Codes
 [Taiwanese Housing](https://willythewoo.github.io/WillyTheWoo/coding/Taiwan_housing)
 
 [Tweets processing](https://willythewoo.github.io/WillyTheWoo/coding/twitter)
