@@ -83,7 +83,7 @@ anyNA(c(NA,2,1))
 ```
 
 
-As you might realized form the examples above, you can do the basic operations with values using `+ , - , * , /` and compare the sizes of the values with `==`(two equal signs), `!=, < , <= , > , >=`.
+As you might have noticed from the examples above, you can do the basic operations with values using `+ , - , * , /` and compare the sizes of the values with `==`(two equal signs), `!=, < , <= , > , >=`.
 
 This concludes our introduction to values.
 

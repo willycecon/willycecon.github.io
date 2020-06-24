@@ -1583,7 +1583,7 @@ div.tocify {
 </div>
 <div id="factors" class="section level2">
 <h2>5. Factors</h2>
-<p>Factors are a special type of value that are categorical strings <strong>with an order</strong> associated with them. You can specify the order when making a factor by using the <code>levels</code> argument inside the function <code>factor</code>. In R 4.0.1 and above, the default for string variables are <strong>NOT</strong> factors while in older versions of R the default for string variables are factors. When the default is <code>stringsAsFactors==TRUE</code>, it is ordered alphabetically. To check your default settings, call <code>default.stringsAsFactors()</code> in your console.</p>
+<p>Factors are a special type of values that are categorical strings <strong>with an order</strong> associated with them. You can specify the order when making a factor by using the <code>levels</code> argument inside the function <code>factor</code>. In R 4.0.1 and above, the default for string variables are <strong>NOT</strong> factors while in older versions of R the default for string variables are factors. When the default is <code>stringsAsFactors==TRUE</code>, it is ordered alphabetically. To check your default settings, call <code>default.stringsAsFactors()</code> in your console.</p>
 <pre class="r"><code>names&lt;-c(&quot;Willy&quot;,&quot;Caroline&quot;,&quot;Aila&quot;)
 name&lt;-factor(names,levels=c(&quot;Aila&quot;,&quot;Willy&quot;,&quot;Caroline&quot;))
 name</code></pre>
@@ -1612,7 +1612,7 @@ name</code></pre>
 <pre><code>## [1] TRUE</code></pre>
 <pre class="r"><code>anyNA(c(NA,2,1))</code></pre>
 <pre><code>## [1] TRUE</code></pre>
-<p>As you might realized form the examples above, you can do the basic operations with values using <code>+,-,*,/</code> and compare the sizes of values with <code>==</code>(two equal signs), <code>&lt;,&lt;=,&gt;,&gt;=</code>.</p>
+<p>As you might have notived from the examples above, you can do the basic operations with values using <code>+,-,*,/</code> and compare the sizes of values with <code>==</code>(two equal signs), <code>!=, &lt; , &lt;= , &gt; , &gt;=</code>.</p>
 <p>This concludes our introduction to values.</p>
 </div>
 </div>

@@ -49,7 +49,7 @@ class(as.numeric(as.character(1)))
 ```
 
 ## 5. Factors
-Factors are a special type of value that are categorical strings **with an order** associated with them. You can specify the order when making a factor by using the `levels` argument inside the function `factor`. In R 4.0.1 and above, the default for string variables are **NOT** factors while in older versions of R the default for string variables are factors.
+Factors are a special type of values that are categorical strings **with an order** associated with them. You can specify the order when making a factor by using the `levels` argument inside the function `factor`. In R 4.0.1 and above, the default for string variables are **NOT** factors while in older versions of R the default for string variables are factors.
 When the default is `stringsAsFactors==TRUE`, it is ordered alphabetically. To check your default settings, call `default.stringsAsFactors()` in your console.
 ```{r}
 names<-c("Willy","Caroline","Aila")
@@ -76,7 +76,7 @@ anyNA(c(NA,2,1))
 ```
 
 
-As you might realized form the examples above, you can do the basic operations with values using `+,-,*,/` and compare the sizes of values with `==`(two equal signs), `<,<=,>,>=`.
+As you might have notived from the examples above, you can do the basic operations with values using `+,-,*,/` and compare the sizes of values with `==`(two equal signs), `!=, < , <= , > , >=`.
 
 This concludes our introduction to values.
 

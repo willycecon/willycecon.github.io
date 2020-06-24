@@ -205,6 +205,7 @@ ggplot(data=data,aes(x=age,
        y="Number of characters")
 
 ```
+
 # Try it yourself
 
 1. Use `read_csv()` from the `readr` package to load data from `https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv`. Make sure to use quotation marks in your function call so the data is read properly. And don't forget to use the assignment operator to actually save the data when you load it. This data set is called the American Community Survey (ACS). It is an annual sample collected by the Census Bureau. In the data set I provided you, there are 8 variables: Year, City, state, city population, \%female, median age, median household income, and whether this city is currently a sanctuary city.
