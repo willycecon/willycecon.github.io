@@ -3251,6 +3251,21 @@ name</pre>
 
 <p>This concludes our introduction to values.</p>
 
+</article></slide><slide class=""><hgroup><h2>Pop quiz</h2></hgroup><article  id="pop-quiz" class="build">
+
+<ol>
+<li><p>When dealing with string data that are numbers, the best way is to transform it into numeric/double using <code>as.numeric()</code></p></li>
+<li><p>Which of the following expressions does not return a logical value? <code>is.na(NA)</code>, <code>as.logical(TRUE+TRUE)</code>, <code>TRUE==TRUE</code>, <code>TRUE+FALSE</code></p></li>
+</ol>
+
+<p><code>is.na(NA)</code> \(\Rightarrow\) TRUE</p>
+
+<p><code>as.logical(TRUE+TRUE)</code> \(\Rightarrow\) TRUE</p>
+
+<p><code>TRUE==TRUE</code> \(\Rightarrow\) TRUE</p>
+
+<p><code>TRUE+FALSE</code> \(\Rightarrow\) 1</p>
+
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Object types</h2></hgroup><article  id="object-types">
 
 </article></slide><slide class=""><hgroup><h2>Objects</h2></hgroup><article  id="objects">
@@ -3326,6 +3341,25 @@ str(df)</pre>
 <p>The answer is, it tells you what the object type or value type of the thing you just fed it is. <code>class(2)</code> would give you &ldquo;numeric&rdquo; and <code>class(TRUE)</code> will give you &ldquo;logical&rdquo;.</p>
 
 <p>We will learn about more complicated and versatile functions later. As of writing your own functions, I will omit that for now. If need be, I can talk about it later or add it back in here.</p>
+
+</article></slide><slide class=""><hgroup><h2>Pop quiz</h2></hgroup><article  id="pop-quiz-1">
+
+<p>The following is an example of a function, can you identify each parts of the function?</p>
+
+<pre class = 'prettyprint lang-r'>both_odd&lt;-function(num1=2, num2){
+
+O1&lt;-(as.integer(num1/2)==(num1/2))
+
+O2&lt;-(as.integer(num2/2)==(num2/2))
+
+Result&lt;-O1==O2
+
+return(Result)
+}  </pre>
+
+<p>What should the call <code>both_odd(1)</code> return?</p>
+
+<p>What about <code>both_odd(2,1)</code>?</p>
 
 </article></slide><slide class="segue dark nobackground level1"><hgroup class = 'auto-fadein'><h2>Syntax and Semantics</h2></hgroup><article  id="syntax-and-semantics">
 

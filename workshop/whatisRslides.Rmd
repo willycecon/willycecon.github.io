@@ -87,6 +87,21 @@ As you might have noticed from the examples above, you can do the basic operatio
 
 This concludes our introduction to values.
 
+## Pop quiz {.build}
+
+1. When dealing with string data that are numbers, the best way is to transform it into numeric/double using `as.numeric()`
+
+2. Which of the following expressions does not return a logical value? `is.na(NA)`, `as.logical(TRUE+TRUE)`, `TRUE==TRUE`, `TRUE+FALSE`
+
+`is.na(NA)` $\Rightarrow$ `r is.na(NA)`
+
+`as.logical(TRUE+TRUE)` $\Rightarrow$ `r as.logical(TRUE+TRUE)`
+
+`TRUE==TRUE` $\Rightarrow$ `r TRUE==TRUE`
+
+`TRUE+FALSE` $\Rightarrow$ `r TRUE+FALSE`
+
+
 # Object types
 
 ## Objects
@@ -149,6 +164,25 @@ The answer is, it tells you what the object type or value type of the thing you 
 
 We will learn about more complicated and versatile functions later. As of writing your own functions, I will omit that for now. If need be, I can talk about it later or add it back in here. 
 
+## Pop quiz
+The following is an example of a function, can you identify each parts of the function?
+
+```{r}
+both_odd<-function(num1=2, num2){
+
+O1<-(as.integer(num1/2)==(num1/2))
+
+O2<-(as.integer(num2/2)==(num2/2))
+
+Result<-O1==O2
+
+return(Result)
+}  
+```
+
+What should the call `both_odd(1)` return? 
+
+What about `both_odd(2,1)`?
 
 # Syntax and Semantics
 
