@@ -13,6 +13,10 @@ output:
 
 [Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/whatisRslides.html)
 
+Workshop recording:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sfgoVqB5Wm8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 R is an object-oriented statistical language that is based on the language S which is based on C. Hence everything you do in R actually gets boiled down to C for your computer to understand. Cool, right?
 
 Anyways, to understand R, there are some basics you need to know.
@@ -85,10 +89,11 @@ R, like I said, is an object-oriented language. This means it is crucial we unde
 
 ```{r}
 vector1<-1
-vector2<-2
+vector2<-c(2)
 vector3<-c(1,2,4)
 matrix1<-matrix(c(1,2,3,4),nrow=2)
 dataframe1<-data.frame(matrix1)
+
 ```
 
 
@@ -111,6 +116,7 @@ To create a sequential vector you can use `:` to create a vector of a sequence a
 seq(1,10,2)
 rep(c(1,2,3),5)
 ```
+
 
 **Important note**: A vector can only contain one value type. You will get a uniform value type if you make a vector of numeric/logical and strings. `NA`'s are not subject to this rule because `NA` is not a value, it is the absence of a value.
 ```{r}
@@ -137,6 +143,7 @@ We will learn about more complicated and versatile functions later. As of writin
 
 # Syntax and Semantics
 Semantics is how you communicate with your computer in the language you have chosen. Every language (even the real languages like English) have a set of rules that tell you how words are arranged [syntax] and what they mean [semantics]. In R, there are only a couple you need to remember:
+
 
 ## Assignment operator
 
