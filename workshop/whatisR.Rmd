@@ -15,7 +15,7 @@ output:
 
 Workshop recording:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sfgoVqB5Wm8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="812" height="456.75" src="https://www.youtube.com/embed/P_brG2nG0hg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 R is an object-oriented statistical language that is based on the language S which is based on C. Hence everything you do in R actually gets boiled down to C for your computer to understand. Cool, right?
 
