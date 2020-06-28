@@ -194,7 +194,7 @@ data<-read.csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv"
 ```{r include=FALSE, eval=FALSE, echo=FALSE}
 data<-data.frame(a<-rnorm(1000,2,5),b<-runif(1000,2,4),c<-rbinom(1000,1,0.8))
 data[data==0]<-NA
-write.csv(data,"~/Desktop/ps1.csv")
+write_csv(data,"~/Desktop/ps1.csv")
 data<-read.csv("~/Desktop/ps1.csv")
 ```
 

@@ -1,7 +1,7 @@
 ---
-title: "Principles of Data Visualization in R Workshop: Introduction to `ggplot2`"
+title: "Principles of Data Visualization in R Workshop: Data"
 author: "Willy Chen"
-date: "Workshop 2"
+date: "Workshop 3"
 output: 
   html_document:
     toc: true
@@ -11,8 +11,49 @@ output:
 ---
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
 
-[Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2slides.html)
+[Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/data.html)
 
-[Click here to continue to the next workshop: Introduction to data](https://willythewoo.github.io/WillyTheWoo/workshop/data.html)
+
+## What is data?
+As we discussed in the first workshop, I started this workshop to increase people's general understaning of data. This includes talking about understanding the structure of data, different graphs, exploratory analysis vs causal analysis, etc.
+
+For the purpose of this workshop, I will only discuss these superficially to give you basic understanding. The first thing we should talk about is the structure of data. For this workshop, I will be using data collected from the workshop signup. You can load the data set with the code below,  and work on it as we go.
+```{r message=FALSE, warning=FALSE}
+require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv")
+```
+
+```{r include=FALSE, eval=FALSE}
+require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv") 
+data<-data%>%
+  select(everything(), good)%>%
+  separate(good,c('good1','good2','good3','good4','good5','good6','good7','good8','good9'),sep=";")%>%
+  gather(key="x",value="",good1:good9)%>%
+  select(-x)%>%
+  select(everything(), bad)%>%
+  separate(bad,c('bad1','bad2','bad3','bad4','bad5','bad6','bad7','bad8','bad9'),sep=";")
+
+data%>%write_csv("~/Desktop/workshop_data2.csv")
+```
+
+## Data Structure
+
+### Long vs Wide
+Recall that when we look at a dataframe, it is like an excel sheet. In a data frame, each column is a variable or sometimes called an attribute. Each row represents an observation in the data. This means each row is an instance that has attributes described by the data.
+
+What this distinction means is that our data can be in either a **long** form or a **wide** form. **Long** form data means that the data collects *multiple instances* of the *same* observation. **Wide** form data means the opposite. In wide form data, each obersvation will only have a *single instance*.
+
+When you transform a data set from long to wide, you **spread** *the multiple instances* into different attributes. This means the data will have many attributes, with each attribute representing the value of a instance.
+
+When you transform a data set from wide to long, you **gather** *the multiple attributes* [that belongs to the *single instance*] of each obsevation and put it into one attribute.
+
+
+
+
+
+
+
+[Click here to continue to the next workshop: Introduction to `tidyverse`](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
 
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
