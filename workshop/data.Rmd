@@ -14,13 +14,13 @@ output:
 [Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/data.html)
 
 
-## What is data?
+## How do we use data?
 As we discussed in the first workshop, I started this workshop to increase people's general understaning of data. This includes talking about understanding the structure of data, different graphs, exploratory analysis vs causal analysis, etc.
 
 For the purpose of this workshop, I will only discuss these superficially to give you basic understanding. The first thing we should talk about is the structure of data. For this workshop, I will be using data collected from the workshop signup. You can load the data set with the code below,  and work on it as we go.
-```{r message=FALSE, warning=FALSE}
+```{r message=FALSE, warning=FALSE, eval=FALSE}
 require(tidyverse)
-data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv")
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data2.csv")
 ```
 
 ```{r include=FALSE, eval=FALSE}
@@ -37,9 +37,7 @@ data<-data%>%
 data%>%write_csv("~/Desktop/workshop_data2.csv")
 ```
 
-## Data Structure
-
-### Long vs Wide
+## Data Structure: Long vs Wide
 Recall that when we look at a dataframe, it is like an excel sheet. In a data frame, each column is a variable or sometimes called an attribute. Each row represents an observation in the data. This means each row is an instance that has attributes described by the data.
 
 What this distinction means is that our data can be in either a **long** form or a **wide** form. **Long** form data means that the data collects *multiple instances* of the *same* observation. **Wide** form data means the opposite. In wide form data, each obersvation will only have a *single instance*.
@@ -47,6 +45,12 @@ What this distinction means is that our data can be in either a **long** form or
 When you transform a data set from long to wide, you **spread** *the multiple instances* into different attributes. This means the data will have many attributes, with each attribute representing the value of a instance.
 
 When you transform a data set from wide to long, you **gather** *the multiple attributes* [that belongs to the *single instance*] of each obsevation and put it into one attribute.
+
+### Key and Value
+From my discussion above, you are probably thinking that the line betwen long and wide seems blurry. You would be correct. A data set can actually be long and wide at the same time depending on how you want to define the **observation** and **instance**. 
+
+Under `tidyverse`, we call these observations *"key"* and these instances *"value"*. Key tells R which attribute(s) uniquely identifies your observations. For example, in our workshop data, you can see the column `good` and the columns `bad1` through `bad9`. The variable good stores information on the observation's favorite week of the perspectives class. However, I allowed for  
+
 
 
 

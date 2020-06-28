@@ -1549,19 +1549,16 @@ div.tocify {
 <p>As we discussed in the first workshop, I started this workshop to increase people’s general understaning of data. This includes talking about understanding the structure of data, different graphs, exploratory analysis vs causal analysis, etc.</p>
 <p>For the purpose of this workshop, I will only discuss these superficially to give you basic understanding. The first thing we should talk about is the structure of data. For this workshop, I will be using data collected from the workshop signup. You can load the data set with the code below, and work on it as we go.</p>
 <pre class="r"><code>require(tidyverse)
-data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv&quot;)</code></pre>
+data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data2.csv&quot;)</code></pre>
 </div>
-<div id="data-structure" class="section level2">
-<h2>Data Structure</h2>
-<div id="long-vs-wide" class="section level3">
-<h3>Long vs Wide</h3>
+<div id="data-structure-long-vs-wide" class="section level2">
+<h2>Data Structure: Long vs Wide</h2>
 <p>Recall that when we look at a dataframe, it is like an excel sheet. In a data frame, each column is a variable or sometimes called an attribute. Each row represents an observation in the data. This means each row is an instance that has attributes described by the data.</p>
 <p>What this distinction means is that our data can be in either a <strong>long</strong> form or a <strong>wide</strong> form. <strong>Long</strong> form data means that the data collects <em>multiple instances</em> of the <em>same</em> observation. <strong>Wide</strong> form data means the opposite. In wide form data, each obersvation will only have a <em>single instance</em>.</p>
 <p>When you transform a data set from long to wide, you <strong>spread</strong> <em>the multiple instances</em> into different attributes. This means the data will have many attributes, with each attribute representing the value of a instance.</p>
 <p>When you transform a data set from wide to long, you <strong>gather</strong> <em>the multiple attributes</em> [that belongs to the <em>single instance</em>] of each obsevation and put it into one attribute.</p>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html">Click here to continue to the next workshop: Introduction to <code>tidyverse</code></a></p>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/menu.html">Click here to return to the menu</a></p>
-</div>
 </div>
 
 
