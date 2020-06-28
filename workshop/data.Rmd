@@ -27,11 +27,9 @@ data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop
 require(tidyverse)
 data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv") 
 data<-data%>%
-  select(everything(), good)%>%
   separate(good,c('good1','good2','good3','good4','good5','good6','good7','good8','good9'),sep=";")%>%
-  gather(key="x",value="",good1:good9)%>%
+  gather(key="x",value="good",good1:good9)%>%
   select(-x)%>%
-  select(everything(), bad)%>%
   separate(bad,c('bad1','bad2','bad3','bad4','bad5','bad6','bad7','bad8','bad9'),sep=";")
 
 data%>%write_csv("~/Desktop/workshop_data2.csv")
