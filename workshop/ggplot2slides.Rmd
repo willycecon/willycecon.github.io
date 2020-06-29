@@ -36,7 +36,8 @@ ggplot(data=data,aes(x=age,
   guides(fill=guide_legend(ncol=4))+
   labs(title = "Correlation between age and number of characters in full name",
        x="Age",
-       y="Number of characters")
+       y="Number of characters") +
+  ggsave("~/Desktop/test.jpg")
 
 ```
 
@@ -104,7 +105,7 @@ ggplot(data=data,
 
 At this point, you may have realized that this chunk $\uparrow$ does not actually graph anything. This takes us to the second element of `ggplot2` -- **geom functions**
 
-# The anatomy of `ggplot()` - <br>Geom functions `geom_...()`
+# The anatomy of `ggplot()` - <br>geom functions `geom_...()`
 
 ## Geom functions `geom_....()`
 Think about creating a paining, if we say the graphing device is the thing you want to draw, then geom functions are the different paint brushes and pens/pencils that you can use. By specifying a geom function, you are telling `ggplot()` what kind of plot you want it to make.
@@ -137,7 +138,7 @@ This geom function makes a bar graph. Note that in this function, your graphing 
 This geom function makes a histogram. Note that in this function, your graphing devices need not specify a y variable.
 
 ### `geom_text()`
-This geom function acts similar to `geom_point`. However, instead of graphing scattered dots, it graphs the texts of the variable you specify via `label=` in your aesthetics `aes()` in your graphing device `ggplot()`.
+This geom function acts similar to `geom_point()`. However, instead of graphing scattered dots, it graphs the texts of the variable you specify via `label=` in your aesthetics `aes()` in your graphing device `ggplot()`.
 
 There are other geom functions in the package so you should explore them if what you want to graph cannot be done by these. You can always search a certain graph type and ggplot2 on Google.
 

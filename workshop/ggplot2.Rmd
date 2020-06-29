@@ -13,6 +13,9 @@ output:
 
 [Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2slides.html)
 
+Video Recording:
+<iframe width="812" height="456.75" src="https://www.youtube.com/embed/GZIhbLpYHDk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # What is `ggplot2`?
 
 ggplot2 is one of the most powerful graphing packages available in to R users. It supports most of the 2D graphing you would want to do and has a fairly straight forward structure that is easy to understand and revise quickly.
