@@ -232,7 +232,7 @@ ggplot(data=data,aes(x=age,
 
 
 
-[Click here to continue to the next workshop: Introduction to data](https://willythewoo.github.io/WillyTheWoo/workshop/data.html)
+[Click here to continue to the next workshop: Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
 
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
 

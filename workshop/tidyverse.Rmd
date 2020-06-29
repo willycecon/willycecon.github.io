@@ -11,6 +11,8 @@ output:
 ---
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
 
+[Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverseslides.html)
+
 R is a powerful language, but any language is only as powerful as its most versatile package. In R's case, that package is tidyverse and we will be focusing on functions from the `tidyverse` package for the rest of this series. If you haven't already, install the tidyverse package from CRAN using the code `install.packages("tidyverse")` and load it into your session using either `library(tidyverse)` or `require(tidyverse)`.
 ```{r}
 require(tidyverse)
@@ -85,11 +87,6 @@ data<-data%>%
 `seelct()` and `rename()` are used so you can tidy up your data. In `select()`, you put your data as the first argument, and the rest of the arguments are just variables you want to keep. If you want to rename some variables, you just need to write `select(data,newvar1=oldvar1,...)`. On the otherhand, if you just want to rename some variables, you onlyneed to write `rename(data,newvar1=oldvar1,...)`. The difference is that `select()` only gives you back the variables you specified while `rename()` gives you back your entire data frame. In the case where you want to use `select()` to reorder your data frame, you just need to specify the ones you want in the order and call `everything()` as your last argument.
 
 
-
-
-
-
-
 # tidyr
 
 ## separate
@@ -104,6 +101,6 @@ data<-data%>%
 
 
 
-<!-- [Click here to continue to the next workshop: Introduction to ggplot2](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2.html) -->
+[Click here to continue to the next workshop: Introduction to text data](https://willythewoo.github.io/WillyTheWoo/workshop/textdata.html) 
 
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
