@@ -18,13 +18,19 @@ output:
 ggplot2 is one of the most powerful graphing packages available in to R users. It supports most of the 2D graphing you would want to do and has a fairly straight forward structure that is easy to understand and revise quickly.
 
 To begin, let's look at an example of a graph I made using data downloadable [here](https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv) and then construct this step by step.
+
+
 ```{r message=FALSE, warning=FALSE, echo=FALSE}
 require(tidyverse)
 data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv")
 glimpse(data)
 ```
 
-```{r echo=FALSE}
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+data$characters<-as.numeric(data$characters)
+```
+
+```{r echo=FALSE, warning=FALSE}
 ggplot(data=data,aes(x=age,
                      y=characters,
                      col=as.factor(social),
