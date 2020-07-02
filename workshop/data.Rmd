@@ -13,6 +13,7 @@ output:
 
 [Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/dataslides.html)
 
+<iframe width="812" height="456.75" src="https://www.youtube.com/embed/Pogt024UjyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # How do we use data?
 As we discussed in the first workshop, I started this workshop to increase people's general understanding of data. This includes talking about understanding the structure of data, different graphs, exploratory analysis vs causal analysis, etc.
@@ -119,7 +120,7 @@ ggplot(filter(plot,num=="Line"),
 
 ## Histogram vs Bar chart
 
-```{r echo=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=10.5}
 plot<-data%>%mutate(num="Histogram")%>%
   bind_rows(data%>%mutate(num="Bar plot"))%>%
     bind_rows(data%>%mutate(num="Density plot"))%>%
@@ -128,15 +129,15 @@ plot<-data%>%mutate(num="Histogram")%>%
 
 
 ggplot(filter(plot,num=="Bar plot"),
-       aes(x=age,fill=as.factor(..count..))+
+       aes(x=age,fill=as.factor(num)))+
   geom_bar()+
-  #geom_histogram(data=filter(plot,num=="Histogram"),
-  #     aes(x=age,fill=..count..),se=FALSE)+
+  geom_histogram(data=filter(plot,num=="Histogram"),
+       aes(x=age,fill=as.factor(num)),se=FALSE)+
   facet_grid(.~num)+
-  #scale_y_continuous()
-  scale_fill_brewer(name="Count",palette="spectral")+
+  scale_fill_discrete(name="Plot Type")+
   labs(title="Bar plot vs Histogram",
-       x="Age")
+       x="Age")+ 
+  theme(legend.position =  "none")
 ```
 
 ## Box plot vs Density plot
