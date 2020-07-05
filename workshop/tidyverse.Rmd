@@ -13,9 +13,12 @@ output:
 
 [Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverseslides.html)
 
-R is a powerful language, but any language is only as powerful as its most versatile package. In R's case, that package is tidyverse and we will be focusing on functions from the `tidyverse` package for the rest of this series. If you haven't already, install the tidyverse package from CRAN using the code `install.packages("tidyverse")` and load it into your session using either `library(tidyverse)` or `require(tidyverse)`.
-```{r}
+R is a powerful language, but any language is only as powerful as its most versatile package. In R's case, that package is tidyverse and we will be focusing on functions from the `tidyverse` package for the rest of this series. If you haven't already, install the tidyverse package from CRAN using the code `install.packages("tidyverse")` and load it into your session using either `library(tidyverse)` or `require(tidyverse)`. For this workshop, we will use a subset of the data set from the ggplot2 workshop with a newly created variable `gpa`.
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
 require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data2.csv")
+d<-data%>%select(workshop,age,social,cohort)%>%mutate(gpa=3.5+rnorm(1976,0,0.3))
 ```
 
 # Pipe operator `%>%`
@@ -44,7 +47,7 @@ For the rest of this workshop, I want to focus on using the packages `dplyr` and
 # dplyr
 To get a more complete view of the `dplyr` package, [click here](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
 
-## filter(df , condition)
+## `filter(df , condition)`
 `filter()` is a literal filter for you to only get data that fits a certain condition. The filter function takes 2 arguments.
 
 1. Data frame
@@ -52,10 +55,29 @@ To get a more complete view of the `dplyr` package, [click here](https://cran.r-
 
 You should place the data you want to use and place the truth condition second. Note that the truthcondition can include multiple things. To make your code clear, alwasy wrap around chunks of condition in paranthesis. For example, the code `filter(data,((a==4&b==2)&(a==2|b==3))|(a==0|b==0))` will give me data that fits either `(a==4&b==2) & (a==2|b==3) ` or  `(a==0|b==0)`. Making your filter condition clear is extermely important for readability.
 
-## arrange(df , vars...)
-`arrange()` lets you rearrange the order of your observations based on the order of a variable(s). By default, it arranges the variable ascendingly. If you would like it to be arranged descendingly, you need to wrap the variable with `desc()`. `arrange()` rearranges based on the order of the variable you gave. For example, `arrange(data,age,desc(gpa))` would first arrange the data set from the youngest to oldest, and then for people of the same age, it arranges the data from the highest GPA to the lowest GPA. Arrange is most useful whe you need to see extreme values using `head()`
+For example, we can select people who answered `Maybe` to the workshop question in the survey:
+```{r}
+filter(data,
+       workshop=="Maybe")
+```
 
-## mutate(df , vars...)
+### ** Bonus ** `%in%`
+Sometimes if you have a vector of things that you want filter to match with the `or`(`|`) condition, you can use `%in%` and the vector you want to match. For example, we can select people who think the social committee's name is either `SUCSAC` or `VANESSA`:
+```{r}
+filter(data,
+       social %in% c("SUCSAC","VANESSA"))%>%
+  select(workshop, social)
+```
+
+
+
+
+## `arrange(df , vars...)`
+`arrange()` lets you rearrange the order of your observations based on the order of a variable(s). By default, it arranges the variable ascendingly. If you would like it to be arranged descendingly, you need to wrap the variable with `desc()`. `arrange()` rearranges based on the order of the variable you gave. For example, `arrange(data,age,desc(gpa))` would first arrange the data set from the youngest to oldest, and then for people of the same age, it arranges the data from the highest GPA to the lowest GPA. Arrange is most useful when you need to see extreme values using `head()` or need to do sequential operations.
+
+For example, we can arrange 
+
+## `mutate(df , vars...)`
 `mutate()` is perhaps one of the most useful function and probably the function I used the most. This function lets you create a new variable in your dataset either with or without using the original data. To use `mutate()`, you use the data frame as its first argument and the variables you want to create as the rest of the arguments. For example, if I want to create a variable that is age $\times$ gpa and gpa $\times$ a random number between 10 and 20, I can write.
 ```{r eval=FALSE}
 data<-df%>%
@@ -63,14 +85,14 @@ data<-df%>%
          graderand=gpa*sample(10:20,1,TRUE))
 ```
 
-## summarise(df , vars...)
+## `summarise(df , vars...)`
 `summarise()` is similar to mutate, but you **will** lose your original data set. This function takes your data frame as the first argument and creates summarized statistics however you want it. Say I want to see the mean, maximum, and standard deviation of the variable gpa, I will write:
 ```{r eval=FALSE}
 data%>%summarise(average=mean(gpa),max=mac(gpa),sigma=sd(gpa))
 ```
 and I will get a data frame with one row and three variables. Alternatively, if you want a general summary statistics of your data you can call the function `summary()`.
 
-## group_by(df , vars...)
+## `group_by(df , vars...)`
 `group_by()` is perhaps the most powerful function of the `dplyr` package. This function allows you to do any operation by certain grouping characteristics. This function outputs a data frame that has a grouping structure on it, making all the subsequent operations groupwise until the structure is removed. For example, if I want to look at the average age of participants in this workshop based on their cohorts, I will simply group the data by cohorts and then call `summarise()` or `mutate()`. Afterwards, I may want to remove the grouping structure so I can see the difference between group averages and total average. In that case, I simply need to pipe the data into `ungroup()` before I pipe it again into mutate.
 
 ```{r eval=FALSE}
@@ -83,20 +105,21 @@ data<-data%>%
 
 **Bonus** If you want the operation to happen row by row (you may need to do this when geocoding), you can use a special version of `group_by()` called `rowwise()`. `rowwise()` imposes a grouping structure so that each row is in its own group.
 
-## select()/rename()
+## `select(df, cols)`/`rename(df, new_col=old_col)`
 `seelct()` and `rename()` are used so you can tidy up your data. In `select()`, you put your data as the first argument, and the rest of the arguments are just variables you want to keep. If you want to rename some variables, you just need to write `select(data,newvar1=oldvar1,...)`. On the otherhand, if you just want to rename some variables, you onlyneed to write `rename(data,newvar1=oldvar1,...)`. The difference is that `select()` only gives you back the variables you specified while `rename()` gives you back your entire data frame. In the case where you want to use `select()` to reorder your data frame, you just need to specify the ones you want in the order and call `everything()` as your last argument.
 
 
 # tidyr
 
-## separate
+## `separate(df, col, into, sep)`
+`separate()` is used for you to split values in a single column into multiple columns. The `into` argument takes on a vector of texts for you to specify the names of the new columns that you want to create from the original column. `sep` specifies what you want are to use as the separator for the column. For example, in the data we used before
 
-## unite
 
-## gather 
+## `unite(df, new_col, cols, sep)`
 
-## spread
+## `pivot_longer(df, cols, names_to, values_to)`
 
+## `pivot_wider(df, id_cols, names_from, values_from)`
 
 
 

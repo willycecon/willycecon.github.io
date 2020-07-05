@@ -1544,17 +1544,7 @@ div.tocify {
 
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/menu.html">Click here to return to the menu</a></p>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/tidyverseslides.html">Click here to go to the slides for more examples</a></p>
-<p>R is a powerful language, but any language is only as powerful as its most versatile package. In R’s case, that package is tidyverse and we will be focusing on functions from the <code>tidyverse</code> package for the rest of this series. If you haven’t already, install the tidyverse package from CRAN using the code <code>install.packages(&quot;tidyverse&quot;)</code> and load it into your session using either <code>library(tidyverse)</code> or <code>require(tidyverse)</code>.</p>
-<pre class="r"><code>require(tidyverse)</code></pre>
-<pre><code>## Loading required package: tidyverse</code></pre>
-<pre><code>## ── Attaching packages ─────────────────────────────────── tidyverse 1.3.0 ──</code></pre>
-<pre><code>## ✔ ggplot2 3.2.1     ✔ purrr   0.3.3
-## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
-## ✔ tidyr   1.0.0     ✔ stringr 1.4.0
-## ✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
-<pre><code>## ── Conflicts ────────────────────────────────────── tidyverse_conflicts() ──
-## ✖ dplyr::filter() masks stats::filter()
-## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<p>R is a powerful language, but any language is only as powerful as its most versatile package. In R’s case, that package is tidyverse and we will be focusing on functions from the <code>tidyverse</code> package for the rest of this series. If you haven’t already, install the tidyverse package from CRAN using the code <code>install.packages(&quot;tidyverse&quot;)</code> and load it into your session using either <code>library(tidyverse)</code> or <code>require(tidyverse)</code>. For this workshop, we will continue to use the data set from the ggplot2 workshop.</p>
 <div id="pipe-operator" class="section level1">
 <h1>Pipe operator <code>%&gt;%</code></h1>
 <p>One of the most powerful tool that tidyverse brings us is the pipe operator <code>%&gt;%</code>. If you are familiar with shell, you know what this is. If you have never heard of shell, this is going to blow your mind.</p>
@@ -1577,33 +1567,76 @@ data_final&lt;-f4(data3)</code></pre>
 <h1>dplyr</h1>
 <p>To get a more complete view of the <code>dplyr</code> package, <a href="https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html">click here</a></p>
 <div id="filterdf-condition" class="section level2">
-<h2>filter(df , condition)</h2>
+<h2><code>filter(df , condition)</code></h2>
 <p><code>filter()</code> is a literal filter for you to only get data that fits a certain condition. The filter function takes 2 arguments.</p>
 <ol style="list-style-type: decimal">
 <li>Data frame</li>
 <li>Truth condition</li>
 </ol>
 <p>You should place the data you want to use and place the truth condition second. Note that the truthcondition can include multiple things. To make your code clear, alwasy wrap around chunks of condition in paranthesis. For example, the code <code>filter(data,((a==4&amp;b==2)&amp;(a==2|b==3))|(a==0|b==0))</code> will give me data that fits either <code>(a==4&amp;b==2) &amp; (a==2|b==3)</code> or <code>(a==0|b==0)</code>. Making your filter condition clear is extermely important for readability.</p>
+<p>For example, we can select people who answered <code>Maybe</code> to the workshop question in the survey:</p>
+<pre class="r"><code>filter(data,
+       workshop==&quot;Maybe&quot;)</code></pre>
+<pre><code>## # A tibble: 240 x 23
+##    TimeStamp workshop days  model times county   age bad1  bad2  bad3 
+##    &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
+##  1 2020/06/… Maybe    Mond… 2 ho… Morn… Cook …    24 Hist… Psyc… &lt;NA&gt; 
+##  2 2020/06/… Maybe    Wedn… 2 ho… Morn… Cuyah…    25 Psyc… &lt;NA&gt;  &lt;NA&gt; 
+##  3 2020/06/… Maybe    Wedn… 2 ho… Morn… Cuyah…    25 Psyc… &lt;NA&gt;  &lt;NA&gt; 
+##  4 2020/06/… Maybe    Mond… 2 ho… Morn… Cook …    24 Hist… Psyc… &lt;NA&gt; 
+##  5 2020/06/… Maybe    Wedn… 2 ho… Morn… Cuyah…    25 Psyc… &lt;NA&gt;  &lt;NA&gt; 
+##  6 2020/06/… Maybe    Wedn… 2 ho… Morn… Cuyah…    25 Psyc… &lt;NA&gt;  &lt;NA&gt; 
+##  7 2020/06/… Maybe    Mond… 2 ho… Morn… Orang…    28 Econ… &lt;NA&gt;  &lt;NA&gt; 
+##  8 2020/06/… Maybe    Mond… 3 ho… Half… Hills…    33 Hist… Econ… &lt;NA&gt; 
+##  9 2020/06/… Maybe    Wedn… 2 ho… Morn… Cuyah…    25 Psyc… &lt;NA&gt;  &lt;NA&gt; 
+## 10 2020/06/… Maybe    Wedn… 2 ho… Morn… Cuyah…    25 Psyc… &lt;NA&gt;  &lt;NA&gt; 
+## # … with 230 more rows, and 13 more variables: bad4 &lt;chr&gt;, bad5 &lt;chr&gt;,
+## #   bad6 &lt;chr&gt;, bad7 &lt;chr&gt;, bad8 &lt;lgl&gt;, bad9 &lt;lgl&gt;, exp &lt;chr&gt;,
+## #   social &lt;chr&gt;, characters &lt;chr&gt;, learn &lt;chr&gt;, homework &lt;chr&gt;,
+## #   cohort &lt;chr&gt;, good &lt;chr&gt;</code></pre>
+<div id="bonus-in" class="section level3">
+<h3>** Bonus ** <code>%in%</code></h3>
+<p>Sometimes if you have a vector of things that you want filter to match with the <code>or</code>(<code>|</code>) condition, you can use <code>%in%</code> and the vector you want to match. For example, we can select people who think the social committee’s name is either <code>SUGSAC</code> or <code>VANESSA</code>:</p>
+<pre class="r"><code>filter(data,
+       social %in% c(&quot;SUGSAC&quot;,&quot;VANESSA&quot;))</code></pre>
+<pre><code>## # A tibble: 206 x 23
+##    TimeStamp workshop days  model times county   age bad1  bad2  bad3 
+##    &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
+##  1 2020/06/… Yes      Mond… 2 ho… Morn… Racin…    27 Psyc… &lt;NA&gt;  &lt;NA&gt; 
+##  2 2020/06/… Yes      Wedn… 3 ho… Afte… Dekal…    26 Hist… &lt;NA&gt;  &lt;NA&gt; 
+##  3 2020/06/… Yes      Mond… 3 ho… Morn… Arlin…    NA Hist… Crit… &lt;NA&gt; 
+##  4 2020/06/… Yes      Mond… 2 ho… Morn… Racin…    27 Psyc… &lt;NA&gt;  &lt;NA&gt; 
+##  5 2020/06/… Yes      Mond… 2 ho… Morn… Racin…    27 Psyc… &lt;NA&gt;  &lt;NA&gt; 
+##  6 2020/06/… Yes      Wedn… 3 ho… Afte… Dekal…    26 Hist… &lt;NA&gt;  &lt;NA&gt; 
+##  7 2020/06/… Yes      Mond… 3 ho… Morn… Arlin…    NA Hist… Crit… &lt;NA&gt; 
+##  8 2020/06/… Yes      Wedn… 3 ho… Afte… Dekal…    26 Hist… &lt;NA&gt;  &lt;NA&gt; 
+##  9 2020/06/… Yes      Mond… 2 ho… Morn… Dalla…    27 Hist… Econ… Soci…
+## 10 2020/06/… Yes      Mond… 2 ho… Morn… Dalla…    27 Hist… Econ… Soci…
+## # … with 196 more rows, and 13 more variables: bad4 &lt;chr&gt;, bad5 &lt;chr&gt;,
+## #   bad6 &lt;chr&gt;, bad7 &lt;chr&gt;, bad8 &lt;lgl&gt;, bad9 &lt;lgl&gt;, exp &lt;chr&gt;,
+## #   social &lt;chr&gt;, characters &lt;chr&gt;, learn &lt;chr&gt;, homework &lt;chr&gt;,
+## #   cohort &lt;chr&gt;, good &lt;chr&gt;</code></pre>
 </div>
-<div id="arrangedf-vars" class="section level2">
-<h2>arrange(df , vars…)</h2>
+</div>
+<div id="arrangedf-vars..." class="section level2">
+<h2><code>arrange(df , vars...)</code></h2>
 <p><code>arrange()</code> lets you rearrange the order of your observations based on the order of a variable(s). By default, it arranges the variable ascendingly. If you would like it to be arranged descendingly, you need to wrap the variable with <code>desc()</code>. <code>arrange()</code> rearranges based on the order of the variable you gave. For example, <code>arrange(data,age,desc(gpa))</code> would first arrange the data set from the youngest to oldest, and then for people of the same age, it arranges the data from the highest GPA to the lowest GPA. Arrange is most useful whe you need to see extreme values using <code>head()</code></p>
 </div>
-<div id="mutatedf-vars" class="section level2">
-<h2>mutate(df , vars…)</h2>
+<div id="mutatedf-vars..." class="section level2">
+<h2><code>mutate(df , vars...)</code></h2>
 <p><code>mutate()</code> is perhaps one of the most useful function and probably the function I used the most. This function lets you create a new variable in your dataset either with or without using the original data. To use <code>mutate()</code>, you use the data frame as its first argument and the variables you want to create as the rest of the arguments. For example, if I want to create a variable that is age <span class="math inline">\(\times\)</span> gpa and gpa <span class="math inline">\(\times\)</span> a random number between 10 and 20, I can write.</p>
 <pre class="r"><code>data&lt;-df%&gt;%
   mutate(gradeage=gpa*age,
          graderand=gpa*sample(10:20,1,TRUE))</code></pre>
 </div>
-<div id="summarisedf-vars" class="section level2">
-<h2>summarise(df , vars…)</h2>
+<div id="summarisedf-vars..." class="section level2">
+<h2><code>summarise(df , vars...)</code></h2>
 <p><code>summarise()</code> is similar to mutate, but you <strong>will</strong> lose your original data set. This function takes your data frame as the first argument and creates summarized statistics however you want it. Say I want to see the mean, maximum, and standard deviation of the variable gpa, I will write:</p>
 <pre class="r"><code>data%&gt;%summarise(average=mean(gpa),max=mac(gpa),sigma=sd(gpa))</code></pre>
 <p>and I will get a data frame with one row and three variables. Alternatively, if you want a general summary statistics of your data you can call the function <code>summary()</code>.</p>
 </div>
-<div id="group_bydf-vars" class="section level2">
-<h2>group_by(df , vars…)</h2>
+<div id="group_bydf-vars..." class="section level2">
+<h2><code>group_by(df , vars...)</code></h2>
 <p><code>group_by()</code> is perhaps the most powerful function of the <code>dplyr</code> package. This function allows you to do any operation by certain grouping characteristics. This function outputs a data frame that has a grouping structure on it, making all the subsequent operations groupwise until the structure is removed. For example, if I want to look at the average age of participants in this workshop based on their cohorts, I will simply group the data by cohorts and then call <code>summarise()</code> or <code>mutate()</code>. Afterwards, I may want to remove the grouping structure so I can see the difference between group averages and total average. In that case, I simply need to pipe the data into <code>ungroup()</code> before I pipe it again into mutate.</p>
 <pre class="r"><code>data&lt;-data%&gt;%
   group_by(cohort)%&gt;%
@@ -1612,24 +1645,25 @@ data_final&lt;-f4(data3)</code></pre>
   mutate(groupdiff=mean(age)-muage)</code></pre>
 <p><strong>Bonus</strong> If you want the operation to happen row by row (you may need to do this when geocoding), you can use a special version of <code>group_by()</code> called <code>rowwise()</code>. <code>rowwise()</code> imposes a grouping structure so that each row is in its own group.</p>
 </div>
-<div id="selectrename" class="section level2">
-<h2>select()/rename()</h2>
+<div id="selectdf-colsrenamedf-new_colold_col" class="section level2">
+<h2><code>select(df, cols)</code>/<code>rename(df, new_col=old_col)</code></h2>
 <p><code>seelct()</code> and <code>rename()</code> are used so you can tidy up your data. In <code>select()</code>, you put your data as the first argument, and the rest of the arguments are just variables you want to keep. If you want to rename some variables, you just need to write <code>select(data,newvar1=oldvar1,...)</code>. On the otherhand, if you just want to rename some variables, you onlyneed to write <code>rename(data,newvar1=oldvar1,...)</code>. The difference is that <code>select()</code> only gives you back the variables you specified while <code>rename()</code> gives you back your entire data frame. In the case where you want to use <code>select()</code> to reorder your data frame, you just need to specify the ones you want in the order and call <code>everything()</code> as your last argument.</p>
 </div>
 </div>
 <div id="tidyr" class="section level1">
 <h1>tidyr</h1>
-<div id="separate" class="section level2">
-<h2>separate</h2>
+<div id="separatedf-col-into-sep" class="section level2">
+<h2><code>separate(df, col, into, sep)</code></h2>
+<p><code>separate()</code> is used for you to split values in a single column into multiple columns. The <code>into</code> argument takes on a vector of texts for you to specify the names of the new columns that you want to create from the original column. <code>sep</code> specifies what you want are to use as the separator for the column. For example, in the data we used before</p>
 </div>
-<div id="unite" class="section level2">
-<h2>unite</h2>
+<div id="unitedf-new_col-cols-sep" class="section level2">
+<h2><code>unite(df, new_col, cols, sep)</code></h2>
 </div>
-<div id="gather" class="section level2">
-<h2>gather</h2>
+<div id="pivot_longerdf-cols-names_to-values_to" class="section level2">
+<h2><code>pivot_longer(df, cols, names_to, values_to)</code></h2>
 </div>
-<div id="spread" class="section level2">
-<h2>spread</h2>
+<div id="pivot_widerdf-id_cols-names_from-values_from" class="section level2">
+<h2><code>pivot_wider(df, id_cols, names_from, values_from)</code></h2>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/textdata.html">Click here to continue to the next workshop: Introduction to text data</a></p>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/menu.html">Click here to return to the menu</a></p>
 </div>
