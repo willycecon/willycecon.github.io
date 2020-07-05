@@ -15,12 +15,17 @@ output:
 
 R is a powerful language, but any language is only as powerful as its most versatile package. In R's case, that package is tidyverse and we will be focusing on functions from the `tidyverse` package for the rest of this series. If you haven't already, install the tidyverse package from CRAN using the code `install.packages("tidyverse")` and load it into your session using either `library(tidyverse)` or `require(tidyverse)`. For this workshop, we will use a subset of the data set from the ggplot2 workshop with a newly created variable `gpa`.
 
-```{r message=FALSE, warning=FALSE, echo=FALSE}
+```{r message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
 require(tidyverse)
 data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data2.csv")
 d<-data%>%select(workshop,age,social,cohort)%>%mutate(gpa=3.5+rnorm(1976,0,0.3))
+write_csv(d,"~/Documents/GitHub/WillyTheWoo/workshop/data/workshop_data3.csv")
 ```
 
+```{r message=FALSE, warning=FALSE}
+require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data3.csv")
+```
 # Pipe operator `%>%`
 One of the most powerful tool that tidyverse brings us is the pipe operator `%>%`. If you are familiar with shell, you know what this is. If you have never heard of shell, this is going to blow your mind.
 
