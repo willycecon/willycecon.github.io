@@ -257,7 +257,7 @@ This problem will teach you how to create a simulated data set under the general
 ----
 
 Using functions like `rnorm()`, `rbinom()`, and `runif()`, create a data frame with variables $X$, $D$, and $E$ such that
-  $X\sim U[-2,2]$, $D\sim Binom(0.3)$, and $E\sim N(0,1)$ with 1,000 observations. Call this data frame `d21`
+  $X\sim U[-2,2]$, $D\sim Binom(0.3)$, and $E\sim N(0,1)$ with 1,000 observations. Call this data frame `d21`. In `rbinom()`, set the argument `size` to 1.
 
 ----
 
