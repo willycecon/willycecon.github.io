@@ -13,10 +13,10 @@ output:
 
 [Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/textdataslides.html)
 
-<iframe width="812" height="456.75" src="https://www.youtube.com/embed/8uTbf0XgAF4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="812" height="456.75" src="https://www.youtube.com/embed/CO_wZO-1gLU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-In data science for social sciences, text data is especially important to be dealt with with care. In R, there are many packages you can use for dealing with text data. In this workshop, we will be going over the `stringr` package which is included in the `tidyverse` package. We will also talk about regular expressions [regex], which is a common way to deal with strings across most language. 
+In data science for the social sciences, text data is especially important to be dealt with with care. In R, there are many packages you can use for dealing with text data. In this workshop, we will be going over the `stringr` package which is included in the `tidyverse` package. We will also talk about regular expressions [regex], which is a common way to deal with strings across most language. 
 
 
 # `stringr`
