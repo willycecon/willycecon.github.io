@@ -20,7 +20,10 @@ Welcome to the Principles of Data Visualization in R Workshop series. Please sel
 
 5. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/textdataslides.html))  [Introduction to text data](https://willythewoo.github.io/WillyTheWoo/workshop/textdata.html) 
 
+5.5 [Setting up free hosting for your website on Github](https://willythewoo.github.io/WillyTheWoo/workshop/github.html)
+
 6. ([Slides](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdownslides.html)) [Introduction to RMarkdown automation ](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdown.html) 
+
 
 There are many cheat sheets published by RStudio. I have attached a couple that I think will be useful for people taking this workshop. You can also find the complete set of cheat sheets [here](https://rstudio.com/resources/cheatsheets/)
 
