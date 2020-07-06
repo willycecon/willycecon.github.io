@@ -96,13 +96,15 @@ data<-data %>%
   mutate(gradeage = gpa*age,
          graderand = gpa*sample(10:20,1,TRUE))
 ```
-
+```{r echo=FALSE}
+data%>%head(n=3)
+```
 ## `summarise(df , vars...)`
 `summarise()` is similar to mutate, but you **will** lose your original data set. This function takes your data frame as the first argument and creates summarized statistics however you want it. Say I want to see the mean, maximum, and standard deviation of the variable gpa, I will write:
-```{r eval=FALSE}
+```{r}
 data %>%
   summarise(avggpa = mean(gpa),
-                 maxgpa = mac(gpa),
+                 maxgpa = max(gpa),
                  sigmagpa = sd(gpa))
 ```
 and I will get a data frame with one row and three variables. Alternatively, if you want a general summary statistics of your data you can call the function `summary()`.
@@ -110,12 +112,14 @@ and I will get a data frame with one row and three variables. Alternatively, if 
 ## `group_by(df , vars...)`
 `group_by()` is perhaps the most powerful function of the `dplyr` package. This function allows you to do any operation by certain grouping characteristics. This function outputs a data frame that has a grouping structure on it, making all the subsequent operations group wise until the structure is removed. For example, if I want to look at the average age of participants in this workshop based on their cohorts, I will simply group the data by cohorts and then call `summarise()` or `mutate()`. Afterwards, I may want to remove the grouping structure so I can see the difference between group averages and total average. In that case, I simply need to pipe the data into `ungroup()` before I pipe it again into mutate.
 
-```{r eval=FALSE}
+```{r}
 data<-data %>%
   group_by(cohort) %>%
-  mutate(muage=mean(age)) %>%
+  mutate(muage=mean(age, na.rm=TRUE)) %>%
   ungroup() %>%
-  mutate(groupdiff = mean(age)-muage)
+  mutate(groupdiff = mean(age, na.rm=TRUE)-muage)
+
+data%>%head(6)
 ```
 
 **Bonus** If you want the operation to happen row by row (you may need to do this when geocoding), you can use a special version of `group_by()` called `rowwise()`. `rowwise()` imposes a grouping structure so that each row is in its own group.
