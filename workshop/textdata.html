@@ -1681,7 +1681,7 @@ data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/
 </div>
 <div id="regular-expressions-regex" class="section level1">
 <h1>Regular Expressions (Regex)</h1>
-<p>Regular expression is the common way to describe strings to any computer language. In the examples, I will speak in terms of what <code>str_extract()</code> will output from the string <strong>“aabc123d”</strong></p>
+<p>Regular expression is the common way to describe strings to any computer language. In the examples, I will speak in terms of what <code>str_extract()</code> will output from the string <strong>“aaabc123d”</strong></p>
 <div id="groupblock" class="section level3">
 <h3>Group/Block: <code>( )</code></h3>
 <p>When you want a exact group of string to be used in a pattern, put parentheses around the pattern.</p>
@@ -1695,7 +1695,7 @@ data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/
 <div id="any-in" class="section level3">
 <h3>Any in: <code>[ ]</code></h3>
 <p>When you use brackets, your regular expression means anything in the bracket. Sort of like an overpowered Or condition.</p>
-<p>For example, [abc] extracts “a”. If you were to use <code>str_extract_all()</code> instead, <code>[abc]</code> extracts “a”, “b”, “c”.</p>
+<p>For example, <code>[abc]</code> extracts “a”. If you were to use <code>str_extract_all()</code> instead, <code>[abc]</code> extracts “a”, “b”, “c”.</p>
 </div>
 <div id="zero-or-one" class="section level3">
 <h3>Zero or one: <code>?</code></h3>
@@ -1730,7 +1730,7 @@ data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/
 <div id="end-of-string" class="section level3">
 <h3>End of string: <code>$</code></h3>
 <p><code>$</code> in regular expression means the pattern needs to be at the end of the string.</p>
-<p>For example, if we use <code>string_extract_all()</code> with <code>..</code> we will get “aa”, “ab”, “bc”, “c1”, “12”, “23”, “3d”. But if we use <code>..$</code> instead, we will only get “3d”.</p>
+<p>For example, if we use <code>string_extract_all()</code> with <code>..</code> we will get “aa”, “ab”, “c1”, “23”. But if we use <code>..$</code> instead, we will only get “3d”.</p>
 </div>
 <div id="a-z-a-z-and-a-za-z" class="section level3">
 <h3><code>[A-Z]</code>, <code>[a-z]</code>, and <code>[A-Za-z]</code></h3>

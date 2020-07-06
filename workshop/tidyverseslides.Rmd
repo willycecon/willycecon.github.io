@@ -3,11 +3,8 @@ title: "Principles of Data Visualization in R Workshop: Introduction to tidyvers
 author: "Willy Chen"
 date: "Workshop 2"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
-    css: eye.css
-    theme: readable
+  ioslides_presentation:
+    widescreen: true
 ---
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
 
