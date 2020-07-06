@@ -1,7 +1,7 @@
 ---
 title: "Principles of Data Visualization in R Workshop: Introduction to tidyverse"
 author: "Willy Chen"
-date: "Workshop 2"
+date: "Workshop 4"
 output: 
   html_document:
     toc: true
@@ -29,7 +29,7 @@ data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop
 # Pipe operator `%>%`
 One of the most powerful tool that tidyverse brings us is the pipe operator `%>%`. If you are familiar with shell, you know what this is. If you have never heard of shell, this is going to blow your mind.
 
-Sometimes, you are going to use multiple function on a data set. Say you have a data set called `data`, and you have 4 functions, `f1`, `f2`, `f3`, and `f4`, and you need the output from feeding data through each function sequestially. Intuitively, the first thing you would do is.
+Sometimes, you are going to use multiple function on a data set. Say you have a data set called `data`, and you have 4 functions, `f1`, `f2`, `f3`, and `f4`, and you need the output from feeding data through each function sequentially. Intuitively, the first thing you would do is.
 ```{r eval=FALSE}
 data1<-f1(data)
 data2<-f2(data1)
@@ -45,7 +45,7 @@ data_final<-
   f3() %>% 
   f4()
 ```
-The piping operator allows us to write much cleaner codefor readability. One of the most important and universal best practice in coding is to space out your code into lines when you need to, and pipes allows us to do that easily. Personally, I put each function in its own line so I can easily change some of the arguments in those functions.
+The piping operator allows us to write much cleaner code for readability. One of the most important and universal best practice in coding is to space out your code into lines when you need to, and pipes allows us to do that easily. Personally, I put each function in its own line so I can easily change some of the arguments in those functions.
 
 For the rest of this workshop, I want to focus on using the packages `dplyr` and `tidyr` from the parent package `tidyverse`. Note that this means you only have to load `tidyverse` and these packages will automatically be included. 
 
@@ -58,7 +58,7 @@ To get a more complete view of the `dplyr` package, [click here](https://cran.r-
 1. Data frame
 2. Truth condition
 
-You should place the data you want to use and place the truth condition second. Note that the truthcondition can include multiple things. To make your code clear, alwasy wrap around chunks of condition in paranthesis. For example, the code `filter(data,((a==4&b==2)&(a==2|b==3))|(a==0|b==0))` will give me data that fits either `(a==4&b==2) & (a==2|b==3) ` or  `(a==0|b==0)`. Making your filter condition clear is extermely important for readability.
+You should place the data you want to use and place the truth condition second. Note that the truth condition can include multiple things. To make your code clear, always wrap around chunks of condition in parenthesis. For example, the code `filter(data,((a==4&b==2)&(a==2|b==3))|(a==0|b==0))` will give me data that fits either `(a==4&b==2) & (a==2|b==3) ` or  `(a==0|b==0)`. Making your filter condition clear is extremely important for readability.
 
 For example, we can select people who answered `Maybe` to the workshop question in the survey:
 ```{r}
@@ -90,7 +90,7 @@ data %>%
 
 
 ## `mutate(df , vars...)`
-`mutate()` is perhaps one of the most useful function and probably the function I used the most. This function lets you create a new variable in your dataset either with or without using the original data. To use `mutate()`, you use the data frame as its first argument and the variables you want to create as the rest of the arguments. For example, if I want to create a variable that is age $\times$ gpa and gpa $\times$ a random number between 10 and 20, I can write.
+`mutate()` is perhaps one of the most useful function and probably the function I used the most. This function lets you create a new variable in your data set either with or without using the original data. To use `mutate()`, you use the data frame as its first argument and the variables you want to create as the rest of the arguments. For example, if I want to create a variable that is age $\times$ gpa and gpa $\times$ a random number between 10 and 20, I can write.
 ```{r eval=FALSE}
 data<-data %>%
   mutate(gradeage = gpa*age,
@@ -108,7 +108,7 @@ data %>%
 and I will get a data frame with one row and three variables. Alternatively, if you want a general summary statistics of your data you can call the function `summary()`.
 
 ## `group_by(df , vars...)`
-`group_by()` is perhaps the most powerful function of the `dplyr` package. This function allows you to do any operation by certain grouping characteristics. This function outputs a data frame that has a grouping structure on it, making all the subsequent operations groupwise until the structure is removed. For example, if I want to look at the average age of participants in this workshop based on their cohorts, I will simply group the data by cohorts and then call `summarise()` or `mutate()`. Afterwards, I may want to remove the grouping structure so I can see the difference between group averages and total average. In that case, I simply need to pipe the data into `ungroup()` before I pipe it again into mutate.
+`group_by()` is perhaps the most powerful function of the `dplyr` package. This function allows you to do any operation by certain grouping characteristics. This function outputs a data frame that has a grouping structure on it, making all the subsequent operations group wise until the structure is removed. For example, if I want to look at the average age of participants in this workshop based on their cohorts, I will simply group the data by cohorts and then call `summarise()` or `mutate()`. Afterwards, I may want to remove the grouping structure so I can see the difference between group averages and total average. In that case, I simply need to pipe the data into `ungroup()` before I pipe it again into mutate.
 
 ```{r eval=FALSE}
 data<-data %>%
@@ -121,7 +121,7 @@ data<-data %>%
 **Bonus** If you want the operation to happen row by row (you may need to do this when geocoding), you can use a special version of `group_by()` called `rowwise()`. `rowwise()` imposes a grouping structure so that each row is in its own group.
 
 ## `select(df, cols)`/`rename(df, new_col=old_col)`
-`seelct()` and `rename()` are used so you can tidy up your data. In `select()`, you put your data as the first argument, and the rest of the arguments are just variables you want to keep. If you want to rename some variables, you just need to write `select(data,newvar1=oldvar1,...)`. On the otherhand, if you just want to rename some variables, you onlyneed to write `rename(data,newvar1=oldvar1,...)`. The difference is that `select()` only gives you back the variables you specified while `rename()` gives you back your entire data frame. 
+`seelct()` and `rename()` are used so you can tidy up your data. In `select()`, you put your data as the first argument, and the rest of the arguments are just variables you want to keep. If you want to rename some variables, you just need to write `select(data,newvar1=oldvar1,...)`. On the other hand, if you just want to rename some variables, you only need to write `rename(data,newvar1=oldvar1,...)`. The difference is that `select()` only gives you back the variables you specified while `rename()` gives you back your entire data frame. 
 
 In the case where you want to use `select()` to reorder your data frame, you just need to specify the ones you want in the order and call `everything()` as your last argument. If instead of selecting the columns you want, you need to kick out of columns you **do not** want, you can just add a minus sign before the variable such as `select(-col1)`
 
@@ -158,7 +158,7 @@ data %>%
 
 
 ## `unite(df, new_col, cols, sep)`
-`unite()` is the exact opposite of separate. It takes multiple columns and concatenate them into one column using the same argumaents. For example, if I want to concatenate workshop and social into a variable called "new" with "/" as my separator, I will write:
+`unite()` is the exact opposite of separate. It takes multiple columns and concatenate them into one column using the same arguments. For example, if I want to concatenate workshop and social into a variable called "new" with "/" as my separator, I will write:
 
 ```{r}
 data %>% 
@@ -172,7 +172,7 @@ We talked in details about these two functions last time in the workshop [Introd
 
 # Try it yourself!
 
-1. For this question, we will be using the same data set from the first quesion in the ggplot2 workshop. You can load the data with `readr::read_csv()` with the path `https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv`.
+1. For this question, we will be using the same data set from the first question in the ggplot2 workshop. You can load the data with `readr::read_csv()` with the path `https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv`.
   
   i. As you can see right now that the column `city` contains both state and city name and sometimes has two or more states. Use the tools you have learned today, create a column named metro that only contains the city name and a column name states that contain all the states the metropolitan area is in. This includes deleting the original state column. Call this new data frame `d11`
   
@@ -180,18 +180,18 @@ We talked in details about these two functions last time in the workshop [Introd
   
   iii. The median of hhincome in this data set is $58,000. Filter the data set `d12` so you only have cities that are on the upper half of the household income distribution. Call this new data frame `d13`.
   
-  iv. You now realzied that you lose half of your data in `d13`, which is not a good thing. Instead, you decide to create a logical variable from `d12` that lets you conditionally do operations on the data. Create a new variable called `upper` such that it is of value 1 if the city's household income is greater than $58,000 and 0 otherwise. Save this new data frame as `d14`. (Hint: You can use the function `ifelse()`)
+  iv. You now realized that you lose half of your data in `d13`, which is not a good thing. Instead, you decide to create a logical variable from `d12` that lets you conditionally do operations on the data. Create a new variable called `upper` such that it is of value 1 if the city's household income is greater than $58,000 and 0 otherwise. Save this new data frame as `d14`. (Hint: You can use the function `ifelse()`)
   
-  v. Do the same thing as part iv but with age 37 and data `d14`. Name the new variabel `up_age`.
+  v. Do the same thing as part iv but with age 37 and data `d14`. Name the new variable `up_age`.
   
-  vi. Now you can look at statistics in each combination of age and income bracket. Find out the average percentage of female in each combination of age and income bracket by year using `summarize()`. Sort this data set by population descendinly.
+  vi. Now you can look at statistics in each combination of age and income bracket. Find out the average percentage of female in each combination of age and income bracket by year using `summarize()`. Sort this data set by population descendingly.
   
   vii. Going back to ggplot2, plot the linear relationship between population and female, faceted by the age and income brackets in a 2 $times$ 2 figure.
   
   viii. Find out how many cities are in each age and income bracket combination by year. (Hint: Use the function `n()` inside `summarize()`).
   
   
-2. This problem will teach you how to create a simulated data set under the generalized Roy model framework. It is also a good practice for understanding `tidyverse`. The three functions in i. are normal distribution, binomial distribution, and uniform distribution respetively.
+2. This problem will teach you how to create a simulated data set under the generalized Roy model framework. It is also a good practice for understanding `tidyverse`. The three functions in i. are normal distribution, binomial distribution, and uniform distribution respectively.
 
   i. Using functions like `rnorm()`, `rbinom()`, and `runif()`, create a data frame with variables $X$, $D$, and $E$ such that
   $X\sim U[-2,2]$, $D\sim Binom(0.3)$, and $E\sim N(0,1)$ with 1,000 observations. Call this data frame `d21`

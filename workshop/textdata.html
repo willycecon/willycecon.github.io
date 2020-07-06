@@ -1537,7 +1537,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Principles of Data Visualization in R Workshop: Introduction to <code>ggplot2</code></h1>
 <h4 class="author">Willy Chen</h4>
-<h4 class="date">Workshop 2</h4>
+<h4 class="date">Workshop 5</h4>
 
 </div>
 
@@ -1547,10 +1547,298 @@ div.tocify {
 <p>In data science for social sciences, text data is especially important to be dealt with with care. In R, there are many packages you can use for dealing with text data. In this workshop, we will be going over the <code>stringr</code> package which is included in the <code>tidyverse</code> package. We will also talk about regular expressions [regex], which is a common way to deal with strings across most language.</p>
 <div id="stringr" class="section level1">
 <h1><code>stringr</code></h1>
+<p>There are many functions that start with <code>str_</code> in the <code>stringr</code> package. In this workshop, we are going to about the ones I used the most often. The <code>str_</code> functions, in general, take the arguments in the form of <code>str_...(string, pattern, sep)</code>,</p>
+<p>For a more complete look at the functions, either look at the cheat sheet linked at the end of this workshop notes or Google it. For this workshop, we will continue using the data from the tidyverse workshop.</p>
+<pre class="r"><code>require(tidyverse)
+data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data3.csv&quot;)</code></pre>
+<div id="str_detect" class="section level2">
+<h2><code>str_detect()</code></h2>
+<p>The first commonly used <code>str_</code> function is <code>str_detect()</code>. Just like its name, this function detects a certain pattern in your string. <code>str_detect()</code> searches a string and return <code>TRUE</code> if the pattern specified is present in the string and <code>FALSE</code> otherwise. For example, if we want to find the strings with the pattern “ology” in the cohort column.</p>
+<pre class="r"><code>data$cohort%&gt;%
+  str_detect(pattern=&quot;ology&quot;)%&gt;%
+  head(10)</code></pre>
+<pre><code>##  [1]  TRUE FALSE FALSE  TRUE FALSE  TRUE  TRUE  TRUE FALSE FALSE</code></pre>
+<p>This also means that we can combine mutate to create a column that indicates to use whether the desired pattern is present in the string:</p>
+<pre class="r"><code>data%&gt;%
+  mutate(ology = as.numeric(str_detect(cohort, 
+                                       pattern=&quot;ology&quot;)))</code></pre>
+<pre><code>## # A tibble: 1,976 x 7
+##    workshop   age county                 social  cohort           gpa ology
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt; &lt;dbl&gt;
+##  1 Yes         24 Orange County, CA      SGGSAC  Anthropology    3.81     1
+##  2 Yes         23 Franklin county, OH    SGGSAC  Economics       3.23     0
+##  3 Yes         23 Franklin county, OH    SGGSAC  Economics       3.34     0
+##  4 Maybe       24 Cook county, IL        SGGSAC  Sociology       3.58     1
+##  5 Yes         23 Knoxville, Tennesse    SGGSAC  Political Sci…  3.63     0
+##  6 Yes         27 Racine County, WI      VANESSA Psychology      3.88     1
+##  7 Yes         31 &lt;NA&gt;                   SGGSAC  Sociology       3.68     1
+##  8 Yes         26 Dekalb, GA             VANESSA Anthropology    3.41     1
+##  9 Yes         35 Hyde Park, IL          SGGSAC  Economics       4.00     0
+## 10 Yes         24 York County, South Ca… SGGSAC  History         3.87     0
+## # … with 1,966 more rows</code></pre>
+</div>
+<div id="str_extract-and-str_extract_all" class="section level2">
+<h2><code>str_extract()</code> and <code>str_extract_all()</code></h2>
+<p>Most <code>str_</code> functions are fairly straight forward in terms of naming. In this case, <code>str_extract()</code> extracts the first desired pattern from the string. <code>str_extract_all()</code> extracts all the times the pattern is present in the string.</p>
+<p>You might be thinking, if I just want a pattern, why won’t I just <code>mutate()</code> a new column with the pattern I want?</p>
+<p>The answer to that question is the pattern can actually be quite vague. We will discuss this in the section <code>regular expression</code>. For now, let’s continue our last example and extract the pattern “ology”.</p>
+<pre class="r"><code>data%&gt;%
+  mutate(ology = str_extract(cohort,
+                             pattern=&quot;ology&quot;))</code></pre>
+<pre><code>## # A tibble: 1,976 x 7
+##    workshop   age county                 social  cohort           gpa ology
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt;
+##  1 Yes         24 Orange County, CA      SGGSAC  Anthropology    3.81 ology
+##  2 Yes         23 Franklin county, OH    SGGSAC  Economics       3.23 &lt;NA&gt; 
+##  3 Yes         23 Franklin county, OH    SGGSAC  Economics       3.34 &lt;NA&gt; 
+##  4 Maybe       24 Cook county, IL        SGGSAC  Sociology       3.58 ology
+##  5 Yes         23 Knoxville, Tennesse    SGGSAC  Political Sci…  3.63 &lt;NA&gt; 
+##  6 Yes         27 Racine County, WI      VANESSA Psychology      3.88 ology
+##  7 Yes         31 &lt;NA&gt;                   SGGSAC  Sociology       3.68 ology
+##  8 Yes         26 Dekalb, GA             VANESSA Anthropology    3.41 ology
+##  9 Yes         35 Hyde Park, IL          SGGSAC  Economics       4.00 &lt;NA&gt; 
+## 10 Yes         24 York County, South Ca… SGGSAC  History         3.87 &lt;NA&gt; 
+## # … with 1,966 more rows</code></pre>
+</div>
+<div id="str_replace-and-str_replace_all" class="section level2">
+<h2><code>str_replace()</code> and <code>str_replace_all()</code></h2>
+<p><code>str_replace()</code> simply replaces the patter you want replaced with the text you want to replace it with. The difference between <code>str_replace()</code> and <code>str_replace_all()</code> is that <code>str_replace()</code> only replaces the pattern the first time it comes up in the string. <code>str_replace()</code> on the other hand replaces all of the patterns that match.</p>
+<p>For example, if we want to replace “ology” with “ologist”, we can use <code>str_replace()</code>:</p>
+<pre class="r"><code>data%&gt;%
+  mutate(cohort = str_replace(cohort,
+                             pattern=&quot;ology&quot;,
+                             replacement=&quot;ologist&quot;))</code></pre>
+<pre><code>## # A tibble: 1,976 x 6
+##    workshop   age county                     social  cohort             gpa
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                      &lt;chr&gt;   &lt;chr&gt;            &lt;dbl&gt;
+##  1 Yes         24 Orange County, CA          SGGSAC  Anthropologist    3.81
+##  2 Yes         23 Franklin county, OH        SGGSAC  Economics         3.23
+##  3 Yes         23 Franklin county, OH        SGGSAC  Economics         3.34
+##  4 Maybe       24 Cook county, IL            SGGSAC  Sociologist       3.58
+##  5 Yes         23 Knoxville, Tennesse        SGGSAC  Political Scien…  3.63
+##  6 Yes         27 Racine County, WI          VANESSA Psychologist      3.88
+##  7 Yes         31 &lt;NA&gt;                       SGGSAC  Sociologist       3.68
+##  8 Yes         26 Dekalb, GA                 VANESSA Anthropologist    3.41
+##  9 Yes         35 Hyde Park, IL              SGGSAC  Economics         4.00
+## 10 Yes         24 York County, South Caroli… SGGSAC  History           3.87
+## # … with 1,966 more rows</code></pre>
+<p>But if I just want to change all the “o”’s into “e”’s, <code>str_replace()</code> would be insufficient:</p>
+<pre class="r"><code>data%&gt;%
+  mutate(cohort = str_replace(cohort,
+                             pattern=&quot;o&quot;,
+                             replacement=&quot;e&quot;))</code></pre>
+<pre><code>## # A tibble: 1,976 x 6
+##    workshop   age county                     social  cohort             gpa
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                      &lt;chr&gt;   &lt;chr&gt;            &lt;dbl&gt;
+##  1 Yes         24 Orange County, CA          SGGSAC  Anthrepology      3.81
+##  2 Yes         23 Franklin county, OH        SGGSAC  Ecenomics         3.23
+##  3 Yes         23 Franklin county, OH        SGGSAC  Ecenomics         3.34
+##  4 Maybe       24 Cook county, IL            SGGSAC  Seciology         3.58
+##  5 Yes         23 Knoxville, Tennesse        SGGSAC  Pelitical Scien…  3.63
+##  6 Yes         27 Racine County, WI          VANESSA Psychelogy        3.88
+##  7 Yes         31 &lt;NA&gt;                       SGGSAC  Seciology         3.68
+##  8 Yes         26 Dekalb, GA                 VANESSA Anthrepology      3.41
+##  9 Yes         35 Hyde Park, IL              SGGSAC  Ecenomics         4.00
+## 10 Yes         24 York County, South Caroli… SGGSAC  Histery           3.87
+## # … with 1,966 more rows</code></pre>
+<p>As you can see above, only the first “o” is replaced by “e”. To correct that, we would use <code>str_replace_all()</code>:</p>
+<pre class="r"><code>data%&gt;%
+  mutate(cohort = str_replace_all(cohort,
+                             pattern=&quot;o&quot;,
+                             replacement=&quot;e&quot;))</code></pre>
+<pre><code>## # A tibble: 1,976 x 6
+##    workshop   age county                     social  cohort             gpa
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                      &lt;chr&gt;   &lt;chr&gt;            &lt;dbl&gt;
+##  1 Yes         24 Orange County, CA          SGGSAC  Anthrepelegy      3.81
+##  2 Yes         23 Franklin county, OH        SGGSAC  Ecenemics         3.23
+##  3 Yes         23 Franklin county, OH        SGGSAC  Ecenemics         3.34
+##  4 Maybe       24 Cook county, IL            SGGSAC  Secielegy         3.58
+##  5 Yes         23 Knoxville, Tennesse        SGGSAC  Pelitical Scien…  3.63
+##  6 Yes         27 Racine County, WI          VANESSA Psychelegy        3.88
+##  7 Yes         31 &lt;NA&gt;                       SGGSAC  Secielegy         3.68
+##  8 Yes         26 Dekalb, GA                 VANESSA Anthrepelegy      3.41
+##  9 Yes         35 Hyde Park, IL              SGGSAC  Ecenemics         4.00
+## 10 Yes         24 York County, South Caroli… SGGSAC  Histery           3.87
+## # … with 1,966 more rows</code></pre>
+<p>If you want to remove a pattern, you can either use <code>str_remove()</code> and <code>str_remove_all()</code> or you can use <code>str_replace()</code>/<code>str_replace_all()</code> with <code>replacement=&quot;&quot;</code>.</p>
+</div>
+<div id="str_to_..." class="section level2">
+<h2><code>str_to_...()</code></h2>
+<p>This is the function that let’s you manipulate your string into a certain form. There are 4 forms: <code>upper</code>, <code>lower</code>, <code>title</code>, <code>sentence</code>. <code>upper</code> and <code>lower</code> changes the string into the respective cases. <code>title</code> capitalizes the first letter of each word. <code>sentence</code> capitalizes the first letter of the sentence.</p>
+<pre class="r"><code>data$county[2]%&gt;%
+  str_to_upper()</code></pre>
+<pre><code>## [1] &quot;FRANKLIN COUNTY, OH&quot;</code></pre>
+<pre class="r"><code>data$county[2]%&gt;%
+  str_to_lower()</code></pre>
+<pre><code>## [1] &quot;franklin county, oh&quot;</code></pre>
+<pre class="r"><code>data$county[2]%&gt;%
+  str_to_title</code></pre>
+<pre><code>## [1] &quot;Franklin County, Oh&quot;</code></pre>
+<pre class="r"><code>data$county[2]%&gt;%
+  str_to_sentence</code></pre>
+<pre><code>## [1] &quot;Franklin county, oh&quot;</code></pre>
+</div>
 </div>
 <div id="regular-expressions-regex" class="section level1">
 <h1>Regular Expressions (Regex)</h1>
+<p>Regular expression is the common way to describe strings to any computer language. In the examples, I will speak in terms of what <code>str_extract()</code> will output from the string <strong>“aabc123d”</strong></p>
+<div id="groupblock" class="section level3">
+<h3>Group/Block: <code>( )</code></h3>
+<p>When you want a exact group of string to be used in a pattern, put parentheses around the pattern.</p>
+<p>For example, <code>(abc)</code> extracts exactly “abc” and <code>(abcd)</code> extracts nothing.</p>
+</div>
+<div id="or" class="section level3">
+<h3>Or: <code>|</code></h3>
+<p>Or condition lets you match like the way <code>dplyr::filter()</code> works.</p>
+<p>For example, <code>(abc)|(ab)|d</code> extracts “abc”. If you use <code>str_extract_all()</code> instead, <code>(abc)|(ab)|d</code> extracts “abc”,“ab”.</p>
+</div>
+<div id="any-in" class="section level3">
+<h3>Any in: <code>[ ]</code></h3>
+<p>When you use brackets, your regular expression means anything in the bracket. Sort of like an overpowered Or condition.</p>
+<p>For example, [abc] extracts “a”. If you were to use <code>str_extract_all()</code> instead, <code>[abc]</code> extracts “a”, “b”, “c”.</p>
+</div>
+<div id="zero-or-one" class="section level3">
+<h3>Zero or one: <code>?</code></h3>
+<p>Adding a <code>?</code> after a letter or a block means to match with either zero or one of that unit exists.</p>
+<p>For example, <code>(ab)c?</code> extracts “abc” and <code>(ab)d?</code> extracts “ab”.</p>
+</div>
+<div id="zero-or-more" class="section level3">
+<h3>Zero or more: <code>*</code></h3>
+<p>* works the same as ? except it can match for there being more than one of that unit.</p>
+<p>For example, <code>ab\*bc</code> extracts “abc” and <code>aa\*bc</code> extracts “aabc”.</p>
+</div>
+<div id="one-or-more" class="section level3">
+<h3>One or more: <code>+</code></h3>
+<p>+ works the same as ? except it requires the pattern to at least exists once.</p>
+<p>For example, <code>a+bc</code> extracts “aabc”</p>
+</div>
+<div id="anything-." class="section level3">
+<h3>Anything: <code>.</code></h3>
+<p><code>.</code> lets you match anything.</p>
+<p>For example, <code>a.c</code> extracts “abc”, <code>a..c</code> extracts “aabc”, and</p>
+</div>
+<div id="any-number-d" class="section level3">
+<h3>Any number: <code>\d</code></h3>
+<p><code>\d</code> lets you match any digit/number. Note that you need <code>\d</code> in regex which means when you are using it in R, you need to escape the <code>\</code> with a <code>\</code> so you actually need to write <code>\\d</code>.</p>
+<p>For example, <code>.\\d+</code> extracts “c123”</p>
+</div>
+<div id="start-of-string" class="section level3">
+<h3>Start of string: <code>^</code></h3>
+<p><code>^</code> in regular expression means the pattern needs to be at the start of the string.</p>
+<p>For example, if we use <code>string_extract_all()</code> with <code>a.</code> we will get “aa”, “ab”. But if we use <code>^a.</code> instead, we will only get “aa”.</p>
+</div>
+<div id="end-of-string" class="section level3">
+<h3>End of string: <code>$</code></h3>
+<p><code>$</code> in regular expression means the pattern needs to be at the end of the string.</p>
+<p>For example, if we use <code>string_extract_all()</code> with <code>..</code> we will get “aa”, “ab”, “bc”, “c1”, “12”, “23”, “3d”. But if we use <code>..$</code> instead, we will only get “3d”.</p>
+</div>
+<div id="a-z-a-z-and-a-za-z" class="section level3">
+<h3><code>[A-Z]</code>, <code>[a-z]</code>, and <code>[A-Za-z]</code></h3>
+<p>These regular expression means “capital A through Z”, “lower case a through z”, and “any character”.</p>
+</div>
+</div>
+<div id="examples" class="section level1">
+<h1>Examples</h1>
+<p>Regex and strings in general take a lot of practice, so now we are going to use the data set to do some practices!</p>
+<ol style="list-style-type: decimal">
+<li>If I want to clear the county column so that it only has the name of the county and not the state or the word county, what do I do?</li>
+</ol>
+<pre class="r"><code>data%&gt;%
+  mutate(county=str_replace(county,regex(&quot;,? .+&quot;),&quot;&quot;))</code></pre>
+<pre><code>## # A tibble: 1,976 x 6
+##    workshop   age county    social  cohort              gpa
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;   &lt;chr&gt;             &lt;dbl&gt;
+##  1 Yes         24 Orange    SGGSAC  Anthropology       3.81
+##  2 Yes         23 Franklin  SGGSAC  Economics          3.23
+##  3 Yes         23 Franklin  SGGSAC  Economics          3.34
+##  4 Maybe       24 Cook      SGGSAC  Sociology          3.58
+##  5 Yes         23 Knoxville SGGSAC  Political Science  3.63
+##  6 Yes         27 Racine    VANESSA Psychology         3.88
+##  7 Yes         31 &lt;NA&gt;      SGGSAC  Sociology          3.68
+##  8 Yes         26 Dekalb    VANESSA Anthropology       3.41
+##  9 Yes         35 Hyde      SGGSAC  Economics          4.00
+## 10 Yes         24 York      SGGSAC  History            3.87
+## # … with 1,966 more rows</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>If I only want the states and not the counties, what do I do?</li>
+</ol>
+<pre class="r"><code>data%&gt;%
+  mutate(county=str_extract(county,regex(&quot;[A-Za-z]+$&quot;)))</code></pre>
+<pre><code>## # A tibble: 1,976 x 6
+##    workshop   age county   social  cohort              gpa
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;             &lt;dbl&gt;
+##  1 Yes         24 CA       SGGSAC  Anthropology       3.81
+##  2 Yes         23 OH       SGGSAC  Economics          3.23
+##  3 Yes         23 OH       SGGSAC  Economics          3.34
+##  4 Maybe       24 IL       SGGSAC  Sociology          3.58
+##  5 Yes         23 Tennesse SGGSAC  Political Science  3.63
+##  6 Yes         27 WI       VANESSA Psychology         3.88
+##  7 Yes         31 &lt;NA&gt;     SGGSAC  Sociology          3.68
+##  8 Yes         26 GA       VANESSA Anthropology       3.41
+##  9 Yes         35 IL       SGGSAC  Economics          4.00
+## 10 Yes         24 Carolina SGGSAC  History            3.87
+## # … with 1,966 more rows</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>If I just want the first 3 letters of each cohort name instead of the full cohort name, what do I do?</li>
+</ol>
+<pre class="r"><code>data%&gt;%
+  mutate(cohort=str_extract(cohort,regex(&quot;^...&quot;)))</code></pre>
+<pre><code>## # A tibble: 1,976 x 6
+##    workshop   age county                      social  cohort   gpa
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                       &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt;
+##  1 Yes         24 Orange County, CA           SGGSAC  Ant     3.81
+##  2 Yes         23 Franklin county, OH         SGGSAC  Eco     3.23
+##  3 Yes         23 Franklin county, OH         SGGSAC  Eco     3.34
+##  4 Maybe       24 Cook county, IL             SGGSAC  Soc     3.58
+##  5 Yes         23 Knoxville, Tennesse         SGGSAC  Pol     3.63
+##  6 Yes         27 Racine County, WI           VANESSA Psy     3.88
+##  7 Yes         31 &lt;NA&gt;                        SGGSAC  Soc     3.68
+##  8 Yes         26 Dekalb, GA                  VANESSA Ant     3.41
+##  9 Yes         35 Hyde Park, IL               SGGSAC  Eco     4.00
+## 10 Yes         24 York County, South Carolina SGGSAC  His     3.87
+## # … with 1,966 more rows</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>If I want the 5-letter cohort endings of the cohorts that <strong>do not</strong> end with “ology”, what do I do?</li>
+</ol>
+<pre class="r"><code>data%&gt;%
+  mutate(cohort=ifelse(str_detect(cohort,&quot;ology&quot;),
+                       NA,
+                       str_extract(cohort,regex(&quot;.....$&quot;))))</code></pre>
+<pre><code>## # A tibble: 1,976 x 6
+##    workshop   age county                      social  cohort   gpa
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                       &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt;
+##  1 Yes         24 Orange County, CA           SGGSAC  &lt;NA&gt;    3.81
+##  2 Yes         23 Franklin county, OH         SGGSAC  omics   3.23
+##  3 Yes         23 Franklin county, OH         SGGSAC  omics   3.34
+##  4 Maybe       24 Cook county, IL             SGGSAC  &lt;NA&gt;    3.58
+##  5 Yes         23 Knoxville, Tennesse         SGGSAC  ience   3.63
+##  6 Yes         27 Racine County, WI           VANESSA &lt;NA&gt;    3.88
+##  7 Yes         31 &lt;NA&gt;                        SGGSAC  &lt;NA&gt;    3.68
+##  8 Yes         26 Dekalb, GA                  VANESSA &lt;NA&gt;    3.41
+##  9 Yes         35 Hyde Park, IL               SGGSAC  omics   4.00
+## 10 Yes         24 York County, South Carolina SGGSAC  story   3.87
+## # … with 1,966 more rows</code></pre>
+<ol start="5" style="list-style-type: decimal">
+<li>How do I make sure that every cohort name only has the first word?</li>
+</ol>
+<pre class="r"><code>data%&gt;%
+  mutate(cohort=str_replace(cohort,regex(&quot; .+&quot;),&quot;&quot;))</code></pre>
+<pre><code>## # A tibble: 1,976 x 6
+##    workshop   age county                      social  cohort         gpa
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                       &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt;
+##  1 Yes         24 Orange County, CA           SGGSAC  Anthropology  3.81
+##  2 Yes         23 Franklin county, OH         SGGSAC  Economics     3.23
+##  3 Yes         23 Franklin county, OH         SGGSAC  Economics     3.34
+##  4 Maybe       24 Cook county, IL             SGGSAC  Sociology     3.58
+##  5 Yes         23 Knoxville, Tennesse         SGGSAC  Political     3.63
+##  6 Yes         27 Racine County, WI           VANESSA Psychology    3.88
+##  7 Yes         31 &lt;NA&gt;                        SGGSAC  Sociology     3.68
+##  8 Yes         26 Dekalb, GA                  VANESSA Anthropology  3.41
+##  9 Yes         35 Hyde Park, IL               SGGSAC  Economics     4.00
+## 10 Yes         24 York County, South Carolina SGGSAC  History       3.87
+## # … with 1,966 more rows</code></pre>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdown.html">Click here to continue to the next workshop: Introduction to RMarkdown automation</a></p>
+<p><a href="https://github.com/rstudio/cheatsheets/raw/master/strings.pdf">Click here to continue to stringr cheat sheet</a></p>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/menu.html">Click here to return to the menu</a></p>
 </div>
 

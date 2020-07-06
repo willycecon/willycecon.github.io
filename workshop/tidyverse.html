@@ -1537,7 +1537,7 @@ div.tocify {
 
 <h1 class="title toc-ignore">Principles of Data Visualization in R Workshop: Introduction to tidyverse</h1>
 <h4 class="author">Willy Chen</h4>
-<h4 class="date">Workshop 2</h4>
+<h4 class="date">Workshop 4</h4>
 
 </div>
 
@@ -1550,7 +1550,7 @@ data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/
 <div id="pipe-operator" class="section level1">
 <h1>Pipe operator <code>%&gt;%</code></h1>
 <p>One of the most powerful tool that tidyverse brings us is the pipe operator <code>%&gt;%</code>. If you are familiar with shell, you know what this is. If you have never heard of shell, this is going to blow your mind.</p>
-<p>Sometimes, you are going to use multiple function on a data set. Say you have a data set called <code>data</code>, and you have 4 functions, <code>f1</code>, <code>f2</code>, <code>f3</code>, and <code>f4</code>, and you need the output from feeding data through each function sequestially. Intuitively, the first thing you would do is.</p>
+<p>Sometimes, you are going to use multiple function on a data set. Say you have a data set called <code>data</code>, and you have 4 functions, <code>f1</code>, <code>f2</code>, <code>f3</code>, and <code>f4</code>, and you need the output from feeding data through each function sequentially. Intuitively, the first thing you would do is.</p>
 <pre class="r"><code>data1&lt;-f1(data)
 data2&lt;-f2(data1)
 data3&lt;-f3(data2)
@@ -1562,7 +1562,7 @@ data_final&lt;-f4(data3)</code></pre>
   f2() %&gt;% 
   f3() %&gt;% 
   f4()</code></pre>
-<p>The piping operator allows us to write much cleaner codefor readability. One of the most important and universal best practice in coding is to space out your code into lines when you need to, and pipes allows us to do that easily. Personally, I put each function in its own line so I can easily change some of the arguments in those functions.</p>
+<p>The piping operator allows us to write much cleaner code for readability. One of the most important and universal best practice in coding is to space out your code into lines when you need to, and pipes allows us to do that easily. Personally, I put each function in its own line so I can easily change some of the arguments in those functions.</p>
 <p>For the rest of this workshop, I want to focus on using the packages <code>dplyr</code> and <code>tidyr</code> from the parent package <code>tidyverse</code>. Note that this means you only have to load <code>tidyverse</code> and these packages will automatically be included.</p>
 </div>
 <div id="dplyr" class="section level1">
@@ -1575,7 +1575,7 @@ data_final&lt;-f4(data3)</code></pre>
 <li>Data frame</li>
 <li>Truth condition</li>
 </ol>
-<p>You should place the data you want to use and place the truth condition second. Note that the truthcondition can include multiple things. To make your code clear, alwasy wrap around chunks of condition in paranthesis. For example, the code <code>filter(data,((a==4&amp;b==2)&amp;(a==2|b==3))|(a==0|b==0))</code> will give me data that fits either <code>(a==4&amp;b==2) &amp; (a==2|b==3)</code> or <code>(a==0|b==0)</code>. Making your filter condition clear is extermely important for readability.</p>
+<p>You should place the data you want to use and place the truth condition second. Note that the truth condition can include multiple things. To make your code clear, always wrap around chunks of condition in parenthesis. For example, the code <code>filter(data,((a==4&amp;b==2)&amp;(a==2|b==3))|(a==0|b==0))</code> will give me data that fits either <code>(a==4&amp;b==2) &amp; (a==2|b==3)</code> or <code>(a==0|b==0)</code>. Making your filter condition clear is extremely important for readability.</p>
 <p>For example, we can select people who answered <code>Maybe</code> to the workshop question in the survey:</p>
 <pre class="r"><code>filter(data,
        workshop==&quot;Maybe&quot;)</code></pre>
@@ -1639,7 +1639,7 @@ data_final&lt;-f4(data3)</code></pre>
 </div>
 <div id="mutatedf-vars..." class="section level2">
 <h2><code>mutate(df , vars...)</code></h2>
-<p><code>mutate()</code> is perhaps one of the most useful function and probably the function I used the most. This function lets you create a new variable in your dataset either with or without using the original data. To use <code>mutate()</code>, you use the data frame as its first argument and the variables you want to create as the rest of the arguments. For example, if I want to create a variable that is age <span class="math inline">\(\times\)</span> gpa and gpa <span class="math inline">\(\times\)</span> a random number between 10 and 20, I can write.</p>
+<p><code>mutate()</code> is perhaps one of the most useful function and probably the function I used the most. This function lets you create a new variable in your data set either with or without using the original data. To use <code>mutate()</code>, you use the data frame as its first argument and the variables you want to create as the rest of the arguments. For example, if I want to create a variable that is age <span class="math inline">\(\times\)</span> gpa and gpa <span class="math inline">\(\times\)</span> a random number between 10 and 20, I can write.</p>
 <pre class="r"><code>data&lt;-data %&gt;%
   mutate(gradeage = gpa*age,
          graderand = gpa*sample(10:20,1,TRUE))</code></pre>
@@ -1655,7 +1655,7 @@ data_final&lt;-f4(data3)</code></pre>
 </div>
 <div id="group_bydf-vars..." class="section level2">
 <h2><code>group_by(df , vars...)</code></h2>
-<p><code>group_by()</code> is perhaps the most powerful function of the <code>dplyr</code> package. This function allows you to do any operation by certain grouping characteristics. This function outputs a data frame that has a grouping structure on it, making all the subsequent operations groupwise until the structure is removed. For example, if I want to look at the average age of participants in this workshop based on their cohorts, I will simply group the data by cohorts and then call <code>summarise()</code> or <code>mutate()</code>. Afterwards, I may want to remove the grouping structure so I can see the difference between group averages and total average. In that case, I simply need to pipe the data into <code>ungroup()</code> before I pipe it again into mutate.</p>
+<p><code>group_by()</code> is perhaps the most powerful function of the <code>dplyr</code> package. This function allows you to do any operation by certain grouping characteristics. This function outputs a data frame that has a grouping structure on it, making all the subsequent operations group wise until the structure is removed. For example, if I want to look at the average age of participants in this workshop based on their cohorts, I will simply group the data by cohorts and then call <code>summarise()</code> or <code>mutate()</code>. Afterwards, I may want to remove the grouping structure so I can see the difference between group averages and total average. In that case, I simply need to pipe the data into <code>ungroup()</code> before I pipe it again into mutate.</p>
 <pre class="r"><code>data&lt;-data %&gt;%
   group_by(cohort) %&gt;%
   mutate(muage=mean(age)) %&gt;%
@@ -1665,7 +1665,7 @@ data_final&lt;-f4(data3)</code></pre>
 </div>
 <div id="selectdf-colsrenamedf-new_colold_col" class="section level2">
 <h2><code>select(df, cols)</code>/<code>rename(df, new_col=old_col)</code></h2>
-<p><code>seelct()</code> and <code>rename()</code> are used so you can tidy up your data. In <code>select()</code>, you put your data as the first argument, and the rest of the arguments are just variables you want to keep. If you want to rename some variables, you just need to write <code>select(data,newvar1=oldvar1,...)</code>. On the otherhand, if you just want to rename some variables, you onlyneed to write <code>rename(data,newvar1=oldvar1,...)</code>. The difference is that <code>select()</code> only gives you back the variables you specified while <code>rename()</code> gives you back your entire data frame.</p>
+<p><code>seelct()</code> and <code>rename()</code> are used so you can tidy up your data. In <code>select()</code>, you put your data as the first argument, and the rest of the arguments are just variables you want to keep. If you want to rename some variables, you just need to write <code>select(data,newvar1=oldvar1,...)</code>. On the other hand, if you just want to rename some variables, you only need to write <code>rename(data,newvar1=oldvar1,...)</code>. The difference is that <code>select()</code> only gives you back the variables you specified while <code>rename()</code> gives you back your entire data frame.</p>
 <p>In the case where you want to use <code>select()</code> to reorder your data frame, you just need to specify the ones you want in the order and call <code>everything()</code> as your last argument. If instead of selecting the columns you want, you need to kick out of columns you <strong>do not</strong> want, you can just add a minus sign before the variable such as <code>select(-col1)</code></p>
 <p>For example, if I want to select workshop, gpa, and age and change “workshop” to “participate”, I can write:</p>
 <pre class="r"><code>data %&gt;%
@@ -1736,7 +1736,7 @@ data_final&lt;-f4(data3)</code></pre>
 </div>
 <div id="unitedf-new_col-cols-sep" class="section level2">
 <h2><code>unite(df, new_col, cols, sep)</code></h2>
-<p><code>unite()</code> is the exact opposite of separate. It takes multiple columns and concatenate them into one column using the same argumaents. For example, if I want to concatenate workshop and social into a variable called “new” with “/” as my separator, I will write:</p>
+<p><code>unite()</code> is the exact opposite of separate. It takes multiple columns and concatenate them into one column using the same arguments. For example, if I want to concatenate workshop and social into a variable called “new” with “/” as my separator, I will write:</p>
 <pre class="r"><code>data %&gt;% 
   unite(&quot;new&quot;,
                 c(workshop, social),
@@ -1764,20 +1764,20 @@ data_final&lt;-f4(data3)</code></pre>
 <div id="try-it-yourself" class="section level1">
 <h1>Try it yourself!</h1>
 <ol style="list-style-type: decimal">
-<li>For this question, we will be using the same data set from the first quesion in the ggplot2 workshop. You can load the data with <code>readr::read_csv()</code> with the path <code>https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv</code>.</li>
+<li>For this question, we will be using the same data set from the first question in the ggplot2 workshop. You can load the data with <code>readr::read_csv()</code> with the path <code>https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv</code>.</li>
 </ol>
 <ol style="list-style-type: lower-roman">
 <li><p>As you can see right now that the column <code>city</code> contains both state and city name and sometimes has two or more states. Use the tools you have learned today, create a column named metro that only contains the city name and a column name states that contain all the states the metropolitan area is in. This includes deleting the original state column. Call this new data frame <code>d11</code></p></li>
 <li><p>After looking at the data set <code>d11</code>, you realized that the variable female was coded <code>1</code> for male and <code>2</code> for female. The variable was created by taking the average value of this variable from everyone in the city. Hence this variable does not represent the percentage or females in the city. Correct this data error from <code>d11</code> so the variable represents the percentage of females. Call this new data frame <code>d12</code></p></li>
 <li><p>The median of hhincome in this data set is $58,000. Filter the data set <code>d12</code> so you only have cities that are on the upper half of the household income distribution. Call this new data frame <code>d13</code>.</p></li>
-<li><p>You now realzied that you lose half of your data in <code>d13</code>, which is not a good thing. Instead, you decide to create a logical variable from <code>d12</code> that lets you conditionally do operations on the data. Create a new variable called <code>upper</code> such that it is of value 1 if the city’s household income is greater than $58,000 and 0 otherwise. Save this new data frame as <code>d14</code>. (Hint: You can use the function <code>ifelse()</code>)</p></li>
-<li><p>Do the same thing as part iv but with age 37 and data <code>d14</code>. Name the new variabel <code>up_age</code>.</p></li>
-<li><p>Now you can look at statistics in each combination of age and income bracket. Find out the average percentage of female in each combination of age and income bracket by year using <code>summarize()</code>. Sort this data set by population descendinly.</p></li>
+<li><p>You now realized that you lose half of your data in <code>d13</code>, which is not a good thing. Instead, you decide to create a logical variable from <code>d12</code> that lets you conditionally do operations on the data. Create a new variable called <code>upper</code> such that it is of value 1 if the city’s household income is greater than $58,000 and 0 otherwise. Save this new data frame as <code>d14</code>. (Hint: You can use the function <code>ifelse()</code>)</p></li>
+<li><p>Do the same thing as part iv but with age 37 and data <code>d14</code>. Name the new variable <code>up_age</code>.</p></li>
+<li><p>Now you can look at statistics in each combination of age and income bracket. Find out the average percentage of female in each combination of age and income bracket by year using <code>summarize()</code>. Sort this data set by population descendingly.</p></li>
 <li><p>Going back to ggplot2, plot the linear relationship between population and female, faceted by the age and income brackets in a 2 <span class="math inline">\(times\)</span> 2 figure.</p></li>
 <li><p>Find out how many cities are in each age and income bracket combination by year. (Hint: Use the function <code>n()</code> inside <code>summarize()</code>).</p></li>
 </ol>
 <ol start="2" style="list-style-type: decimal">
-<li>This problem will teach you how to create a simulated data set under the generalized Roy model framework. It is also a good practice for understanding <code>tidyverse</code>. The three functions in i. are normal distribution, binomial distribution, and uniform distribution respetively.</li>
+<li>This problem will teach you how to create a simulated data set under the generalized Roy model framework. It is also a good practice for understanding <code>tidyverse</code>. The three functions in i. are normal distribution, binomial distribution, and uniform distribution respectively.</li>
 </ol>
 <ol style="list-style-type: lower-roman">
 <li><p>Using functions like <code>rnorm()</code>, <code>rbinom()</code>, and <code>runif()</code>, create a data frame with variables <span class="math inline">\(X\)</span>, <span class="math inline">\(D\)</span>, and <span class="math inline">\(E\)</span> such that <span class="math inline">\(X\sim U[-2,2]\)</span>, <span class="math inline">\(D\sim Binom(0.3)\)</span>, and <span class="math inline">\(E\sim N(0,1)\)</span> with 1,000 observations. Call this data frame <code>d21</code></p></li>
