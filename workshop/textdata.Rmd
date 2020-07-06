@@ -1,5 +1,5 @@
 ---
-title: "Principles of Data Visualization in R Workshop: Introduction to `ggplot2`"
+title: "Principles of Data Visualization in R Workshop: Introduction to text data"
 author: "Willy Chen"
 date: "Workshop 5"
 output: 
