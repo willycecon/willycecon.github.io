@@ -13,6 +13,9 @@ output:
 
 [Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/textdataslides.html)
 
+<iframe width="812" height="456.75" src="https://www.youtube.com/embed/8uTbf0XgAF4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 In data science for social sciences, text data is especially important to be dealt with with care. In R, there are many packages you can use for dealing with text data. In this workshop, we will be going over the `stringr` package which is included in the `tidyverse` package. We will also talk about regular expressions [regex], which is a common way to deal with strings across most language. 
 
 
@@ -179,43 +182,104 @@ These regular expression means "capital A through Z", "lower case a through z", 
 
 # Examples
 Regex and strings in general take a lot of practice, so now we are going to use the data set to do some practices!
+Use the our data frame `data`, answer the following questions:
+
+<details><summary>View data</summary>
+```{r echo=FALSE}
+data
+```
+
+</details>
+
+<br>
+<br>
+
 
 1. If I want to clear the county column so that it only has the name of the county and not the state or the word county, what do I do?
 
+<details><summary>Click for solutions</summary>
 ```{r}
 data%>%
   mutate(county=str_replace(county,regex(",? .+"),""))
 ```
+</details>
+
+<br>
+<br>
+
+
 
 2. If I only want the states and not the counties, what do I do?
 
+<details><summary>Click for solutions</summary>
+
 ```{r}
-data%>%
-  mutate(county=str_extract(county,regex("[A-Za-z]+$")))
+data%>%mutate(state=str_replace(county,regex(".+, "),""))
 ```
 
+</details>
+
+<br>
+<br>
+
+
+
 3. If I just want the first 3 letters of each cohort name instead of the full cohort name, what do I do?
+
+<details><summary>Click for solutions</summary>
+
 ```{r}
 data%>%
   mutate(cohort=str_extract(cohort,regex("^...")))
 ```
 
+</details>
+
+<br>
+<br>
+
+
+
 4. If I want the 5-letter cohort endings of the cohorts that **do not** end with "ology", what do I do?
+
+<details><summary>Click for solutions</summary>
+
 ```{r}
 data%>%
-  mutate(cohort=ifelse(str_detect(cohort,"ology"),
+  mutate(cohort=ifelse(str_detect(cohort,regex("ology$")),
                        NA,
                        str_extract(cohort,regex(".....$"))))
 ```
 
-5. How do I make sure that every cohort name only has the first word?
+</details>
+
+
+<br>
+
+<br>
+
+5. How do I make sure that every cohort name only has the first word of each discipline?
+
+<details><summary>Click for solutions</summary>
 ```{r}
 data%>%
-  mutate(cohort=str_replace(cohort,regex(" .+"),""))
+  mutate(cohort=str_extract(cohort,regex("[A-Za-z]+([A-Za-z]+)?/?;?([A-Za-z]+)?")))
+
+data%>%
+  mutate(cohort1=str_extract(cohort,regex("[A-Za-z]+( [A-Za-z]+)?/?")),
+         cohort2=str_extract(cohort,regex("(/|;)([A-Za-z]+)?")))
 ```
+</details>
 
 [Click here to continue to the next workshop: Introduction to RMarkdown automation](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdown.html)
 
 [Click here to continue to stringr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/strings.pdf)
 
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+
+
+
+
+
+

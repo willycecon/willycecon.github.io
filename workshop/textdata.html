@@ -1544,6 +1544,8 @@ div.tocify {
 
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/menu.html">Click here to return to the menu</a></p>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/textdataslides.html">Click here to go to the slides for more examples</a></p>
+<iframe width="812" height="456.75" src="https://www.youtube.com/embed/8uTbf0XgAF4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
 <p>In data science for social sciences, text data is especially important to be dealt with with care. In R, there are many packages you can use for dealing with text data. In this workshop, we will be going over the <code>stringr</code> package which is included in the <code>tidyverse</code> package. We will also talk about regular expressions [regex], which is a common way to deal with strings across most language.</p>
 <div id="stringr" class="section level1">
 <h1><code>stringr</code></h1>
@@ -1641,7 +1643,7 @@ data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/
 ##  9 Yes         35 Hyde Park, IL              SGGSAC  Ecenomics         4.00
 ## 10 Yes         24 York County, South Caroli… SGGSAC  Histery           3.87
 ## # … with 1,966 more rows</code></pre>
-<p>As you can see above, only the first “o” is replaced by “e”. To correct that, we would use <code>str_replace_all()</code>:</p>
+<p>As you can see from above, only the first “o” is replaced by “e”. To correct that, we would use <code>str_replace_all()</code>:</p>
 <pre class="r"><code>data%&gt;%
   mutate(cohort = str_replace_all(cohort,
                              pattern=&quot;o&quot;,
@@ -1739,10 +1741,30 @@ data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/
 </div>
 <div id="examples" class="section level1">
 <h1>Examples</h1>
-<p>Regex and strings in general take a lot of practice, so now we are going to use the data set to do some practices!</p>
+<p>Regex and strings in general take a lot of practice, so now we are going to use the data set to do some practices! Use the our data frame <code>data</code>, answer the following questions:</p>
+<details>
+<p><summary>View data</summary></p>
+<pre><code>## # A tibble: 1,976 x 6
+##    workshop   age county                     social  cohort             gpa
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                      &lt;chr&gt;   &lt;chr&gt;            &lt;dbl&gt;
+##  1 Yes         24 Orange County, CA          SGGSAC  Anthropology      3.81
+##  2 Yes         23 Franklin county, OH        SGGSAC  Economics         3.23
+##  3 Yes         23 Franklin county, OH        SGGSAC  Economics         3.34
+##  4 Maybe       24 Cook county, IL            SGGSAC  Sociology         3.58
+##  5 Yes         23 Knoxville, Tennesse        SGGSAC  Political Scien…  3.63
+##  6 Yes         27 Racine County, WI          VANESSA Psychology        3.88
+##  7 Yes         31 &lt;NA&gt;                       SGGSAC  Sociology         3.68
+##  8 Yes         26 Dekalb, GA                 VANESSA Anthropology      3.41
+##  9 Yes         35 Hyde Park, IL              SGGSAC  Economics         4.00
+## 10 Yes         24 York County, South Caroli… SGGSAC  History           3.87
+## # … with 1,966 more rows</code></pre>
+</details>
+<p><br> <br></p>
 <ol style="list-style-type: decimal">
 <li>If I want to clear the county column so that it only has the name of the county and not the state or the word county, what do I do?</li>
 </ol>
+<details>
+<p><summary>Click for solutions</summary></p>
 <pre class="r"><code>data%&gt;%
   mutate(county=str_replace(county,regex(&quot;,? .+&quot;),&quot;&quot;))</code></pre>
 <pre><code>## # A tibble: 1,976 x 6
@@ -1759,28 +1781,35 @@ data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/
 ##  9 Yes         35 Hyde      SGGSAC  Economics          4.00
 ## 10 Yes         24 York      SGGSAC  History            3.87
 ## # … with 1,966 more rows</code></pre>
+</details>
+<p><br> <br></p>
 <ol start="2" style="list-style-type: decimal">
 <li>If I only want the states and not the counties, what do I do?</li>
 </ol>
-<pre class="r"><code>data%&gt;%
-  mutate(county=str_extract(county,regex(&quot;[A-Za-z]+$&quot;)))</code></pre>
-<pre><code>## # A tibble: 1,976 x 6
-##    workshop   age county   social  cohort              gpa
-##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;   &lt;chr&gt;             &lt;dbl&gt;
-##  1 Yes         24 CA       SGGSAC  Anthropology       3.81
-##  2 Yes         23 OH       SGGSAC  Economics          3.23
-##  3 Yes         23 OH       SGGSAC  Economics          3.34
-##  4 Maybe       24 IL       SGGSAC  Sociology          3.58
-##  5 Yes         23 Tennesse SGGSAC  Political Science  3.63
-##  6 Yes         27 WI       VANESSA Psychology         3.88
-##  7 Yes         31 &lt;NA&gt;     SGGSAC  Sociology          3.68
-##  8 Yes         26 GA       VANESSA Anthropology       3.41
-##  9 Yes         35 IL       SGGSAC  Economics          4.00
-## 10 Yes         24 Carolina SGGSAC  History            3.87
+<details>
+<p><summary>Click for solutions</summary></p>
+<pre class="r"><code>data%&gt;%mutate(state=str_replace(county,regex(&quot;.+, &quot;),&quot;&quot;))</code></pre>
+<pre><code>## # A tibble: 1,976 x 7
+##    workshop   age county              social  cohort         gpa state     
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;     
+##  1 Yes         24 Orange County, CA   SGGSAC  Anthropology  3.81 CA        
+##  2 Yes         23 Franklin county, OH SGGSAC  Economics     3.23 OH        
+##  3 Yes         23 Franklin county, OH SGGSAC  Economics     3.34 OH        
+##  4 Maybe       24 Cook county, IL     SGGSAC  Sociology     3.58 IL        
+##  5 Yes         23 Knoxville, Tennesse SGGSAC  Political S…  3.63 Tennesse  
+##  6 Yes         27 Racine County, WI   VANESSA Psychology    3.88 WI        
+##  7 Yes         31 &lt;NA&gt;                SGGSAC  Sociology     3.68 &lt;NA&gt;      
+##  8 Yes         26 Dekalb, GA          VANESSA Anthropology  3.41 GA        
+##  9 Yes         35 Hyde Park, IL       SGGSAC  Economics     4.00 IL        
+## 10 Yes         24 York County, South… SGGSAC  History       3.87 South Car…
 ## # … with 1,966 more rows</code></pre>
+</details>
+<p><br> <br></p>
 <ol start="3" style="list-style-type: decimal">
 <li>If I just want the first 3 letters of each cohort name instead of the full cohort name, what do I do?</li>
 </ol>
+<details>
+<p><summary>Click for solutions</summary></p>
 <pre class="r"><code>data%&gt;%
   mutate(cohort=str_extract(cohort,regex(&quot;^...&quot;)))</code></pre>
 <pre><code>## # A tibble: 1,976 x 6
@@ -1797,11 +1826,15 @@ data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/
 ##  9 Yes         35 Hyde Park, IL               SGGSAC  Eco     4.00
 ## 10 Yes         24 York County, South Carolina SGGSAC  His     3.87
 ## # … with 1,966 more rows</code></pre>
+</details>
+<p><br> <br></p>
 <ol start="4" style="list-style-type: decimal">
 <li>If I want the 5-letter cohort endings of the cohorts that <strong>do not</strong> end with “ology”, what do I do?</li>
 </ol>
+<details>
+<p><summary>Click for solutions</summary></p>
 <pre class="r"><code>data%&gt;%
-  mutate(cohort=ifelse(str_detect(cohort,&quot;ology&quot;),
+  mutate(cohort=ifelse(str_detect(cohort,regex(&quot;ology$&quot;)),
                        NA,
                        str_extract(cohort,regex(&quot;.....$&quot;))))</code></pre>
 <pre><code>## # A tibble: 1,976 x 6
@@ -1818,11 +1851,16 @@ data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/
 ##  9 Yes         35 Hyde Park, IL               SGGSAC  omics   4.00
 ## 10 Yes         24 York County, South Carolina SGGSAC  story   3.87
 ## # … with 1,966 more rows</code></pre>
+</details>
+<p><br></p>
+<p><br></p>
 <ol start="5" style="list-style-type: decimal">
-<li>How do I make sure that every cohort name only has the first word?</li>
+<li>How do I make sure that every cohort name only has the first word of each discipline?</li>
 </ol>
+<details>
+<p><summary>Click for solutions</summary></p>
 <pre class="r"><code>data%&gt;%
-  mutate(cohort=str_replace(cohort,regex(&quot; .+&quot;),&quot;&quot;))</code></pre>
+  mutate(cohort=str_extract(cohort,regex(&quot;[A-Za-z]+([A-Za-z]+)?/?;?([A-Za-z]+)?&quot;)))</code></pre>
 <pre><code>## # A tibble: 1,976 x 6
 ##    workshop   age county                      social  cohort         gpa
 ##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                       &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt;
@@ -1837,6 +1875,24 @@ data&lt;-read_csv(&quot;https://willythewoo.github.io/WillyTheWoo/workshop/data/
 ##  9 Yes         35 Hyde Park, IL               SGGSAC  Economics     4.00
 ## 10 Yes         24 York County, South Carolina SGGSAC  History       3.87
 ## # … with 1,966 more rows</code></pre>
+<pre class="r"><code>data%&gt;%
+  mutate(cohort1=str_extract(cohort,regex(&quot;[A-Za-z]+( [A-Za-z]+)?/?&quot;)),
+         cohort2=str_extract(cohort,regex(&quot;(/|;)([A-Za-z]+)?&quot;)))</code></pre>
+<pre><code>## # A tibble: 1,976 x 8
+##    workshop   age county         social  cohort      gpa cohort1    cohort2
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;  
+##  1 Yes         24 Orange County… SGGSAC  Anthropo…  3.81 Anthropol… &lt;NA&gt;   
+##  2 Yes         23 Franklin coun… SGGSAC  Economics  3.23 Economics  &lt;NA&gt;   
+##  3 Yes         23 Franklin coun… SGGSAC  Economics  3.34 Economics  &lt;NA&gt;   
+##  4 Maybe       24 Cook county, … SGGSAC  Sociology  3.58 Sociology  &lt;NA&gt;   
+##  5 Yes         23 Knoxville, Te… SGGSAC  Politica…  3.63 Political… &lt;NA&gt;   
+##  6 Yes         27 Racine County… VANESSA Psycholo…  3.88 Psychology &lt;NA&gt;   
+##  7 Yes         31 &lt;NA&gt;           SGGSAC  Sociology  3.68 Sociology  &lt;NA&gt;   
+##  8 Yes         26 Dekalb, GA     VANESSA Anthropo…  3.41 Anthropol… &lt;NA&gt;   
+##  9 Yes         35 Hyde Park, IL  SGGSAC  Economics  4.00 Economics  &lt;NA&gt;   
+## 10 Yes         24 York County, … SGGSAC  History    3.87 History    &lt;NA&gt;   
+## # … with 1,966 more rows</code></pre>
+</details>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdown.html">Click here to continue to the next workshop: Introduction to RMarkdown automation</a></p>
 <p><a href="https://github.com/rstudio/cheatsheets/raw/master/strings.pdf">Click here to continue to stringr cheat sheet</a></p>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/menu.html">Click here to return to the menu</a></p>
