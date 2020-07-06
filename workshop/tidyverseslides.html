@@ -3282,9 +3282,9 @@ data_final&lt;-f4(data3)</pre>
 <pre >## # A tibble: 3 x 8
 ##   workshop   age county          social cohort       gpa gradeage graderand
 ##   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
-## 1 Yes         24 Orange County,… SGGSAC Anthropol…  3.81     91.4      49.5
-## 2 Yes         23 Franklin count… SGGSAC Economics   3.23     74.3      42.0
-## 3 Yes         23 Franklin count… SGGSAC Economics   3.34     76.8      43.4</pre>
+## 1 Yes         24 Orange County,… SGGSAC Anthropol…  3.81     91.4      60.9
+## 2 Yes         23 Franklin count… SGGSAC Economics   3.23     74.3      51.7
+## 3 Yes         23 Franklin count… SGGSAC Economics   3.34     76.8      53.4</pre>
 
 </article></slide><slide class=""><hgroup><h2><code>summarise(df , vars...)</code></h2></hgroup><article  id="summarisedf-vars...">
 
@@ -3320,12 +3320,12 @@ data_final&lt;-f4(data3)</pre>
 <pre >## # A tibble: 6 x 10
 ##   workshop   age county social cohort   gpa gradeage graderand muage
 ##   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
-## 1 Yes         24 Orang… SGGSAC Anthr…  3.81     91.4      49.5  26.1
-## 2 Yes         23 Frank… SGGSAC Econo…  3.23     74.3      42.0  26.9
-## 3 Yes         23 Frank… SGGSAC Econo…  3.34     76.8      43.4  26.9
-## 4 Maybe       24 Cook … SGGSAC Socio…  3.58     86.0      46.6  25.7
-## 5 Yes         23 Knoxv… SGGSAC Polit…  3.63     83.5      47.2  23  
-## 6 Yes         27 Racin… VANES… Psych…  3.88    105.       50.5  25.4
+## 1 Yes         24 Orang… SGGSAC Anthr…  3.81     91.4      60.9  26.1
+## 2 Yes         23 Frank… SGGSAC Econo…  3.23     74.3      51.7  26.9
+## 3 Yes         23 Frank… SGGSAC Econo…  3.34     76.8      53.4  26.9
+## 4 Maybe       24 Cook … SGGSAC Socio…  3.58     86.0      57.3  25.7
+## 5 Yes         23 Knoxv… SGGSAC Polit…  3.63     83.5      58.1  23  
+## 6 Yes         27 Racin… VANES… Psych…  3.88    105.       62.1  25.4
 ## # … with 1 more variable: groupdiff &lt;dbl&gt;</pre>
 
 <p><strong>Bonus</strong> If you want the operation to happen row by row (you may need to do this when geocoding), you can use a special version of <code>group_by()</code> called <code>rowwise()</code>. <code>rowwise()</code> imposes a grouping structure so that each row is in its own group.</p>
@@ -3402,16 +3402,16 @@ data_final&lt;-f4(data3)</pre>
 <pre >## # A tibble: 1,976 x 11
 ##    workshop   age county state social cohort   gpa gradeage graderand muage
 ##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
-##  1 Yes         24 Orang… CA    SGGSAC Anthr…  3.81     91.4      49.5  26.1
-##  2 Yes         23 Frank… OH    SGGSAC Econo…  3.23     74.3      42.0  26.9
-##  3 Yes         23 Frank… OH    SGGSAC Econo…  3.34     76.8      43.4  26.9
-##  4 Maybe       24 Cook … IL    SGGSAC Socio…  3.58     86.0      46.6  25.7
-##  5 Yes         23 Knoxv… Tenn… SGGSAC Polit…  3.63     83.5      47.2  23  
-##  6 Yes         27 Racin… WI    VANES… Psych…  3.88    105.       50.5  25.4
-##  7 Yes         31 &lt;NA&gt;   &lt;NA&gt;  SGGSAC Socio…  3.68    114.       47.8  25.7
-##  8 Yes         26 Dekalb GA    VANES… Anthr…  3.41     88.6      44.3  26.1
-##  9 Yes         35 Hyde … IL    SGGSAC Econo…  4.00    140.       52.0  26.9
-## 10 Yes         24 York … Sout… SGGSAC Histo…  3.87     92.9      50.3  24  
+##  1 Yes         24 Orang… CA    SGGSAC Anthr…  3.81     91.4      60.9  26.1
+##  2 Yes         23 Frank… OH    SGGSAC Econo…  3.23     74.3      51.7  26.9
+##  3 Yes         23 Frank… OH    SGGSAC Econo…  3.34     76.8      53.4  26.9
+##  4 Maybe       24 Cook … IL    SGGSAC Socio…  3.58     86.0      57.3  25.7
+##  5 Yes         23 Knoxv… Tenn… SGGSAC Polit…  3.63     83.5      58.1  23  
+##  6 Yes         27 Racin… WI    VANES… Psych…  3.88    105.       62.1  25.4
+##  7 Yes         31 &lt;NA&gt;   &lt;NA&gt;  SGGSAC Socio…  3.68    114.       58.9  25.7
+##  8 Yes         26 Dekalb GA    VANES… Anthr…  3.41     88.6      54.5  26.1
+##  9 Yes         35 Hyde … IL    SGGSAC Econo…  4.00    140.       64.0  26.9
+## 10 Yes         24 York … Sout… SGGSAC Histo…  3.87     92.9      61.9  24  
 ## # … with 1,966 more rows, and 1 more variable: groupdiff &lt;dbl&gt;</pre>
 
 </article></slide><slide class=""><hgroup><h2><code>unite(df, new_col, cols, sep)</code></h2></hgroup><article  id="unitedf-new_col-cols-sep">
@@ -3426,16 +3426,16 @@ data_final&lt;-f4(data3)</pre>
 <pre >## # A tibble: 1,976 x 9
 ##    new       age county    cohort    gpa gradeage graderand muage groupdiff
 ##    &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
-##  1 Yes_SG…    24 Orange C… Anthro…  3.81     91.4      49.5  26.1     0.260
-##  2 Yes_SG…    23 Franklin… Econom…  3.23     74.3      42.0  26.9    -0.501
-##  3 Yes_SG…    23 Franklin… Econom…  3.34     76.8      43.4  26.9    -0.501
-##  4 Maybe_…    24 Cook cou… Sociol…  3.58     86.0      46.6  25.7     0.658
-##  5 Yes_SG…    23 Knoxvill… Politi…  3.63     83.5      47.2  23       3.37 
-##  6 Yes_VA…    27 Racine C… Psycho…  3.88    105.       50.5  25.4     0.944
-##  7 Yes_SG…    31 &lt;NA&gt;      Sociol…  3.68    114.       47.8  25.7     0.658
-##  8 Yes_VA…    26 Dekalb, … Anthro…  3.41     88.6      44.3  26.1     0.260
-##  9 Yes_SG…    35 Hyde Par… Econom…  4.00    140.       52.0  26.9    -0.501
-## 10 Yes_SG…    24 York Cou… History  3.87     92.9      50.3  24       2.37 
+##  1 Yes_SG…    24 Orange C… Anthro…  3.81     91.4      60.9  26.1     0.260
+##  2 Yes_SG…    23 Franklin… Econom…  3.23     74.3      51.7  26.9    -0.501
+##  3 Yes_SG…    23 Franklin… Econom…  3.34     76.8      53.4  26.9    -0.501
+##  4 Maybe_…    24 Cook cou… Sociol…  3.58     86.0      57.3  25.7     0.658
+##  5 Yes_SG…    23 Knoxvill… Politi…  3.63     83.5      58.1  23       3.37 
+##  6 Yes_VA…    27 Racine C… Psycho…  3.88    105.       62.1  25.4     0.944
+##  7 Yes_SG…    31 &lt;NA&gt;      Sociol…  3.68    114.       58.9  25.7     0.658
+##  8 Yes_VA…    26 Dekalb, … Anthro…  3.41     88.6      54.5  26.1     0.260
+##  9 Yes_SG…    35 Hyde Par… Econom…  4.00    140.       64.0  26.9    -0.501
+## 10 Yes_SG…    24 York Cou… History  3.87     92.9      61.9  24       2.37 
 ## # … with 1,966 more rows</pre>
 
 </article></slide><slide class=""><hgroup><h2><code>gather()</code> and <code>spread()</code></h2></hgroup><article  id="gather-and-spread">
@@ -3490,7 +3490,7 @@ data_final&lt;-f4(data3)</pre>
 
 </article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
 
-<p>Using <code>d21</code>, create \(Y0\) and \(Y1\) such that \(Y0=X+E\) and \(Y1=X+0.3*D+E\). Then create a new variable \(Y\) such that \(Y=Y1\) if \(D=1\) and \(Y=Y0\) if \(D=0\).</p>
+<p>Using <code>d21</code>, create \(Y0\) and \(Y1\) such that \(Y0=X+E\) and \(Y1=X+0.3+E\). Then create a new variable \(Y\) such that \(Y=Y1\) if \(D=1\) and \(Y=Y0\) if \(D=0\).</p>
 
 </article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
 

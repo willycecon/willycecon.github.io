@@ -203,7 +203,7 @@ We talked in details about these two functions last time in the workshop [Introd
   i. Using functions like `rnorm()`, `rbinom()`, and `runif()`, create a data frame with variables $X$, $D$, and $E$ such that
   $X\sim U[-2,2]$, $D\sim Binom(0.3)$, and $E\sim N(0,1)$ with 1,000 observations. Call this data frame `d21`. In `rbinom()`, set the argument `size` to 1.
   
-  ii. Using `d21`, create $Y0$ and $Y1$ such that $Y0=X+E$ and $Y1=X+0.3*D+E$. Then create a new variable $Y$ such that $Y=Y1$ if $D=1$ and $Y=Y0$ if $D=0$.
+  ii. Using `d21`, create $Y0$ and $Y1$ such that $Y0=X+E$ and $Y1=X+0.3+E$. Then create a new variable $Y$ such that $Y=Y1$ if $D=1$ and $Y=Y0$ if $D=0$.
 
   iii. Create a new variable called ID that uniquely identifies each observation. 
   
