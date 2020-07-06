@@ -3205,6 +3205,26 @@ data_final&lt;-f4(data3)</pre>
 <p>Sometimes if you have a vector of things that you want filter to match with the <code>or</code>(<code>|</code>) condition, you can use <code>%in%</code> and the vector you want to match. For example, we can select people who think the social committee’s name is either <code>SUCSAC</code> or <code>VANESSA</code>:</p>
 
 <pre class = 'prettyprint lang-r'>filter(data,
+       social == &quot;SUCSAC&quot; | social == &quot;VANESSA&quot;)</pre>
+
+<pre >## # A tibble: 459 x 6
+##    workshop   age county            social  cohort         gpa
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;             &lt;chr&gt;   &lt;chr&gt;        &lt;dbl&gt;
+##  1 Yes         27 Racine County, WI VANESSA Psychology    3.88
+##  2 Yes         26 Dekalb, GA        VANESSA Anthropology  3.41
+##  3 Yes         NA Arlington, VA     VANESSA Sociology     3.39
+##  4 Yes         27 Racine County, WI VANESSA Psychology    3.39
+##  5 Yes         NA NY                SUCSAC  Psychology    3.77
+##  6 Maybe       28 Orange county     SUCSAC  Economics     3.83
+##  7 Yes         35 Cook County, IL   SUCSAC  Economics     3.44
+##  8 Yes         35 Cook County, IL   SUCSAC  Economics     3.63
+##  9 Yes         27 Racine County, WI VANESSA Psychology    3.45
+## 10 Yes         NA NY                SUCSAC  Psychology    3.83
+## # … with 449 more rows</pre>
+
+</article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
+
+<pre class = 'prettyprint lang-r'>filter(data,
        social %in% c(&quot;SUCSAC&quot;,&quot;VANESSA&quot;))</pre>
 
 <pre >## # A tibble: 459 x 6
@@ -3259,12 +3279,12 @@ data_final&lt;-f4(data3)</pre>
   mutate(gradeage = gpa*age,
          graderand = gpa*sample(10:20,1,TRUE))</pre>
 
-<pre >## # A tibble: 3 x 6
-##   workshop   age county              social cohort         gpa
-##   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt;  &lt;chr&gt;        &lt;dbl&gt;
-## 1 Yes         24 Orange County, CA   SGGSAC Anthropology  3.81
-## 2 Yes         23 Franklin county, OH SGGSAC Economics     3.23
-## 3 Yes         23 Franklin county, OH SGGSAC Economics     3.34</pre>
+<pre >## # A tibble: 3 x 8
+##   workshop   age county          social cohort       gpa gradeage graderand
+##   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;      &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+## 1 Yes         24 Orange County,… SGGSAC Anthropol…  3.81     91.4      53.3
+## 2 Yes         23 Franklin count… SGGSAC Economics   3.23     74.3      45.2
+## 3 Yes         23 Franklin count… SGGSAC Economics   3.34     76.8      46.7</pre>
 
 </article></slide><slide class=""><hgroup><h2><code>summarise(df , vars...)</code></h2></hgroup><article  id="summarisedf-vars...">
 
@@ -3297,15 +3317,16 @@ data_final&lt;-f4(data3)</pre>
 <pre class = 'prettyprint lang-r'>data%&gt;%
   head(6)</pre>
 
-<pre >## # A tibble: 6 x 8
-##   workshop   age county          social cohort          gpa muage groupdiff
-##   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
-## 1 Yes         24 Orange County,… SGGSAC Anthropology   3.81  26.1     0.260
-## 2 Yes         23 Franklin count… SGGSAC Economics      3.23  26.9    -0.501
-## 3 Yes         23 Franklin count… SGGSAC Economics      3.34  26.9    -0.501
-## 4 Maybe       24 Cook county, IL SGGSAC Sociology      3.58  25.7     0.658
-## 5 Yes         23 Knoxville, Ten… SGGSAC Political Sc…  3.63  23       3.37 
-## 6 Yes         27 Racine County,… VANES… Psychology     3.88  25.4     0.944</pre>
+<pre >## # A tibble: 6 x 10
+##   workshop   age county social cohort   gpa gradeage graderand muage
+##   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+## 1 Yes         24 Orang… SGGSAC Anthr…  3.81     91.4      53.3  26.1
+## 2 Yes         23 Frank… SGGSAC Econo…  3.23     74.3      45.2  26.9
+## 3 Yes         23 Frank… SGGSAC Econo…  3.34     76.8      46.7  26.9
+## 4 Maybe       24 Cook … SGGSAC Socio…  3.58     86.0      50.2  25.7
+## 5 Yes         23 Knoxv… SGGSAC Polit…  3.63     83.5      50.8  23  
+## 6 Yes         27 Racin… VANES… Psych…  3.88    105.       54.4  25.4
+## # … with 1 more variable: groupdiff &lt;dbl&gt;</pre>
 
 <p><strong>Bonus</strong> If you want the operation to happen row by row (you may need to do this when geocoding), you can use a special version of <code>group_by()</code> called <code>rowwise()</code>. <code>rowwise()</code> imposes a grouping structure so that each row is in its own group.</p>
 
@@ -3378,20 +3399,20 @@ data_final&lt;-f4(data3)</pre>
                 c(&quot;county&quot;,&quot;state&quot;),
                 sep=&quot;, &quot;)</pre>
 
-<pre >## # A tibble: 1,976 x 9
-##    workshop   age county    state    social cohort      gpa muage groupdiff
-##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
-##  1 Yes         24 Orange C… CA       SGGSAC Anthropo…  3.81  26.1     0.260
-##  2 Yes         23 Franklin… OH       SGGSAC Economics  3.23  26.9    -0.501
-##  3 Yes         23 Franklin… OH       SGGSAC Economics  3.34  26.9    -0.501
-##  4 Maybe       24 Cook cou… IL       SGGSAC Sociology  3.58  25.7     0.658
-##  5 Yes         23 Knoxville Tennesse SGGSAC Politica…  3.63  23       3.37 
-##  6 Yes         27 Racine C… WI       VANES… Psycholo…  3.88  25.4     0.944
-##  7 Yes         31 &lt;NA&gt;      &lt;NA&gt;     SGGSAC Sociology  3.68  25.7     0.658
-##  8 Yes         26 Dekalb    GA       VANES… Anthropo…  3.41  26.1     0.260
-##  9 Yes         35 Hyde Park IL       SGGSAC Economics  4.00  26.9    -0.501
-## 10 Yes         24 York Cou… South C… SGGSAC History    3.87  24       2.37 
-## # … with 1,966 more rows</pre>
+<pre >## # A tibble: 1,976 x 11
+##    workshop   age county state social cohort   gpa gradeage graderand muage
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+##  1 Yes         24 Orang… CA    SGGSAC Anthr…  3.81     91.4      53.3  26.1
+##  2 Yes         23 Frank… OH    SGGSAC Econo…  3.23     74.3      45.2  26.9
+##  3 Yes         23 Frank… OH    SGGSAC Econo…  3.34     76.8      46.7  26.9
+##  4 Maybe       24 Cook … IL    SGGSAC Socio…  3.58     86.0      50.2  25.7
+##  5 Yes         23 Knoxv… Tenn… SGGSAC Polit…  3.63     83.5      50.8  23  
+##  6 Yes         27 Racin… WI    VANES… Psych…  3.88    105.       54.4  25.4
+##  7 Yes         31 &lt;NA&gt;   &lt;NA&gt;  SGGSAC Socio…  3.68    114.       51.5  25.7
+##  8 Yes         26 Dekalb GA    VANES… Anthr…  3.41     88.6      47.7  26.1
+##  9 Yes         35 Hyde … IL    SGGSAC Econo…  4.00    140.       56.0  26.9
+## 10 Yes         24 York … Sout… SGGSAC Histo…  3.87     92.9      54.2  24  
+## # … with 1,966 more rows, and 1 more variable: groupdiff &lt;dbl&gt;</pre>
 
 </article></slide><slide class=""><hgroup><h2><code>unite(df, new_col, cols, sep)</code></h2></hgroup><article  id="unitedf-new_col-cols-sep">
 
@@ -3402,19 +3423,19 @@ data_final&lt;-f4(data3)</pre>
                 c(workshop, social),
                 sep=&quot;_&quot;)</pre>
 
-<pre >## # A tibble: 1,976 x 7
-##    new          age county              cohort          gpa muage groupdiff
-##    &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
-##  1 Yes_SGGSAC    24 Orange County, CA   Anthropology   3.81  26.1     0.260
-##  2 Yes_SGGSAC    23 Franklin county, OH Economics      3.23  26.9    -0.501
-##  3 Yes_SGGSAC    23 Franklin county, OH Economics      3.34  26.9    -0.501
-##  4 Maybe_SGG…    24 Cook county, IL     Sociology      3.58  25.7     0.658
-##  5 Yes_SGGSAC    23 Knoxville, Tennesse Political Sc…  3.63  23       3.37 
-##  6 Yes_VANES…    27 Racine County, WI   Psychology     3.88  25.4     0.944
-##  7 Yes_SGGSAC    31 &lt;NA&gt;                Sociology      3.68  25.7     0.658
-##  8 Yes_VANES…    26 Dekalb, GA          Anthropology   3.41  26.1     0.260
-##  9 Yes_SGGSAC    35 Hyde Park, IL       Economics      4.00  26.9    -0.501
-## 10 Yes_SGGSAC    24 York County, South… History        3.87  24       2.37 
+<pre >## # A tibble: 1,976 x 9
+##    new       age county    cohort    gpa gradeage graderand muage groupdiff
+##    &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
+##  1 Yes_SG…    24 Orange C… Anthro…  3.81     91.4      53.3  26.1     0.260
+##  2 Yes_SG…    23 Franklin… Econom…  3.23     74.3      45.2  26.9    -0.501
+##  3 Yes_SG…    23 Franklin… Econom…  3.34     76.8      46.7  26.9    -0.501
+##  4 Maybe_…    24 Cook cou… Sociol…  3.58     86.0      50.2  25.7     0.658
+##  5 Yes_SG…    23 Knoxvill… Politi…  3.63     83.5      50.8  23       3.37 
+##  6 Yes_VA…    27 Racine C… Psycho…  3.88    105.       54.4  25.4     0.944
+##  7 Yes_SG…    31 &lt;NA&gt;      Sociol…  3.68    114.       51.5  25.7     0.658
+##  8 Yes_VA…    26 Dekalb, … Anthro…  3.41     88.6      47.7  26.1     0.260
+##  9 Yes_SG…    35 Hyde Par… Econom…  4.00    140.       56.0  26.9    -0.501
+## 10 Yes_SG…    24 York Cou… History  3.87     92.9      54.2  24       2.37 
 ## # … with 1,966 more rows</pre>
 
 </article></slide><slide class=""><hgroup><h2><code>gather()</code> and <code>spread()</code></h2></hgroup><article  id="gather-and-spread">
@@ -3453,7 +3474,7 @@ data_final&lt;-f4(data3)</pre>
 
 </article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
 
-<p>Going back to ggplot2, plot the linear relationship between population and female, faceted by the age and income brackets in a 2 \(times\) 2 figure.</p>
+<p>Going back to ggplot2, plot the linear relationship between population and female, faceted by the age and income brackets in a 2 \(\times\) 2 figure.</p>
 
 </article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
 
@@ -3486,11 +3507,7 @@ data_final&lt;-f4(data3)</pre>
 
 </article></slide><slide class=""><hgroup><h2></h2></hgroup><article >
 
-<p>Using ggplot, graph the relationship between Y and gpa using scatter plot. Facet the figure by D.</p>
-
-<p><a href='https://willythewoo.github.io/WillyTheWoo/workshop/textdata.html' title=''>Click here to continue to the next workshop: Introduction to text data</a></p>
-
-<p><a href='https://willythewoo.github.io/WillyTheWoo/workshop/menu.html' title=''>Click here to return to the menu</a></p></article></slide>
+<p>Using ggplot, graph the relationship between Y and gpa using scatter plot. Facet the figure by D.</p></article></slide>
 
 
   <slide class="backdrop"></slide>

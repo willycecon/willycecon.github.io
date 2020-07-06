@@ -66,7 +66,6 @@ filter(data,
        workshop=="Maybe" & gpa>3.5)
 ```
 
----
 
 ### `%in%`
 Sometimes if you have a vector of things that you want filter to match with the `or`(`|`) condition, you can use `%in%` and the vector you want to match. For example, we can select people who think the social committee's name is either `SUCSAC` or `VANESSA`:

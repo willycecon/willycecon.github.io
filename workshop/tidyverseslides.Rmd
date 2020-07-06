@@ -77,6 +77,14 @@ filter(data,
 Sometimes if you have a vector of things that you want filter to match with the `or`(`|`) condition, you can use `%in%` and the vector you want to match. For example, we can select people who think the social committee's name is either `SUCSAC` or `VANESSA`:
 ```{r}
 filter(data,
+       social == "SUCSAC" | social == "VANESSA")
+```
+
+----
+
+```{r}
+
+filter(data,
        social %in% c("SUCSAC","VANESSA"))
 ```
 
@@ -104,8 +112,13 @@ data<-data %>%
          graderand = gpa*sample(10:20,1,TRUE))
 ```
 ```{r echo=FALSE}
+data<-data %>%
+  mutate(gradeage = gpa*age,
+         graderand = gpa*sample(10:20,1,TRUE))
+
 data%>%head(n=3)
 ```
+
 
 ## `summarise(df , vars...)`
 `summarise()` is similar to mutate, but you **will** lose your original data set. This function takes your data frame as the first argument and creates summarized statistics however you want it. Say I want to see the mean, maximum, and standard deviation of the variable gpa, I will write:
@@ -231,7 +244,7 @@ Now you can look at statistics in each combination of age and income bracket. Fi
 
 ----
 
-Going back to ggplot2, plot the linear relationship between population and female, faceted by the age and income brackets in a 2 $times$ 2 figure.
+Going back to ggplot2, plot the linear relationship between population and female, faceted by the age and income brackets in a 2 $\times$ 2 figure.
 
 ----
 
@@ -267,8 +280,3 @@ id_gpa<-data.frame(ID=1:1000,
 
 Using ggplot, graph the relationship between Y and gpa using scatter plot. Facet the figure by D. 
 
-  
-
-[Click here to continue to the next workshop: Introduction to text data](https://willythewoo.github.io/WillyTheWoo/workshop/textdata.html) 
-
-[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
