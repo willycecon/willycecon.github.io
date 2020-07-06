@@ -1578,21 +1578,22 @@ data_final&lt;-f4(data3)</code></pre>
 <p>You should place the data you want to use and place the truth condition second. Note that the truth condition can include multiple things. To make your code clear, always wrap around chunks of condition in parenthesis. For example, the code <code>filter(data,((a==4&amp;b==2)&amp;(a==2|b==3))|(a==0|b==0))</code> will give me data that fits either <code>(a==4&amp;b==2) &amp; (a==2|b==3)</code> or <code>(a==0|b==0)</code>. Making your filter condition clear is extremely important for readability.</p>
 <p>For example, we can select people who answered <code>Maybe</code> to the workshop question in the survey:</p>
 <pre class="r"><code>filter(data,
-       workshop==&quot;Maybe&quot;)</code></pre>
-<pre><code>## # A tibble: 240 x 6
+       workshop==&quot;Maybe&quot; &amp; gpa&gt;3.5)</code></pre>
+<pre><code>## # A tibble: 128 x 6
 ##    workshop   age county                  social cohort           gpa
 ##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;                   &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;
 ##  1 Maybe       24 Cook county, IL         SGGSAC Sociology       3.58
 ##  2 Maybe       25 Cuyahoga County, OH     SGGSAC Anthropology    3.79
 ##  3 Maybe       25 Cuyahoga County, OH     SGGSAC Anthropology    3.69
-##  4 Maybe       24 Cook county, IL         SGGSAC Sociology       3.49
-##  5 Maybe       25 Cuyahoga County, OH     SGGSAC Anthropology    3.52
-##  6 Maybe       25 Cuyahoga County, OH     SGGSAC Anthropology    3.40
-##  7 Maybe       28 Orange county           SUCSAC Economics       3.83
-##  8 Maybe       33 Hillsborough County, FL SGGSAC Psych/poli sci  3.54
-##  9 Maybe       25 Cuyahoga County, OH     SGGSAC Anthropology    3.10
-## 10 Maybe       25 Cuyahoga County, OH     SGGSAC Anthropology    3.67
-## # … with 230 more rows</code></pre>
+##  4 Maybe       25 Cuyahoga County, OH     SGGSAC Anthropology    3.52
+##  5 Maybe       28 Orange county           SUCSAC Economics       3.83
+##  6 Maybe       33 Hillsborough County, FL SGGSAC Psych/poli sci  3.54
+##  7 Maybe       25 Cuyahoga County, OH     SGGSAC Anthropology    3.67
+##  8 Maybe       24 Cook county, IL         SGGSAC Sociology       3.96
+##  9 Maybe       33 Hillsborough County, FL SGGSAC Psych/poli sci  4.15
+## 10 Maybe       24 Cook county, IL         SGGSAC Sociology       3.52
+## # … with 118 more rows</code></pre>
+<hr />
 <div id="in" class="section level3">
 <h3><code>%in%</code></h3>
 <p>Sometimes if you have a vector of things that you want filter to match with the <code>or</code>(<code>|</code>) condition, you can use <code>%in%</code> and the vector you want to match. For example, we can select people who think the social committee’s name is either <code>SUCSAC</code> or <code>VANESSA</code>:</p>
@@ -1643,14 +1644,24 @@ data_final&lt;-f4(data3)</code></pre>
 <pre class="r"><code>data&lt;-data %&gt;%
   mutate(gradeage = gpa*age,
          graderand = gpa*sample(10:20,1,TRUE))</code></pre>
+<pre><code>## # A tibble: 3 x 6
+##   workshop   age county              social cohort         gpa
+##   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt;  &lt;chr&gt;        &lt;dbl&gt;
+## 1 Yes         24 Orange County, CA   SGGSAC Anthropology  3.81
+## 2 Yes         23 Franklin county, OH SGGSAC Economics     3.23
+## 3 Yes         23 Franklin county, OH SGGSAC Economics     3.34</code></pre>
 </div>
 <div id="summarisedf-vars..." class="section level2">
 <h2><code>summarise(df , vars...)</code></h2>
 <p><code>summarise()</code> is similar to mutate, but you <strong>will</strong> lose your original data set. This function takes your data frame as the first argument and creates summarized statistics however you want it. Say I want to see the mean, maximum, and standard deviation of the variable gpa, I will write:</p>
 <pre class="r"><code>data %&gt;%
   summarise(avggpa = mean(gpa),
-                 maxgpa = mac(gpa),
+                 maxgpa = max(gpa),
                  sigmagpa = sd(gpa))</code></pre>
+<pre><code>## # A tibble: 1 x 3
+##   avggpa maxgpa sigmagpa
+##    &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;
+## 1   3.50   4.39    0.301</code></pre>
 <p>and I will get a data frame with one row and three variables. Alternatively, if you want a general summary statistics of your data you can call the function <code>summary()</code>.</p>
 </div>
 <div id="group_bydf-vars..." class="section level2">
@@ -1658,9 +1669,20 @@ data_final&lt;-f4(data3)</code></pre>
 <p><code>group_by()</code> is perhaps the most powerful function of the <code>dplyr</code> package. This function allows you to do any operation by certain grouping characteristics. This function outputs a data frame that has a grouping structure on it, making all the subsequent operations group wise until the structure is removed. For example, if I want to look at the average age of participants in this workshop based on their cohorts, I will simply group the data by cohorts and then call <code>summarise()</code> or <code>mutate()</code>. Afterwards, I may want to remove the grouping structure so I can see the difference between group averages and total average. In that case, I simply need to pipe the data into <code>ungroup()</code> before I pipe it again into mutate.</p>
 <pre class="r"><code>data&lt;-data %&gt;%
   group_by(cohort) %&gt;%
-  mutate(muage=mean(age)) %&gt;%
+  mutate(muage=mean(age, na.rm=TRUE)) %&gt;%
   ungroup() %&gt;%
-  mutate(groupdiff = mean(age)-muage)</code></pre>
+  mutate(groupdiff = mean(age, na.rm=TRUE)-muage)
+
+data%&gt;%head(6)</code></pre>
+<pre><code>## # A tibble: 6 x 8
+##   workshop   age county          social cohort          gpa muage groupdiff
+##   &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;           &lt;chr&gt;  &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
+## 1 Yes         24 Orange County,… SGGSAC Anthropology   3.81  26.1     0.260
+## 2 Yes         23 Franklin count… SGGSAC Economics      3.23  26.9    -0.501
+## 3 Yes         23 Franklin count… SGGSAC Economics      3.34  26.9    -0.501
+## 4 Maybe       24 Cook county, IL SGGSAC Sociology      3.58  25.7     0.658
+## 5 Yes         23 Knoxville, Ten… SGGSAC Political Sc…  3.63  23       3.37 
+## 6 Yes         27 Racine County,… VANES… Psychology     3.88  25.4     0.944</code></pre>
 <p><strong>Bonus</strong> If you want the operation to happen row by row (you may need to do this when geocoding), you can use a special version of <code>group_by()</code> called <code>rowwise()</code>. <code>rowwise()</code> imposes a grouping structure so that each row is in its own group.</p>
 </div>
 <div id="selectdf-colsrenamedf-new_colold_col" class="section level2">
@@ -1719,19 +1741,19 @@ data_final&lt;-f4(data3)</code></pre>
 <pre><code>## Warning: Expected 2 pieces. Missing pieces filled with `NA` in 430 rows
 ## [16, 17, 26, 32, 40, 41, 48, 59, 65, 67, 70, 71, 74, 78, 79, 84, 91, 92,
 ## 96, 99, ...].</code></pre>
-<pre><code>## # A tibble: 1,976 x 7
-##    workshop   age county         state         social cohort            gpa
-##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;          &lt;chr&gt;         &lt;chr&gt;  &lt;chr&gt;           &lt;dbl&gt;
-##  1 Yes         24 Orange County  CA            SGGSAC Anthropology     3.81
-##  2 Yes         23 Franklin coun… OH            SGGSAC Economics        3.23
-##  3 Yes         23 Franklin coun… OH            SGGSAC Economics        3.34
-##  4 Maybe       24 Cook county    IL            SGGSAC Sociology        3.58
-##  5 Yes         23 Knoxville      Tennesse      SGGSAC Political Scie…  3.63
-##  6 Yes         27 Racine County  WI            VANES… Psychology       3.88
-##  7 Yes         31 &lt;NA&gt;           &lt;NA&gt;          SGGSAC Sociology        3.68
-##  8 Yes         26 Dekalb         GA            VANES… Anthropology     3.41
-##  9 Yes         35 Hyde Park      IL            SGGSAC Economics        4.00
-## 10 Yes         24 York County    South Caroli… SGGSAC History          3.87
+<pre><code>## # A tibble: 1,976 x 9
+##    workshop   age county    state    social cohort      gpa muage groupdiff
+##    &lt;chr&gt;    &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;  &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
+##  1 Yes         24 Orange C… CA       SGGSAC Anthropo…  3.81  26.1     0.260
+##  2 Yes         23 Franklin… OH       SGGSAC Economics  3.23  26.9    -0.501
+##  3 Yes         23 Franklin… OH       SGGSAC Economics  3.34  26.9    -0.501
+##  4 Maybe       24 Cook cou… IL       SGGSAC Sociology  3.58  25.7     0.658
+##  5 Yes         23 Knoxville Tennesse SGGSAC Politica…  3.63  23       3.37 
+##  6 Yes         27 Racine C… WI       VANES… Psycholo…  3.88  25.4     0.944
+##  7 Yes         31 &lt;NA&gt;      &lt;NA&gt;     SGGSAC Sociology  3.68  25.7     0.658
+##  8 Yes         26 Dekalb    GA       VANES… Anthropo…  3.41  26.1     0.260
+##  9 Yes         35 Hyde Park IL       SGGSAC Economics  4.00  26.9    -0.501
+## 10 Yes         24 York Cou… South C… SGGSAC History    3.87  24       2.37 
 ## # … with 1,966 more rows</code></pre>
 </div>
 <div id="unitedf-new_col-cols-sep" class="section level2">
@@ -1741,19 +1763,19 @@ data_final&lt;-f4(data3)</code></pre>
   unite(&quot;new&quot;,
                 c(workshop, social),
                 sep=&quot;_&quot;)</code></pre>
-<pre><code>## # A tibble: 1,976 x 5
-##    new            age county                      cohort              gpa
-##    &lt;chr&gt;        &lt;dbl&gt; &lt;chr&gt;                       &lt;chr&gt;             &lt;dbl&gt;
-##  1 Yes_SGGSAC      24 Orange County, CA           Anthropology       3.81
-##  2 Yes_SGGSAC      23 Franklin county, OH         Economics          3.23
-##  3 Yes_SGGSAC      23 Franklin county, OH         Economics          3.34
-##  4 Maybe_SGGSAC    24 Cook county, IL             Sociology          3.58
-##  5 Yes_SGGSAC      23 Knoxville, Tennesse         Political Science  3.63
-##  6 Yes_VANESSA     27 Racine County, WI           Psychology         3.88
-##  7 Yes_SGGSAC      31 &lt;NA&gt;                        Sociology          3.68
-##  8 Yes_VANESSA     26 Dekalb, GA                  Anthropology       3.41
-##  9 Yes_SGGSAC      35 Hyde Park, IL               Economics          4.00
-## 10 Yes_SGGSAC      24 York County, South Carolina History            3.87
+<pre><code>## # A tibble: 1,976 x 7
+##    new          age county              cohort          gpa muage groupdiff
+##    &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;
+##  1 Yes_SGGSAC    24 Orange County, CA   Anthropology   3.81  26.1     0.260
+##  2 Yes_SGGSAC    23 Franklin county, OH Economics      3.23  26.9    -0.501
+##  3 Yes_SGGSAC    23 Franklin county, OH Economics      3.34  26.9    -0.501
+##  4 Maybe_SGG…    24 Cook county, IL     Sociology      3.58  25.7     0.658
+##  5 Yes_SGGSAC    23 Knoxville, Tennesse Political Sc…  3.63  23       3.37 
+##  6 Yes_VANES…    27 Racine County, WI   Psychology     3.88  25.4     0.944
+##  7 Yes_SGGSAC    31 &lt;NA&gt;                Sociology      3.68  25.7     0.658
+##  8 Yes_VANES…    26 Dekalb, GA          Anthropology   3.41  26.1     0.260
+##  9 Yes_SGGSAC    35 Hyde Park, IL       Economics      4.00  26.9    -0.501
+## 10 Yes_SGGSAC    24 York County, South… History        3.87  24       2.37 
 ## # … with 1,966 more rows</code></pre>
 </div>
 <div id="gather-and-spread" class="section level2">

@@ -63,8 +63,10 @@ You should place the data you want to use and place the truth condition second. 
 For example, we can select people who answered `Maybe` to the workshop question in the survey:
 ```{r}
 filter(data,
-       workshop=="Maybe")
+       workshop=="Maybe" & gpa>3.5)
 ```
+
+---
 
 ### `%in%`
 Sometimes if you have a vector of things that you want filter to match with the `or`(`|`) condition, you can use `%in%` and the vector you want to match. For example, we can select people who think the social committee's name is either `SUCSAC` or `VANESSA`:
