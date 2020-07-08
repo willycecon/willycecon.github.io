@@ -23,8 +23,10 @@ For my photography work, [click here](https://www.flickr.com/photos/6149pix).
 
 
 ## Research Experience
-[My CV](https://willythewoo.github.io/WillyTheWoo/cvWillyChen.pdf)
-
+<a href="/WillyTheWoo/cvWillyChen.pdf" download>
+  Last Updated: 7/7/2020
+</a>
+<iframe src="https://willythewoo.github.io/WillyTheWoo/cvWillyChen.pdf" style="width: 100%; height:1000px; margin-left: auto;margin-left: auto;" frameborder="0"></iframe>
 
 
 ## Coding Projects/Examples
