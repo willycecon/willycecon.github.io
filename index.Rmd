@@ -19,7 +19,9 @@ You can find videos, slides, and lecture notes of my R workshop under coding exa
 # {.tabset .tabset-fade .tabset-pills}
 
 ## About Me
-I am currently an MA'20 candidate of Economics at the University of Chicago. I obtained my B.S. in both Economics and Mathematics from The Ohio State University in Spring 2019. My research interest is in public economics with current focus on the migration effect of Sanctuary City Policies.
+I am currently an MA'20 candidate of Economics at the University of Chicago. I obtained my B.S. in both Economics and Mathematics from The Ohio State University in Spring 2019. 
+
+My research interest is in public economics with current focus on the migration effect of Sanctuary City Policies.
 
 I am a self-proclaimed magician, photographer, boardgame-maker, and funny T-shirt enthusiast.
 
