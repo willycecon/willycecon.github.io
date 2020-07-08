@@ -5,13 +5,17 @@ output:
     theme: readable
     css: web.css
 ---
+<div style="clear: left; font-size: 24px;">
+<p style="float: right; width:310px; height:310px; padding: 12px">
+<img src="https://willythewoo.github.io/WillyTheWoo/IMG_1288.jpg" alt="Willy's Profile Picture">
+</p>
+Welcome to my personal website. You can find my biography and my work here. You can find my revised board game **The Democratic Republicans** in the Bio section. You can find videos, slides, and lecture notes of my R workshop under coding examples.
 
-<div style="width:300px; height:300px">
-![](https://willythewoo.github.io/WillyTheWoo/IMG_1288.jpg)
+
 </div>
 # {.tabset .tabset-fade .tabset-pills}
 
-## Bio
+## About Me
 I am currently an MA candidate of Economics at the University of Chicago. I obtained his B.S. in both Economics and Mathematics from The Ohio State University in Spring 2019. My research interest is in public economics with current focus on the migration effect of Sanctuary City Policies.
 
 I am a self-proclaimed magician, photographer, boardgame-maker, and funny T-shirt enthusiast.
@@ -22,10 +26,10 @@ Check out my newest revision of the game secret hitler called **[The Deomocratic
 For my photography work, [click here](https://www.flickr.com/photos/6149pix).
 
 
-## Research Experience
-<a href="/WillyTheWoo/cvWillyChen.pdf" download>
-  Last Updated: 7/7/2020
-</a>
+## Curriculum Vitae
+<p style="color: #FF0000;">
+Last Updated: `r Sys.Date()`
+</p>
 <iframe src="https://willythewoo.github.io/WillyTheWoo/cvWillyChen.pdf" style="width: 100%; height:1000px; margin-left: auto;margin-left: auto;" frameborder="0"></iframe>
 
 
