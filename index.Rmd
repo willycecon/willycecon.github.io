@@ -23,8 +23,12 @@ I am a self-proclaimed magician, photographer, boardgame-maker, and funny T-shir
 Check out my newest revision of the game secret hitler called **[The Deomocratic Republicans](https://willythewoo.github.io/WillyTheWoo/The_Democratic_Republicans.pdf)**
 
 
-For my photography work, [click here](https://www.flickr.com/photos/6149pix).
-
+## Photographs
+Click on the picture to see the whole album
+<a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/6149pix/albums/72157715013398433" title="Willy's Photography Showcase">
+<img src="https://c6.staticflickr.com/65535/50052276847_6de66aca78_b_d.jpg" style="width: 100%;" alt="Willy's Photography Showcase">
+</a>
+<!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
 
 ## Curriculum Vitae
 <p style="color: #FF0000;">
@@ -92,3 +96,8 @@ function carousel() {
 Academic Email: willyc@uchicago.edu
 
 Personal Email: wchen6149@gmail.com
+
+
+<script>
+!function(e,t,n,r,c){var i=function(e,t){var n,r="IE",c=document.createElement("B"),i=document.documentElement;return e&&(r+=" "+e,t&&(r=t+" "+r)),c.innerHTML="<!--[if "+r+']><b id="iecctest"></b><![endif]-->',i.appendChild(c),n=!!document.getElementById("iecctest"),i.removeChild(c),n};if(!e[n]&&(e[n]={process:function(t){(e[n].q=e[n].q||[]).push(t)},baseURL:"https://embedr.flickr.com"},!i(8,"lte"))){var d=t.createElement(r),m=t.getElementsByTagName(r)[0];d.async=1,d.src=c,m.parentNode.insertBefore(d,m)}}(window,document,"FlickrEmbedr","script","https://embedr.flickr.com/assets/embedr-loader.js"),window.FlickrEmbedr.process("inline");
+</script>
