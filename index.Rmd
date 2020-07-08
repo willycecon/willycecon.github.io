@@ -5,6 +5,8 @@ output:
     theme: readable
     css: web.css
 ---
+<h1>**This page is no longer maintained timely. For latest updates, visit [willy.netlify.app](willy.netlify.app)**
+</h1>
 <div style="clear: left; font-size: 24px;">
 <p style="float: right; width: 330px; padding: 8px">
 <img src="https://willythewoo.github.io/WillyTheWoo/IMG_1288.jpg" alt="Willy's Profile Picture">
