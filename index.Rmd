@@ -28,7 +28,7 @@ I am a self-proclaimed magician, photographer, boardgame-maker, and funny T-shir
 Check out my newest revision of the game secret hitler called **[The Deomocratic Republicans](https://willythewoo.github.io/WillyTheWoo/The_Democratic_Republicans.pdf)**
 
 
-## Photographs
+## Photography
 Click on the picture to see the whole album
 <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/6149pix/albums/72157715013398433" title="Willy's Photography Showcase">
 <img src="https://c6.staticflickr.com/65535/50052276847_6de66aca78_b_d.jpg" style="width: 100%;" alt="Willy's Photography Showcase">
@@ -53,11 +53,11 @@ Last Updated: `r Sys.Date()` <a href="https://willythewoo.github.io/WillyTheWoo/
 
 
 ### Codes
-[Taiwanese Housing](https://willythewoo.github.io/WillyTheWoo/coding/Taiwan_housing)
+[Taiwanese Housing Auction (Web scraping / Geocoding)](https://willythewoo.github.io/WillyTheWoo/coding/Taiwan_housing)
 
-[Tweets processing](https://willythewoo.github.io/WillyTheWoo/coding/twitter)
+[Twitter scraping and sentiment analysis](https://willythewoo.github.io/WillyTheWoo/coding/twitter)
 
-[Battleship in R](https://willythewoo.github.io/WillyTheWoo/coding/Battleship)
+[Single-Player Battleship in R](https://willythewoo.github.io/WillyTheWoo/coding/Battleship)
 
 ```{r eval=FALSE,echo=FALSE}
 ## Photo Gallery

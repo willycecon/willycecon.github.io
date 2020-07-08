@@ -35,4 +35,4 @@ There are many cheat sheets published by RStudio. I have attached a couple that 
   * [Importing data cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf)
 
 
-For coding examples with R, you can visit [my website](https://willythewoo.github.io/WillyTheWoo/) 
+For coding examples with R, you can visit my website [(Netlify)](willy.netlify.app) [(Git)](https://willythewoo.github.io/WillyTheWoo/) 
