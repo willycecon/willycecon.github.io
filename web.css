@@ -6,7 +6,13 @@ body {
   font-size: 16pt;
 }
 
-div {
-  background-color: rgba(255, 255, 255, 0.35)   /* 35% opaque white */;
-  padding: 0.25em;
+div.container-fluid.main-container {
+  background-color: rgba(255, 255, 255, 0.8)   /* 35% opaque white */;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+img {
+    padding: 15px;
+    border-radius: 25px;
 }

@@ -6,17 +6,20 @@ output:
     css: web.css
 ---
 <div style="clear: left; font-size: 24px;">
-<p style="float: right; width:310px; height:310px; padding: 12px">
+<p style="float: right; width: 330px; padding: 8px">
 <img src="https://willythewoo.github.io/WillyTheWoo/IMG_1288.jpg" alt="Willy's Profile Picture">
 </p>
-Welcome to my personal website. You can find my biography and my work here. You can find my revised board game **The Democratic Republicans** in the Bio section. You can find videos, slides, and lecture notes of my R workshop under coding examples.
+Welcome to my personal website. You can find my biography and my work here. 
 
+You can find my revised board game **The Democratic Republicans** in the *About Me* section. 
+
+You can find videos, slides, and lecture notes of my R workshop under coding examples.
 
 </div>
 # {.tabset .tabset-fade .tabset-pills}
 
 ## About Me
-I am currently an MA candidate of Economics at the University of Chicago. I obtained his B.S. in both Economics and Mathematics from The Ohio State University in Spring 2019. My research interest is in public economics with current focus on the migration effect of Sanctuary City Policies.
+I am currently an MA'20 candidate of Economics at the University of Chicago. I obtained my B.S. in both Economics and Mathematics from The Ohio State University in Spring 2019. My research interest is in public economics with current focus on the migration effect of Sanctuary City Policies.
 
 I am a self-proclaimed magician, photographer, boardgame-maker, and funny T-shirt enthusiast.
 
@@ -28,11 +31,11 @@ Click on the picture to see the whole album
 <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/6149pix/albums/72157715013398433" title="Willy's Photography Showcase">
 <img src="https://c6.staticflickr.com/65535/50052276847_6de66aca78_b_d.jpg" style="width: 100%;" alt="Willy's Photography Showcase">
 </a>
-<!-- <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script> -->
+<script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 ## Curriculum Vitae
 <p style="color: #FF0000;">
-Last Updated: `r Sys.Date()`
+Last Updated: `r Sys.Date()` <a href="https://willythewoo.github.io/WillyTheWoo/cvWillyChen.pdf"> Link </a>
 </p>
 <iframe src="https://willythewoo.github.io/WillyTheWoo/cvWillyChen.pdf" style="width: 100%; height:1000px; margin-left: auto;margin-left: auto;" frameborder="0"></iframe>
 
