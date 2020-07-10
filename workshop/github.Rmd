@@ -1,0 +1,26 @@
+---
+title: "Principles of Data Visualization in R Workshop: Setting up free hosting for your website on Github"
+author: "Willy Chen"
+date: "Workshop 5.5"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: eye.css
+    theme: readable
+---
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+In this workshop, will teach you how to sign up for GitHub, set up your own repository linked to your desktop, and be able to use it for free hosting of your website.
+
+# GitHub
+GitHub is one of the most widely used **FREE** online platform that allows you to upload stuff onto it for project cooperation, co-development, etc. We won't get into the weeds of how to properly use GitHub but I want to walk you through setting up GitHub on your computer so you can upload websites for most purposes. We will talk more about how to write a html website in the next workshop. For now, you can use this sample site <a href="/WillyTheWoo/workshop/menu.html" download value="index"> [Click to Download] </a> that I personally wrote for you. 
+
+
+
+
+
+
+[Click here to continue to the next workshop: Introduction to RMarkdown](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdown.html)
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
