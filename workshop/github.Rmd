@@ -14,7 +14,7 @@ output:
 In this workshop, will teach you how to sign up for GitHub, set up your own repository linked to your desktop, and be able to use it for free hosting of your website.
 
 # GitHub
-GitHub is one of the most widely used **FREE** online platform that allows you to upload stuff onto it for project cooperation, co-development, etc. We won't get into the weeds of how to properly use GitHub but I want to walk you through setting up GitHub on your computer so you can upload websites for most purposes. We will talk more about how to write a html website in the next workshop. For now, you can use this sample site <a href="/WillyTheWoo/workshop/menu.html" download="index"> [Click to Download] </a> that I personally wrote for you. 
+GitHub is one of the most widely used **FREE** online platform that allows you to upload stuff onto it for project cooperation, co-development, etc. We won't get into the weeds of how to properly use GitHub but I want to walk you through setting up GitHub on your computer so you can upload websites for most purposes. We will talk more about how to write a html website in the next workshop. For now, you can use this sample site <a href="/WillyTheWoo/workshop/index.html" download="index"> [Click to Download] </a> that I personally wrote for you. 
 
 ## Sign up for GitHub
 To sign up for GitHub, go to <a href="github.com">github.com</a>. Once you are on the site, You will see the following page:
@@ -53,6 +53,38 @@ To easily connect your computer to your GitHub repositories, you need the GitHub
 - [GitHub Desktop for MacOS](https://central.github.com/deployments/desktop/desktop/latest/darwin)
 
 - [GitHub Desktop for Windows](https://central.github.com/deployments/desktop/desktop/latest/win32)
+
+After downloading, click on the file to install it and then lauch the app. You will then be prompted to sign in to your GitHub account. Once you are signed in, you can click on the button that says `Current Repository`:
+
+<a href="https://willythewoo.github.io/WillyTheWoo/workshop/git5.png">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git5.png" alt="Picture of github dropdown menu" style="width:900px">
+</a>
+
+After you click on `Current Repository`, you will see an `add` button. Click on it and select `Clone Repository`
+
+<a href="https://willythewoo.github.io/WillyTheWoo/workshop/git6.png">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git6.png" alt="Picture of github dropdown menu" style="width:900px">
+</a>
+
+Then you will be prompted to select which repository you want to clone to your computer. Select the repository you just created (I used the repository "workshop" because I already have a repository same as my username. You should choose the one named after your username.).
+Noticed that when you choose a repository, GitHub Desktop will automatically create a sub folder under your main directory for Github. Everything you want to push to this repository on GitHub should be put in this folder on your computer. This folder is called your `local repository`.
+
+<a href="https://willythewoo.github.io/WillyTheWoo/workshop/git7.png">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git7.png" alt="Picture of github dropdown menu" style="width:900px">
+</a>
+
+## Commit and push to repository
+GitHub is a version control tool which allows you to test your files locally first and then push it live later. When you move a file to 
+your folder, GitHub Desktop will show you what the changes are. If you are sure with your change, you will tell GitHub Desktop to push it to your online repository and thus making the changes live.
+
+If you haven't already, download the sample html site I provided at the beggining. Put that file into your local repository and then look at GitHub Desktop. You should be able to see a screen like this (Note that wehn I wrote this workshop, I also have to upload a styling file so the files in the picture below are not exactly what you will see):
+
+<a href="https://willythewoo.github.io/WillyTheWoo/workshop/git8.png">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git8.png" alt="Picture of github dropdown menu" style="width:900px">
+</a>
+
+To commit and push, you need to type some words at the summary part (See the picture above).
+
 
 
 [Click here to continue to the next workshop: Introduction to RMarkdown](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdown.html)
