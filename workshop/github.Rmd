@@ -27,22 +27,22 @@ Enter the email you want to use to be associated with your account. Make sure yo
 
 
 ## Setting up your online repository
-Repository is essentially just a fancy way to say `cloud drive`. Once you set up your repository, you will be able to upload files onto it. If your repository is public, anyone with a link to your repository will be able to access the files you put in it. To set up your repository, click on your profile picture on the top right corner after you log in to GitHub. This triggers a dropdown menu from which you should select `Your repositories` like this:
+Repository is essentially just a fancy way to say `cloud drive`. Once you set up your repository, you will be able to upload files onto it. If your repository is public, anyone with a link to your repository will be able to access the files you put in it. To set up your repository, click on your profile picture on the top right corner after you log in to GitHub. This triggers a drop down menu from which you should select `Your repositories` like this:
 
 <a href="https://willythewoo.github.io/WillyTheWoo/workshop/git2.png">
-<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git2.png" alt="Picture of github dropdown menu" style="width:900px">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git2.png" alt="Picture of github drop down menu" style="width:900px">
 </a>
 
 Once you can see your list of repositories (You probably can't since you haven't created any), click on the `new` button to create a new repository.
 
 <a href="https://willythewoo.github.io/WillyTheWoo/workshop/git3.png">
-<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git3.png" alt="Picture of github dropdown menu" style="width:900px">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git3.png" alt="Picture of github new repository button" style="width:900px">
 </a>
 
 **Important** You NEED to name this repository the same name as your username. This prompts GitHub to use your repository as a site automatically.
 
 <a href="https://willythewoo.github.io/WillyTheWoo/workshop/git4.png">
-<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git4.png" alt="Picture of github dropdown menu" style="width:900px">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git4.png" alt="Picture of github new repository name" style="width:900px">
 </a>
 
 Now that your GitHub repository is set, we need to find an easier way for you to be able to push (upload) files on to it.
@@ -54,38 +54,46 @@ To easily connect your computer to your GitHub repositories, you need the GitHub
 
 - [GitHub Desktop for Windows](https://central.github.com/deployments/desktop/desktop/latest/win32)
 
-After downloading, click on the file to install it and then lauch the app. You will then be prompted to sign in to your GitHub account. Once you are signed in, you can click on the button that says `Current Repository`:
+After downloading, click on the file to install it and then launch the app. You will then be prompted to sign in to your GitHub account. Once you are signed in, you can click on the button that says `Current Repository`:
 
 <a href="https://willythewoo.github.io/WillyTheWoo/workshop/git5.png">
-<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git5.png" alt="Picture of github dropdown menu" style="width:900px">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git5.png" alt="Picture of github desktop for repository" style="width:900px">
 </a>
 
 After you click on `Current Repository`, you will see an `add` button. Click on it and select `Clone Repository`
 
 <a href="https://willythewoo.github.io/WillyTheWoo/workshop/git6.png">
-<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git6.png" alt="Picture of github dropdown menu" style="width:900px">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git6.png" alt="Picture of github desktop add repository" style="width:900px">
 </a>
 
 Then you will be prompted to select which repository you want to clone to your computer. Select the repository you just created (I used the repository "workshop" because I already have a repository same as my username. You should choose the one named after your username.).
-Noticed that when you choose a repository, GitHub Desktop will automatically create a sub folder under your main directory for Github. Everything you want to push to this repository on GitHub should be put in this folder on your computer. This folder is called your `local repository`.
+Noticed that when you choose a repository, GitHub Desktop will automatically create a sub folder under your main directory for GitHub. Everything you want to push to this repository on GitHub should be put in this folder on your computer. This folder is called your `local repository`.
 
 <a href="https://willythewoo.github.io/WillyTheWoo/workshop/git7.png">
-<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git7.png" alt="Picture of github dropdown menu" style="width:900px">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git7.png" alt="Picture of github desktop local repository" style="width:900px">
 </a>
 
 ## Commit and push to repository
 GitHub is a version control tool which allows you to test your files locally first and then push it live later. When you move a file to 
 your folder, GitHub Desktop will show you what the changes are. If you are sure with your change, you will tell GitHub Desktop to push it to your online repository and thus making the changes live.
 
-If you haven't already, download the sample html site I provided at the beggining. Put that file into your local repository and then look at GitHub Desktop. You should be able to see a screen like this (Note that wehn I wrote this workshop, I also have to upload a styling file so the files in the picture below are not exactly what you will see):
+If you haven't already, download the sample html site I provided at the beginning <a href="/WillyTheWoo/workshop/index.html" download="index"> [Click to Download the sample site] </a>. Put that file into your local repository and then look at GitHub Desktop. You should be able to see a screen like this (Note that when I wrote this workshop, I also have to upload a styling file so the files in the picture below are not exactly what you will see):
 
 <a href="https://willythewoo.github.io/WillyTheWoo/workshop/git8.png">
-<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git8.png" alt="Picture of github dropdown menu" style="width:900px">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git8.png" alt="Picture of github desktop commit" style="width:900px">
 </a>
 
-To commit and push, you need to type some words at the summary part (See the picture above).
+To commit and push, you need to type some words at the summary part (See the picture above) and then click on the `Commit to master` button. Then click on the `Push origin` button or you can use command + P for Mac or control + P for Windows.
 
+<a href="https://willythewoo.github.io/WillyTheWoo/workshop/git9.png">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/git9.png" alt="Picture of github desktop push origin" style="width:900px">
+</a>
 
+Once it finishes pushing, your sample website will be live in a couple minutes! You will be able to access it at:
+
+`https://yourusername.github.io/yourusername/`
+
+Go on to the next workshop to see how you can create html websites using RMarkdown and then publish it to GitHub!
 
 [Click here to continue to the next workshop: Introduction to RMarkdown](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdown.html)
 
