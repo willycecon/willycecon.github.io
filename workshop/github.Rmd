@@ -17,7 +17,7 @@ In this workshop, will teach you how to sign up for GitHub, set up your own repo
 GitHub is one of the most widely used **FREE** online platform that allows you to upload stuff onto it for project cooperation, co-development, etc. We won't get into the weeds of how to properly use GitHub but I want to walk you through setting up GitHub on your computer so you can upload websites for most purposes. We will talk more about how to write a html website in the next workshop. For now, you can use this sample site <a href="/WillyTheWoo/workshop/index.html" download="index"> [Click to Download] </a> that I personally wrote for you. 
 
 ## Sign up for GitHub
-To sign up for GitHub, go to <a href="github.com">github.com</a>. Once you are on the site, You will see the following page:
+To sign up for GitHub, go to <a href="https:www.github.com">github.com</a>. Once you are on the site, You will see the following page:
 <a href="https://willythewoo.github.io/WillyTheWoo/workshop/git1.png">
 <img src="https://willythewoo.github.io/WillyTheWoo/workshop/git1.png" alt="Picture of github sign up page" style="width:900px">
 </a>
