@@ -1553,8 +1553,6 @@ div.tocify {
 
 
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/menu.html">Click here to return to the menu</a></p>
-<p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdownslides.html">Click here to go to the slides</a></p>
-<p><a href="/WillyTheWoo/workshop/rmarkdownslides.html" download> Download the slides here </a></p>
 <div id="rmarkdown" class="section level1">
 <h1>RMarkdown</h1>
 <p>RMarkdown is file type specific to RStudio that helps you automate document processes. In today’s workshop, we will focus on using RMarkdown for PDF and html. Note that RMarkdown can also be used to output MS Word, MS Powerpoint, etc. Markdown (<code>.md</code>) is a common way to call text files that describes a document and can be read differently by different compilers. RMarkdown (<code>.rmd</code>) is the markdown system specifically designed for RStudio.</p>
@@ -1720,11 +1718,67 @@ Political Science
 <h2>Global options</h2>
 <p>Sometimes you might want to specify a specific options for all your chunks. This is when you can use global options. To do global options, you need to create a chunk at the beginning of the document after your <code>YAML</code> in the following way:</p>
 <pre class="r"><code>knitr::opts_chunk$set(echo = TRUE)</code></pre>
-<p>This chunk, if evaluated, would make all of the chunks <code>echo=TRUE</code>. Local specifications will override the global chunk options so you can still specify differently for specific chunks. In addition, if you put pure texts next to the <code>r</code> at the beginning of each chunks, you can name that chunk. Naming is important if you want <code>R</code> to reference a specific output somewhere else as well. For example, the example chunk earlier is called <code>table</code>. I can reference it by using <a href="table">a</a></p>
-<p>The secondary options <code>toc</code> tells R I want a table of contents and I tell R to float throughout the website by <code>toc_float</code>. I give it a specific style sheet <code>eye.css</code> to follow in order to specify the background color I want. <code>theme</code> specifies a theme for the document. Here I choose “readable” to be the theme.</p>
+<p>This chunk, if evaluated, would make all of the chunks <code>echo=TRUE</code>. Local specifications will override the global chunk options so you can still specify differently for specific chunks. In addition, if you put pure texts next to the <code>r</code> at the beginning of each chunks, you can name that chunk. Naming is especially useful if you have many chunks in a document and your markdown is not knitting because you can see exactly which chunk is giving you troubles.</p>
+</div>
+<div id="inline-r-code" class="section level2">
+<h2>Inline R Code</h2>
+<p>If you have a really short code to run and you don’t need R to echo it, you can do this inline. This means R will evaluate your code with out it being a chunk and can be much faster for referencing and helps with automation. To use inline code, you will write</p>
+<pre class="r"><code>`r your code here`</code></pre>
+<p>For example, if I want to reference the second row and thrid collumn of the data frame from earlier, I can write</p>
+<pre class="r"><code>`r data[2,3]`</code></pre>
+<p>and get Franklin county, OH. You can also use inline code to do simple calculations like</p>
+<pre class="r"><code>`r 7+2`</code></pre>
+<p>and we get 9</p>
+</div>
+<div id="texts-and-sectioning" class="section level2">
+<h2>Texts and sectioning</h2>
+<p>There are acouple of symbols that have specifiv functions in RMArkdown: <code>#</code>, <code>*</code>, <code>1.</code>, <code>_</code>, <code>-</code></p>
+<p><code>#</code> Let’s you declare a section. To do so, you need to make sure there is an empty line, a <code>#</code> in the next line, followed by a space and the title you want to call the section. <code>##</code> will create a second level of section under the original section. By default, you can have at most 7 levels of sections.</p>
+<p><code>*</code> can be used as a bullet point and create an unordered list. It needs to be preceded by an empty line and have a space after it aswell. If you want sub-bullet points, you can use <code>-</code> in the next line and indented to be after the <code>*</code>.</p>
+<p><code>1.</code> A number with a period folloing the same spacing rule will create an ordered list. The sub list item rule still applies.</p>
+<p>If you wrap your texts with <code>*</code> or <code>_</code>, <code>R</code> will <em>italicise</em> those texts. If you wrap the texts with <code>**</code> or <code>__</code>, R will make the texts <strong>bold</strong>.</p>
+<p>To create a hyper link, you can use <code>[texts](link)</code>. If you want to insert a picture, you can use <code>![](link)</code>. If you are outputting an html/pdf document, you can write in html/LaTex code as well.</p>
+<p>For more symbols like these, you can check out the <a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf">RMarkdown cheat sheet</a></p>
+</div>
+</div>
+<div id="pdf-document" class="section level1">
+<h1>PDF document</h1>
+<p>To make your RMarkdown output a pdf file, you need to specify <code>output: pdf_document</code> in your <code>YAML</code> header. However, this does require the use of the LaTex language. If you have installed LaTex on your computer before, you can skip next step.</p>
+<p><strong>Installing tinytex</strong></p>
+<p>To install the LaTex language on your computer, execute the following code chunk</p>
+<pre class="r"><code>install.packages(&#39;tinytex&#39;)
+tinytex::install_tinytex()  </code></pre>
+<p>Once tinytex is installed on your computer, as long as you specify <code>output: pdf_document</code>, your RMarkdown will a pdf document. If you need to specify any packages in your LaTex preamble, you need to add it to your <code>YAML</code> by doing:</p>
+<pre class="r"><code>---
+title: &quot;Title&quot;
+author: &quot;Me&quot;
+header-includes:
+   - \usepackage{packagename}
+output:
+    pdf_document
+---</code></pre>
+</div>
+<div id="html-document" class="section level1">
+<h1>HTML document</h1>
+<p>To make your RMarkdown output a pdf file, you need to specify <code>output: html_document</code> in your <code>YAML</code> header. There are many seconndary options that you can specitfy for your html. For example, to create this workshop, I had to make my <code>YAML</code>:</p>
+<pre class="r"><code>---
+title: &quot;Principles of Data Visualization in R Workshop: Introduction to RMarkdown&quot;
+author: &quot;Willy Chen&quot;
+date: &quot;Workshop 6&quot;
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: eye.css
+    theme: readable
+---</code></pre>
+<p><code>toc: true</code> tells R I want there to be a table of contents. <code>toc_float:true</code> make that toc float around. <code>css</code> specifies a styling sheet for my webpage. <code>theme</code> specifies a theme for the webpage. You can find more secondary options and their values by googling.</p>
+</div>
+<div id="conluding-remarks" class="section level1">
+<h1>Conluding remarks</h1>
+<p>RMarkdown is super useful both for storing your codes and making documents. When it comes to the usage of RMarkdown, honestly, the sky is the limit. You can check out more of my examples in R on <a href="willy.netlify.app">my website</a>. For the last workshop, we will talk about some coding basics that can help you out when you need to specific things in your report/document.</p>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/coding.html">Click here to continue to the next workshop: Coding basics</a></p>
 <p><a href="https://willythewoo.github.io/WillyTheWoo/workshop/menu.html">Click here to return to the menu</a></p>
-</div>
 </div>
 
 
