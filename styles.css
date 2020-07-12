@@ -1,0 +1,78 @@
+body {
+  background-image: url('https://willythewoo.github.io/WillyTheWoo/plum.jpg');
+  background-repeat: repeat;
+  background-size: 100%;
+  font-family: Helvetica;
+  font-size: 16pt;
+  padding: 50px;
+}
+
+div.whole{
+  width:100%;
+}
+
+div.main{
+  background-color: rgba(255, 255, 255, 0.8)   /* 35% opaque white */;
+  padding: 20px;
+  border-radius: 0px 0px 25px 25px;
+  text-align: center;
+
+}
+
+div.Home{
+  background-color: rgba(255, 255, 255, 0.8)   /* 35% opaque white */;
+  padding: 220px;
+  border-radius: 0px 0px 25px 25px;
+  text-align: center;
+}
+
+nav{
+  height: 100px;
+  background-color: #ffffff;
+  float: center;
+  padding: 20px;
+  border-radius: 25px 25px 0px 0px;
+
+}
+div ul{
+  height: 100px;
+  background-color: #ffffff;
+  float: left;
+  margin-left:15%;
+  padding: 0;
+  border-radius: 25px;
+}
+
+div ul li {
+  list-style: none;
+  display: inline-block;
+  line-height: 100px;
+}
+
+div ul li a{
+  display:block;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: Helvetica;
+  color: #1e1e1e;
+  padding: 0 20px;
+}
+
+img{
+  border-radius: 25px;
+}
+
+div.sub a{
+  display: list-item;
+  list-style: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: Helvetica;
+  color: #AA0000;
+  padding: 0 20px;
+}
+
+p{
+  font-size: 30px
+}
+

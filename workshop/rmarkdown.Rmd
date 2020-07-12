@@ -1,0 +1,98 @@
+---
+title: "Principles of Data Visualization in R Workshop: Introduction to RMarkdown"
+author: "Willy Chen"
+date: "Workshop 6"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: eye.css
+    theme: readable
+---
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+[Click here to go to the slides](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdownslides.html)
+
+<a href="/WillyTheWoo/workshop/rmarkdownslides.html" download>
+  Download the slides here
+</a>
+
+# RMarkdown
+
+RMarkdown is file type specific to RStudio that helps you automate document processes. In today's workshop, we will focus on using RMarkdown for PDF and html. Note that RMarkdown can also be used to output MS Word, MS Powerpoint, etc. Markdown (`.md`) is a common way to call text files that describes a document and can be read differently by different compilers. RMarkdown (`.rmd`) is the markdown system specifically designed for RStudio.
+
+When you create a new RMarkdown file in RStudio, it will be created as an example RMarkdown and contains the essential elements in RMarkdown. These elements are `YAML`, `R chunk`, `texts`, and `R inline`.
+
+## YAML
+YAML is always at the beginning of the RMarkdown. It is the top section sectioned off by `---`. Inside your YAML, you can specify the title of this document, the author, the date, the file type, as well as other secondary options like `CSS` for `html` and `preamlbles` for `PDF`. For example, in the RMarkdown I use to make this workshop, my YAML is:
+
+```{r eval=FALSE}
+---
+title: "Principles of Data Visualization in R Workshop: Introduction to RMarkdown"
+author: "Willy Chen"
+date: "Workshop 6"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: eye.css
+    theme: readable
+---
+```
+
+
+`title` specifies the name of this document and `author` specifies the author's name. I put "Workshop 6" for `date` because I did not need it to sepcify a date, but rather just show the index of the workshop. `output` specifies which kind of document I want R to make this `.rmd` into. When this YAML is read by R, it takes these values and outputs the document desired.
+
+
+## Code Chunks
+A code chunk is similar to YAML, except it is sectioned off by ` ```{r}` and ` ``` `. Inside your code chunk, you will have access to your R environemnt. This means you can write a bunch to R code to be run at that specific place. If there is any output from the code, it will be written in the document. This makes it incredibly convenient to make automated reports that is designed and styled in your specified way. For example, I want to output, at this specific spot, a table of the data we used last time, I can write:
+
+```{r table, warning=FALSE, message=FALSE, results='asis'}
+require(tidyverse)
+require(kableExtra)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data3.csv")
+data[1:5,]%>%kable("html")%>%kable_styling("striped")
+```
+
+To execute any single line of code in a chunk, you will click on that line and press `command/control + return/enter` on your keyboard. To execrute the entire chunk, you will click on that chunk and press `command/control + shift + return/enter `. To execute the entire document, you will click the `knit` button positioned right below your file tab. When you `knit` a document, your RMarkdown is automatically saved.
+
+## Chunk options
+When you execute some R code, you generally get 4 types of outputs: `echo`, `warning`, `message`, and `results`. `echo` simply echos your code, you can see your `echo` in the console everytime you execute some code. `warning` and `message` comes from the functions you execute. These are generally things you may want to pay attention to even though they do not affect the output. `results` are the text outputs of your code.
+
+When writing in RMarkdown, you can specify whether you want to include each type of output next to the `r` at the beginning of your chunk. The default is everything is included. If you do not want a specific type of output, you can change them by specifying that type to be `FALSE`. If you are dealing with results though, your specification is only between `asis` and `hide`.
+
+There are other options such as `eval`, `include`, `fig.width`, etc. `eval=FALSE` means this chunk will not be evaluated, but you will still get the echo. `include=FALSE` neglects the existence of that chunk. `fig.__` specify the dimensions of your output if it is a picture. 
+
+## Global options
+Sometimes you might want to specify a specific options for all your chunks. This is when you can use global options. To do global options, you need to create a chunk at the beginning of the document after your `YAML` in the following way:
+
+```{r eval=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This chunk, if evaluated, would make all of the chunks `echo=TRUE`. Local specifications will override the global chunk options so you can still specify differently for specific chunks. In addition, if you put pure texts next to the `r` at the beginning of each chunks, you can name that chunk. Naming is especially useful if you have many chunks in a document and your markdown is not knitting because you can see exactly which chunk is giving you troubles.
+
+
+
+
+
+
+
+
+
+
+
+The secondary options `toc` tells R I want a table of contents and I tell R to float throughout the website by `toc_float`. I give it a specific style sheet `eye.css` to follow in order to specify the background color I want. `theme` specifies a theme for the document. Here I choose "readable" to be the theme.
+
+
+
+
+
+
+
+
+
+
+[Click here to continue to the next workshop: Coding basics](https://willythewoo.github.io/WillyTheWoo/workshop/coding.html)
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
