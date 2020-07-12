@@ -45,7 +45,18 @@ Once you can see your list of repositories (You probably can't since you haven't
 <img src="https://willythewoo.github.io/WillyTheWoo/workshop/git4.png" alt="Picture of github new repository name" style="width:900px">
 </a>
 
-Now that your GitHub repository is set, we need to find an easier way for you to be able to push (upload) files on to it.
+
+## Setting up Github Pages
+Now that your GitHub repository is set, we need to find an easier way for you to be able to push (upload) files on to it. But for GitHub to actually publishes your html as a site, you need to set it that way. To do so, go to the settings panel of your repository, scroll down to the section "GitHub Pages" and click the button below source and change it from "None" to "Master branch".
+
+<a href="https://willythewoo.github.io/WillyTheWoo/workshop/git4.png">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/gp1.png" alt="Picture of github repository settings" style="width:900px">
+</a>
+
+<a href="https://willythewoo.github.io/WillyTheWoo/workshop/git4.png">
+<img src="https://willythewoo.github.io/WillyTheWoo/workshop/gp2.png" alt="Picture of github pages" style="width:900px">
+</a>
+
 
 ## Github Desktop
 To easily connect your computer to your GitHub repositories, you need the GitHub Desktop app. Download one of the following files according to your system.
