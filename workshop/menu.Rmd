@@ -24,8 +24,6 @@ Welcome to the Principles of Data Visualization in R Workshop series. Please sel
 
 6. [Introduction to RMarkdown automation ](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdown.html) 
 
-7. [Coding basics](https://willythewoo.github.io/WillyTheWoo/workshop/coding.html)
-
 
 There are many cheat sheets published by RStudio. I have attached a couple that I think will be useful for people taking this workshop. You can also find the complete set of cheat sheets [here](https://rstudio.com/resources/cheatsheets/)
 
