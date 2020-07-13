@@ -1557,7 +1557,7 @@ div.tocify {
 <h1>RMarkdown</h1>
 <p><a href="/WillyTheWoo/styles.css" download> Download my stylesheet here </a></p>
 <p>RMarkdown is file type specific to RStudio that helps you automate document processes. In today’s workshop, we will focus on using RMarkdown for PDF and html. Note that RMarkdown can also be used to output MS Word, MS Powerpoint, etc. Markdown (<code>.md</code>) is a common way to call text files that describes a document and can be read differently by different compilers. RMarkdown (<code>.rmd</code>) is the markdown system specifically designed for RStudio.</p>
-<p>When you create a new RMarkdown file in RStudio, it will be created as an example RMarkdown and contains the essential elements in RMarkdown. These elements are <code>YAML</code>, <code>R chunk</code>, <code>texts</code>, and <code>R inline</code>.</p>
+<p>When you create a new RMarkdown file in RStudio, it will be created as an example RMarkdown and contains the essential elements in RMarkdown. These elements are <code>YAML</code>, <code>R chunk</code>, <code>R inline</code>, <code>texts</code>.</p>
 <div id="yaml" class="section level2">
 <h2>YAML</h2>
 <p>YAML is always at the beginning of the RMarkdown. It is the top section sectioned off by <code>---</code>. Inside your YAML, you can specify the title of this document, the author, the date, the file type, as well as other secondary options like <code>CSS</code> for <code>html</code> and <code>preamlbles</code> for <code>PDF</code>. For example, in the RMarkdown I use to make this workshop, my YAML is:</p>
@@ -1736,7 +1736,19 @@ Political Science
 <p>There are acouple of symbols that have specifiv functions in RMArkdown: <code>#</code>, <code>*</code>, <code>1.</code>, <code>_</code>, <code>-</code></p>
 <p><code>#</code> Let’s you declare a section. To do so, you need to make sure there is an empty line, a <code>#</code> in the next line, followed by a space and the title you want to call the section. <code>##</code> will create a second level of section under the original section. By default, you can have at most 7 levels of sections.</p>
 <p><code>*</code> can be used as a bullet point and create an unordered list. It needs to be preceded by an empty line and have a space after it aswell. If you want sub-bullet points, you can use <code>-</code> in the next line and indented to be after the <code>*</code>.</p>
+<ul>
+<li>Bullet
+<ul>
+<li>sub1</li>
+<li>sub2</li>
+</ul></li>
+</ul>
 <p><code>1.</code> A number with a period folloing the same spacing rule will create an ordered list. The sub list item rule still applies.</p>
+<ol style="list-style-type: decimal">
+<li>num1</li>
+<li>num2</li>
+<li>num5</li>
+</ol>
 <p>If you wrap your texts with <code>*</code> or <code>_</code>, <code>R</code> will <em>italicise</em> those texts. If you wrap the texts with <code>**</code> or <code>__</code>, R will make the texts <strong>bold</strong>.</p>
 <p>To create a hyper link, you can use <code>[texts](link)</code>. If you want to insert a picture, you can use <code>![](link)</code>. If you are outputting an html/pdf document, you can write in html/LaTex code as well.</p>
 <p>For more symbols like these, you can check out the <a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf">RMarkdown cheat sheet</a></p>
