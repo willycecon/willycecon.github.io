@@ -15,7 +15,7 @@ output:
 
 # RMarkdown
 
-<a href="/WillyTheWoo/styles.css" download>
+<a href="/WillyTheWoo/web.css" download>
 Download my stylesheet here 
 </a>
 
