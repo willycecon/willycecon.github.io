@@ -128,7 +128,13 @@ As you can see from the code chunk I asked you to run, there is a vector called 
 If you were versed at linear algebra or matrix algebra at some point in your life, you're probably thinking, are the vectors vertical or horizontal?
 
 ## [Atomic] Vectors (Cont.)
-Neither! The only time the direction your vector would matter is if you are merging it with a data set. In that case, you will use specific functions to merge them and the direction of the vector is specified in the function you use.
+And the answer is: Vertical! However, the only time the direction your vector would matter is if you are merging it with a data set [adding a collumn]. 
+
+In that case, you will use `bind_cols()` [recommended] or `cbind()` to do so. 
+
+If you want to append one data set to another, you can use `bind_rows()` [recommended] or `rbind()`. But you need to make sure they have the same column names in order to append without error.
+
+----
 
 To create a sequential vector you can use `:` to create a vector of a sequence added by 1. If you want different gaps, you can use `seq()`. If you want a repeated number, you can use `rep()` For example,
 ```{r}

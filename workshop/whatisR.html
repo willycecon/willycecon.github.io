@@ -1635,7 +1635,7 @@ dataframe1&lt;-data.frame(matrix1)</code></pre>
 <pre><code>## [1] 1 2 3</code></pre>
 <p>As you can see from the code chunk I asked you to run, there is a vector called <code>vector1</code> and a vector called <code>vector2</code>. Both of these vectors are displayed as a value in RStudio, showing you that if you don’t create a vector for a single value, R will just take it as a vector with one element. <code>vector3</code> shows you what a vector with multiple value looks like.</p>
 <p>If you were versed at linear algebra or matrix algebra at some point in your life, you’re probably thinking, are the vectors vertical or horizontal?</p>
-<p>And the answer is: Neither! The only time the direction your vector would matter is if you are merging it with a data set. In that case, you will use specific functions to merge them and the direction of the vector is specified in the function you use.</p>
+<p>And the answer is: Vertical! However, the only time the direction your vector would matter is if you are merging it with a data set [adding a collumn]. In that case, you will use <code>bind_cols()</code> [recommended] or <code>cbind()</code> to do so. If you want to append one data set to another, you can use <code>bind_rows()</code> [recommended] or <code>rbind()</code>. But you need to make sure they have the same column names in order to append without error.</p>
 <p>To create a sequential vector you can use <code>:</code> to create a vector of a sequence added by 1. If you want different gaps, you can use <code>seq()</code>. If you want a repeated number, you can use <code>rep()</code> For example,</p>
 <pre class="r"><code>1:10</code></pre>
 <pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
