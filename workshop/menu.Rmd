@@ -26,6 +26,10 @@ Welcome to the Principles of Data Visualization in R Workshop series. Please sel
 
 Bonus workshop: [Introduciton to LaTeX documents by Livia Dewale](https://willythewoo.github.io/WillyTheWoo/workshop/LaTeX.pdf)
 
+If you have learned from any of the workshops, please leave some feedbacks [here](https://forms.gle/mjiBRQ7V4Xq9N338A)
+
+<br>
+
 There are many cheat sheets published by RStudio. I have attached a couple that I think will be useful for people taking this workshop. You can also find the complete set of cheat sheets [here](https://rstudio.com/resources/cheatsheets/)
 
   * [RMarkdown cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
