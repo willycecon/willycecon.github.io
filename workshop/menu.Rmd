@@ -6,7 +6,9 @@ output:
     css: eye.css
     theme: readable
 ---
-Welcome to the Principles of Data Visualization in R Workshop series. Please select one of the following menu items to continue.
+Welcome to the Principles of Data Visualization in R Workshop series. Please select one of the following menu items to continue. 
+
+**All solutions to the homework problems are included in the notes.**
 
 0. [How to download R](https://willythewoo.github.io/WillyTheWoo/workshop/Introduction.html) 
 
