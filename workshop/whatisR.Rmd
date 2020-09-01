@@ -183,9 +183,40 @@ Sometimes, you may wish to call a function from a package while is "masked" by a
 
 
 # Try it yourself!
-1. Create a data frame that has all the even numbers from 1 to 1000 in the first column and all the odd numbers from 1 to 1000 in the second columns and call this `mydf`. (Hint: Use either `bind_cols()` or `bind_rows()`)
+1. Create a data frame that has all the even numbers from 1 to 1000 in the first column and all the odd numbers from 1 to 1000 in the second columns and call this `mydf`. (Hint: Use either `bind_cols()` or `bind_rows()` from the tidyverse package)
+
+<details><summary>Click for solutions</summary>
+First, we know that we need to create a data frame that using `bind_cols()` as the construction the quesiton asked is column specific. We also know that a data frame is essentially vertical vectors glued together, so we need to create column vectors to do this problem.
+
+To create a vector of numbers with a specific pattern, we need the `seq()` function. Recall that the arguments of `seq()` is `seq(from, to, by,...)` so we can use `seq(2,1000,2)` and `seq(1,1000,2)` to create the vectors. After the vectors are created, we can use `bind_cols()` to create the data frame.
+
+```{r include=FALSE}
+require(tidyverse)
+knitr::opts_chunk$set(warning=FALSE,message=FALSE)
+```
+
+```{r}
+even <- seq(2,1000,2)
+odd <- seq(1,1000,2)
+
+mydf <- bind_cols(col1=even,col2=odd)
+
+head(mydf)
+```
+</details>
 
 2. Using the selection operator `[]`, create the sub-data frame in `mydf` such that it only contains numbers less than 100 or greater than 900. (Hint: You can put logical values in the selection operator. Try and see how it works)
+
+<details><summary>Click for solutions</summary>
+
+To tackle this question, we need to first figure out where the values less than 100 or greater than 1000 are located. This means we can use the condition `mydf<=100|mydf>=900` to get logical values in each cell of the data frame.
+
+After that, we can use the selection operator to subset mydf to only the values fitting the condition `mydf<=100|mydf>=900`.
+
+```{r}
+new_df<-bind_cols(mydf[mydf<=100|mydf>=900,1],mydf[mydf<=100|mydf>=900,2])
+```
+</details>
 
 3. Use the following code [copy and paste onto your console] to obtain a data frame called `ps1.csv`. 
 
@@ -203,8 +234,25 @@ data<-read.csv("~/Desktop/ps1.csv")
 ```
 
   i. Use the function `head()` to look at the first couple rows of the data, what do you see?
-  ii. How many `NA`'s are there in this data frame. (Hint: you can sum up a vector using `sum()`)
 
+<details><summary>Click for solutions</summary>
+```{r}
+data<-read.csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv")
+
+head(data)
+```
+</details>
+
+  ii. How many `NA`'s are there in this data frame. (Hint: you can sum up a vector using `sum()`)
+  
+<details><summary>Click for solutions</summary>
+
+The idea here is to transform this data frame in to a data frame of only logical values so we can do additions (recall that TRUE is treated as 1 and FALSE is treated at 0)
+
+```{r}
+sum(is.na(data))
+```
+</details>
 # That is the end of the first workshop! 
 [Click here to continue to the next workshop: Introduction to ggplot2](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2.html)
 

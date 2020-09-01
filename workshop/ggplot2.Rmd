@@ -9,6 +9,10 @@ output:
     css: eye.css
     theme: readable
 ---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(warning = TRUE, message = FALSE)
+```
 [Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
 
 [Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2slides.html)
@@ -224,23 +228,107 @@ ggplot(data=data,aes(x=age,
 
   (i) Look at the data with `glimpse()` to get a view of what you are dealing with. You can also use the function `variable.names()` to see what variables there are. After you look at the data, use `anyNA()` to see if there is any `NA` in the data set.
   
-  (ii) Use the function `plot_usmap()` from the `usmap` package to look at the household income level in each states with cities of more than 1,000,000 population. (Hint: the correct call would be `plot_usmap(data=dataframe,values="hhincome")` where data frame is the name of the data frame you stored your data.)
+<details><summary>Click for solutions</summary>
+```{r}
+data <- read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv")
+
+glimpse(data)
+
+anyNA(data)
+```
+</details>
+
+  (ii) Use the function `plot_usmap()` from the `usmap` package to look at the household income level in each states with cities of more than 1,000,000 population. (Hint: the correct call would be `plot_usmap(data=dataframe,values="hhincome")` where `dataframe` is the name of the data frame you stored your data.)
+  
+<details><summary>Click for solutions</summary>
+
+```{r}
+require(usmap)
+plot_usmap(data = data,
+           values="hhincome")
+```
+
+</details>
   
   (iii) This data set has data spanning many years, can you use `facet_..()` to separate the sub-figures from (ii)?
+    
+<details><summary>Click for solutions</summary>
+```{r}
+plot_usmap(data = data,
+           values="hhincome")+
+  facet_wrap(~year,nrow=4)
+```
+</details>
 
   (iv) Make a scatter plot with a estimated line for the relationship between city median age and median household income
+    
+<details><summary>Click for solutions</summary>
+```{r}
+ggplot(data,aes(x=age,y=hhincome))+
+  geom_point()+
+  geom_smooth(se=FALSE)
+```
+</details>
   
   (v) Make a scatter plot with year as your x-axis and household income as your y-axis. Instead of using dots on this graph, use the cities' names.
+    
+<details><summary>Click for solutions</summary>
+```{r}
+ggplot(data,aes(x=year,y=hhincome,label=city))+
+  geom_text()+
+  geom_smooth(se=FALSE)
+```
+</details>
   
   (vi) Can you separately graph (v) for sanctuary and non-sanctuary cities?
+    
+<details><summary>Click for solutions</summary>
+```{r}
+ggplot(data,aes(x=year,y=hhincome,label=city))+
+  geom_text()+
+  geom_smooth(se=FALSE)+
+  facet_wrap(sanctuary~.)
+```
+</details>
 
 2. Using the data set from `https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv`, do the following tasks:
 
-  (i) Plot the densities of each variable using `geom_density()`
+  (i) Plot the densities of each variable on one plot using `geom_density()`
+    
+<details><summary>Click for solutions</summary>
+```{r}
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv")
+
+ggplot(data)+
+  geom_density(aes(x=a))+
+  geom_density(aes(x=b))+
+  geom_density(aes(x=c))
+```
+</details>
   
   (ii) Plot overlapping histograms of variables a and b
+    
+<details><summary>Click for solutions</summary>
+```{r}
+ggplot(data)+
+  geom_histogram(aes(x=a,fill="a",alpha=0.5))+
+  geom_histogram(aes(x=b,fill="b",alpha=0.5))
+```
+</details>
   
   (iii) Graph a scatter plot with `geom_point()` using variables a and b and then graph a jitter plot using `geom_jitter()` and compare the two plots
+    
+<details><summary>Click for solutions</summary>
+```{r}
+print("This is Scatter")
+ggplot(data,aes(x=a,y=b))+
+  geom_point()
+
+print("This is Jitter")
+ggplot(data,aes(x=a,y=b))+
+  geom_jitter()
+```
+</details>
 
 
 
