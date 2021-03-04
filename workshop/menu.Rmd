@@ -6,7 +6,11 @@ output:
     css: eye.css
     theme: readable
 ---
-Welcome to the Principles of Data Visualization in R Workshop series. Please select one of the following menu items to continue. 
+Welcome to the Principles of Data Visualization in R Workshop series.
+
+This workshop is designed for those with little to none coding experiences. The goal of this workshop is to get YOU familiar with basic data visualization (graphing) as soon as possible (workshop 2).
+
+Please select one of the following menu items to continue:
 
 **All solutions to the homework problems are included in the notes.**
 
