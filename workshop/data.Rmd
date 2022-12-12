@@ -1,0 +1,190 @@
+---
+title: "Principles of Data Visualization in R Workshop: Data"
+author: "Willy Chen"
+date: "Workshop 3"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: eye.css
+    theme: readable
+---
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+[Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/dataslides.html)
+
+<a href="/WillyTheWoo/workshop/dataslides.html" download>
+  Download the slides here
+</a>
+
+<iframe width="812" height="456.75" src="https://www.youtube.com/embed/Pogt024UjyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# How do we use data?
+As we discussed in the first workshop, I started this workshop to increase people's general understanding of data. This includes talking about understanding the structure of data, different graphs, exploratory analysis vs causal analysis, etc.
+
+For the purpose of this workshop, I will only discuss these superficially to give you basic understanding. The first thing we should talk about is the structure of data. For this workshop, I will be using data collected from the workshop signup. You can load the data set with the code below,  and work on it as we go.
+```{r message=FALSE, warning=FALSE}
+require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data2.csv")
+```
+
+```{r include=FALSE, eval=FALSE}
+require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv") 
+data<-data%>%
+  separate(good,c('good1','good2','good3','good4','good5','good6','good7','good8','good9'),sep=";")%>%
+  gather(key="gk",value="good",good1:good9)%>%
+  separate(bad,c('bad1','bad2','bad3','bad4','bad5','bad6','bad7','bad8','bad9'),sep=";")%>%
+  filter(!is.na(good))
+
+data%>%write_csv("~/Desktop/workshop_data2.csv")
+```
+
+# Data Structure: Long vs Wide
+Recall that when we look at a dataframe, it is like an excel sheet. In a data frame, each column is a variable or sometimes called an attribute. Each row represents an observation in the data. This means each row is an instance that has attributes described by the data.
+
+What this distinction means is that our data can be in either a **long** form or a **wide** form. **Long** form data means that the data collects *multiple instances* of the *same* observation. **Wide** form data means the opposite. In wide form data, each observation will only have a *single instance*.
+
+When you transform a data set from long to wide, you **spread** *the multiple instances* into different attributes. This means the data will have many attributes, with each attribute representing the value of a instance.
+
+When you transform a data set from wide to long, you **gather** *the multiple attributes* [that belongs to the *single instance*] of each observation and put it into one attribute.
+
+## Key and Value
+From my discussion above, you are probably thinking that the line between long and wide seems blurry. You would be correct. A data set can actually be long and wide at the same time depending on how you want to define the **observation** and **instance**. 
+
+Under `tidyverse`, we call these observations *"key"* and these instances *"value"*. Key tells R which attribute(s) uniquely identifies your observations. For example, in our workshop data, you can see the column `good` and the columns `bad1` through `bad9`. The variable good stores information on the observation's favorite week(s) of the perspectives class. The variables bad1 through bad9 store information on the observation's least favorite week(s) of class [not ranked].
+
+```{r echo=FALSE}
+data%>%sample_n(5)%>%select(TimeStamp,good)
+```
+
+
+As you can see, if we look at the variable good, the data set is in  long form since every row represents a unique combination of student and favorite week. On the other hand, if we look at bad1 through bad9, each row for the specific student will have the same bad1 through bad9.
+
+
+
+## `gather()` and `spread()`
+`tidyverse::gather()` is used to gather wide form data into a long form data. This function takes arguments in the following form `gather(key="sting",value="string",columns)`. `tidyverse::spread()` is used to spread a long form data into a wide form data.  This function takes arguments in the following form `spread(key="sting",value="string",columns)`.
+
+For example, we can gather bad1 through bad9 into a single variable.
+```{r}
+data%>%
+  gather(key="bad","bad_week",bad1:bad9)%>%
+  filter(!is.na(bad_week))%>%
+  select(bad, bad_week)%>%sample_n(5)
+```
+
+Similarly, we can use `spread()` to transform data from long to wide with good.
+
+```{r}
+data%>%group_by(TimeStamp)%>%mutate(num=1:n())%>%
+  spread(key="num",value="good",sep="_")%>%.[,26:30]%>%
+  head(n=5)
+```
+
+
+# Different graphs
+
+In `ggplot2`, we briefly talked about different types of graphs. Scatter plot, jitter plot, line plot, fitted-line plot, bar chart, histogram, box plot, etc. Each of these graphs has a `geom_...()` function associated with it. 
+
+## Scatter vs Jitter
+
+```{r echo=FALSE}
+plot<-data%>%mutate(num="Scatter")%>%bind_rows(data%>%mutate(num="Jitter"))
+
+ggplot(filter(plot,num=="Scatter"),
+       aes(age,as.numeric(characters),col=as.factor(num)))+
+  geom_point()+
+  geom_jitter(data=filter(plot,num=="Jitter"),
+       aes(age,as.numeric(characters),col=as.factor(num)))+
+  facet_grid(num~.)+
+  scale_color_discrete(name="Plot Type")+
+  labs(title="Scatter plot vs Jitter plot",
+       x="Age",
+       y="Character count")
+
+```
+
+## Line vs Smooth
+
+```{r echo=FALSE}
+plot<-data%>%mutate(num="Line")%>%bind_rows(data%>%mutate(num="Smooth"))
+
+ggplot(filter(plot,num=="Line"),
+       aes(age,as.numeric(characters),col=as.factor(num)))+
+  geom_line()+
+  geom_smooth(data=filter(plot,num=="Smooth"),
+       aes(age,as.numeric(characters),col=as.factor(num)),se=FALSE)+
+  facet_grid(num~.)+
+  scale_color_discrete(name="Plot Type")+
+  labs(title="Line plot vs Smooth plot",
+       x="Age",
+       y="Character count")
+```
+
+## Histogram vs Bar chart
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=10.5}
+plot<-data%>%mutate(num="Histogram")%>%
+  bind_rows(data%>%mutate(num="Bar plot"))%>%
+    bind_rows(data%>%mutate(num="Density plot"))%>%
+    bind_rows(data%>%mutate(num="Box plot"))
+
+
+
+ggplot(filter(plot,num=="Bar plot"),
+       aes(x=age,fill=as.factor(num)))+
+  geom_bar()+
+  geom_histogram(data=filter(plot,num=="Histogram"),
+       aes(x=age,fill=as.factor(num)),se=FALSE)+
+  facet_grid(.~num)+
+  scale_fill_discrete(name="Plot Type")+
+  labs(title="Bar plot vs Histogram",
+       x="Age")+ 
+  theme(legend.position =  "none")
+```
+
+## Box plot vs Density plot
+
+```{r echo=FALSE}
+ggplot(filter(plot,num=="Density plot"),
+       aes(x=age,fill=factor(num)))+
+  geom_density(aes(y=..density..*100))+
+  geom_boxplot(data=filter(plot,num=="Box plot"),
+       aes(y=age,fill=as.factor(num)),se=FALSE)+
+  facet_grid(.~num)+
+  scale_fill_discrete(name="Plot Type")+
+  labs(title="Box plot vs Density plot",
+       y="Age",
+       x="NA                                                 AGE")+
+  scale_y_continuous(sec.axis = sec_axis(~./100,name="Density"))
+
+
+```
+
+
+For more information on how to use these functions, check out the [ggplot2 cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/data-visualization-2.1.pdf)
+
+
+# Analysis
+
+## Exploratory analysis
+
+Exploratory analysis are similar to what you would probably think big data does. Essentially, you fit the data to a model or graph the data in order to get a sense of the underlying relationship.
+
+Many things you see on the internet are simply graphs from exploratory analysis. Notice that even though exploratory analysis could show underlying relationship, it could also end up being used to mislead.
+
+For example, if we graph the precipitation on y-axis and the probability of you having your umbrella with you on x-axis, we will probably get a positive relationship. However, this does not mean you bringing umbrella causes higher precipitation. For more spurious and hilarious correlation, [click here](https://www.tylervigen.com/spurious-correlations).
+
+
+## Causal analysis
+
+Causal analysis is what social scientists try to do. It is often similar to an exploratory analysis but it requires much attention to logic and reasoning. For this workshop, I will not divulge into how to do causal analysis as that takes many actual classes and years of training.
+
+
+This is the end of this workshop. I hope that helped you clear some things out. There is no homework from this workshop, but I highly recommend looking at the spurious correlation website!
+
+
+[Click here to continue to the next workshop: Introduction to `tidyverse`](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)

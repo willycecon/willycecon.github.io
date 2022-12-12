@@ -1,0 +1,289 @@
+---
+title: "Principles of Data Visualization in R Workshop: Introduction to text data"
+author: "Willy Chen"
+date: "Workshop 5"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: eye.css
+    theme: readable
+---
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+[Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/textdataslides.html)
+
+<a href="/WillyTheWoo/workshop/textdataslides.html" download>
+  Download the slides here
+</a>
+
+<iframe width="812" height="456.75" src="https://www.youtube.com/embed/CO_wZO-1gLU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+In data science for the social sciences, text data is especially important to be dealt with with care. In R, there are many packages you can use for dealing with text data. In this workshop, we will be going over the `stringr` package which is included in the `tidyverse` package. We will also talk about regular expressions [regex], which is a common way to deal with strings across most language. 
+
+
+# `stringr`
+
+There are many functions that start with `str_` in the `stringr` package. In this workshop, we are going to about the ones I used the most often. The `str_` functions, in general, take the arguments in the form of `str_...(string, pattern, sep)`,
+
+For a more complete look at the functions, either look at the cheat sheet linked at the end of this workshop notes or Google it. For this workshop, we will continue using the data from the tidyverse workshop.
+
+```{r message=FALSE, warning=FALSE}
+require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data3.csv")
+```
+
+## `str_detect()`
+The first commonly used `str_` function is `str_detect()`. Just like its name, this function detects a certain pattern in your string. `str_detect()` searches a string and return `TRUE` if the pattern specified is present in the string and `FALSE` otherwise. For example, if we want to find the strings with the pattern "ology" in the cohort column.
+
+```{r}
+data$cohort%>%
+  str_detect(pattern="ology")%>%
+  head(10)
+```
+
+This also means that we can combine mutate to create a column that indicates to use whether the desired pattern is present in the string:
+
+```{r}
+data%>%
+  mutate(ology = as.numeric(str_detect(cohort, 
+                                       pattern="ology")))
+```
+
+
+## `str_extract()` and `str_extract_all()`
+Most `str_` functions are fairly straight forward in terms of naming. In this case, `str_extract()` extracts the first desired pattern from the string. `str_extract_all()` extracts all the times the pattern is present in the string.
+
+You might be thinking, if I just want a pattern, why won't I just `mutate()` a new column with the pattern I want?
+
+The answer to that question is the pattern can actually be quite vague. We will discuss this in the section `regular expression`. For now, let's continue our last example and extract the pattern "ology".
+
+```{r}
+data%>%
+  mutate(ology = str_extract(cohort,
+                             pattern="ology"))
+```
+
+
+## `str_replace()` and `str_replace_all()`
+`str_replace()` simply replaces the patter you want replaced with the text you want to replace it with. The difference between `str_replace()` and `str_replace_all()` is that `str_replace()` only replaces the pattern the first time it comes up in the string. `str_replace()` on the other hand replaces all of the patterns that match.
+
+For example, if we want to replace "ology" with "ologist", we can use `str_replace()`:
+
+```{r}
+data%>%
+  mutate(cohort = str_replace(cohort,
+                             pattern="ology",
+                             replacement="ologist"))
+```
+
+But if I just want to change all the "o"'s into "e"'s, `str_replace()` would be insufficient:
+
+```{r}
+data%>%
+  mutate(cohort = str_replace(cohort,
+                             pattern="o",
+                             replacement="e"))
+```
+
+As you can see from above, only the first "o" is replaced by "e". To correct that, we would use `str_replace_all()`:
+
+```{r}
+data%>%
+  mutate(cohort = str_replace_all(cohort,
+                             pattern="o",
+                             replacement="e"))
+```
+
+If you want to remove a pattern, you can either use `str_remove()` and `str_remove_all()` or you can use `str_replace()`/`str_replace_all()` with `replacement=""`. 
+
+## `str_to_...()`
+This is the function that let's you manipulate your string into a certain form. There are 4 forms: `upper`, `lower`, `title`, `sentence`. `upper` and `lower` changes the string into the respective cases. `title` capitalizes the first letter of each word. `sentence` capitalizes the first letter of the sentence.
+
+```{r}
+data$county[2]%>%
+  str_to_upper()
+
+data$county[2]%>%
+  str_to_lower()
+
+data$county[2]%>%
+  str_to_title
+
+data$county[2]%>%
+  str_to_sentence
+```
+
+
+
+# Regular Expressions (Regex)
+
+Regular expression is the common way to describe strings to any computer language. In the examples, I will speak in terms of what `str_extract()` will output from the string **"aaabc123d"**
+
+### Group/Block: `( )` 
+
+When you want a exact group of string to be used in a pattern, put parentheses around the pattern. 
+
+For example, `(abc)` extracts exactly "abc" and `(abcd)` extracts nothing.
+
+### Or: `|` 
+
+Or condition lets you match like the way `dplyr::filter()` works.
+
+For example, `(abc)|(ab)|d` extracts "abc". If you use `str_extract_all()` instead, `(abc)|(ab)|d` extracts "abc","ab".
+
+### Any in: `[ ]`
+
+When you use brackets, your regular expression means anything in the bracket. Sort of like an overpowered Or condition.
+
+For example, `[abc]` extracts "a". If you were to use `str_extract_all()` instead, `[abc]` extracts "a", "b", "c".
+
+### Zero or one: `?` 
+
+Adding a `?` after a letter or a block means to match with either zero or one of that unit exists.
+
+For example, `(ab)c?` extracts "abc" and `(ab)d?` extracts "ab".
+
+### Zero or more: `*`
+
+\* works the same as ? except it can match for there being more than one of that unit.
+
+For example, `ab\*bc` extracts "abc" and `aa\*bc` extracts "aabc".
+
+### One or more: `+`
+
+\+ works the same as ? except it requires the pattern to at least exists once.
+
+For example, `a+bc` extracts "aabc"
+
+### Anything: `.` 
+
+`.` lets you match anything. 
+
+For example, `a.c` extracts "abc", `a..c` extracts "aabc", and 
+
+
+### Any number: `\d` 
+
+`\d` lets you match any digit/number. Note that you need `\d` in regex which means when you are using it in R, you need to escape the `\` with a `\` so you actually need to write `\\d`.
+
+For example, `.\\d+` extracts "c123"
+
+### Start of string: `^` 
+`^` in regular expression means the pattern needs to be at the start of the string.
+
+For example, if we use `string_extract_all()` with `a.` we will get "aa", "ab". But if we use `^a.` instead, we will only get "aa".
+
+### End of string: `$` 
+`$` in regular expression means the pattern needs to be at the end of the string.
+
+For example, if we use `string_extract_all()` with `..` we will get "aa", "ab", "c1", "23". But if we use `..$` instead, we will only get "3d".
+
+### `[A-Z]`, `[a-z]`, and `[A-Za-z]`
+These regular expression means "capital A through Z", "lower case a through z", and "any character".
+
+
+# Examples
+Regex and strings in general take a lot of practice, so now we are going to use the data set to do some practices!
+Use the our data frame `data`, answer the following questions:
+
+<details><summary>View data</summary>
+```{r echo=FALSE}
+data
+```
+
+</details>
+
+<br>
+<br>
+
+
+1. If I want to clear the county column so that it only has the name of the county and not the state or the word county, what do I do?
+
+<details><summary>Click for solutions</summary>
+```{r}
+data%>%
+  mutate(county=str_replace(county,regex(",? .+"),""))
+```
+</details>
+
+<br>
+<br>
+
+
+
+2. If I only want the states and not the counties, what do I do?
+
+<details><summary>Click for solutions</summary>
+
+```{r}
+data%>%mutate(state=str_replace(county,regex(".+, "),""))
+```
+
+</details>
+
+<br>
+<br>
+
+
+
+3. If I just want the first 3 letters of each cohort name instead of the full cohort name, what do I do?
+
+<details><summary>Click for solutions</summary>
+
+```{r}
+data%>%
+  mutate(cohort=str_extract(cohort,regex("^...")))
+```
+
+</details>
+
+<br>
+<br>
+
+
+
+4. If I want the 5-letter cohort endings of the cohorts that **do not** end with "ology", what do I do?
+
+<details><summary>Click for solutions</summary>
+
+```{r}
+data%>%
+  mutate(cohort=ifelse(str_detect(cohort,regex("ology$")),
+                       NA,
+                       str_extract(cohort,regex(".....$"))))
+```
+
+</details>
+
+
+<br>
+
+<br>
+
+5. How do I make sure that every cohort name only has the first word of each discipline?
+
+<details><summary>Click for solutions</summary>
+```{r}
+data%>%
+  mutate(cohort=str_extract(cohort,regex("[A-Za-z]+([A-Za-z]+)?/?;?([A-Za-z]+)?")))
+
+data%>%
+  mutate(cohort1=str_extract(cohort,regex("[A-Za-z]+( [A-Za-z]+)?/?")),
+         cohort2=str_extract(cohort,regex("(/|;)([A-Za-z]+)?")))
+```
+</details>
+
+[Click here to continue to the next workshop: Introduction to RMarkdown automation](https://willythewoo.github.io/WillyTheWoo/workshop/rmarkdown.html)
+
+[Click here to continue to stringr cheat sheet](https://github.com/rstudio/cheatsheets/raw/master/strings.pdf)
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+
+
+
+
+
+

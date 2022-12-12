@@ -1,0 +1,358 @@
+---
+title: "Principles of Data Visualization in R Workshop: Introduction to tidyverse"
+author: "Willy Chen"
+date: "Workshop 4"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: eye.css
+    theme: readable
+---
+```{r include=FALSE}
+knitr::opts_chunk$set(warning = TRUE, message=FALSE)
+```
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+[Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverseslides.html)
+
+<a href="/WillyTheWoo/workshop/tidyverseslides.html" download>
+  Download the slides here
+</a>
+
+<iframe width="812" height="456.75" src="https://www.youtube.com/embed/jhYbSbcQi5Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+R is a powerful language, but any language is only as powerful as its most versatile package. In R's case, that package is tidyverse and we will be focusing on functions from the `tidyverse` package for the rest of this series. If you haven't already, install the tidyverse package from CRAN using the code `install.packages("tidyverse")` and load it into your session using either `library(tidyverse)` or `require(tidyverse)`. For this workshop, we will use a subset of the data set from the ggplot2 workshop with a newly created variable `gpa`.
+
+```{r message=FALSE, warning=FALSE, echo=FALSE, eval=FALSE}
+require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data2.csv")
+d<-data %>% select(workshop,age,county,social,cohort) %>% mutate(gpa=3.5+rnorm(1976,0,0.3))
+write_csv(d,"~/Documents/GitHub/WillyTheWoo/workshop/data/workshop_data3.csv")
+```
+
+```{r message=FALSE, warning=FALSE}
+require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data3.csv")
+```
+# Pipe operator `%>%`
+One of the most powerful tool that tidyverse brings us is the pipe operator `%>%`. If you are familiar with shell, you know what this is. If you have never heard of shell, this is going to blow your mind.
+
+Sometimes, you are going to use multiple function on a data set. Say you have a data set called `data`, and you have 4 functions, `f1`, `f2`, `f3`, and `f4`, and you need the output from feeding data through each function sequentially. Intuitively, the first thing you would do is.
+```{r eval=FALSE}
+data1<-f1(data)
+data2<-f2(data1)
+data3<-f3(data2)
+data_final<-f4(data3)
+```
+This may seem simple to do, but it can get tedious if you need to use more than 10 functions. To save our eyes and brains a little, programmers invented the pipe operator `%>%`. What the pipe operator does is it takes the output of a function and directly pipe it into the next function as its *first* argument. Hence the above scenario can be rewritten into:
+```{r eval=FALSE}
+data_final<-
+  data %>% 
+  f1() %>% 
+  f2() %>% 
+  f3() %>% 
+  f4()
+```
+The piping operator allows us to write much cleaner code for readability. One of the most important and universal best practice in coding is to space out your code into lines when you need to, and pipes allows us to do that easily. Personally, I put each function in its own line so I can easily change some of the arguments in those functions.
+
+For the rest of this workshop, I want to focus on using the packages `dplyr` and `tidyr` from the parent package `tidyverse`. Note that this means you only have to load `tidyverse` and these packages will automatically be included. 
+
+# dplyr
+To get a more complete view of the `dplyr` package, [click here](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
+
+## `filter(df , condition)`
+`filter()` is a literal filter for you to only get data that fits a certain condition. The filter function takes 2 arguments.
+
+1. Data frame
+2. Truth condition
+
+You should place the data you want to use and place the truth condition second. Note that the truth condition can include multiple things. To make your code clear, always wrap around chunks of condition in parenthesis. For example, the code `filter(data,((a==4&b==2)&(a==2|b==3))|(a==0|b==0))` will give me data that fits either `(a==4&b==2) & (a==2|b==3) ` or  `(a==0|b==0)`. Making your filter condition clear is extremely important for readability.
+
+For example, we can select people who answered `Maybe` to the workshop question in the survey:
+```{r}
+filter(data,
+       workshop=="Maybe" & gpa>3.5)
+```
+
+
+### `%in%`
+Sometimes if you have a vector of things that you want filter to match with the `or`(`|`) condition, you can use `%in%` and the vector you want to match. For example, we can select people who think the social committee's name is either `SUCSAC` or `VANESSA`:
+```{r}
+filter(data,
+       social %in% c("SUCSAC","VANESSA"))
+```
+
+
+
+
+## `arrange(df , vars...)`
+`arrange()` lets you rearrange the order of your observations based on the order of a variable(s). By default, it arranges the variable ascendingly. If you would like it to be arranged descendingly, you need to wrap the variable with `desc()`. `arrange()` rearranges based on the order of the variable you gave. For example, `arrange(data,age,desc(gpa))` would first arrange the data set from the youngest to oldest, and then for people of the same age, it arranges the data from the highest GPA to the lowest GPA. 
+
+Recall that if your string column is set to factors, you can also arrange it by the alphabetical order. The priority of ordering is set by how you write your arguments. Arrange is most useful when you need to see extreme values using `head()` or need to do sequential operations.
+
+For example, we can arrange the data set by cohort alphabetically and gpa descendingly:
+```{r}
+data %>% 
+  arrange(as.factor(cohort),
+          desc(gpa))
+```
+
+
+## `mutate(df , vars...)`
+`mutate()` is perhaps one of the most useful function and probably the function I used the most. This function lets you create a new variable in your data set either with or without using the original data. To use `mutate()`, you use the data frame as its first argument and the variables you want to create as the rest of the arguments. For example, if I want to create a variable that is age $\times$ gpa and gpa $\times$ a random number between 10 and 20, I can write.
+```{r eval=FALSE}
+data<-data %>%
+  mutate(gradeage = gpa*age,
+         graderand = gpa*sample(10:20,1,TRUE))
+```
+```{r echo=FALSE}
+data%>%head(n=3)
+```
+## `summarise(df , vars...)`
+`summarise()` is similar to mutate, but you **will** lose your original data set. This function takes your data frame as the first argument and creates summarized statistics however you want it. Say I want to see the mean, maximum, and standard deviation of the variable gpa, I will write:
+```{r}
+data %>%
+  summarise(avggpa = mean(gpa),
+                 maxgpa = max(gpa),
+                 sigmagpa = sd(gpa))
+```
+and I will get a data frame with one row and three variables. Alternatively, if you want a general summary statistics of your data you can call the function `summary()`.
+
+## `group_by(df , vars...)`
+`group_by()` is perhaps the most powerful function of the `dplyr` package. This function allows you to do any operation by certain grouping characteristics. This function outputs a data frame that has a grouping structure on it, making all the subsequent operations group wise until the structure is removed. For example, if I want to look at the average age of participants in this workshop based on their cohorts, I will simply group the data by cohorts and then call `summarise()` or `mutate()`. Afterwards, I may want to remove the grouping structure so I can see the difference between group averages and total average. In that case, I simply need to pipe the data into `ungroup()` before I pipe it again into mutate.
+
+```{r}
+data<-data %>%
+  group_by(cohort) %>%
+  mutate(muage=mean(age, na.rm=TRUE)) %>%
+  ungroup() %>%
+  mutate(groupdiff = mean(age, na.rm=TRUE)-muage)
+
+data%>%head(6)
+```
+
+**Bonus** If you want the operation to happen row by row (you may need to do this when geocoding), you can use a special version of `group_by()` called `rowwise()`. `rowwise()` imposes a grouping structure so that each row is in its own group.
+
+## `select(df, cols)`/`rename(df, new_col=old_col)`
+`seelct()` and `rename()` are used so you can tidy up your data. In `select()`, you put your data as the first argument, and the rest of the arguments are just variables you want to keep. If you want to rename some variables, you just need to write `select(data,newvar1=oldvar1,...)`. On the other hand, if you just want to rename some variables, you only need to write `rename(data,newvar1=oldvar1,...)`. The difference is that `select()` only gives you back the variables you specified while `rename()` gives you back your entire data frame. 
+
+In the case where you want to use `select()` to reorder your data frame, you just need to specify the ones you want in the order and call `everything()` as your last argument. If instead of selecting the columns you want, you need to kick out of columns you **do not** want, you can just add a minus sign before the variable such as `select(-col1)`
+
+For example, if I want to select workshop, gpa, and age and change "workshop" to "participate", I can write:
+```{r}
+data %>%
+  select(participate=workshop,
+         gpa, age)
+```
+
+## `distinct(df, cols)`
+`distinct()` gives you distinct combinations of the columns you select. For example, say I want the distinct combinations of workshop and cohort, I will write:
+
+```{r}
+data %>%
+  distinct(workshop,
+           cohort) %>% arrange(cohort)
+```
+
+
+
+# tidyr
+
+## `separate(df, col, into, sep)`
+`separate()` is used for you to split values in a single column into multiple columns. The `into` argument takes on a vector of texts for you to specify the names of the new columns that you want to create from the original column. `sep` specifies what you want are to use as the separator for the column. For example, in the data we used before, people answered a county and state, which should be separated by a comma. We can thus use separate to split this column into county and state:
+
+```{r}
+data %>% 
+  separate(county,
+                c("county","state"),
+                sep=", ")
+```
+
+
+
+## `unite(df, new_col, cols, sep)`
+`unite()` is the exact opposite of separate. It takes multiple columns and concatenate them into one column using the same arguments. For example, if I want to concatenate workshop and social into a variable called "new" with "/" as my separator, I will write:
+
+```{r}
+data %>% 
+  unite("new",
+                c(workshop, social),
+                sep="_")
+```
+
+## `gather()` and `spread()`
+We talked in details about these two functions last time in the workshop [Introduction to data](https://willythewoo.github.io/WillyTheWoo/workshop/data.html). To summarize, `gather()` is used to gather wide form data into a long form data. This function takes arguments in the following form `gather(key="sting",value="string",columns)`. `spread()` is used to spread a long form data into a wide form data.  This function takes arguments in the following form `spread(key="sting",value="string",columns)`.
+
+# Try it yourself!
+
+1. For this question, we will be using the same data set from the first question in the ggplot2 workshop. You can load the data with `readr::read_csv()` with the path `https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv`.
+  
+  i. As you can see right now that the column `city` contains both state and city name and sometimes has two or more states. Use the tools you have learned today, create a column named metro that only contains the city name and a column named states that contain all the states the metropolitan area is in. This includes deleting the original state column. Call this new data frame `d11`
+  
+<details><summary>Click for solutions</summary>
+```{r}
+# Loading data
+d11 <- read.csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv")
+
+# Separate the column city into metro and states
+d11<-d11%>%
+  separate(city,sep=",", into=c("metro","states"))%>%
+  select(-state)
+
+# Look at the result
+head(d11)
+```
+</details>
+
+  ii. After looking at the data set `d11`, you realized that the variable female was coded `1` for male and `2` for female. The variable was created by taking the average value of this variable from everyone in the city. Hence this variable does not represent the percentage or females in the city. Correct this data error from `d11` so the variable represents the percentage of females. Call this new data frame `d12`
+
+<details><summary>Click for solutions</summary>
+
+Since female was coded as the average of 1 and 2, and we need it to be the average of 0 and 1, we can simply minus one on female to achieve what is asked.
+
+```{r}
+d12<-d11%>%
+  mutate(female = female-1)
+
+head(d12)
+```
+</details>
+
+  iii. The median of hhincome in this data set is $58,000. Filter the data set `d12` so you only have cities that are on the upper half of the household income distribution. Call this new data frame `d13`. (Hint: You can either use `arrange()` or `median()` to figure out the median yourself)
+
+<details><summary>Click for solutions</summary>
+
+```{r}
+d13<-d12%>%filter(hhincome >= 58000)
+
+str(d13)
+```
+
+If you tried to do median yourself, you might notice that the output is NA or empty. This is caused by the fact that some household income data are missing. To correct this, add `na.rm = TRUE` as an argument in the function `median()`. 
+```{r}
+d13<-d12%>%filter(hhincome >= median(d12$hhincome, na.rm = TRUE))
+
+str(d13)
+```
+</details>
+
+  iv. You now realized that you lose half of your data in `d13`, which is not a good thing. Instead, you decide to create a logical variable from `d12` that lets you conditionally do operations on the data. Create a new variable called `upper` such that it is of value 1 if the city's household income is greater than $58,000 and 0 otherwise. Save this new data frame as `d14`. (Hint: You can use the function `ifelse()`)
+  
+<details><summary>Click for solutions</summary>
+```{r}
+d14<-d12%>%
+  mutate(upper=ifelse(hhincome>=58000,TRUE,FALSE))
+
+str(d14)
+```
+</details>
+
+  v. Do the same thing as part iv but with age 37 and data `d14`. Name the new variable `up_age` and store this new data frame as `d15`
+ 
+<details><summary>Click for solutions</summary>
+```{r}
+d15<-d14%>%
+  mutate(up_age=ifelse(age>=37,TRUE,FALSE))
+
+str(d15)
+```
+</details>
+
+  vi. Now you can look at statistics in each combination of age and income bracket. Find out the raw average percentage of female in each combination of age and income bracket by year using `summarize()`. Sort this data set by population descendingly.
+
+<details><summary>Click for solutions</summary>
+```{r}
+d15%>%
+  filter(!is.na(upper),!is.na(up_age),!is.na(female))%>%
+  group_by(upper,up_age)%>%
+  summarise(female=mean(female,na.rm=TRUE))
+```
+</details>
+
+  vii. Going back to ggplot2, plot the linear relationship between population and female, faceted by the age and income brackets in a 2 $times$ 2 figure.
+  
+<details><summary>Click for solutions</summary>
+```{r}
+ggplot(d15%>%filter(!is.na(upper),!is.na(up_age),!is.na(female)),aes(x=population,y=female))+
+  geom_smooth(se=FALSE)+
+  facet_wrap(upper~up_age)
+```
+</details>
+  
+  viii. Find out how many cities are in each age and income bracket combination by year. (Hint: Use the function `n()` inside `summarize()`).
+  
+<details><summary>Click for solutions</summary>
+```{r}
+d15%>%
+  filter(!is.na(upper),!is.na(up_age),!is.na(female))%>%
+  group_by(upper,up_age)%>%
+  summarise(female=mean(female,na.rm=TRUE),
+            count=n())
+```
+</details>
+  
+2. This problem will teach you how to create a simulated data set under the generalized Roy model framework. It is also a good practice for understanding `tidyverse`. The three functions in i. are normal distribution, binomial distribution, and uniform distribution respectively.
+
+  i. Using functions like `rnorm()`, `rbinom()`, and `runif()`, create a data frame with variables $X$, $D$, and $E$ such that
+  $X\sim U[-2,2]$, $D\sim Binom(0.3)$, and $E\sim N(0,1)$ with 1,000 observations. Call this data frame `d21`. In `rbinom()`, set the argument `size` to 1.
+
+<details><summary>Click for solutions</summary>
+```{r}
+d21<-data.frame(
+  X=runif(1000,-2,2),
+  D=rbinom(1000,1,0.3),
+  E=rnorm(1000,0,1)
+)
+```
+</details>
+
+  ii. Using `d21`, create $Y0$ and $Y1$ such that $Y0=X+E$ and $Y1=X+0.3+E$. Then create a new variable $Y$ such that $Y=Y1$ if $D=1$ and $Y=Y0$ if $D=0$. Store this new data frame as `d22`.
+
+<details><summary>Click for solutions</summary>
+```{r}
+d22<-d21%>%
+  mutate(Y0 = X + E,
+         Y1 = X + 0.3 + E,
+         Y = ifelse(D==1,Y1,Y0))
+```
+</details>
+
+  iii. Create a new variable called ID that uniquely identifies each observation. Store this data frame as `d23`.
+
+<details><summary>Click for solutions</summary>
+```{r}
+d23 <- d22%>%
+  mutate(ID=1:1000)
+```
+</details>
+
+  iv. Run the following code to create a data set called `id_gpa` with ID numbers and gpa.
+```{r}
+id_gpa<-data.frame(ID=1:1000,
+                   gpa=rnorm(1000,3.5,0.15))
+```
+  Now run `?left_join` to read up on the documentation of this function. Merge `id_gpa` into `d23` so you have the gpa of all the observations in `d21`. Store this new data frame as `d24`
+  
+<details><summary>Click for solutions</summary>
+```{r}
+d24<-d23%>%
+  left_join(id_gpa,by="ID")
+```
+</details>
+
+  v. Using ggplot, graph the relationship between Y and gpa using scatter plot. Facet the figure by D. 
+
+<details><summary>Click for solutions</summary>
+```{r}
+ggplot(d24,aes(x=gpa,y=Y))+
+  geom_smooth(se=FALSE)+
+  facet_wrap(~D)
+```
+</details>
+  
+
+[Click here to continue to the next workshop: Introduction to text data](https://willythewoo.github.io/WillyTheWoo/workshop/textdata.html) 
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)

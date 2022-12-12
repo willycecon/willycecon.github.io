@@ -1,0 +1,339 @@
+---
+title: "Principles of Data Visualization in R Workshop: Introduction to `ggplot2`"
+author: "Willy Chen"
+date: "Workshop 2"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    css: eye.css
+    theme: readable
+---
+
+```{r echo=FALSE}
+knitr::opts_chunk$set(warning = TRUE, message = FALSE)
+```
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+[Click here to go to the slides for more examples](https://willythewoo.github.io/WillyTheWoo/workshop/ggplot2slides.html)
+
+<a href="/WillyTheWoo/workshop/ggplot2slides.html" download>
+  Download the slides here
+</a>
+
+<iframe width="812" height="456.75" src="https://www.youtube.com/embed/GZIhbLpYHDk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# What is `ggplot2`?
+
+ggplot2 is one of the most powerful graphing packages available in to R users. It supports most of the 2D graphing you would want to do and has a fairly straight forward structure that is easy to understand and revise quickly.
+
+To begin, let's look at an example of a graph I made using data downloadable [here](https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv) and then construct this step by step.
+
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv")
+glimpse(data)
+```
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+data$characters<-as.numeric(data$characters)
+```
+
+```{r echo=FALSE, warning=FALSE}
+ggplot(data=data,aes(x=age,
+                     y=characters,
+                     col=as.factor(social),
+                     label=as.factor(homework)))+
+  geom_smooth(se=FALSE,method="lm")+
+  geom_point()+
+  geom_text(show.legend=TRUE)+
+  facet_wrap(~factor(exp,levels=c("What is R?",
+                                  "Can do simple calculations",
+                                  "Can do basic data cleaning or basic plot functions in R",
+                                  "Can do cleaning, basic predictive modeling")),nrow=2)+
+  scale_color_discrete(name="Guesses \non social \ncommitee's \nname")+
+  guides(fill=guide_legend(ncol=4))+
+  labs(title = "Correlation between age and number of characters in full name",
+       x="Age",
+       y="Number of characters")
+
+```
+
+
+Yes or no is the answer to whether the person is open to doing homework between the workshops.
+To start graphing, we need to first load the package `tidyverse` and load the data since both `ggplot2` and `readr` are included in tidyverse. Let's take a look at the structure of this data:
+
+```{r message=FALSE, warning=FALSE, eval=FALSE}
+require(tidyverse)
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/workshop_data.csv")
+glimpse(data)
+```
+
+By calling `glimpse()`, we can see that there is only one numeric variable `age` though the variable characters looks to be numeric but took the form of a string because there is one string input. We can change that by adopting what we learned last time and call.
+```{r}
+data$characters<-as.numeric(data$characters)
+class(data$characters)
+```
+
+Now that our data is ready, we should learn about the 4 basic elements of ggplot
+
+**Note: In this workshop, I will call the full graph a figure and the contents of the figure graphs. For example, a dot in a scatter plot would be called a graph.**
+
+# Graphing device `ggplot()`
+The most basic part of a ggplot graph is the graphing device. This is where you will specify the data your are graphing and assigning variables to axes and graphing features like colors to make the graph happen. The name of these components are called aesthetics `aes()`. Most of the things you will need to graph will be specified inside your aesthetics. 
+
+The general call for the ggplot graphing device is called `ggplot(data,aes(...))`. Inside `aes()` you will specify features of your plot like `aes(x=x_var, y=y_var, col, fill, size, alpha, shape, label, ...)`. The x and y variables are fairly self-explanatory so I will omit them from discussion. The rest of the aesthetics can be specified either by a value or by a variable within your data. For example, color can be specified by a factor variable, at which point `ggplot()` will automatically assign **discrete** colors to each category. On the other hand, if color is specified by a continuous/numeric variable, then `ggplot()` will automatically assign a **spectrum** of colors to the values. And if you would rather see just a specific color for your plot, you can specify color with either words like `"red"` or computer color codes such as `RGB`. 
+
+## Common Aesthetics
+1. `col`: This aesthetics specify the exterior color. It is the most commonly used aesthetics for specifying colors
+2. `fill`: Sometimes your graphs are in shapes that allow you to have different colors on the edges and on the infill. In those cases, you would specify `col` for the color of the edges and `fill` for the color of the infill.
+3. `alpha`: This aesthetic takes values between 0 and 1. `alpha` specifies the opacity of an object with 0 being completely transparent.
+4. `size`: This aesthetic takes a numerical value that changes the sizes of the things in your graphs. Usually only used in scatter plots.
+5. `shape`: `shape` is the only one that cannot be specified by a continuous variable. There are a total of 15 shapes, some of which are hollowed, some have separated infill and edges, and some just has an infill that is specified by `col`.
+6. `label`: Counter-intuitively, label does not specify the label you want to use in your legend. Rather, it specifies the text you want to put on your graphs themselves through the `geom_text()` function. 
+
+Going back to our example, we can now graph a plot with age and characters associated with colors. This is a good time to recall that in R 4.0.1, string variables are not factors by default so you should make your string variables factors to map them to your desired aesthetics. In this case, I have to write `as.factor(social)`. In practice, calling `as.factor()` rather than `factor()` has no difference on your graph.
+```{r}
+ggplot(data=data,
+       aes(x=age,
+           y=characters,
+           col=as.factor(social),
+           label=as.factor(homework)))
+```
+
+At this point, you may have realized that this chunk $\uparrow$ does not actually graph anything. This takes us to the second element of `ggplot2` -- **geom functions**
+
+# Geom functions `geom_....()`
+Think about creating a paining, if we say the graphing device is the thing you want to draw, then geom functions are the different paint brushes and pens/pencils that you can use. By specifying a geom function, you are telling `ggplot()` what kind of plot you want it to make. The most commonly seen geom functions are:
+
+## `geom_point()`
+If you want a scatter plot, use `geom_point()`. One thing to note is that there is a function called `geom_jitter()`. This function draws jitter plots which are for frequency and not accuracy.
+
+##  `geom_smooth()`
+If you want a smoothed line to show trend, use `geom_smooth()`. This function by default uses local regressions to fit the data which will make your graphs look much more elegant. You can change `geom_smooth()` to draw linear functions by setting the argument `method="lm"` inside the function.
+
+##  `geom_line()`
+This geom function connects your scattered dots with lines.
+
+##  `geom_bar`
+This geom function makes a bar graph. Note that in this function, your graphing devices need not specify a y variable.
+
+## `geom_histogram()`
+This geom function makes a histogram. Note that in this function, your graphing devices need not specify a y variable.
+
+## `geom_text()`
+This geom function acts similar to `geom_point`. However, instead of graphing scattered dots, it graphs the texts of the variable you specify via `label=` in your aesthetics `aes()` in your graphing device `ggplot()`.
+
+There are other geom functions in the package so you should explore them if what you want to graph cannot be done by these. You can always search a certain graph type and ggplot2 on Google.
+
+Going back to our example, we can actually do most of my example graph now. Note that I added `se=FALSE` inside geom_smooth() so it does not graph the standard error range. The default is to graph it. Also note that the geom functions and the graphing device are connected through addition signs.
+```{r}
+ggplot(data=data,aes(x=age,
+                     y=characters,
+                     col=as.factor(social),
+                     label=as.factor(homework)))+
+  geom_smooth(se=FALSE,method="lm")+
+  geom_point()+
+  geom_text(show.legend=TRUE)
+```
+
+Now that we have the basic graph, you're probably wondering how we can specify the legend and the labels. This brings us to the third element of `ggplot2` -- **scale functions**
+
+# Scale functions `scale_.._..()`
+Scale functions are what you use to specify things about your aesthetics. Every aesthetic you put in your graphing device can be specified. In general, the scale functions are in the form of
+
+scale_`aesthetic`_`variable type` 
+
+`aesthetic` refers to the aesthetic you are specifying. This could be color, fill, x, y, etc. `variable_type` refers to how the values should be regarded. Normally you have 3 options: `continuous`, `discrete`, and `manual`. `manual` allows your specification to be more flexible but it also requires the most work put in as it does not have much defaults. `continuous` is used to map continuous aesthetics and `discrete` is used to map discrete aesthetics.
+
+The most basic thing you can do with scale functions is to name your legend. For example, in the figure in the previous section, the legend just said as.factor(social). This is harder to understand so we can specify a name for it by using `scale_color_discrete(name="Guesses \non social \ncommitee's \nname")`. `\n` is used to cut the sentence into the next line. Other thing you can specify with scale functions are like the range of your axes, the range for your alpha, the color palette to use for the color or fill aesthetic, etc.
+
+Outside of scale function, there is also a blanket function for the figure itself called `labs()`. When you add `labs()` at the end of your `ggplot()` call, you can specify the title for the figure, the text on the axes, etc. with ease. The function call is:
+
+`labs(title="Figure name", x="x-axis name", y="y-axis name")`
+
+With these knowledge, we can go back to our example and get the following. Don't worry about the guide function, it just gives me even more control over the legend.
+```{r}
+ggplot(data=data,aes(x=age,
+                     y=characters,
+                     col=as.factor(social),
+                     label=as.factor(homework)))+
+  geom_smooth(se=FALSE,method="lm")+
+  geom_point()+
+  geom_text(show.legend=TRUE)+
+  scale_color_discrete(name="Guesses \non social \ncommitee's \nname")+
+  guides(fill=guide_legend(ncol=4))+
+  labs(title = "Correlation between age and number of characters in full name",
+       x="Age",
+       y="Number of characters")
+
+```
+
+These are the basics of `ggplot2`, you can actually make most graphs just using the first three elements. But if your graph is getting really complicated with colors and placements, sometimes you would want to separate your graphs by some variables. That brings us to the last element of `ggplot2` -- **facet functions**
+
+# Facet functions `facet_..()`
+The facet functions allow you to separate your figure into multiple sub figures for clarity. It generally takes the form of
+
+`facet_..( varriable1 ~ variable2, ncol= , nrow= )`
+
+Where variable1 and variable2 gives you the ability to split by 2 variables. There are three facet functions: `facet_wrap()`, `facet_null()`, `facet_grid()`. You can specify `ncol=` and `nrow=` for the number of rows of columns of sub figures you want the figure to have. Going back to our example, you will see that in my call of `facet_wrap()`, I forced the function to have 2 columns which gave me 4 sub-figures=s arranged in a square rather than next to each other.
+```{r }
+ggplot(data=data,aes(x=age,
+                     y=characters,
+                     col=as.factor(social),
+                     label=as.factor(homework)))+
+  geom_smooth(se=FALSE,method="lm")+
+  geom_point()+
+  geom_text(show.legend=TRUE)+
+  facet_wrap(~factor(exp,levels=c("What is R?",
+                                  "Can do simple calculations",
+                                  "Can do basic data cleaning or basic plot functions in R",
+                                  "Can do cleaning, basic predictive modeling")),nrow=2)+
+  scale_color_discrete(name="Guesses \non social \ncommitee's \nname")+
+  guides(fill=guide_legend(ncol=4))+
+  labs(title = "Correlation between age and number of characters in full name",
+       x="Age",
+       y="Number of characters")
+
+```
+
+At this point, you truly have enough power to graph whatever you want, provided that the data you have allows you to do so. In the next workshop, we will discuss some data fundamentals which will lead to the next workshop where we will go over basic data cleaning skills via the `tidyverse` package. Now try to do the following problems on your own. I will see you in the next workshop!
+
+
+If you have been watching the graphs closely, you might realize that behind the `geom_text()`'s, there are dots. We can remove those dots by removing `geom_point()`
+```{r warning=FALSE}
+ggplot(data=data,aes(x=age,
+                     y=characters,
+                     col=as.factor(social),
+                     label=as.factor(homework)))+
+  geom_smooth(se=FALSE,method="lm")+
+  #geom_point()+
+  geom_text(show.legend=TRUE)+
+  facet_wrap(~factor(exp,levels=c("What is R?",
+                                  "Can do simple calculations",
+                                  "Can do basic data cleaning or basic plot functions in R",
+                                  "Can do cleaning, basic predictive modeling")),nrow=2)+
+  scale_color_discrete(name="Guesses \non social \ncommitee's \nname")+
+  guides(fill=guide_legend(ncol=4))+
+  labs(title = "Correlation between age and number of characters in full name",
+       x="Age",
+       y="Number of characters")
+
+```
+
+# Try it yourself
+
+1. Use `read_csv()` from the `readr` package to load data from `https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv`. Make sure to use quotation marks in your function call so the data is read properly. And don't forget to use the assignment operator to actually save the data when you load it. This data set is called the American Community Survey (ACS). It is an annual sample collected by the Census Bureau. In the data set I provided you, there are 8 variables: Year, City, state, city population, \%female, median age, median household income, and whether this city is currently a sanctuary city.
+
+  (i) Look at the data with `glimpse()` to get a view of what you are dealing with. You can also use the function `variable.names()` to see what variables there are. After you look at the data, use `anyNA()` to see if there is any `NA` in the data set.
+  
+<details><summary>Click for solutions</summary>
+```{r}
+data <- read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/acs_sample.csv")
+
+glimpse(data)
+
+anyNA(data)
+```
+</details>
+
+  (ii) Use the function `plot_usmap()` from the `usmap` package to look at the household income level in each states with cities of more than 1,000,000 population. (Hint: the correct call would be `plot_usmap(data=dataframe,values="hhincome")` where `dataframe` is the name of the data frame you stored your data.)
+  
+<details><summary>Click for solutions</summary>
+
+```{r}
+require(usmap)
+plot_usmap(data = data,
+           values="hhincome")
+```
+
+</details>
+  
+  (iii) This data set has data spanning many years, can you use `facet_..()` to separate the sub-figures from (ii)?
+    
+<details><summary>Click for solutions</summary>
+```{r}
+plot_usmap(data = data,
+           values="hhincome")+
+  facet_wrap(~year,nrow=4)
+```
+</details>
+
+  (iv) Make a scatter plot with a estimated line for the relationship between city median age and median household income
+    
+<details><summary>Click for solutions</summary>
+```{r}
+ggplot(data,aes(x=age,y=hhincome))+
+  geom_point()+
+  geom_smooth(se=FALSE)
+```
+</details>
+  
+  (v) Make a scatter plot with year as your x-axis and household income as your y-axis. Instead of using dots on this graph, use the cities' names.
+    
+<details><summary>Click for solutions</summary>
+```{r}
+ggplot(data,aes(x=year,y=hhincome,label=city))+
+  geom_text()+
+  geom_smooth(se=FALSE)
+```
+</details>
+  
+  (vi) Can you separately graph (v) for sanctuary and non-sanctuary cities?
+    
+<details><summary>Click for solutions</summary>
+```{r}
+ggplot(data,aes(x=year,y=hhincome,label=city))+
+  geom_text()+
+  geom_smooth(se=FALSE)+
+  facet_wrap(sanctuary~.)
+```
+</details>
+
+2. Using the data set from `https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv`, do the following tasks:
+
+  (i) Plot the densities of each variable on one plot using `geom_density()`
+    
+<details><summary>Click for solutions</summary>
+```{r}
+data<-read_csv("https://willythewoo.github.io/WillyTheWoo/workshop/data/ps1.csv")
+
+ggplot(data)+
+  geom_density(aes(x=a))+
+  geom_density(aes(x=b))+
+  geom_density(aes(x=c))
+```
+</details>
+  
+  (ii) Plot overlapping histograms of variables a and b
+    
+<details><summary>Click for solutions</summary>
+```{r}
+ggplot(data)+
+  geom_histogram(aes(x=a,fill="a",alpha=0.5))+
+  geom_histogram(aes(x=b,fill="b",alpha=0.5))
+```
+</details>
+  
+  (iii) Graph a scatter plot with `geom_point()` using variables a and b and then graph a jitter plot using `geom_jitter()` and compare the two plots
+    
+<details><summary>Click for solutions</summary>
+```{r}
+print("This is Scatter")
+ggplot(data,aes(x=a,y=b))+
+  geom_point()
+
+print("This is Jitter")
+ggplot(data,aes(x=a,y=b))+
+  geom_jitter()
+```
+</details>
+
+
+
+[Click here to continue to the next workshop: Introduction to tidyverse](https://willythewoo.github.io/WillyTheWoo/workshop/tidyverse.html)
+
+[Click here to return to the menu](https://willythewoo.github.io/WillyTheWoo/workshop/menu.html)
+
+

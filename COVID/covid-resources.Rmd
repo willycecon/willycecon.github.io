@@ -1,0 +1,172 @@
+---
+title: "COVID-19 Resource Lookup"
+date: Updated on `r Sys.Date()`
+author: Information gathered by volunteers
+output: html_document
+theme: readable
+css: web.css
+font-size: 9pt
+runtime: shiny
+---
+
+<a href="https://forms.gle/Mai38UY6GsQePxh57"> Submit feedback or corrections here </a>
+
+```{r echo=FALSE,message=FALSE,warning=FALSE,results="hide"}
+knitr::opts_chunk$set(echo=FALSE,message=FALSE,warning=FALSE)
+library(tidyverse)
+library(shiny)
+library(shinythemes)
+
+COVID_19_Resource<-read.csv("https://willythewoo.github.io/WillyTheWoo/COVID/COVID-19-Resource.csv")%>%
+  separate(State,sep="-",c("State","City"))%>%
+  mutate(City=ifelse(is.na(City),"Statewide",City),
+         State=str_remove(State," "),
+         City=str_remove(City," "))
+
+        COVID_19_Resource<-COVID_19_Resource[,!str_detect(variable.names(COVID_19_Resource),regex("X"))]%>%
+  arrange(State,City)%>%
+  filter(!Date.of.update=="")%>%
+          mutate(Date.of.update=paste('2020/',as.character(Date.of.update),sep=""),
+                 Date.of.update=str_replace_all(Date.of.update,"/","-"),
+                 city=City,
+                 state=State,
+                 Link=paste('<a href="',Link,'">',str_remove_all(str_remove_all(Link,regex("ht.+//(www\\.)?")),regex("/.+")),"</a>",sep="")
+                 )
+
+        names(COVID_19_Resource)<-str_replace_all(variable.names(COVID_19_Resource),pattern="\\.",rep=" ")%>%
+  str_replace_all(patter="UI DI",rep="UI/DI")
+
+              
+Eviction<-read_csv("https://willythewoo.github.io/WillyTheWoo/COVID/eviction_resources.csv")%>%
+  mutate(City=ifelse(gov=="Local",City,"Statewide"),
+         Date.Updated=str_remove(Date.Updated,regex(" .+"))
+         )%>%
+  select(-gov)%>%
+  select(State,everything())%>%
+  rename("Date of update"=Date.Updated,
+         "Dates in Effect"="Dates in eEfect")%>%
+  mutate( Link=paste('<a href="',Link,'">',str_remove_all(str_remove_all(Link,regex("ht.+//(www\\.)?")),regex("/.+")),"</a>",sep=""))
+
+states<-c("All states","Federal",sort(unique(c(unique(COVID_19_Resource$State),unique(Eviction$State)))))
+
+cities<-c("All","Statewide",sort(unique(c(unique(COVID_19_Resource$City),unique(Eviction$City)))))
+
+geo<-bind_rows(COVID_19_Resource[,1:2],Eviction[,1:2])%>%
+  distinct(State,City)%>%arrange(State,City)
+```
+
+```{r echo=FALSE,message=FALSE,warning=FALSE}
+#"https://willythewoo.github.io/WillyTheWoo/COVID/shiny.css"
+u<-fluidPage(
+  tags$head(
+  tags$link(rel = "stylesheet", type = "text/css", href = "https://drive.google.com/file/d/1UFyngXSHXemDl4_zsWg2BL_KmwPKvtfx/view?usp=sharing")),
+  # tags$style(".content {background-color: black;
+  #            margin-left:-200px}"),
+  mainPanel(
+    br(),
+    fluidRow(
+    column(5,selectInput("state","Select a state",c("All states",unique(geo$State)),selected="All states")),
+    column(5,(selectInput("city","Select a city",choices="",selected=""))
+    #        ),
+    # column(5,(selectInput("res","Select a resource",c('All',variable.names(COVID_19_Resource)[!str_detect(variable.names(COVID_19_Resource),regex("Date|Link|notes"))][-c(1,2)])))
+           )
+    ),
+
+h2("Resources in your selected area"),
+h4("Note: UI = Unemployment Insurance, DI = Disability Insurance"),
+tabsetPanel(
+        tabPanel("Labor",tableOutput("labor")),
+        tabPanel("Food, Rent & Bill", tableOutput("rent")),
+        tabPanel("Medical", h2("Coming Soon")),
+        tabPanel("Closure & S.I.P.", h2("Coming Soon")),
+        tabPanel("Disability & High Risk", h2("Coming Soon"))
+      )
+            ),
+  theme = shinytheme("united")
+)
+
+```
+
+
+
+
+
+
+
+
+```{r}
+s<-function(session, input, output){
+    observe({
+      input$state
+         updateSelectInput(session,
+                           "city",
+                           "Select a city",
+                           choices = c("All","Statewide",geo$City[geo$State==input$state]),
+                           selected = "All")
+    })
+  
+  labor <- reactive({
+    # if(input$res!="All"){
+    #   COVID_19_Resource<-COVID_19_Resource%>%
+    #     filter(!is.na(input$res))
+    # }
+    if(input$state=="All states"&input$city=="All"){
+    
+      COVID_19_Resource
+    
+    }else if(input$state=="All states"&input$city=="Statewide"){
+    
+      COVID_19_Resource%>%filter(City=="Statewide")
+    
+    }else if(input$city=="All"){
+    
+      COVID_19_Resource%>%filter(State==input$state)
+    
+    }else{
+    COVID_19_Resource%>%filter(State==input$state,City==input$city)
+    }
+    })
+  
+  
+    rent <- reactive({
+    # if(input$res!="All"){
+    #   COVID_19_Resource<-COVID_19_Resource%>%
+    #     filter(!is.na(input$res))
+    # }
+    if(input$state=="All states"&input$city=="All"){
+    
+      Eviction
+    }else if(input$state=="All states"&input$city=="Statewide"){
+    
+      Eviction%>%filter(City=="Statewide")
+      
+    }else if(input$city=="All"){
+    
+      Eviction%>%filter(State==input$state)
+    
+    }else{
+    Eviction%>%filter(State==input$state,City==input$city)
+    }
+    })
+  
+  
+  
+  output$labor<-renderTable(labor(),hover=TRUE,width="auto", sanitize.text.function = function(x) x)
+  output$rent<-renderTable(rent(),hover=TRUE,width="auto",sanitize.text.function = function(x) x)
+}
+
+  
+shinyApp(ui = u, server = s, options = list(height = 900, width = 1100))
+
+```
+
+Food, Rent, & Bill information acquired from [Eviction Lab](https://evictionlab.org/covid-eviction-policies/?fbclid=IwAR1k7R9pixJuUMAH267esXb-6eWXBtgjbszETow1ZsRbQ2t5u9CANXtb4e4)
+
+
+```{r eval=FALSE, echo=FALSE}
+rsconnect::setAccountInfo(name='willychen',
+			  token='5B5DCAFF63B32C4F04F0320A52198C34',
+			  secret='4lfxUC1RDYnrXfydtnQjLfP4AxKGe5EJMW40EIIP')
+setwd("~/Documents/GitHub/WillyTheWoo/COVID")
+rsconnect::deployApp("~/Documents/GitHub/WillyTheWoo/COVID/covid-resources.Rmd")
+```
