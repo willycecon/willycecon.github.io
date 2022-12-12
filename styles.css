@@ -1,0 +1,105 @@
+
+body {
+  /* background-image: url('https://willythewoo.github.io/WillyTheWoo/images/Dusk-min.jpg'); */
+  /*background-color: #FEB8C6;*/
+  background-color: #18453B;
+  background-repeat: repeat;
+  background-size: 100%;
+  font-family: Helvetica;
+  font-size: 16pt;
+  padding: 50px;
+}
+
+div.whole{
+  width:100%;
+}
+
+
+div.main{
+  background-color: rgba(255, 255, 255, 0.8)   /* 35% opaque white */;
+  padding: 10px;
+  border-radius: 0px 0px 25px 25px;
+  text-align: center;
+
+}
+
+div.Home{
+  background-color: rgba(255, 255, 255, 0.8)   /* 35% opaque white */;
+  padding: 50px;
+  border-radius: 0px 0px 25px 25px;
+  text-align: center;
+}
+
+nav{
+  height: 100px;
+  background-color: #ffffffe6;
+  float: center;
+  padding: 20px;
+  border-radius: 25px 25px 0px 0px;
+
+}
+div.whole ul{
+  height: 100px;
+  background-color: #ffffff;
+  float: center;
+  margin-left:15%;
+  padding: 0;
+  border-radius: 25px;
+}
+
+div.whole ul li {
+  list-style: none;
+  display: inline-block;
+  line-height: 100px;
+}
+
+div.whole ul li a{
+  display:block;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Helvetica;
+  color: #1e1e1e;
+  padding: 0px 20px;
+}
+
+
+img{
+  border-radius: 25px;
+}
+div.sub{
+  padding:50px;
+  padding-top: 0px;
+}
+div.sub a{
+  display: list-item;
+  list-style: none;
+  text-align: left;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Helvetica;
+  color: #18453B;
+  padding:0px;
+}
+
+div.sub h2{
+  text-align: left;
+}
+
+div.intext{
+  text-align:left;
+  font-size: 25px
+}
+
+div.flickr{
+  border-radius: 10px 10px 10px 10px;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.link{
+  color: #18453B;
+}
