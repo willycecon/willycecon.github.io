@@ -25,7 +25,7 @@ div.main{
 
 div.Home{
   background-color: rgba(255, 255, 255, 0.8)   /* 35% opaque white */;
-  padding: 50px;
+  padding: 20px;
   border-radius: 0px 0px 25px 25px;
   text-align: center;
 }
@@ -93,6 +93,9 @@ div.flickr{
   border-radius: 10px 10px 10px 10px;
 }
 
+div.showpdf{
+  padding:0px
+}
 .center {
   margin-left: auto;
   margin-right: auto;
