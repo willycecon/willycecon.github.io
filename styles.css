@@ -31,7 +31,7 @@ div.Home{
 }
 
 nav{
-  height: 100px;
+  width: 100%;
   background-color: #ffffffe6;
   float: center;
   padding: 20px;
