@@ -6,7 +6,7 @@ body {
   background-repeat: repeat;
   background-size: 100%;
   font-family: Helvetica;
-  font-size: 16pt;
+  /* font-size: 16pt; */
   padding: 50px;
 }
 
@@ -56,7 +56,7 @@ div.whole ul li {
 div.whole ul li a{
   display:block;
   text-decoration: none;
-  font-size: 20px;
+  /* font-size: 20px; */
   font-family: Helvetica;
   color: #1e1e1e;
   padding: 0px 20px;
