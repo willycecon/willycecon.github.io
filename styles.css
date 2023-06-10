@@ -67,7 +67,7 @@ img{
   border-radius: 25px;
 }
 div.sub{
-  padding:50px;
+  padding:10px;
   padding-top: 0px;
 }
 div.sub a{
@@ -75,7 +75,6 @@ div.sub a{
   list-style: none;
   text-align: left;
   text-decoration: none;
-  font-size: 25px;
   font-family: Helvetica;
   color: #18453B;
   padding:0px;
@@ -87,7 +86,7 @@ div.sub h2{
 
 div.intext{
   text-align:left;
-  font-size: 25px
+  /* font-size: 25px */
 }
 
 div.flickr{
