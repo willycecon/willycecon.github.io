@@ -6,6 +6,9 @@ get_duh <- function(data, groups, evepar = 2, round = 4, show.groups = TRUE){
   # evepar is the eveness parameter that needs to be strictly greater than 1
   # round is the rounding parameter for how many digits after 0
   # show.groups = TRUE means the group names will be shown at the end.
+  
+  # This function also outputs GSI (Gini-Simpson Index) and SE (Shannon's Entropy)
+  
   if (evepar <= 1){
     stop("Error: evepar must be strictly greater than 1 for convexity")
   }
