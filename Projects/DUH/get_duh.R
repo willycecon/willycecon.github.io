@@ -1,13 +1,19 @@
-get_duh <- function(data, groups, evepar = 2, round = 4){
-require(tidyverse)
+get_duh <- function(data, groups, evepar = 2, round = 4, show.groups = TRUE){
+  require(tidyverse)
   
-    if (evepar <= 1){
-    stop("Error: Evepar must be strictly greater than 1 for convexity")
+  # data should be a dataframe
+  # groups should be a length-1 string that identifies the prefixes of all varaibles of interests
+  # evepar is the eveness parameter that needs to be strictly greater than 1
+  # round is the rounding parameter for how many digits after 0
+  # show.groups = TRUE means the group names will be shown at the end.
+  if (evepar <= 1){
+    stop("Error: evepar must be strictly greater than 1 for convexity")
   }
-  if (length(groups) == 1){
+  if (length(groups) > 1){
+    stop("Enter the common prefixes of the variables of interest.")
+  }else{
     names <- variable.names(data)
-    g <- str_detect(names,
-                    as.character(groups))
+    g <- str_detect(names, regex(paste("^",groups,sep="")))
     G <- sum(g)
     g2 <- names[g]
     subdata <- data[,g] 
@@ -70,7 +76,10 @@ require(tidyverse)
                       GSI = calc$GSI,
                       SE  = calc$SE)  
     print(paste("Universe has", G, "categories",sep=" "))
-    print("Version R10b")
+    if(show.groups == TRUE){
+      print(paste(g2, collapse = ", "))
+    }
+    # print("Version R10b")
     print(paste("Using ",evepar, "-metric", collapse="", sep = ""))
     return(data)
     
