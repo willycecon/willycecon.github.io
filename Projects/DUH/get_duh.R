@@ -1,26 +1,26 @@
-get_duh <- function(data, groups, evepar = 2, round = 4, show.groups = TRUE){
+get_duh <- function(data, groups, evepar = 2, round = 4, show.groups = TRUE, prefix = NULL){
   require(tidyverse)
   
   # data should be a dataframe
-  # groups should be a length-1 string that identifies the prefixes of all varaibles of interests
-  # evepar is the eveness parameter that needs to be strictly greater than 1
-  # round is the rounding parameter for how many digits after 0
+  # groups should be a length-1 string that identifies the prefixes of all variables of interests.
+  # evepar is the eveness parameter that needs to be strictly greater than 1.
+  # round is the rounding parameter for how many digits after 0.
   # show.groups = TRUE means the group names will be shown at the end.
-  
-  # This function also outputs GSI (Gini-Simpson Index) and SE (Shannon's Entropy)
-  
+  # prefix takes a length 1 string that adds to the varialbe names of DUH, GSI, and SE.
   if (evepar <= 1){
     stop("Error: evepar must be strictly greater than 1 for convexity")
   }
   if (length(groups) > 1){
-    stop("Enter the common prefixes of the variables of interest.")
+    g2 <- groups
+    G <- length(groups)
+    subdata <- data[,groups]
   }else{
     names <- variable.names(data)
     g <- str_detect(names, regex(paste("^",groups,sep="")))
     G <- sum(g)
     g2 <- names[g]
     subdata <- data[,g] 
-    
+  }  
     #Double check groupings are correct
     check <- subdata %>%
       rowwise() %>%
@@ -72,12 +72,21 @@ get_duh <- function(data, groups, evepar = 2, round = 4, show.groups = TRUE){
              GSI = 1 - HHI,
              SE = (-1)*rmajor*log(rmajor) + SE) %>%
       select(id, DUH, GSI, SE,rmajor)
-    
     data <- bind_cols(data,
                       rmajor = calc$rmajor,
                       DUH = calc$DUH,
                       GSI = calc$GSI,
-                      SE  = calc$SE)  
+                      SE  = calc$SE)
+    
+    if (!is.null(prefix)){
+      name <- names(data)
+      name_length <- length(name)
+      name[(name_length-2):name_length] <- c(paste(prefix,"DUH",sep=""),
+                        paste(prefix,"GSI",sep=""),
+                        paste(prefix,"SE",sep=""))
+      names(data) <- name
+    }
+    
     print(paste("Universe has", G, "categories",sep=" "))
     if(show.groups == TRUE){
       print(paste(g2, collapse = ", "))
@@ -85,6 +94,4 @@ get_duh <- function(data, groups, evepar = 2, round = 4, show.groups = TRUE){
     # print("Version R10b")
     print(paste("Using ",evepar, "-metric", collapse="", sep = ""))
     return(data)
-    
-  }
 }
