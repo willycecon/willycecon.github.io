@@ -1,0 +1,57 @@
+title: Willy Chen
+description: Economics Ph.D. Candidate, Michigan State University
+url: "https://willycecon.com"
+baseurl: ""
+
+author:
+  name: Willy Chen
+  email: willyc@msu.edu
+
+# Navigation
+nav_links:
+  - title: Home
+    url: /
+  - title: Research
+    url: /research/
+  - title: CV
+    url: /cv/
+  - title: Teaching
+    url: /teaching/
+  - title: Photography
+    url: /photography/
+  - title: Contact
+    url: /contact/
+
+# Collections
+collections:
+  pages:
+    output: true
+
+defaults:
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: page
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude legacy files from build
+exclude:
+  - Archive/
+  - COVID/
+  - styles/
+  - Print/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - "*.Rmd"
+  - index_archived.html
+  - Template.html
+  - div.css
+  - Table_style.css
+  - nav.html

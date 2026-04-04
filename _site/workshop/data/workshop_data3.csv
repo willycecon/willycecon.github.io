@@ -1,0 +1,1977 @@
+workshop,age,county,social,cohort,gpa
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.806362280884147
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2296508431022652
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.338811820369892
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.582799822105486
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.6303032699460562
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.8828805156344783
+Yes,31,NA,SGGSAC,Sociology,3.67962093066266
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.408190050218147
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.9994966766100077
+Yes,24,"York County, South Carolina",SGGSAC,History,3.8693739640583322
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,2.6245696094468203
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.392150051347876
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.3895374556025737
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.792007989884243
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.6920984800706207
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.116302630014003
+Yes,NA,NY,SUCSAC,Psychology,3.7698090029188105
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.4911711933335665
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.6756717354363118
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.121015210358606
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,4.0141742310041355
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.5200705425869896
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.3968761298978136
+Yes,22,"Cook County, IL",SGGSAC,Sociology,2.9684165509252898
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.9014243899022074
+Maybe,28,Orange county,SUCSAC,Economics,3.8333242797689904
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.5412289186573442
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.099984472529271
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.6573108745166514
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.400111588891999
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.436524207002825
+Yes,45,Cook countywid,SGGSAC,Anthropology,4.029204445824511
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.6741580163758374
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4639157684948993
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.6319317017437878
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.454101457040575
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.9584926041489035
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.7666945543924393
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.2247007189898644
+Yes,NA,NY,SUCSAC,Psychology,3.8297610350209346
+Yes,25,Cook,SGGSAC,Sociology,3.8772952644647543
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.3640000435438884
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.6507153026591506
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.2188750232283203
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,4.14784531240377
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.366378833970049
+Yes,23,"Cook county, IL",SGGSAC,Sociology,2.9291610968547737
+Yes,NA,NY,SUCSAC,Psychology,3.363970862529898
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.8409200942798765
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.6469008987699336
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.5245264626501127
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.276009123581532
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.6795275472619866
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.008645825216257
+Yes,31,NA,SGGSAC,Sociology,3.479070198861909
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.7395021460750892
+Yes,24,"York County, South Carolina",SGGSAC,History,3.762136408883551
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.3347483700194887
+Yes,NA,NY,SUCSAC,Psychology,3.8416808650971155
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6651556124369558
+Yes,31,NA,SGGSAC,Sociology,4.0448430316053585
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.504064297769343
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.363357759179772
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.7084680609078875
+Maybe,28,Orange county,SUCSAC,Economics,3.569385119794073
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.5333249915012215
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.3257748925562183
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.81841094991512
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.2409571429130697
+Yes,NA,NY,SUCSAC,Psychology,3.293119118928623
+Maybe,28,Orange county,SUCSAC,Economics,3.6155615178979694
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.7411762273230287
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.029550243760467
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.300349216373228
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.4955186409236267
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.780904863817381
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.728338660269143
+Yes,25,Cook,SGGSAC,Sociology,3.6919810984631813
+Yes,NA,NY,SUCSAC,Psychology,3.530862073890568
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.4390377159597416
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.4310768742303352
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.7615928122124838
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.4848261324178966
+Yes,25,Cook,SGGSAC,Sociology,3.2014776372530918
+Yes,24,"Cook, IL",SGGSAC,Sociology,2.981522646642689
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,2.9623893044323504
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.6689165910932657
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.6070081873686832
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.2868246255268425
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.248493724920396
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.278441209673887
+Yes,25,Cook,SGGSAC,Sociology,3.4350663409568503
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.7925098740358583
+Yes,26,"Franklin county, OH",SGGSAC,Economics,4.013185101536912
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.2319499873586746
+Yes,NA,Cook county,SGGSAC,Sociology,3.758866477346834
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2961470315001873
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.5954678312388304
+Yes,25,Cook,SGGSAC,Sociology,3.08977084706797
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.078609809821899
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.6501642463212733
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.7121953728384973
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.2171385771631327
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.301084770812737
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.677129188863975
+Yes,NA,Cook county,SGGSAC,Sociology,3.922659718324882
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.3901637969061906
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.7668201749486525
+Yes,NA,Cook county,SGGSAC,Sociology,3.439862174831821
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.7498718240919744
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.280163426263347
+Yes,NA,Cook county,SGGSAC,Sociology,3.3348667943613277
+Yes,NA,Cook county,SGGSAC,Sociology,3.4461060371739802
+Yes,NA,Cook county,SGGSAC,Sociology,3.0125393232449964
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.1450509595531635
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.295692308025585
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.9340689719606536
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.8375402911896566
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.533663368045258
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.425594910636815
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.6266559377893555
+Yes,NA,Cook county,SGGSAC,Sociology,3.4936775177811437
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.3432770690483857
+Yes,31,NA,SGGSAC,Sociology,3.938616006786071
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.7568255358159495
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.518983180819526
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.1883168594710787
+Yes,31,NA,SGGSAC,Sociology,3.5470215453293674
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.872851135921021
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.4297444433123507
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.9741110112693496
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.02597519495518
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.620286343618729
+Yes,22,"Cook County, IL",SGGSAC,Sociology,2.8201122572054866
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6752984990299433
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.689705657283452
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.1633513028450904
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.3105694715122773
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.57433020151351
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.7557251195463173
+Yes,27,"Dallas County, TX",VANESSA,Sociology,4.018926210067418
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.6234186248241675
+Yes,31,NA,SGGSAC,Sociology,3.3574903762159427
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.3577424435150656
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.4559808907699026
+Yes,25,Cook,SGGSAC,Sociology,3.8876446556046034
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.7268563994320982
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.459232369375192
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.467443295614165
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.7758011426060993
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.199173827540541
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.2121989998664904
+Yes,NA,NY,SUCSAC,Psychology,3.8949269653253116
+Yes,23,"Franklin county, OH",SGGSAC,Economics,2.827489962579985
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.5291920158895143
+Yes,24,"York County, South Carolina",SGGSAC,History,3.47738173950023
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.497893296386807
+Maybe,28,Orange county,SUCSAC,Economics,3.2615543534186386
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,4.056481555486167
+Yes,NA,Cook county,SGGSAC,Sociology,3.4602412116898145
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,4.201494367268474
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.8873348056976536
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.886217301277464
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.902303127134926
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,2.983579632481188
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.5329945192599546
+Yes,25,Cook,SGGSAC,Sociology,3.910471287379238
+Maybe,28,Orange county,SUCSAC,Economics,3.779210654077914
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.369197200888063
+Yes,31,NA,SGGSAC,Sociology,3.078262322169007
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.7433977336000974
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.6601068855819925
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.6474315866065465
+Yes,NA,"Arlington, VA",VANESSA,Sociology,2.8828007863913174
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.7954875862826625
+Yes,31,NA,SGGSAC,Sociology,3.334310059454324
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.662759947365996
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.199010507462908
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.1928293389049265
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,4.1970810652814166
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.26766926529111
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.4817424004323336
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.5627855174872827
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.750585154753021
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.53382087290408
+Yes,31,NA,SGGSAC,Sociology,3.6907335111807673
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.6447377490574793
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.52233942948924
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.3480363291253323
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.6612832228108974
+Yes,31,NA,SGGSAC,Sociology,3.1079741871457314
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.433211053346152
+Yes,27,"Dallas County, TX",VANESSA,Sociology,4.054210633310764
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.835599090586807
+Yes,24,"York County, South Carolina",SGGSAC,History,3.232122175787664
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.7076430539216845
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.401871648381705
+Yes,31,NA,SGGSAC,Sociology,3.5373620554787113
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.171625553048357
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.779535984463599
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.44361385819253
+Yes,NA,NY,SUCSAC,Psychology,3.7230486554224456
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.497575184871135
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.642467224821767
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.5436917352006794
+Yes,23,"Cook county, IL",SGGSAC,Sociology,4.143490105278469
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.705970990632554
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.4952530624452915
+Yes,25,Cook,SGGSAC,Sociology,3.132972890975305
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.0761733102835565
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.903151892227586
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.7337293362248047
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.1288847615503355
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.3961060155580927
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.502096916324364
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.0853836698942665
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.584887437167821
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.210116748962405
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.448900938558503
+Yes,25,Cook,SGGSAC,Sociology,3.9764807828976165
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.0143619327217985
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.518369598123871
+Yes,NA,NY,SUCSAC,Psychology,3.995050399796466
+Yes,24,"Cook, IL",SGGSAC,Sociology,2.6763319560868846
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.289982377868827
+Yes,31,NA,SGGSAC,Sociology,3.0883023208927534
+Yes,24,"York County, South Carolina",SGGSAC,History,3.9637386949667563
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,2.809236635866803
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.2838604101498046
+Yes,31,NA,SGGSAC,Sociology,3.6679131515632215
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,4.29488549417154
+Yes,NA,NY,SUCSAC,Psychology,3.7711511980205508
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.819867507105348
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.729567383113147
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.3862613925228207
+Yes,NA,Cook county,SGGSAC,Sociology,3.883243239280123
+Yes,31,NA,SGGSAC,Sociology,3.5653383856555116
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.4865667998738874
+Yes,NA,"Arlington, VA",VANESSA,Sociology,2.9633962686831548
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.5544692691077038
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.6544807828468677
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.3415186154290843
+Yes,23,"Cook county, IL",SGGSAC,Sociology,2.875977123796836
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.938211549998824
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.263131815949797
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.70919098598342
+Yes,25,Cook,SGGSAC,Sociology,3.5676778871260413
+Yes,25,Cook,SGGSAC,Sociology,4.027470499851998
+Yes,25,Cook,SGGSAC,Sociology,3.4174982649688572
+Yes,27,"Dallas County, TX",VANESSA,Sociology,2.731623044731673
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.2009786893718175
+Yes,NA,Cook county,SGGSAC,Sociology,3.541218012234333
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,4.0047804314110875
+Yes,26,"Franklin county, OH",SGGSAC,Economics,2.896966148852522
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.6197268014588646
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.2841178151732953
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,2.7965976035110116
+Yes,23,"Franklin county, OH",SGGSAC,Economics,2.9023315317493426
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.230593319978404
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.7741660298431405
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.4305064646358887
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.700432396206546
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.3835889789031226
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4185385781133992
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.1954955746377043
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.3089759990574596
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.461366973696497
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.643188980334664
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.693401703410294
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.093672482979295
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.8455009173194483
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.6165615976329777
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.339809335738288
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.4573882796881628
+Yes,45,Cook countywid,SGGSAC,Anthropology,4.137452863089319
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.481346335227053
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.4199113065641615
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.418075144120253
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.617884468701425
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.2834904347781397
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.6671969555215647
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.267215984849831
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.5966636253530537
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.2394180114502404
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.1733423850273756
+Yes,31,NA,SGGSAC,Sociology,3.745632816219484
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.0407031203155386
+Yes,22,"Cook County, IL",SGGSAC,Sociology,4.071655567272187
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.8052502117794136
+Yes,NA,Cook county,SGGSAC,Sociology,3.2649533244980984
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.8293164373876216
+Yes,NA,NY,SUCSAC,Psychology,3.3975871395462796
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.153123076175313
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.0730915259726848
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.847892621524074
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.0639703270252014
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.368309547822313
+Yes,24,"York County, South Carolina",SGGSAC,History,3.7779151154124895
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.8281561992475157
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.681733154889385
+Maybe,28,Orange county,SUCSAC,Economics,3.591203958899007
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.631546620326809
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,2.7848978375486313
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,2.918105733993928
+Yes,45,Cook countywid,SGGSAC,Anthropology,4.13497394487434
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.3146653876775023
+Yes,NA,NY,SUCSAC,Psychology,3.409370486179924
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.2408033713732656
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.4193978419323643
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.44002217248781
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.8127559474579216
+Yes,25,Cook,SGGSAC,Sociology,3.757411622868237
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.9411971182100953
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.6641932374324253
+Maybe,28,Orange county,SUCSAC,Economics,3.2864443369761527
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.8377878883961776
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.540288603528379
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.435590790847352
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.055558949370922
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.779464101546186
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.1987671696393276
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.6273201610387216
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.221372884678576
+Yes,24,"York County, South Carolina",SGGSAC,History,3.5810219741718234
+Yes,31,NA,SGGSAC,Sociology,2.9566758774027333
+Yes,24,"York County, South Carolina",SGGSAC,History,4.071494047849244
+Yes,24,"York County, South Carolina",SGGSAC,History,3.9362420054117577
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.117857986036939
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,4.036839611489709
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,2.9751223887541327
+Yes,NA,Cook county,SGGSAC,Sociology,3.6851825700924095
+Yes,31,NA,SGGSAC,Sociology,3.527277035119666
+Yes,NA,NY,SUCSAC,Psychology,3.3021025392017007
+Yes,24,"York County, South Carolina",SGGSAC,History,3.6071798781169813
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.433791800339216
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.477423873383286
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.6301058046631267
+Yes,25,Cook,SGGSAC,Sociology,3.740792925335261
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.13791229216532
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.781018913159543
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.621267051458777
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.977027170323188
+Yes,25,Cook,SGGSAC,Sociology,3.6428910355325774
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.100996280155319
+Yes,NA,NY,SUCSAC,Psychology,3.8118263772368377
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.5627523653245348
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.580151851643831
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.6031718039161564
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,2.852446303770945
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.5250068570384703
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.771716190853228
+Yes,24,"York County, South Carolina",SGGSAC,History,3.7385362701045217
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,2.9676080301213337
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.7554956396193675
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.3293926580029756
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.2440393314027705
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.0768733107904964
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.3461834114455975
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.607510940245243
+Yes,24,"York County, South Carolina",SGGSAC,History,3.0931704477638897
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.8878714870126014
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.2044589216784445
+Maybe,28,Orange county,SUCSAC,Economics,3.608488501860305
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.2155917577731263
+Yes,24,"York County, South Carolina",SGGSAC,History,3.3306862189589013
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.5685634287857977
+Yes,31,NA,SGGSAC,Sociology,3.3648934081508983
+Yes,NA,Cook county,SGGSAC,Sociology,3.3303304003038647
+Yes,26,"Franklin county, OH",SGGSAC,Economics,4.034610181891838
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.5457452054687146
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.6718147943078034
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.876187841903063
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.967462252572461
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.5105981377443967
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.765604913704828
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.1829265951886283
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2612697925571132
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.6348326513665032
+Yes,24,"York County, South Carolina",SGGSAC,History,3.302436079324985
+Yes,24,"York County, South Carolina",SGGSAC,History,3.8582852651355024
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.4530503949359135
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.1603616078775967
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.0240138069176536
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.488416478069329
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.7757280417945434
+Yes,24,"York County, South Carolina",SGGSAC,History,3.49842373032682
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.675664127558323
+Yes,NA,Cook county,SGGSAC,Sociology,3.7502819461030947
+Yes,25,Cook,SGGSAC,Sociology,3.5131464563278056
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.7918650942125143
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.2366082301593337
+Yes,NA,Cook county,SGGSAC,Sociology,3.456810769600029
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.4412265968509765
+Yes,NA,NY,SUCSAC,Psychology,3.4815517378965035
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6965348108490024
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.5220693167833015
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.776485851621158
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.749083384615231
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.5301687672031328
+Yes,NA,NY,SUCSAC,Psychology,3.845434685594681
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.534102900098879
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.691393690439121
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.9814641699662854
+Yes,NA,NY,SUCSAC,Psychology,3.6006462937151618
+Yes,25,Cook,SGGSAC,Sociology,3.0248131094582007
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.3411481143609634
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.842316997014537
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.4288665309040045
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.451931776596555
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.2194514903024984
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.327550649019957
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.785599474418692
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.709373091952602
+Yes,24,"York County, South Carolina",SGGSAC,History,3.26315287463151
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.9607014416980606
+Yes,25,Cook,SGGSAC,Sociology,3.561535644498401
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.5459514059974486
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.8409428513276622
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.4292005914279082
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7179569506593433
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.7382817329981637
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.8467348336871474
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.792105359254659
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.729475268810181
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.973703792144232
+Yes,NA,NY,SUCSAC,Psychology,3.0926819165657125
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.44491616388362
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.6564441641778327
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.385970890741072
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,2.8723765627990825
+Yes,25,Cook,SGGSAC,Sociology,3.6256014955996756
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.4709261631709687
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.631830504524436
+Yes,31,NA,SGGSAC,Sociology,3.2542550625778786
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.5205396781766587
+Maybe,28,Orange county,SUCSAC,Economics,3.6722071647974595
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.7486624038429195
+Yes,24,"York County, South Carolina",SGGSAC,History,3.751314885374088
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.557461331811558
+Yes,NA,NY,SUCSAC,Psychology,3.8842361366791454
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.2733858509875344
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.3809814685760626
+Yes,25,Cook,SGGSAC,Sociology,3.541431745813205
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,2.9189316760780004
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.5727881061155666
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.0257508622226124
+Yes,25,Cook,SGGSAC,Sociology,3.7296904554991333
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.606848489428172
+Yes,NA,Cook county,SGGSAC,Sociology,3.662596136162303
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.240052176073144
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.3458106534058363
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.5469179324472586
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.0317910077550163
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.361583634826641
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.193387912325588
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4948652410849053
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.3479231477972675
+Yes,23,"Cook county, IL",SGGSAC,Sociology,2.9237321057087438
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.777365388015642
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.7900632627631077
+Yes,NA,Cook county,SGGSAC,Sociology,3.0395241831642132
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.489794036436227
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.4381969560337926
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.2230405650157987
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.647871741011405
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.608292341917953
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.899295418705211
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.300433477885546
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.8504849815706113
+Yes,25,Cook,SGGSAC,Sociology,3.601643863049112
+Yes,NA,Cook county,SGGSAC,Sociology,4.022032487779261
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.0172141149925387
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.3002266886962195
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.4665931613317205
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.517955885317172
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.3809187280126842
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.3091620028224447
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,4.197378096040456
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.3041164471756748
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.8370473335787985
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.681443162817138
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.5707142557409894
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.0584822430347978
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.1663535742819366
+Yes,24,"York County, South Carolina",SGGSAC,History,3.5219377252574064
+Yes,NA,NY,SUCSAC,Psychology,3.688605894128841
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.4630094662599062
+Yes,22,"Cook County, IL",SGGSAC,Sociology,2.909478187704903
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,2.916690211360293
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.7154110442608044
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,4.150453537421866
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.2946983597688555
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.5756087615505434
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.5307530328229593
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4014854232270038
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.7824521808029137
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.723804780982004
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.23727643571595
+Yes,31,NA,SGGSAC,Sociology,3.600378352491532
+Yes,24,"York County, South Carolina",SGGSAC,History,3.082458386769317
+Yes,31,NA,SGGSAC,Sociology,3.285189380301122
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.950349180262811
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.584365211252122
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.172665603973173
+Yes,24,"Cook, IL",SGGSAC,Sociology,2.961579662342538
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7532032067654395
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.599368381502276
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.3584298483819928
+Yes,NA,Cook county,SGGSAC,Sociology,4.010603266114622
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.820637292624759
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.748124354950386
+Yes,25,Cook,SGGSAC,Sociology,3.6149879860294862
+Yes,24,"York County, South Carolina",SGGSAC,History,3.846909830918043
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7205648557991986
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.569216929812953
+Yes,31,NA,SGGSAC,Sociology,3.301119162332452
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.390246121307168
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.8034386749836693
+Yes,NA,NY,SUCSAC,Psychology,3.131417476209344
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.4445101036279326
+Maybe,28,Orange county,SUCSAC,Economics,3.770828340408981
+Yes,NA,NY,SUCSAC,Psychology,3.8094162636251236
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.5499605058972974
+Yes,23,"Cook county, IL",SGGSAC,Sociology,4.083635841326009
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.8616717900408966
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.7123558408798965
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.670465380412883
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.370227218232136
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.8868923540990448
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.6895977820434496
+Maybe,28,Orange county,SUCSAC,Economics,3.5871742856386084
+Yes,24,"York County, South Carolina",SGGSAC,History,3.9612784864470205
+Yes,25,Cook,SGGSAC,Sociology,3.4018892406507506
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.5838381723134134
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.6249217936774136
+Maybe,28,Orange county,SUCSAC,Economics,3.6288438446445914
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.1001155488037893
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.523748514581226
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.138774859673912
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.8702996426255654
+Yes,31,NA,SGGSAC,Sociology,3.730597026163196
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6308851811286065
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.4637804670622168
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.3477481695320312
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.1870672548974257
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6367781668331176
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.467071683832464
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.5700708444684155
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.3622255853891736
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4176097865484065
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.5192400285995897
+Yes,NA,Cook county,SGGSAC,Sociology,3.311305826550285
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.786801594954303
+Yes,23,"Cook county, IL",SGGSAC,Sociology,2.993275424482146
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2758673317353613
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.3494506849568104
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.3946136425333067
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.4954884154445427
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.466820083966172
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.644404237904987
+Yes,26,"Franklin county, OH",SGGSAC,Economics,2.973857608716183
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.377447246010867
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.1924016488078264
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.597693139929438
+Yes,NA,Cook county,SGGSAC,Sociology,3.614285983082139
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.4918326614508612
+Yes,NA,NY,SUCSAC,Psychology,2.8547423414475825
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.680500557082064
+Yes,25,Cook,SGGSAC,Sociology,3.960172682716388
+Yes,NA,Cook county,SGGSAC,Sociology,3.838807018752975
+Maybe,28,Orange county,SUCSAC,Economics,3.7855760653945034
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.7895915879213904
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.4323176653472185
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.520482211601119
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.606725776776174
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.260208019059778
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.34178008063687
+Maybe,28,Orange county,SUCSAC,Economics,3.1382070552925034
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.3571114006572738
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.419829125876899
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.132754207842245
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.6644874660342395
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.218732426298664
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.534681197010467
+Maybe,28,Orange county,SUCSAC,Economics,3.5479405328237523
+Maybe,28,Orange county,SUCSAC,Economics,3.145588309928784
+Yes,NA,NY,SUCSAC,Psychology,3.7806232687018158
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.608012061426369
+Yes,25,Cook,SGGSAC,Sociology,3.4685390021737694
+Maybe,28,Orange county,SUCSAC,Economics,3.5380105713038095
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.4156438237217435
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.3270028722679066
+Yes,NA,Cook county,SGGSAC,Sociology,3.1589852307393875
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.696020640976186
+Yes,NA,NY,SUCSAC,Psychology,3.440425639055104
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.3814504448013
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,2.8628619193160607
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.4721940863032383
+Yes,NA,"Arlington, VA",VANESSA,Sociology,2.672569598482965
+Yes,NA,NY,SUCSAC,Psychology,2.8360779741708555
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.5062411834662415
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.7486503340909403
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.217397237803514
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.266082202261735
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.5311668917491583
+Yes,NA,NY,SUCSAC,Psychology,3.6044300944387073
+Yes,24,"York County, South Carolina",SGGSAC,History,3.0304740942459194
+Yes,25,Cook,SGGSAC,Sociology,3.700487453844646
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.7947511090756896
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.3229405470164264
+Yes,23,"Franklin county, OH",SGGSAC,Economics,4.016848959471464
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.2279847739991023
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.9090167775183486
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.589441098962611
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5685867674577927
+Yes,NA,NY,SUCSAC,Psychology,3.3707967545462076
+Yes,NA,Cook county,SGGSAC,Sociology,3.8720490625332795
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.6621020748578506
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.7287903419466844
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.8835426510808193
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.736385978895459
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.093722133183535
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.362014313949623
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.9347645767544024
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.422299156274799
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.238646052736683
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.582890898775047
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.5376033132544897
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.3097769974461806
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.061413110234352
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.3404249584016816
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.4968266253091325
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.6929859653730754
+Yes,25,Cook,SGGSAC,Sociology,3.771538845111793
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.678253710961907
+Yes,31,NA,SGGSAC,Sociology,3.672947113144331
+Yes,25,Cook,SGGSAC,Sociology,4.291713685020149
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.603616588131182
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,4.040724672359174
+Yes,25,Cook,SGGSAC,Sociology,3.6793430785314567
+Maybe,28,Orange county,SUCSAC,Economics,3.372759587867166
+Yes,24,"York County, South Carolina",SGGSAC,History,3.1900101372252703
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.5440383805640145
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.50250205255793
+Yes,NA,Cook county,SGGSAC,Sociology,4.074399816144537
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.790712119118946
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.588534179305632
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.479895090796933
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.0182656949951876
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.811703953358441
+Maybe,28,Orange county,SUCSAC,Economics,3.53938495596786
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.5938799017187635
+Yes,27,"Racine County, WI",VANESSA,Psychology,2.867226701266257
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.3003581983343535
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.5018784576098705
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.399451234610143
+Maybe,28,Orange county,SUCSAC,Economics,3.3904222374599464
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,2.8651697609701805
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.962675290149872
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.661290787550262
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.7359205056048364
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.5382791250922887
+Yes,24,"York County, South Carolina",SGGSAC,History,3.9243337490469523
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.243193353437081
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,4.02491583511468
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.2656212349175555
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.4972761549920803
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.679483730338951
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4245829901677873
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.0953235160004287
+Yes,NA,NY,SUCSAC,Psychology,3.6049857437379615
+Yes,NA,NY,SUCSAC,Psychology,3.326093999223042
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.372094932642951
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.3269454366372195
+Maybe,28,Orange county,SUCSAC,Economics,2.8650701199586344
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.673167673554601
+Yes,NA,NY,SUCSAC,Psychology,3.52178939985066
+Yes,45,Cook countywid,SGGSAC,Anthropology,2.7804477276990855
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.1335943857358695
+Yes,31,NA,SGGSAC,Sociology,3.3951753557810846
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.06713074880701
+Yes,NA,NY,SUCSAC,Psychology,3.82587703264948
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.5756970316986836
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.5962144232350663
+Yes,NA,NY,SUCSAC,Psychology,3.224762161580434
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.187329752816295
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.612049346070297
+Maybe,28,Orange county,SUCSAC,Economics,4.0858398955595865
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.155387594805325
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.4830855481023733
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.035368976955157
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.2641875395492503
+Yes,24,"York County, South Carolina",SGGSAC,History,3.411410820441618
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.076768615833314
+Yes,31,NA,SGGSAC,Sociology,3.717412990943126
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.4013095125446866
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.8149269879184944
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.510637090102103
+Yes,NA,Cook county,SGGSAC,Sociology,3.249652785452395
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4066976942352007
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.2922917770614126
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.182531762450048
+Yes,NA,NY,SUCSAC,Psychology,3.8706651939946197
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,2.905829429844957
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.7810559512135806
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.3644206474538816
+Yes,24,"York County, South Carolina",SGGSAC,History,3.6937072960564654
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,2.518329631992567
+Yes,24,"Cook, IL",SGGSAC,Sociology,4.074394966863952
+Yes,24,"York County, South Carolina",SGGSAC,History,3.0486279328930324
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.471181307343104
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.5467469056031384
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.5175723124311657
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.609754410312605
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.615104523093814
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.4232853105982426
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.3154961805968823
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.8851979469332214
+Yes,22,"Cook County, IL",SGGSAC,Sociology,2.884640946037477
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.6825894904643417
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,4.034372575808716
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.3601865045884516
+Maybe,28,Orange county,SUCSAC,Economics,3.135326992107705
+Yes,23,"Cook county, IL",SGGSAC,Sociology,4.013007100751587
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.610405849902667
+Yes,NA,NY,SUCSAC,Psychology,2.9160821334094655
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,4.214299126225883
+Yes,22,"Cook County, IL",SGGSAC,Sociology,4.022504397406439
+Yes,25,Cook,SGGSAC,Sociology,3.2310867574738977
+Yes,NA,Cook county,SGGSAC,Sociology,3.1807866398397047
+Yes,25,Cook,SGGSAC,Sociology,3.489487551197636
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.566046498759522
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.898802181407043
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.5502595844196305
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,2.9430196124635946
+Yes,31,NA,SGGSAC,Sociology,3.229564404713434
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.0648559114558616
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.761838941978323
+Yes,25,Cook,SGGSAC,Sociology,3.2140487474179094
+Yes,24,"York County, South Carolina",SGGSAC,History,3.822328890856123
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.0374460432071517
+Yes,NA,NY,SUCSAC,Psychology,3.5926239002807274
+Yes,NA,Cook county,SGGSAC,Sociology,3.1951774845199097
+Yes,25,Cook,SGGSAC,Sociology,3.3752227449247254
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.294086401647018
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.664681035301666
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.557963554312227
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.010259124330396
+Yes,45,Cook countywid,SGGSAC,Anthropology,2.898229182240331
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.5837783762388002
+Yes,NA,Cook county,SGGSAC,Sociology,2.953970767275292
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.0727011242338813
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.2671661472424858
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.3908236703435746
+Yes,25,Cook,SGGSAC,Sociology,3.439589715369631
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5925764221662697
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6984472392628027
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.6972126717464926
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.9024208294360614
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.2698837546644515
+Maybe,28,Orange county,SUCSAC,Economics,3.470772476487274
+Yes,31,NA,SGGSAC,Sociology,3.4746909699196236
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.3315520041801343
+Yes,24,"York County, South Carolina",SGGSAC,History,4.022248641819869
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.5043412445127897
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.9675004333627113
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.202699772085753
+Yes,24,"York County, South Carolina",SGGSAC,History,3.1844906096732717
+Yes,24,"Cook, IL",SGGSAC,Sociology,4.114933273588377
+Yes,25,Cook,SGGSAC,Sociology,3.462802068193153
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.4781454191723262
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.5668640830290435
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.6042426484060766
+Yes,24,"York County, South Carolina",SGGSAC,History,3.1302004387375497
+Yes,24,"Cook, IL",SGGSAC,Sociology,2.991836828445096
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2059647623066696
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.606971280214075
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.6703284336172324
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.509527258211631
+Yes,22,"Cook County, IL",SGGSAC,Sociology,2.9488419596067406
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.7034872824752445
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.2746841343132567
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.324316319089496
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.3489430862065737
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.495357142717292
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.8600645718492785
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.9684801912503898
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.7380235144017706
+Yes,31,NA,SGGSAC,Sociology,3.4706614834466345
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.7079691758200384
+Yes,24,"York County, South Carolina",SGGSAC,History,3.402670310248144
+Yes,NA,NY,SUCSAC,Psychology,3.732220705253651
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.6131800791964905
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.1181242968356595
+Maybe,28,Orange county,SUCSAC,Economics,3.7353454721996937
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.644631294780311
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.7283519776797527
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,2.813203384772125
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.1842198794561014
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.7484807199759067
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.4921143721906094
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.355105249801663
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.263968862437053
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.450433129791256
+Yes,NA,Cook county,SGGSAC,Sociology,3.7512106218596104
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.4709581753401446
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.7174614060014073
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.308006598502597
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.5290523467625574
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.4032632473386677
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.797479789902016
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.611737737241617
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.5573683743301827
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.368627633463065
+Yes,31,NA,SGGSAC,Sociology,3.4805135974069628
+Yes,24,"York County, South Carolina",SGGSAC,History,3.179198241169654
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.940092360833388
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.1419577406014128
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.6449690373904517
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.137294125949152
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.1419842466959915
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.318817538516371
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,2.9851527450036395
+Yes,NA,Cook county,SGGSAC,Sociology,3.6804472346624233
+Yes,22,"Cook County, IL",SGGSAC,Sociology,2.7026210288379735
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.743816107000192
+Maybe,28,Orange county,SUCSAC,Economics,3.3390583759402603
+Yes,31,NA,SGGSAC,Sociology,3.8080902608906126
+Yes,24,"York County, South Carolina",SGGSAC,History,3.3745343246338977
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.675181984146392
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.5068379108814574
+Yes,NA,NY,SUCSAC,Psychology,3.0987497285886954
+Yes,NA,Cook county,SGGSAC,Sociology,3.5884122439663013
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.4320947982346612
+Yes,NA,NY,SUCSAC,Psychology,3.515937195906051
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.9751425759693158
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.2929882397620456
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.4201675183509046
+Yes,NA,NY,SUCSAC,Psychology,3.270700569890645
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,2.8327474075393777
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.1859758301300682
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.5507417469709788
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.297072553719692
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.24749286102607
+Maybe,28,Orange county,SUCSAC,Economics,2.77213514451519
+Yes,25,Cook,SGGSAC,Sociology,3.5995035222594174
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.9957937843263442
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.600126941027203
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.238501173852581
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.263848140696436
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.5174662388862976
+Maybe,28,Orange county,SUCSAC,Economics,3.288220928009139
+Yes,NA,Cook county,SGGSAC,Sociology,3.228258996780095
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.4326526789528864
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,2.827584403944742
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.841135362951392
+Yes,NA,Cook county,SGGSAC,Sociology,3.164074576021881
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.5183530465146964
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.668702591368165
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,4.0946525255189234
+Yes,24,"Cook, IL",SGGSAC,Sociology,3.9430051699683246
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.1989485613193116
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.4000237989313518
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.478173368022616
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.8206620645065
+Yes,25,Cook,SGGSAC,Sociology,3.6826568516402527
+Yes,24,"York County, South Carolina",SGGSAC,History,3.6020538592930698
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.359711982146761
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.5171306143069456
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,4.0778461823791465
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.4523804546375856
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.3546739016794924
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,2.991981945308913
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.8145182273662255
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.5031324759160736
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.561567317459028
+Yes,NA,NY,SUCSAC,Psychology,3.5597249472387675
+Yes,27,"Dallas County, TX",VANESSA,Sociology,2.9532625131249244
+Yes,NA,Cook county,SGGSAC,Sociology,3.6328166490196523
+Yes,31,NA,SGGSAC,Sociology,3.5219499859612635
+Yes,31,NA,SGGSAC,Sociology,3.23239869367046
+Yes,NA,Cook county,SGGSAC,Sociology,3.210230104122563
+Maybe,28,Orange county,SUCSAC,Economics,3.8075326192221803
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.6236857259378024
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.619332389633703
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.748084633311542
+Yes,NA,Cook county,SGGSAC,Sociology,2.9690704186039265
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.4221671692646902
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.3834982717651667
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.376838100295542
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.316010093977335
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.6358036661593407
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.8204592985561425
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.381361495198519
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.7790837853164447
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.7323809839541338
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.937307943048282
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.326288420627433
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.348327778001787
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.5498411019424307
+Maybe,28,Orange county,SUCSAC,Economics,3.3101615989291036
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.287929432270631
+Yes,25,Cook,SGGSAC,Sociology,3.248820232058294
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.0121511454587733
+Yes,NA,NY,SUCSAC,Psychology,3.613564747757781
+Maybe,24,"Cook county, IL",SGGSAC,Sociology,3.632204770582319
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,2.871648874224182
+Yes,25,Cook,SGGSAC,Sociology,3.525920374475407
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,2.6347170557400217
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.828991107658664
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,2.9619757502058897
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.8628746051953606
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.457175625502458
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.6294596167587567
+Yes,NA,Cook county,SGGSAC,Sociology,3.6613464945452017
+Yes,45,Cook countywid,SGGSAC,Anthropology,3.3940494369020215
+Yes,25,Cook,SGGSAC,Sociology,3.9242682741146884
+Yes,NA,Cook county,SGGSAC,Sociology,3.4636498602740993
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.7818632770565954
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.235728622609477
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.4118560903815016
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.4290309468879134
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.799303844933494
+Maybe,28,Orange county,SUCSAC,Economics,3.530631619943607
+Maybe,28,Orange county,SUCSAC,Economics,3.488504862624985
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.573814833222893
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,2.8699588544496146
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.5151804023454147
+Yes,NA,NY,SUCSAC,Psychology,3.3249314458952166
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.0869094313128604
+Yes,NA,NY,SUCSAC,Psychology,3.118915913776579
+Yes,31,NA,SGGSAC,Sociology,3.666421467428063
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.6872008998224817
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.849916657203489
+Yes,31,NA,SGGSAC,Sociology,3.0209561288246984
+Yes,NA,Cook county,SGGSAC,Sociology,3.4356115286325113
+Yes,NA,NY,SUCSAC,Psychology,3.4114478937380386
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4007422766901114
+Yes,31,NA,SGGSAC,Sociology,3.10384859631305
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.676814471101749
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,4.119084676670132
+Yes,45,Cook countywid,SGGSAC,Anthropology,4.155202610416681
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.594706485792431
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.4854839175347343
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.2312609658815727
+Maybe,28,Orange county,SUCSAC,Economics,3.3201364439042313
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.6983614304878434
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.3824696534004706
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.097597690659031
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.6774175911557707
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.578031809097981
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.276399346859598
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.7370123215350257
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.9351514771743044
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7568765503538586
+Yes,45,Cook countywid,SGGSAC,Anthropology,2.981404977764571
+Maybe,28,Orange county,SUCSAC,Economics,3.4970734085519166
+Yes,25,Cook,SGGSAC,Sociology,3.745405041341673
+Yes,26,"Dekalb, GA",VANESSA,Anthropology,3.554604035144589
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.624842557906343
+Yes,23,"Burlington county, NJ",VANESSA,Psychology,3.4220309956585746
+Yes,NA,NY,SUCSAC,Psychology,3.4328627087225856
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.0555959163710633
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.5717003910544345
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.936545874745638
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.95610317777272
+Maybe,28,Orange county,SUCSAC,Economics,3.3135798316296707
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.924719185639985
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.964935968932205
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.685382140890472
+Yes,NA,Cook county,SGGSAC,Sociology,3.572586702349329
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.918713948801092
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.8573096860442195
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.4897661571926997
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.376012783397009
+Yes,25,Cook,SGGSAC,Sociology,3.777728027888838
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.425408307536617
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.227524121456846
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2773743621548874
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.262953321361969
+Yes,27,"Racine County, WI",VANESSA,Psychology,3.15960122326123
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.1881913853953137
+Yes,27,"Manatee county, Florida",SGGSAC,Anthropology,3.0415827112322
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.8254541275017107
+Maybe,25,"Cuyahoga County, OH",SGGSAC,Anthropology,3.8923831248617002
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.963307324839835
+Yes,NA,"Arlington, VA",VANESSA,Sociology,3.9082762526502286
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2424486430474233
+Maybe,28,Orange county,SUCSAC,Economics,3.435591299582131
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.589537664273379
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.7797459343456405
+Yes,35,"Hyde Park, IL",SGGSAC,Economics,3.6784033443148836
+Yes,NA,NY,SUCSAC,Psychology,3.5193943989998786
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.479295573719189
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.900537078119957
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.571692376450866
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,4.040643591565228
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,4.296530415590728
+Yes,23,"Bexar county, TX",SGGSAC,Anthropology,3.372977532549582
+Yes,35,"Cook County, IL",SUCSAC,Economics,3.3743466832785978
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.3404949004299884
+Yes,23,"Franklin county, OH",SGGSAC,Economics,2.7303047968802314
+Yes,23,"Franklin county, OH",SGGSAC,Economics,4.074320046030355
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.52369448364689
+Yes,31,NA,SGGSAC,Sociology,3.3311821753488253
+Yes,24,"York County, South Carolina",SGGSAC,History,3.7710278397976262
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.344815773543359
+Yes,NA,NY,SUCSAC,Psychology,3.488173766502318
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.6677946271559745
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.0373372854118506
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.4576151778924915
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6773180658107454
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.6445025728780385
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.0244102270679383
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.1584845335604492
+Yes,NA,NY,SUCSAC,Psychology,3.522350760645669
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.022747807983336
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.362678985385987
+Yes,NA,NY,SUCSAC,Psychology,3.7737565715992973
+Yes,26,"Franklin county, OH",SGGSAC,Economics,4.062048767931193
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.2546795077393686
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.431823597703618
+Yes,31,NA,SGGSAC,Sociology,2.9994791747148932
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.664652006667067
+Yes,24,"York County, South Carolina",SGGSAC,History,3.3911177821852503
+Yes,NA,NY,SUCSAC,Psychology,3.882650436961467
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.296856449425184
+Yes,31,NA,SGGSAC,Sociology,3.6913036155041765
+Yes,26,"Franklin county, OH",SGGSAC,Economics,4.217634236138997
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.4550170721499796
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.3900686394459068
+Yes,NA,NY,SUCSAC,Psychology,3.567228228362552
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.6548818910288863
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.465899670002084
+Yes,NA,NY,SUCSAC,Psychology,3.878207246945886
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.542190550064473
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6461475271214066
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.034364026669361
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.898763291015626
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5275198546339643
+Yes,NA,Cook county,SGGSAC,Sociology,3.921904037000999
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6020360161972587
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.5884574520988193
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2574358864048634
+Yes,NA,Cook county,SGGSAC,Sociology,3.4340366707373926
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.685838045034385
+Yes,NA,Cook county,SGGSAC,Sociology,3.8781781930417534
+Yes,NA,Cook county,SGGSAC,Sociology,3.4155935840633145
+Yes,NA,Cook county,SGGSAC,Sociology,3.288336778765011
+Yes,NA,Cook county,SGGSAC,Sociology,3.253500135615874
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.2848230049365394
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.3672850631456974
+Yes,NA,Cook county,SGGSAC,Sociology,3.575158594329286
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.456806989492234
+Yes,31,NA,SGGSAC,Sociology,3.2193577305439605
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.5819601702574904
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4467881884675418
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.0216537240061148
+Yes,31,NA,SGGSAC,Sociology,3.5124867534221997
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6683462953810775
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.6648894635511824
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.4874450034140954
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.4552614449938033
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.6373597896617924
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.5595443081263873
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.680776967587322
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.794973645064639
+Yes,31,NA,SGGSAC,Sociology,3.820355586084641
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4787189613862544
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.409518025277426
+Yes,NA,NY,SUCSAC,Psychology,3.378542162966531
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.429116633633772
+Yes,24,"York County, South Carolina",SGGSAC,History,4.022710308425459
+Yes,NA,Cook county,SGGSAC,Sociology,2.967632712652102
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.581401398169844
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.376876788805734
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,4.177408856461642
+Yes,31,NA,SGGSAC,Sociology,3.160681852454263
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.208628039691876
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.474369602759278
+Yes,31,NA,SGGSAC,Sociology,2.863553571383887
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.810043979146736
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.524334388348158
+Yes,31,NA,SGGSAC,Sociology,3.425621161361515
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.9862138940477374
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.927765031558883
+Yes,31,NA,SGGSAC,Sociology,3.1592395538096283
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.503955005248458
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2041185727260535
+Yes,24,"York County, South Carolina",SGGSAC,History,3.5164718743483214
+Yes,31,NA,SGGSAC,Sociology,3.10681758717295
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.506783682425499
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.575595499505821
+Yes,NA,NY,SUCSAC,Psychology,3.1526811073854017
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.719014606158941
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.7656917244090167
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.580773704359897
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.5509621823118684
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.8761527016540684
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.8289876184319582
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.455841063078465
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.029068717310209
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.4059403963135906
+Yes,NA,NY,SUCSAC,Psychology,3.8761732239042104
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2168090370104285
+Yes,31,NA,SGGSAC,Sociology,3.3168971014301714
+Yes,24,"York County, South Carolina",SGGSAC,History,3.7081367222667407
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,2.944205778948756
+Yes,31,NA,SGGSAC,Sociology,2.9483944108258595
+Yes,NA,NY,SUCSAC,Psychology,3.572217814151637
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.7688987697615337
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.511617277823228
+Yes,NA,Cook county,SGGSAC,Sociology,3.357515044910182
+Yes,31,NA,SGGSAC,Sociology,3.188873718565841
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.5197116836162485
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.3419878498212396
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,4.394524333578985
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.9789682470035124
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.3796573313336333
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.6810643589874292
+Yes,NA,Cook county,SGGSAC,Sociology,3.549800931394563
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.743211559446794
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.132818704176235
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.86263660752437
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.521803918986981
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5187920386740683
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.173184898231231
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,2.963000523195192
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.8608821992600473
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.579552686167431
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.276530018498974
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.830035496754763
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2355343677217183
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.7564814081553806
+Yes,31,NA,SGGSAC,Sociology,3.319194196129367
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.486093714708384
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.1573039647929497
+Yes,NA,Cook county,SGGSAC,Sociology,3.6195581883764527
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.384387272152789
+Yes,NA,NY,SUCSAC,Psychology,3.553740660634909
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.4885388949336207
+Yes,27,"Dallas County, TX",VANESSA,Sociology,4.0417151044950455
+Yes,24,"York County, South Carolina",SGGSAC,History,3.442710231112296
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.0904991967893185
+Yes,NA,NY,SUCSAC,Psychology,3.0885513865149012
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4075691703568625
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.4701336414658077
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.2412838582027
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.8210634077823786
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.615599911429304
+Yes,24,"York County, South Carolina",SGGSAC,History,3.138346516608111
+Yes,31,NA,SGGSAC,Sociology,3.3276805337673863
+Yes,24,"York County, South Carolina",SGGSAC,History,3.7865447680930475
+Yes,24,"York County, South Carolina",SGGSAC,History,3.5414376562490864
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4345089692770503
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.0554851410498824
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.816158059858761
+Yes,NA,Cook county,SGGSAC,Sociology,3.22229625979967
+Yes,31,NA,SGGSAC,Sociology,3.400151748087184
+Yes,NA,NY,SUCSAC,Psychology,3.3220223823241297
+Yes,24,"York County, South Carolina",SGGSAC,History,3.3320761884851944
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.804168980776545
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.557188926111669
+Yes,NA,NY,SUCSAC,Psychology,3.2314252491208806
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.156045801256121
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.029351538314156
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.3982562329324133
+Yes,24,"York County, South Carolina",SGGSAC,History,3.540819423089906
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.784250958383668
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.0715751830098386
+Yes,24,"York County, South Carolina",SGGSAC,History,4.017855868979874
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.394028805858762
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.8083714240609288
+Yes,24,"York County, South Carolina",SGGSAC,History,4.136976665110584
+Yes,31,NA,SGGSAC,Sociology,3.4164814684865816
+Yes,NA,Cook county,SGGSAC,Sociology,3.1202787965706826
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.6389146232387164
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.494792921993321
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.437892472220411
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4146683657185157
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.0477511915413267
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4022150901674215
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.2583274470141323
+Yes,24,"York County, South Carolina",SGGSAC,History,3.74885607622393
+Yes,24,"York County, South Carolina",SGGSAC,History,3.7800491554585225
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.4314714160252597
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.2287938911487872
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2150929093923755
+Yes,24,"York County, South Carolina",SGGSAC,History,3.0373732773761586
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.4777248178463878
+Yes,NA,Cook county,SGGSAC,Sociology,4.084995883667881
+Yes,NA,Cook county,SGGSAC,Sociology,3.1297486222268005
+Yes,NA,NY,SUCSAC,Psychology,3.610675543440426
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.117895285988169
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.929584128136817
+Yes,NA,NY,SUCSAC,Psychology,3.0645913071786213
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4023854718641364
+Yes,NA,NY,SUCSAC,Psychology,3.1184680633307447
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.8475028195336725
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.6451311078193895
+Yes,24,"York County, South Carolina",SGGSAC,History,3.377285078573056
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.547865772844149
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.1121031950740004
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7698470734489167
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.766889919182396
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.6560044842919086
+Yes,NA,NY,SUCSAC,Psychology,3.930733000717963
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.146385486319663
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.4799116566812085
+Yes,31,NA,SGGSAC,Sociology,3.457489640413389
+Yes,24,"York County, South Carolina",SGGSAC,History,3.1873019400164866
+Yes,NA,NY,SUCSAC,Psychology,3.792945684708125
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.562358788007892
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.3722973222052812
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.5639860141967423
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4143211105628666
+Yes,NA,Cook county,SGGSAC,Sociology,2.9857563416189703
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6862431087496654
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.6713350359249697
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.2324762089697794
+Yes,23,"Cook county, IL",SGGSAC,Sociology,2.9493918857515684
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.6704891487609617
+Yes,NA,Cook county,SGGSAC,Sociology,3.974714828417211
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.0834907331074275
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.4072135665987062
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.89150783296074
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.2797136019228965
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.8711643435621417
+Yes,NA,Cook county,SGGSAC,Sociology,3.6208789008204754
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.360606671582192
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.288210400284652
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.803121564262731
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.396448172852581
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.466590464970101
+Yes,24,"York County, South Carolina",SGGSAC,History,3.6068102057209894
+Yes,NA,NY,SUCSAC,Psychology,3.6865746097426
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.631889874468898
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7732410393063955
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.7810610377629548
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.5390948745657766
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.407729590631039
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.734786467875465
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6634461372870364
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.435345939506801
+Yes,31,NA,SGGSAC,Sociology,3.8361265676720953
+Yes,24,"York County, South Carolina",SGGSAC,History,3.300205561181557
+Yes,31,NA,SGGSAC,Sociology,3.611467002051283
+Yes,22,"Cook County, IL",SGGSAC,Sociology,2.6341894923169633
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.0519974521673867
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6730494996928056
+Yes,NA,Cook county,SGGSAC,Sociology,3.7571909477653267
+Yes,26,"Franklin county, OH",SGGSAC,Economics,2.9144695968439924
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.1103160830718086
+Yes,24,"York County, South Carolina",SGGSAC,History,3.278821655267521
+Yes,22,"Cook County, IL",SGGSAC,Sociology,2.7236840303041077
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.6543962562785346
+Yes,31,NA,SGGSAC,Sociology,3.9708717923973236
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.229397199215812
+Yes,NA,NY,SUCSAC,Psychology,3.1696125704993796
+Yes,NA,NY,SUCSAC,Psychology,3.6387362325566692
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.3936569694071235
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.528285640226989
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.885839929050065
+Yes,24,"York County, South Carolina",SGGSAC,History,3.8518883329136604
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.712863579488794
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.3702896641114526
+Yes,31,NA,SGGSAC,Sociology,3.6152237294167975
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.774798822391692
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.7125938745086824
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.1707433428003284
+Yes,23,"Franklin county, OH",SGGSAC,Economics,2.967345836980646
+Yes,NA,Cook county,SGGSAC,Sociology,3.765459786507495
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.323774808341733
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,4.079150620425725
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,4.030431030638085
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.3133172847366565
+Yes,26,"Franklin county, OH",SGGSAC,Economics,4.0269948808490375
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.7728482044265865
+Yes,NA,Cook county,SGGSAC,Sociology,3.71358162470899
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5690492943032925
+Yes,NA,NY,SUCSAC,Psychology,2.9186429515262335
+Yes,NA,Cook county,SGGSAC,Sociology,3.3280156311662794
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.17628862427672
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.2561713072513636
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.9263512647540155
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.712177601256457
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7688815826336945
+Yes,NA,NY,SUCSAC,Psychology,3.827427874126012
+Yes,NA,Cook county,SGGSAC,Sociology,3.9186926341111343
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.527153402714806
+Yes,NA,NY,SUCSAC,Psychology,3.1179863393203773
+Yes,NA,NY,SUCSAC,Psychology,3.499052935609658
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2866411545993617
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.33128554361231
+Yes,NA,NY,SUCSAC,Psychology,3.323309169643574
+Yes,24,"York County, South Carolina",SGGSAC,History,3.653168180554176
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.076068276738909
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.233146594383891
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.8068772624799356
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.0019230998809245
+Yes,NA,NY,SUCSAC,Psychology,3.8133455518421027
+Yes,NA,Cook county,SGGSAC,Sociology,3.7100223046560346
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.196316506478113
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.8163360604327043
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.6262258600335917
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.239630261918158
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.3986614884570723
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6049172668477727
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.7311341685895725
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.3202609274018147
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.2480551380947578
+Yes,31,NA,SGGSAC,Sociology,3.2856367687274077
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7772370138879694
+Yes,24,"York County, South Carolina",SGGSAC,History,3.5967710134982473
+Yes,NA,Cook county,SGGSAC,Sociology,3.2776699554242863
+Yes,27,"Dallas County, TX",VANESSA,Sociology,2.841851297182104
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.6632089074335026
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.4210567498392197
+Yes,24,"York County, South Carolina",SGGSAC,History,3.890540787285628
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2355330779686287
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.4240554838382113
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.435780814713813
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.547734135849157
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.3304294998296973
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.37754219123211
+Yes,NA,NY,SUCSAC,Psychology,3.546085543673206
+Yes,NA,NY,SUCSAC,Psychology,3.0343320994997103
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.5900887573024796
+Yes,NA,NY,SUCSAC,Psychology,4.159481613902691
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.589424452914969
+Yes,31,NA,SGGSAC,Sociology,3.8576409326171466
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.3347239479836914
+Yes,NA,NY,SUCSAC,Psychology,3.6037383744018197
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6445743127811103
+Yes,NA,NY,SUCSAC,Psychology,3.586133067543115
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.8997087342714947
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4078437113200697
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.2391308416996725
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6309206129345872
+Yes,24,"York County, South Carolina",SGGSAC,History,3.9131679985286842
+Yes,31,NA,SGGSAC,Sociology,3.898779350330997
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.4514519485903206
+Yes,NA,Cook county,SGGSAC,Sociology,2.808280813934146
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.86526720340546
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.1569377706158632
+Yes,NA,NY,SUCSAC,Psychology,3.6963745799910264
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.302474327018789
+Yes,24,"York County, South Carolina",SGGSAC,History,3.343458279824227
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6059661257698212
+Yes,24,"York County, South Carolina",SGGSAC,History,3.7807467729218867
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.414140021739327
+Yes,22,"Cook County, IL",SGGSAC,Sociology,2.9834285646115446
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.299355778511316
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.517037330001974
+Yes,23,"Cook county, IL",SGGSAC,Sociology,4.059289181025299
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.35802092342963
+Yes,NA,NY,SUCSAC,Psychology,2.9474117140887484
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7200098063097173
+Yes,NA,Cook county,SGGSAC,Sociology,3.1128495223929566
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.467355776373533
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.348591931636499
+Yes,31,NA,SGGSAC,Sociology,3.0967691610506694
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.2108738964637373
+Yes,24,"York County, South Carolina",SGGSAC,History,3.0595339102568566
+Yes,NA,NY,SUCSAC,Psychology,3.5427236596926597
+Yes,NA,Cook county,SGGSAC,Sociology,3.0784860925723474
+Yes,NA,Cook county,SGGSAC,Sociology,3.0712288512209893
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.544773688975439
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.2444347041422317
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.3993127743798572
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5034649854930757
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.837363853305646
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,4.134556115787795
+Yes,31,NA,SGGSAC,Sociology,3.171216342382918
+Yes,24,"York County, South Carolina",SGGSAC,History,3.5219271205170943
+Yes,23,"Cook county, IL",SGGSAC,Sociology,4.089109728558898
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.654270445875984
+Yes,24,"York County, South Carolina",SGGSAC,History,3.77008026739957
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.8157655795661167
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.4503611587566616
+Yes,24,"York County, South Carolina",SGGSAC,History,3.022101559940427
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.951941088356488
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.526348656147885
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.5577241594391036
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.190281790792984
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.496019522377313
+Yes,31,NA,SGGSAC,Sociology,3.7395294645177866
+Yes,24,"York County, South Carolina",SGGSAC,History,3.152082803081833
+Yes,NA,NY,SUCSAC,Psychology,3.765235386258555
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,2.829565129466957
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.7313958856813216
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4121451280701125
+Yes,NA,Cook county,SGGSAC,Sociology,3.337384847245936
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.185297739902835
+Yes,31,NA,SGGSAC,Sociology,3.312673962877641
+Yes,24,"York County, South Carolina",SGGSAC,History,3.832137394281869
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.5489715374305435
+Yes,NA,Cook county,SGGSAC,Sociology,3.173346052117328
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.159968546472403
+Yes,31,NA,SGGSAC,Sociology,3.5504617951040864
+Yes,24,"York County, South Carolina",SGGSAC,History,3.458020943139516
+Yes,NA,NY,SUCSAC,Psychology,3.3499342195859416
+Yes,NA,Cook county,SGGSAC,Sociology,3.4755196365822316
+Yes,NA,NY,SUCSAC,Psychology,3.474159827173984
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.4063224543749366
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.873429525849111
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.8168062274041006
+Yes,NA,NY,SUCSAC,Psychology,3.520700650018824
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.5615067834981042
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.666596980530799
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.852151803921272
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.3336146307031225
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.3114313989418407
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.228141677969605
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.1671404784744683
+Yes,NA,Cook county,SGGSAC,Sociology,3.2244403486065143
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.109841598234594
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.4407869618558875
+Yes,NA,Cook county,SGGSAC,Sociology,3.024475364022238
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.153019755108571
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.48523697397709
+Yes,24,"York County, South Carolina",SGGSAC,History,3.776316399945781
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.7959034305795707
+Yes,27,"Dallas County, TX",VANESSA,Sociology,2.977355563023118
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.537215695291396
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.7248575444438115
+Yes,27,"Dallas County, TX",VANESSA,Sociology,4.00170123669455
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.483961733826383
+Yes,NA,NY,SUCSAC,Psychology,3.108679639861009
+Yes,27,"Dallas County, TX",VANESSA,Sociology,4.037676611985036
+Yes,NA,Cook county,SGGSAC,Sociology,3.506556485302386
+Yes,31,NA,SGGSAC,Sociology,3.2771760822972764
+Yes,31,NA,SGGSAC,Sociology,4.115833955046664
+Yes,NA,Cook county,SGGSAC,Sociology,3.523667270410402
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.5714872494225487
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.0631782360416127
+Yes,NA,Cook county,SGGSAC,Sociology,3.299902093252936
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.0898294926933074
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,4.116604656924681
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.347403360403756
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.2089211476834385
+Yes,27,"Dallas County, TX",VANESSA,Sociology,2.8254246500333036
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.479842249748181
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.810893501442133
+Yes,NA,NY,SUCSAC,Psychology,3.1484674927514495
+Yes,NA,Cook county,SGGSAC,Sociology,3.495900928616984
+Yes,NA,Cook county,SGGSAC,Sociology,3.6428258456841434
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.5537396755840582
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.2226280689722486
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.214882628394917
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.1602067739917725
+Yes,NA,NY,SUCSAC,Psychology,3.923874226677876
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.347536626524397
+Yes,NA,NY,SUCSAC,Psychology,3.641994719115004
+Yes,31,NA,SGGSAC,Sociology,3.709260760486463
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.8017806529209714
+Yes,31,NA,SGGSAC,Sociology,3.2689247578003386
+Yes,NA,Cook county,SGGSAC,Sociology,3.4566637323106746
+Yes,NA,NY,SUCSAC,Psychology,3.5081028042944227
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4636407602438193
+Yes,31,NA,SGGSAC,Sociology,3.3076459681391492
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.421792531788025
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.3196478894883965
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.782100535839003
+Yes,27,"Dallas County, TX",VANESSA,Sociology,3.3573211330572703
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.2129916076072313
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.1768298002357342
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4670734951651903
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.7849613211350004
+Yes,22,"Cook County, IL",SGGSAC,Sociology,4.091235656406506
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.70090750643572
+Yes,NA,NY,SUCSAC,Psychology,3.7883720277597863
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.3984141861346315
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.5572060491065387
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.3278766180015924
+Yes,NA,Cook county,SGGSAC,Sociology,3.666520269096322
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.875265297821182
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.7908229054229072
+Yes,23,"Cook county, IL",SGGSAC,Sociology,3.0617256188452395
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.86253899142914
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.3248509148557606
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.146185071306345
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.3063667714562306
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.1121616110229193
+Yes,23,"Knoxville, Tennesse",SGGSAC,Political Science,3.3772110931948296
+Yes,NA,NY,SUCSAC,Psychology,3.6124682085820328
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.2465951152519477
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.711159308917763
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.7925605492109624
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.646461447489108
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.4393127490730953
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.341455120816992
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4499262031522306
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.3186337534686183
+Yes,31,NA,SGGSAC,Sociology,4.259511779906977
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.4001829743044047
+Yes,NA,NY,SUCSAC,Psychology,3.497477963595982
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.415187144003842
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.1546786019120603
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.493980490977743
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.724356292367842
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.757050094990791
+Yes,NA,NY,SUCSAC,Psychology,3.942353079284715
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.5811245977845347
+Yes,NA,NY,SUCSAC,Psychology,3.6232347724914007
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.1675503776857146
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.246002042214651
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.552118542826739
+Yes,31,NA,SGGSAC,Sociology,3.470920188940676
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6806322789584516
+Yes,NA,NY,SUCSAC,Psychology,3.798610055366952
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.202565119467088
+Yes,31,NA,SGGSAC,Sociology,3.0070286620516002
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.3032139830723817
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.5656384938761168
+Yes,NA,NY,SUCSAC,Psychology,4.028298774936753
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.531487212943163
+Yes,NA,NY,SUCSAC,Psychology,3.7212512007857943
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.184331415048497
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.303716752327802
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.4148345392346924
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.8413654531423376
+Yes,NA,Cook county,SGGSAC,Sociology,3.884222122817584
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.970325104292617
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2085928090267406
+Yes,NA,Cook county,SGGSAC,Sociology,3.547573515145905
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.198356838707514
+Yes,NA,Cook county,SGGSAC,Sociology,3.182494699754738
+Yes,NA,Cook county,SGGSAC,Sociology,3.48813333079414
+Yes,NA,Cook county,SGGSAC,Sociology,3.389308778234292
+Yes,NA,Cook county,SGGSAC,Sociology,3.3431308138417695
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.54918471648026
+Yes,NA,Cook county,SGGSAC,Sociology,3.3412919698675276
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.3539925680707223
+Yes,31,NA,SGGSAC,Sociology,3.2676731341597187
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.419218507162479
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.9478563941927276
+Yes,31,NA,SGGSAC,Sociology,3.6293325567132446
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.7050090337604558
+Yes,23,"Franklin county, OH",SGGSAC,Economics,2.7301683839076847
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.8209296663730723
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.357537080898768
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.624184102052089
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.169647971770887
+Yes,31,NA,SGGSAC,Sociology,3.498665538861935
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.7767264461464998
+Yes,NA,NY,SUCSAC,Psychology,3.415274594177658
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.6897084961233975
+Yes,NA,Cook county,SGGSAC,Sociology,3.098288520909329
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6257199047023647
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.262750881012369
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,4.172769324955063
+Yes,31,NA,SGGSAC,Sociology,2.8794675389599496
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.5425689651804384
+Yes,31,NA,SGGSAC,Sociology,3.5384175096511705
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.5181571253132873
+Yes,31,NA,SGGSAC,Sociology,3.178479285160181
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.471800005403986
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.8469219727978974
+Yes,31,NA,SGGSAC,Sociology,3.539712372746521
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.298862737095008
+Yes,31,NA,SGGSAC,Sociology,4.135413562573361
+Yes,23,"Franklin county, OH",SGGSAC,Economics,4.203241320258976
+Yes,NA,NY,SUCSAC,Psychology,3.3348380119723107
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.170885945935126
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2987922553917444
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.494862467073589
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.3916801266277767
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.0915534908244493
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.36242246505652
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.544887737717299
+Yes,NA,NY,SUCSAC,Psychology,3.5039114089419856
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.548544123914066
+Yes,31,NA,SGGSAC,Sociology,3.7171932091256874
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.0084045470281735
+Yes,31,NA,SGGSAC,Sociology,3.420738282817992
+Yes,NA,NY,SUCSAC,Psychology,3.552284539669458
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.371873181193669
+Yes,NA,Cook county,SGGSAC,Sociology,3.424181798311505
+Yes,31,NA,SGGSAC,Sociology,3.1954186438552967
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,2.9693031769287894
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6454875179052117
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.9166388843735076
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.8575931107789194
+Yes,NA,Cook county,SGGSAC,Sociology,3.50745274767349
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.7541662994446705
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.158615649860835
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.1919819321726313
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2875550272936422
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.8260142902719996
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.1680248179460073
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.0499214831789656
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.630998187414234
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.644245358856309
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.0700074944686158
+Yes,31,NA,SGGSAC,Sociology,3.6034424704170904
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.5006732224198753
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.7065462592567173
+Yes,NA,Cook county,SGGSAC,Sociology,3.330541229523009
+Yes,NA,NY,SUCSAC,Psychology,3.158786953179456
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.475524728296111
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4720892208283307
+Yes,NA,NY,SUCSAC,Psychology,2.445142218511501
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.0830585313707277
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5612653874153906
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5871433725063793
+Yes,31,NA,SGGSAC,Sociology,3.4503209760323896
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2999445105043175
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.286147352796286
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6733027681461476
+Yes,NA,Cook county,SGGSAC,Sociology,3.8485777086923996
+Yes,31,NA,SGGSAC,Sociology,3.5276709997912654
+Yes,NA,NY,SUCSAC,Psychology,3.9226454433521
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.8300046058310677
+Yes,NA,NY,SUCSAC,Psychology,4.032629418023559
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.442372661221026
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.561654588965763
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.710257222538418
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4106280436654064
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.315550236556177
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.2222460253052274
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.617976306034435
+Yes,31,NA,SGGSAC,Sociology,2.9806418712250595
+Yes,NA,Cook county,SGGSAC,Sociology,3.86349562376554
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.9758128726748225
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.0704576876054386
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.123131948356097
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6124101291719164
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.9642218242464105
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.683678430346409
+Yes,NA,Cook county,SGGSAC,Sociology,3.103024366916121
+Yes,NA,Cook county,SGGSAC,Sociology,2.9729087032181765
+Yes,NA,NY,SUCSAC,Psychology,3.3733092700710916
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.159947292389364
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.8117351133269293
+Yes,NA,NY,SUCSAC,Psychology,3.5687873995850055
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.7184914127750845
+Yes,NA,NY,SUCSAC,Psychology,3.230319434845104
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.4364630863378367
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.2170683473237967
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.984684405808196
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.0878619252275765
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.4967385847294636
+Yes,NA,NY,SUCSAC,Psychology,3.731516791571811
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.44915207023791
+Yes,31,NA,SGGSAC,Sociology,3.2187107000986273
+Yes,NA,NY,SUCSAC,Psychology,3.50128359553202
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5984394217708884
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.795489815854713
+Yes,NA,Cook county,SGGSAC,Sociology,3.5306982994496687
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.31185442949406
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.794171235178625
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.7791010592650003
+Yes,NA,Cook county,SGGSAC,Sociology,3.566060272037899
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.7949991144830038
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.862002848235512
+Yes,22,"Cook County, IL",SGGSAC,Sociology,2.9962883844871047
+Yes,NA,Cook county,SGGSAC,Sociology,3.669627784187376
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.773329548784109
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.446593180805511
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.3066523931987133
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.897216150896085
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.4630365847137505
+Yes,NA,NY,SUCSAC,Psychology,3.732446425394121
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,2.891253316047269
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.2324177853743374
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.562749033670097
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.2955736340635955
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.9608498358705972
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4270986997725346
+Yes,31,NA,SGGSAC,Sociology,3.9906847087992827
+Yes,31,NA,SGGSAC,Sociology,3.674444791295252
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.14841883723407
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.8028371686705698
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.292649961564208
+Yes,NA,Cook county,SGGSAC,Sociology,3.4724834872050865
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.610532643464174
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.8001792370905756
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.6643220530688305
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5811447059783115
+Yes,31,NA,SGGSAC,Sociology,3.787708105954097
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.45718905655968
+Yes,NA,NY,SUCSAC,Psychology,4.20703408247865
+Yes,NA,NY,SUCSAC,Psychology,3.12795245468433
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.4337985427112976
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.449117258344627
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.3858434118957987
+Yes,31,NA,SGGSAC,Sociology,3.3311116662998512
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.612614660151276
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.613011204763689
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.9979698101042986
+Yes,23,"Franklin county, OH",SGGSAC,Economics,2.8680482399619325
+Yes,NA,Cook county,SGGSAC,Sociology,3.626674895695983
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.3946148228225215
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.480412649385461
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.8177426766310014
+Yes,NA,Cook county,SGGSAC,Sociology,3.6830978380048975
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.8316912181070957
+Yes,NA,NY,SUCSAC,Psychology,4.032583826479524
+Yes,NA,Cook county,SGGSAC,Sociology,3.5167321424949307
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6322562696740817
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6426017964422326
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6649366053684855
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.2813506796547367
+Yes,NA,NY,SUCSAC,Psychology,3.8916602761093517
+Yes,NA,Cook county,SGGSAC,Sociology,3.368981594994666
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.4673159709140022
+Yes,NA,NY,SUCSAC,Psychology,3.4585546275742627
+Yes,NA,NY,SUCSAC,Psychology,3.2972947864190245
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,2.908107927683995
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.1992219900435637
+Yes,NA,NY,SUCSAC,Psychology,3.574514152255394
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.5987779339625736
+Yes,26,"Franklin county, OH",SGGSAC,Economics,2.671352565090142
+Yes,NA,NY,SUCSAC,Psychology,3.4279663918165495
+Yes,NA,Cook county,SGGSAC,Sociology,3.4296636054833693
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6759065624502116
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.292851124697602
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.83955600069251
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6689596738416204
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6942175065295437
+Yes,31,NA,SGGSAC,Sociology,3.421683561396195
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7582939931973445
+Yes,NA,Cook county,SGGSAC,Sociology,2.5745429989775843
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.8584923353072003
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2492573966933205
+Yes,26,"Franklin county, OH",SGGSAC,Economics,4.070291463365818
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.4091694124732794
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.240673234922524
+Yes,NA,NY,SUCSAC,Psychology,3.6830615530367488
+Yes,NA,NY,SUCSAC,Psychology,3.527017789007578
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.7486499359162124
+Yes,NA,NY,SUCSAC,Psychology,2.893226622624432
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.0212367201364936
+Yes,31,NA,SGGSAC,Sociology,3.5721165239619923
+Yes,NA,NY,SUCSAC,Psychology,3.0631621634679633
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6190818669292253
+Yes,NA,NY,SUCSAC,Psychology,3.1182545817023337
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4054613964957197
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.607908702845629
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.704117388935001
+Yes,31,NA,SGGSAC,Sociology,3.535895761658087
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6034167461549913
+Yes,NA,Cook county,SGGSAC,Sociology,3.332967492059325
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.712757019283848
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.1694317029704147
+Yes,NA,NY,SUCSAC,Psychology,3.682511201411221
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.70228311129729
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.9451060190369347
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.031150030023128
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.465892950399766
+Yes,22,"Cook County, IL",SGGSAC,Sociology,4.359005635567501
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.697184636065003
+Yes,NA,NY,SUCSAC,Psychology,3.1960338770565144
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.3793921783487186
+Yes,NA,Cook county,SGGSAC,Sociology,3.3272054185680178
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.1434914956201903
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.160895321076988
+Yes,31,NA,SGGSAC,Sociology,3.5135141824162366
+Yes,NA,NY,SUCSAC,Psychology,3.283497576616409
+Yes,NA,Cook county,SGGSAC,Sociology,3.652239747936614
+Yes,NA,Cook county,SGGSAC,Sociology,3.494639763139278
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.3240604279605614
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.3887144027296943
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.080263909236901
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.7905448152049948
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2860496194533586
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.1823576419712833
+Yes,31,NA,SGGSAC,Sociology,3.5461059892857976
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.7375367626770464
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.221724033073967
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.6929447186309305
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.017576902023171
+Yes,26,"Franklin county, OH",SGGSAC,Economics,2.962402233753243
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.0303194168676137
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.7850858331086616
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.6882060905982272
+Yes,31,NA,SGGSAC,Sociology,3.8221411740666844
+Yes,NA,NY,SUCSAC,Psychology,2.7736785153423225
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.4620249260321
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.3101873300037976
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.3602664170595564
+Yes,NA,Cook county,SGGSAC,Sociology,3.525224794707994
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.1185699027693774
+Yes,31,NA,SGGSAC,Sociology,3.7383052857465198
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.586396533030628
+Yes,NA,Cook county,SGGSAC,Sociology,3.7006965683370705
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.6614113026505106
+Yes,31,NA,SGGSAC,Sociology,3.9682414668447126
+Yes,NA,NY,SUCSAC,Psychology,3.8872845404839733
+Yes,NA,Cook county,SGGSAC,Sociology,3.4814886634099844
+Yes,NA,NY,SUCSAC,Psychology,3.097904981250823
+Yes,22,"Cook County, IL",SGGSAC,Sociology,4.164286728180256
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.7823809974457006
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.086861770584592
+Yes,NA,NY,SUCSAC,Psychology,4.056296273201228
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.8314155936594796
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.6893534358008857
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,2.779335279856771
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7275884531534946
+Yes,26,"Franklin county, OH",SGGSAC,Economics,2.9601387610762955
+Yes,NA,Cook county,SGGSAC,Sociology,3.6170437643251296
+Yes,NA,Cook county,SGGSAC,Sociology,3.4255691195109716
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.752964109062196
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.9353977201747785
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.472827520495348
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,3.65714652913006
+Yes,NA,NY,SUCSAC,Psychology,3.726537366524656
+Yes,NA,Cook county,SGGSAC,Sociology,3.5675609860622184
+Yes,31,NA,SGGSAC,Sociology,3.6037687733945027
+Yes,31,NA,SGGSAC,Sociology,3.8815313555989874
+Yes,NA,Cook county,SGGSAC,Sociology,3.3424826020975646
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.2749992239947905
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.7949743965307503
+Yes,NA,Cook county,SGGSAC,Sociology,3.1680218753558695
+Yes,24,"San Diego county, CA",SGGSAC,Anthropology,4.068481482528295
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.3699740788601553
+Yes,NA,NY,SUCSAC,Psychology,3.3064478139545854
+Yes,NA,Cook county,SGGSAC,Sociology,3.740096844352867
+Yes,NA,Cook county,SGGSAC,Sociology,3.5042022606995387
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.5698460193501007
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,2.943535984122618
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.452519712466151
+Yes,NA,NY,SUCSAC,Psychology,3.4615677029953495
+Yes,NA,NY,SUCSAC,Psychology,3.905014681089675
+Yes,31,NA,SGGSAC,Sociology,3.40908128568769
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.077293378567272
+Yes,31,NA,SGGSAC,Sociology,3.01280887414902
+Yes,NA,Cook county,SGGSAC,Sociology,3.3857301869114957
+Yes,NA,NY,SUCSAC,Psychology,3.4046126006267974
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.3923602090186105
+Yes,31,NA,SGGSAC,Sociology,3.1474260526378885
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.716936242171939
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.414864784748565
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.898244961647432
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.4249104453822943
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.0815325543667846
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,4.11921978635122
+Yes,NA,NY,SUCSAC,Psychology,3.3436547478570966
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2501645998974054
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.4121396580548207
+Yes,NA,Cook county,SGGSAC,Sociology,3.998127902943664
+Yes,22,"Cook County, IL",SGGSAC,Sociology,3.310925472424483
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.473715560741371
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.633225454474324
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.226863580013224
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.5120111479760654
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.2591942797300133
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,3.843959483904178
+Yes,NA,NY,SUCSAC,Psychology,3.157327769828006
+Yes,26,"Franklin county, OH",SGGSAC,Economics,3.7429605521179976
+Yes,23,"Franklin county, OH",SGGSAC,Economics,3.2082943830220536
+Maybe,33,"Hillsborough County, FL",SGGSAC,Psych/poli sci,4.01492886136076
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.445227188669009
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.849517277232778
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.8490079772664196
+Yes,31,NA,SGGSAC,Sociology,3.1971778823536834
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.648558526613847
+Yes,NA,NY,SUCSAC,Psychology,3.475707986339549
+Yes,NA,NY,SUCSAC,Psychology,3.286852780973856
+Yes,NA,NY,SUCSAC,Psychology,3.5195372828279208
+Yes,31,NA,SGGSAC,Sociology,3.4429174163195415
+Yes,NA,NY,SUCSAC,Psychology,3.5302675645022052
+Yes,31,NA,SGGSAC,Sociology,3.2711862212763454
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.405651301162802
+Yes,NA,NY,SUCSAC,Psychology,3.6559304103196015
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.3549893358002043
+Yes,NA,NY,SUCSAC,Psychology,3.7002955890765272
+Yes,31,NA,SGGSAC,Sociology,3.0374768895245325
+Yes,31,NA,SGGSAC,Sociology,3.5125474109033763
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.673992184641696
+Yes,31,NA,SGGSAC,Sociology,3.2517970113124006
+Yes,NA,NY,SUCSAC,Psychology,3.547432661775817
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.36047495554355
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.663940361639808
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.493105836545085
+Yes,31,NA,SGGSAC,Sociology,3.766174745280454
+Yes,31,NA,SGGSAC,Sociology,3.838440178316018
+Yes,31,NA,SGGSAC,Sociology,3.480616103339205
+Yes,31,NA,SGGSAC,Sociology,3.8181339649320694
+Yes,31,NA,SGGSAC,Sociology,3.4166797874601658
+Yes,NA,NY,SUCSAC,Psychology,3.2504343240579585
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.3416166678042507
+Yes,NA,NY,SUCSAC,Psychology,3.8910397398032224
+Yes,31,NA,SGGSAC,Sociology,3.7103654804302963
+Yes,31,NA,SGGSAC,Sociology,3.4857360163219484
+Yes,NA,NY,SUCSAC,Psychology,3.982212477614637
+Yes,31,NA,SGGSAC,Sociology,3.0535258454945704
+Yes,31,NA,SGGSAC,Sociology,3.2548580722348843
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.785445876018171
+Yes,NA,NY,SUCSAC,Psychology,3.5397324024244354
+Yes,NA,NY,SUCSAC,Psychology,3.0656810391550944
+Yes,31,NA,SGGSAC,Sociology,3.6863686672722253
+Yes,31,NA,SGGSAC,Sociology,3.1522525875483525
+Yes,NA,NY,SUCSAC,Psychology,3.9285182429323546
+Yes,NA,NY,SUCSAC,Psychology,3.7135323518292016
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.4705475110567723
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.61448950307386
+Yes,31,NA,SGGSAC,Sociology,3.0068855683094293
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.543017395543663
+Yes,NA,NY,SUCSAC,Psychology,3.1719596240872754
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.645879079084167
+Yes,NA,NY,SUCSAC,Psychology,3.6309341441142045
+Yes,NA,NY,SUCSAC,Psychology,3.385962580610121
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.976381682048167
+Yes,NA,NY,SUCSAC,Psychology,3.6291229061844303
+Yes,31,NA,SGGSAC,Sociology,3.48440216710796
+Yes,NA,NY,SUCSAC,Psychology,3.562846633220431
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.5720428734536624
+Yes,NA,NY,SUCSAC,Psychology,2.972255494167253
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.7365226862757672
+Yes,31,NA,SGGSAC,Sociology,3.9096142364997863
+Yes,31,NA,SGGSAC,Sociology,3.5807087242633084
+Yes,31,NA,SGGSAC,Sociology,3.346419245062845
+Yes,NA,NY,SUCSAC,Psychology,3.568145881893882
+Yes,NA,NY,SUCSAC,Psychology,3.339846024005083
+Yes,31,NA,SGGSAC,Sociology,2.721948934480026
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.821445335018947
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.404637940852898
+Yes,NA,NY,SUCSAC,Psychology,3.2449746007559743
+Yes,NA,NY,SUCSAC,Psychology,3.952130659523879
+Yes,NA,NY,SUCSAC,Psychology,3.0559975871937826
+Yes,NA,NY,SUCSAC,Psychology,3.198111810609842
+Yes,NA,NY,SUCSAC,Psychology,4.011821223031685
+Yes,NA,NY,SUCSAC,Psychology,3.9057887804387255
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.477222547164029
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.0340072376431713
+Yes,31,NA,SGGSAC,Sociology,3.3017693720052277
+Yes,NA,NY,SUCSAC,Psychology,4.177599327990919
+Yes,NA,NY,SUCSAC,Psychology,3.455316846840153
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.590932060235236
+Yes,NA,NY,SUCSAC,Psychology,3.5339461570022204
+Yes,31,NA,SGGSAC,Sociology,3.441222121888118
+Yes,NA,NY,SUCSAC,Psychology,3.7124020989927993
+Yes,NA,NY,SUCSAC,Psychology,3.2948844003497264
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.526508411290714
+Yes,31,NA,SGGSAC,Sociology,3.6136919021662526
+Yes,NA,NY,SUCSAC,Psychology,3.806325735874358
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,4.125205070625578
+Yes,NA,NY,SUCSAC,Psychology,4.122394334243443
+Yes,31,NA,SGGSAC,Sociology,3.055010861308428
+Yes,NA,NY,SUCSAC,Psychology,3.3746387642459528
+Yes,31,NA,SGGSAC,Sociology,3.5195044175410173
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.771028242324887
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6111174789107503
+Yes,31,NA,SGGSAC,Sociology,3.550533132023019
+Yes,NA,NY,SUCSAC,Psychology,3.695199556199318
+Yes,31,NA,SGGSAC,Sociology,3.3498046066817353
+Yes,31,NA,SGGSAC,Sociology,3.3910405633505647
+Yes,NA,NY,SUCSAC,Psychology,3.109839566677976
+Yes,NA,NY,SUCSAC,Psychology,3.9817518715648994
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.924777423535037
+Yes,NA,NY,SUCSAC,Psychology,3.181230757801881
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.042418642988443
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.4814836603986077
+Yes,NA,NY,SUCSAC,Psychology,3.516317872992811
+Yes,31,NA,SGGSAC,Sociology,3.488515643874405
+Yes,31,NA,SGGSAC,Sociology,3.1740873195529784
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.3624797899842442
+Yes,NA,NY,SUCSAC,Psychology,4.151262700161945
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.589724067247861
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6170854080437986
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.6034286993799345
+Yes,NA,NY,SUCSAC,Psychology,3.4632743758030755
+Yes,NA,NY,SUCSAC,Psychology,3.3808806331545225
+Yes,31,NA,SGGSAC,Sociology,3.7431115111899484
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.23149336702553
+Yes,31,NA,SGGSAC,Sociology,3.2104845673746616
+Yes,NA,NY,SUCSAC,Psychology,3.5283248746347518
+Yes,31,NA,SGGSAC,Sociology,3.6465388361270716
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.773894561619115
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.218333329738192
+Yes,NA,NY,SUCSAC,Psychology,3.629619521605943
+Yes,NA,NY,SUCSAC,Psychology,3.791057818735831
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.4677088498821895
+Yes,24,"Orange County, CA",SGGSAC,Anthropology,3.315943824950548
