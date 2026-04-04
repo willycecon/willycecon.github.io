@@ -1,0 +1,240 @@
+/* ============================================================
+   Willy Chen — willycecon.com
+   Custom styles: MSU Green (#18453B) + white background theme
+   ============================================================ */
+
+:root {
+  --msu-green:       #18453B;
+  --msu-green-hover: #1e5548;
+  --msu-green-light: #e8f0ee;
+  --white:           #ffffff;
+  --body-bg:         #ffffff;
+  --text-dark:       #1e1e1e;
+  --text-muted:      #6c757d;
+  --border-light:    #dee2e6;
+}
+
+/* ── Base ── */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-dark);
+  background-color: var(--body-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ── Navbar ── */
+nav.navbar {
+  background-color: var(--msu-green);
+  padding: 0.75rem 0;
+}
+
+nav.navbar .navbar-brand {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+}
+
+nav.navbar .navbar-brand:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+nav.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.93rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 4px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+nav.navbar .nav-link:hover,
+nav.navbar .nav-link.active {
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+nav.navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── Page wrapper ── */
+.page-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+/* ── Headings ── */
+h1, h2, h3, h4 {
+  color: var(--msu-green);
+  font-weight: 600;
+}
+
+h1 { font-size: 1.75rem; margin-bottom: 1rem; }
+
+h2 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--msu-green);
+}
+
+h3 { font-size: 1.05rem; }
+
+/* ── Links ── */
+a {
+  color: var(--msu-green);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--msu-green-hover);
+  text-decoration: underline;
+}
+
+/* ── Profile section (home page) ── */
+.profile-section {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.profile-img {
+  width: 210px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.profile-bio p {
+  margin-bottom: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-img {
+    width: 160px;
+  }
+}
+
+/* ── Research page ── */
+.paper-entry {
+  margin-bottom: 1.4rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.paper-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.paper-meta {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ── CV page ── */
+.cv-container {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cv-embed {
+  width: 100%;
+  height: 85vh;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  margin-top: 0.75rem;
+}
+
+.cv-download-link {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.45rem 1.1rem;
+  background-color: var(--msu-green);
+  color: var(--white);
+  border-radius: 5px;
+  font-size: 0.93rem;
+  font-weight: 500;
+  transition: background-color 0.15s ease;
+}
+
+.cv-download-link:hover {
+  background-color: var(--msu-green-hover);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ── Photography page ── */
+.flickr-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flickr-container img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* ── Code ── */
+code {
+  background-color: var(--msu-green-light);
+  color: var(--msu-green);
+  padding: 0.15em 0.45em;
+  border-radius: 4px;
+  font-size: 0.88em;
+}
+
+/* ── Footer ── */
+footer {
+  background-color: var(--msu-green);
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 1.4rem 1rem;
+  font-size: 0.85rem;
+  margin-top: 4rem;
+}
+
+footer a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+footer a:hover {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+/* ── Utility ── */
+img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.text-msu {
+  color: var(--msu-green);
+}
+
+hr.section-divider {
+  border: none;
+  border-top: 2px solid var(--msu-green);
+  margin: 1.5rem 0;
+  opacity: 1;
+}
