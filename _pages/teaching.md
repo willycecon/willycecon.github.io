@@ -4,6 +4,14 @@ title: Teaching
 permalink: /teaching/
 ---
 
+
+## Notes &amp; Resources
+
+- [PhD First Year General Equilibrium Notes](/Files/Notes/Micro_Organized_Notes_Willy_Lauren.pdf)
+- [PhD First Year Game Theory Notes](/Files/Notes/GameTheory_Organized_Notes_Willy_PublicBeta2.pdf)
+- [MSU PhD First Year Spring Macroeconomics Notes](/Files/Notes/MacroII_Organized_Notes_Willy_PublicBeta1.pdf)
+- [PhD First Year Econometrics Cheat Sheet](/Files/Metrics_CheatSheet_latest.pdf)
+
 ## Workshop: Principles of Data Visualization in R
 
 This workshop series introduces graduate and undergraduate students to data visualization and reproducible research practices using R.
@@ -19,12 +27,6 @@ This workshop series introduces graduate and undergraduate students to data visu
 - [Version Control with GitHub](/workshop/github.html)
 - [Working with Text Data](/workshop/textdata.html)
 
-## Notes &amp; Resources
-
-- [PhD First Year General Equilibrium Notes](/Files/Notes/Micro_Organized_Notes_Willy_Lauren.pdf)
-- [PhD First Year Game Theory Notes](/Files/Notes/GameTheory_Organized_Notes_Willy_PublicBeta2.pdf)
-- [MSU PhD First Year Spring Macroeconomics Notes](/Files/Notes/MacroII_Organized_Notes_Willy_PublicBeta1.pdf)
-- [PhD First Year Econometrics Cheat Sheet](/Files/Metrics_CheatSheet_latest.pdf)
 
 ## Archived Projects
 
