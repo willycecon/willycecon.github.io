@@ -9,7 +9,7 @@ permalink: /
   <div class="profile-bio">
     <p> Hello!</p>
     <p>I am a Ph.D candidate at Michigan State University Department of Economics.</p>
-    <p><b>I am on the market for the 2026-2027 cycle.</b></p>
+    <!-- <p><b>I am on the market for the 2026-2027 cycle.</b></p> -->
     <p>I obtained my MA in Economics from the University of Chicago in August 2020 and my BS in Economics and Mathematics from The Ohio State University in May 2019.</p>
     <p>My research interests are in labor economics and the economics of inequality, with a current focus on the educational mismatch of immigrant workers in the U.S. labor market.</p>
     <p>I am a self-proclaimed magician, photographer, sailor, and funny T-shirt enthusiast.</p>
