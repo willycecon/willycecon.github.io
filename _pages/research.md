@@ -7,7 +7,7 @@ permalink: /research/
 ## Working Papers
 
 <div class="paper-entry">
-  <a href="https://dx.doi.org/10.2139/ssrn.5263564"><strong>Descriptive Units of Heterogeneity: An Axiomatic Approach to Measuring Heterogeneity</strong></a>
+  <a href="https://dx.doi.org/10.2139/ssrn.4952556"><strong>Descriptive Units of Heterogeneity: An Axiomatic Approach to Measuring Heterogeneity</strong></a>
   <div class="paper-meta">
     R: <a href="https://willycecon.com/Projects/DUH/get_duh.R"><code>get_duh.R</code></a> &nbsp;|&nbsp;
     Python: <a href="https://willycecon.com/Projects/DUH/get_duh.py"><code>get_duh.py</code></a>
