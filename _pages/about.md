@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <div class="profile-section">
-  <img src="/IMG_7374.jpg" alt="Willy Chen" class="profile-img">
+  <img src="/WillyChen_sq.jpeg" alt="Willy Chen's Headshot" class="profile-img">
   <div class="profile-bio">
     <p> Hello!</p>
     <p>I am a Ph.D candidate at Michigan State University Department of Economics.</p>
