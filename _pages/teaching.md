@@ -4,6 +4,26 @@ title: Teaching
 permalink: /teaching/
 ---
 
+## TA: Micro II — Game Theory (EC812B, Spring 2026)
+
+I served as a teaching assistant for the PhD-level game theory course at MSU. Below are the recitation handouts and solutions I prepared.
+
+| # | Topic | Handout | Solution |
+|---|-------|---------|----------|
+| 1 | Nash Equilibrium | [PDF](/Files/Teaching/EC812B/Recitation%201-NE.pdf) | [PDF](/Files/Teaching/EC812B/Sol_Recitation%201-NE.pdf) |
+| 2 | Mixed Strategy NE | [PDF](/Files/Teaching/EC812B/Recitation%202-MSNE.pdf) | [PDF](/Files/Teaching/EC812B/Sol_Recitation%202-MSNE.pdf) |
+| 3 | Subgame Perfect NE | [PDF](/Files/Teaching/EC812B/Recitation%203-SPNE.pdf) | [PDF](/Files/Teaching/EC812B/Sol_Recitation%203-SPNE.pdf) |
+| 4 | Dynamic Oligopoly | [PDF](/Files/Teaching/EC812B/Recitation%204-DynamicOligopoly.pdf) | [PDF](/Files/Teaching/EC812B/Sol_Recitation%204-DynamicOligopoly.pdf) |
+| 5 | Perfect Bayesian & Sequential Equilibrium | [PDF](/Files/Teaching/EC812B/Recitation%205-PBE%20and%20SE.pdf) | [PDF](/Files/Teaching/EC812B/Sol_Recitation%205-PBE%20and%20SE.pdf) |
+| 6 | Exam Review | [PDF](/Files/Teaching/EC812B/Recitation%206-ExamReview.pdf) | — |
+| 7 | Folk Theorem | [PDF](/Files/Teaching/EC812B/Recitation%207-FolkTheorem.pdf) | [PDF](/Files/Teaching/EC812B/Sol_Recitation%207-FolkTheorem.pdf) |
+| 8 | Bayesian Nash Equilibrium | — | [PDF](/Files/Teaching/EC812B/Sol_Recitation%208-BNE.pdf) |
+| 9 | Continuous BNE | [PDF](/Files/Teaching/EC812B/Recitation%209-ContinuousBNE.pdf) | [PDF](/Files/Teaching/EC812B/Sol_Recitation%209-ContinuousBNE.pdf) |
+| 10 | Adverse Selection & Signaling | [PDF](/Files/Teaching/EC812B/Recitation%2010-AdverseSelection_Signalling.pdf) | [PDF](/Files/Teaching/EC812B/Sol_Recitation%2010-Signaling.pdf) |
+| 11 | Cho-Kreps | — | [PDF](/Files/Teaching/EC812B/Sol_Recitation%2011-ChoKreps.pdf) |
+| 12 | Screening | — | [PDF](/Files/Teaching/EC812B/Sol_Recitation%2012-Screening.pdf) |
+| 13 | Moral Hazard | [PDF](/Files/Teaching/EC812B/Recitation%2013_MoralHazard.pdf) | [PDF](/Files/Teaching/EC812B/Sol_Recitation%2013_MoralHazard.pdf) |
+
 ## Course Notes &amp; Resources
 
 - [PhD First Year General Equilibrium Notes](/Files/Notes/Micro_Organized_Notes_Willy_Lauren.pdf)
