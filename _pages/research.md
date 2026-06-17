@@ -26,7 +26,20 @@ permalink: /research/
   <a href="https://dx.doi.org/10.2139/ssrn.5378789"><strong>The Relationship between Entrée Variety and Student Participation in School Lunch</strong> (with Saied Toosi and Amy Ellen Schwartz)</a>
 </div>
 
-## Publications
+
+## Work in Progress
+
+<div class="paper-entry">
+  <a>The Credentials Arms Race: Understanding Immigrant Occupational Mismatch in the U.S. Labor Market</strong> (Job Market Paper)</a>
+</div>
+
+<div class="paper-entry">
+  <a>Immigrant Occupational Mismatch: The Role of Intra-Household Bargaining and Employer-Sponsored Health Insurance</strong> (with Elif Dilden)</a>
+</div>
+
+
+
+## Peer-Reviewed Publications
 
 <div class="paper-entry">
   <a href="https://jamanetwork.com/journals/jamanetworkopen/article-abstract/2796283">
