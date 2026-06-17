@@ -30,11 +30,11 @@ permalink: /research/
 ## Work in Progress
 
 <div class="paper-entry">
-  <a>The Credentials Arms Race: Understanding Immigrant Occupational Mismatch in the U.S. Labor Market</strong> (Job Market Paper)</a>
+  <a><strong>The Credentials Arms Race: Understanding Immigrant Occupational Mismatch in the U.S. Labor Market</strong> (Job Market Paper)</a>
 </div>
 
 <div class="paper-entry">
-  <a>Immigrant Occupational Mismatch: The Role of Intra-Household Bargaining and Employer-Sponsored Health Insurance</strong> (with Elif Dilden)</a>
+  <a><strong>Immigrant Occupational Mismatch: The Role of Intra-Household Bargaining and Employer-Sponsored Health Insurance</strong> (with Elif Dilden)</a>
 </div>
 
 
