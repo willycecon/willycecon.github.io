@@ -19,8 +19,8 @@ nav_links:
     url: /teaching/
   - title: Photography
     url: /photography/
-  - title: Contact
-    url: /contact/
+  # - title: Contact
+  #   url: /contact/
 
 # Collections
 collections:
