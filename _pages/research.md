@@ -9,9 +9,8 @@ permalink: /research/
   <strong>Discounted Degrees: The Dual Equilibria of Immigrant Over-Education in the U.S. Labor Market</strong>
 
 <details markdown="1">
-<summary>Abstract</summary>
- High-skilled immigrant workers in the US disproportionately accept occupations below their skill level or acquire additional domestic education to achieve wage parity. This paper evaluates the leading but untested mechanism: employer screening. I extend the canonical signaling model to incorporate an employer-side friction on hiring foreign workers, and show that the friction does not simply lower immigrant wages: it eliminates a large set of optimal equilibrium wage contracts, forcing immigrant workers into occupational mismatch. Using a novel longitudinal panel built from LinkedIn records, I estimate the extent of the displacement and identify the critical education levels. I estimate the size of the friction from the occupational wage gaps between the immigrants and natives at labor market entry. 
-I find that immigrants with a master's or a professional degree are more likely to work lower-education jobs than their native counterparts, while those with a bachelor's degree or a PhD are less likely to do so. The estimated friction terms are persistent throughout an immigrant worker's first decade in the U.S., and they are much larger for immigrants with only foreign credentials. Finally, a structural decomposition reveals that occupational skill requirements are the main determinants of the occupational wage gaps, even after controlling for job mismatch and firm-level demand for foreign labor.
+<summary>Abstract</summary> 
+High-skilled immigrant workers in the US disproportionately accept occupations below their skill level or acquire additional domestic education to achieve wage parity. This paper evaluates the leading but untested mechanism: employer screening. I extend the canonical signaling model to incorporate an employer-side friction on hiring foreign workers, and show that the friction does not simply lower immigrant wages: it eliminates a large set of optimal equilibrium wage contracts, forcing immigrant workers into occupational mismatch. Using a novel longitudinal panel built from LinkedIn records, I estimate the extent of the displacement and identify the critical education levels. I estimate the size of the friction from the occupational wage gaps between the immigrants and natives at labor market entry. I find that immigrants with a master's or a professional degree are more likely to work lower-education jobs than their native counterparts, while those with a bachelor's degree or a PhD are less likely to do so. The estimated friction terms are persistent throughout an immigrant worker's first decade in the U.S., and they are much larger for immigrants with only foreign credentials. Finally, a structural decomposition reveals that occupational skill requirements are the main determinants of the occupational wage gaps, even after controlling for job mismatch and firm-level demand for foreign labor.
 </details>
 </div>
 ## Working Papers
@@ -39,10 +38,13 @@ I find that immigrants with a master's or a professional degree are more likely 
 
 ## Work in Progress
 
-<div class="paper-entry">
+<!-- <div class="paper-entry">
   <a><strong>The Credentials Arms Race: Understanding Immigrant Occupational Mismatch in the U.S. Labor Market</strong> (Job Market Paper)</a>
-</div>
+</div> -->
 
+<div class="paper-entry">
+  <a><strong>Talent Reallocation Amid Silicon Valley Tech Layoffs</strong> (with Hannah Bae and Xintong Li)</a>
+</div>
 <div class="paper-entry">
   <a><strong>Immigrant Occupational Mismatch: The Role of Intra-Household Bargaining and Employer-Sponsored Health Insurance</strong> (with Elif Dilden)</a>
 </div>
