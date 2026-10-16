@@ -6,7 +6,7 @@ permalink: /research/
 
 ## Job Market Paper
 <div class="paper-entry">
-  <strong>Discounted Degrees: The Dual Equilibria of Immigrant Over-Education in the U.S. Labor Market</strong>
+  <a href="https://willycecon.com/JMP.pdf"><strong>Discounted Degrees: The Dual Equilibria of Immigrant Over-Education in the U.S. Labor Market</strong></a>
 
 <details markdown="1">
 <summary>Abstract</summary> 
