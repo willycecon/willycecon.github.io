@@ -3,6 +3,7 @@ layout: page
 title: Curriculum Vitae
 permalink: /cv/
 ---
+<a class="cv-download-link" href="/Willy_Chen_Industry_CV.pdf" download>Click for Industry CV</a>
 
 <div class="cv-container">
   <a class="cv-download-link" href="/cvWillyChen.pdf" download>Download CV (PDF)</a>
